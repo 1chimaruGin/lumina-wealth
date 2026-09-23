@@ -26,4 +26,6 @@ jobs:
         run: python -m pytest tests/ -q
 
       - name: The pipeline still builds a brief offline
+        env:
+          LUMINA_BACKEND: offline
         run: python scripts/compose.py --dry-run --no-llm > /dev/null

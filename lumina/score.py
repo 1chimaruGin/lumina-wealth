@@ -273,69 +273,20 @@ class HeuristicScorer:
 # --- Claude ----------------------------------------------------------------
 
 
-class ClaudeScorer:
-    """Haiku 4.5 with forced tool use, so every response is schema-valid.
+class _LLMScorer:
+    """Shared prompt-building and reply-handling for both model-backed scorers.
 
-    Falls back to the heuristic, per item, on any API problem — a bad API day
-    degrades the brief, it never cancels it.
+    Subclasses implement `_call(system, user, tool) -> dict | None`; returning
+    None means "this request did not produce usable JSON", and the caller
+    quietly falls back to the heuristic for that batch. Keeping the batching
+    and parsing here means the API and CLI backends cannot drift apart.
     """
 
-    name = "claude"
+    name = "llm"
 
-    def __init__(self, cfg: Config, usage: UsageStore):
-        import anthropic  # imported lazily so --no-llm needs no SDK at all
+    def _call(self, system: str, user: str, tool: dict) -> dict | None:  # pragma: no cover
+        raise NotImplementedError
 
-        self.cfg = cfg
-        self.usage = usage
-        self.fallback = HeuristicScorer(cfg)
-        self.model = cfg.get("model.scorer", "claude-haiku-4-5")
-        self.max_tokens = int(cfg.get("model.max_output_tokens", 2000))
-        self.temperature = float(cfg.get("model.temperature", 0.2))
-        self.batch_size = int(cfg.get("model.batch_size", 8))
-        self._anthropic = anthropic
-        self.client = anthropic.Anthropic()
-        self.profile = profile_block(cfg)
-        self.degraded: list[str] = []
-
-    # -- plumbing --
-    def _call(self, system: str, user: str, tool: dict) -> dict | None:
-        stop = self.usage.exhausted()
-        if stop:
-            self.degraded.append(f"budget stop: {stop}")
-            return None
-        try:
-            resp = self.client.messages.create(
-                model=self.model,
-                max_tokens=self.max_tokens,
-                temperature=self.temperature,
-                system=system,
-                tools=[tool],
-                tool_choice={"type": "tool", "name": tool["name"]},
-                messages=[{"role": "user", "content": user}],
-            )
-        except self._anthropic.RateLimitError:
-            self.degraded.append("rate limited by the API")
-            return None
-        except self._anthropic.APIStatusError as exc:
-            self.degraded.append(f"API error {exc.status_code}")
-            return None
-        except self._anthropic.APIConnectionError:
-            self.degraded.append("could not reach the API")
-            return None
-        except Exception as exc:  # never let scoring end the run
-            self.degraded.append(f"{type(exc).__name__}")
-            log.warning("scorer call failed: %s", exc)
-            return None
-
-        self.usage.record(resp.usage.input_tokens, resp.usage.output_tokens)
-        for block in resp.content:
-            if block.type == "tool_use":
-                # Inputs are JSON-parsed by the SDK; never string-match them.
-                return dict(block.input)
-        self.degraded.append("model returned no tool call")
-        return None
-
-    # -- streams --
     def score_streams(self, items: Sequence[Item]) -> list[StreamScore]:
         results: list[StreamScore] = []
         pending = list(items)
@@ -376,7 +327,6 @@ class ClaudeScorer:
         lines.append("\nScore every item. Use the id numbers exactly as given.")
         return "\n".join(lines)
 
-    # -- mind --
     def summarise_mind(self, item: Item) -> MindPiece:
         user = (
             f"THE PERSON:\n{self.profile}\n\n"
@@ -394,16 +344,187 @@ class ClaudeScorer:
             summarised_by=self.name,
         )
 
+    def close(self) -> None:
+        pass
+
+
+class ClaudeScorer(_LLMScorer):
+    """Haiku 4.5 with forced tool use, so every response is schema-valid.
+
+    Falls back to the heuristic, per item, on any API problem — a bad API day
+    degrades the brief, it never cancels it.
+    """
+
+    name = "claude"
+
+    def __init__(self, cfg: Config, usage: UsageStore):
+        import anthropic  # imported lazily so --no-llm needs no SDK at all
+
+        self.cfg = cfg
+        self.usage = usage
+        self.fallback = HeuristicScorer(cfg)
+        self.model = cfg.get("model.scorer", "claude-haiku-4-5")
+        self.max_tokens = int(cfg.get("model.max_output_tokens", 2000))
+        self.temperature = float(cfg.get("model.temperature", 0.2))
+        self.batch_size = int(cfg.get("model.batch_size", 8))
+        self._anthropic = anthropic
+        self.client = anthropic.Anthropic()
+        self.profile = profile_block(cfg)
+        self.degraded: list[str] = []
+
+    def _call(self, system: str, user: str, tool: dict) -> dict | None:
+        stop = self.usage.exhausted()
+        if stop:
+            self.degraded.append(f"budget stop: {stop}")
+            return None
+        try:
+            resp = self.client.messages.create(
+                model=self.model,
+                max_tokens=self.max_tokens,
+                temperature=self.temperature,
+                system=system,
+                tools=[tool],
+                tool_choice={"type": "tool", "name": tool["name"]},
+                messages=[{"role": "user", "content": user}],
+            )
+        except self._anthropic.RateLimitError:
+            self.degraded.append("rate limited by the API")
+            return None
+        except self._anthropic.APIStatusError as exc:
+            self.degraded.append(f"API error {exc.status_code}")
+            return None
+        except self._anthropic.APIConnectionError:
+            self.degraded.append("could not reach the API")
+            return None
+        except Exception as exc:  # never let scoring end the run
+            self.degraded.append(f"{type(exc).__name__}")
+            log.warning("scorer call failed: %s", exc)
+            return None
+
+        self.usage.record(resp.usage.input_tokens, resp.usage.output_tokens)
+        for block in resp.content:
+            if block.type == "tool_use":
+                # Inputs are JSON-parsed by the SDK; never string-match them.
+                return dict(block.input)
+        self.degraded.append("model returned no tool call")
+        return None
+
+
+
+class ClaudeCodeScorer(_LLMScorer):
+    """Scores through the Claude Code CLI — no API key, billed to the subscription.
+
+    Same interface and the same failure posture as ClaudeScorer: any batch that
+    errors or comes back unparseable falls through to the heuristic, and the
+    brief records which scorer actually produced it.
+    """
+
+    name = "claude-code"
+
+    def __init__(self, cfg: Config, usage: UsageStore):
+        from .claude_cli import ClaudeCodeClient, ClaudeCodeError, describe_schema
+
+        self.cfg = cfg
+        self.usage = usage
+        self.fallback = HeuristicScorer(cfg)
+        self.batch_size = int(cfg.get("model.batch_size", 8))
+        self.profile = profile_block(cfg)
+        self.degraded: list[str] = []
+        self._error = ClaudeCodeError
+        self._describe = describe_schema
+        self.client = ClaudeCodeClient(
+            model=cfg.get("model.cli_model", "haiku"),
+            timeout=int(cfg.get("model.cli_timeout_seconds", 420)),
+        )
+        # A subscription run is not billed per call, so the dollar ceiling would
+        # trip on a price nobody pays. The call ceiling is the real guard.
+        usage.billed = False
+
+    def _schema_prompt(self, tool: dict) -> str:
+        return (
+            "Reply with ONE JSON object and nothing else — no prose, no code fence.\n"
+            "Keys:\n" + self._describe(tool["input_schema"])
+        )
+
+    def _call(self, system: str, user: str, tool: dict) -> dict | None:
+        stop = self.usage.exhausted()
+        if stop:
+            self.degraded.append(f"budget stop: {stop}")
+            return None
+        full_system = system + "\n\n" + self._schema_prompt(tool)
+        for attempt in (1, 2):
+            try:
+                payload, stats = self.client.ask(full_system, user)
+                self.usage.record(stats["input_tokens"], stats["output_tokens"],
+                                  equivalent_usd=stats["equivalent_usd"])
+                return payload
+            except self._error as exc:
+                message = str(exc)
+                if attempt == 1 and ("JSON" in message or "reply" in message):
+                    # One retry, with the instruction made blunter.
+                    user = user + "\n\nReturn ONLY the JSON object. No explanation."
+                    continue
+                self.degraded.append(message[:80])
+                log.warning("claude-code scorer: %s", message)
+                return None
+        return None
+
+    def close(self) -> None:
+        self.client.close()
+
+
+def _has_api_key() -> bool:
+    return bool(os.getenv("ANTHROPIC_API_KEY") or os.getenv("ANTHROPIC_AUTH_TOKEN"))
+
 
 def build_scorer(cfg: Config, usage: UsageStore, use_llm: bool = True):
-    """Pick a scorer. No key means no LLM — stated plainly, never a crash."""
+    """Pick a scoring backend.
+
+    model.backend in settings.yaml:
+      claude-code  the Claude Code CLI — no API key, billed to a Claude
+                   subscription. Needs an interactive login or, in CI, a
+                   CLAUDE_CODE_OAUTH_TOKEN from `claude setup-token`.
+      api          the Anthropic API, needs ANTHROPIC_API_KEY.
+      offline      the deterministic heuristic scorer; no network.
+      auto         claude-code if the CLI is there, else api if a key is there,
+                   else offline.
+
+    Whatever is chosen, an unavailable backend degrades to the next one rather
+    than failing the run, and the brief names the scorer that actually ran.
+    """
+    from .claude_cli import cli_available
+
     if not use_llm:
         return HeuristicScorer(cfg)
-    if not (os.getenv("ANTHROPIC_API_KEY") or os.getenv("ANTHROPIC_AUTH_TOKEN")):
-        log.warning("ANTHROPIC_API_KEY not set — scoring offline with the heuristic scorer")
+
+    backend = str(os.getenv("LUMINA_BACKEND") or cfg.get("model.backend", "auto")).lower()
+    if backend == "auto":
+        backend = "claude-code" if cli_available() else ("api" if _has_api_key() else "offline")
+
+    if backend == "offline":
         return HeuristicScorer(cfg)
-    try:
-        return ClaudeScorer(cfg, usage)
-    except Exception as exc:
-        log.warning("could not start the Claude scorer (%s) — falling back to heuristic", exc)
-        return HeuristicScorer(cfg)
+
+    if backend == "claude-code":
+        if not cli_available():
+            from .claude_cli import auth_hint
+            log.warning("model.backend is claude-code but the CLI is not installed — "
+                        "install it with `npm i -g @anthropic-ai/claude-code`. %s", auth_hint())
+            return ClaudeScorer(cfg, usage) if _has_api_key() else HeuristicScorer(cfg)
+        try:
+            return ClaudeCodeScorer(cfg, usage)
+        except Exception as exc:
+            log.warning("could not start the Claude Code scorer (%s) — falling back", exc)
+            return ClaudeScorer(cfg, usage) if _has_api_key() else HeuristicScorer(cfg)
+
+    if backend == "api":
+        if not _has_api_key():
+            log.warning("model.backend is api but no ANTHROPIC_API_KEY is set — scoring offline")
+            return HeuristicScorer(cfg)
+        try:
+            return ClaudeScorer(cfg, usage)
+        except Exception as exc:
+            log.warning("could not start the Claude API scorer (%s) — falling back to heuristic", exc)
+            return HeuristicScorer(cfg)
+
+    log.warning("unknown model.backend %r — scoring offline", backend)
+    return HeuristicScorer(cfg)

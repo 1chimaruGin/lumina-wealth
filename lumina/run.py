@@ -100,6 +100,8 @@ def run_daily(
 
     scored: list[StreamScore] = scorer.score_streams(stream_pool) if stream_pool else []
     scored.sort(key=lambda s: s.total, reverse=True)
+    # Releases the CLI backend's temp config; a no-op for the others.
+    getattr(scorer, "close", lambda: None)()
 
     min_score = float(cfg.get("select.min_stream_score", 4.5))
     picks = [s for s in scored if s.total >= min_score][: int(cfg.get("select.stream_picks", 3))]
@@ -188,6 +190,7 @@ def run_backfill(
     start = end - timedelta(days=days - 1)
     usage = UsageStore.load(cfg.data_dir, cfg.get("budget", {}))
     usage.max_usd = float(cfg.get("budget.max_usd_per_backfill", 2.0))
+    usage.max_calls = int(cfg.get("budget.max_calls_per_backfill", 90))
     usage.max_input *= days
     usage.max_output *= days
     seen = SeenStore.load(cfg.data_dir)

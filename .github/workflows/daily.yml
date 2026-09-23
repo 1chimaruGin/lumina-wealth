@@ -34,12 +34,21 @@ jobs:
           python-version: "3.12"
           cache: pip
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Install Claude Code
+        # The scorer runs through the CLI, which authenticates against the
+        # Claude subscription — no ANTHROPIC_API_KEY anywhere.
+        run: npm install -g @anthropic-ai/claude-code
+
       - name: Build the brief
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: |
           python scripts/compose.py \

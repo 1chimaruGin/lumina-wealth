@@ -116,6 +116,12 @@ class UsageStore:
     max_input: int = 120_000
     max_output: int = 30_000
     max_usd: float = 0.25
+    max_calls: int = 40
+    # False for subscription-billed backends (Claude Code): the CLI still
+    # reports an equivalent API price, but nothing is charged per call, so the
+    # dollar ceiling would stop a run over a bill that does not exist.
+    billed: bool = True
+    equivalent_usd: float = 0.0
     stopped_reason: str | None = None
 
     @classmethod
@@ -130,37 +136,48 @@ class UsageStore:
             max_input=int(budget.get("max_input_tokens_per_run", 120_000)),
             max_output=int(budget.get("max_output_tokens_per_run", 30_000)),
             max_usd=float(budget.get("max_usd_per_run", 0.25)),
+            max_calls=int(budget.get("max_calls_per_run", 40)),
         )
 
     @property
     def cost_usd(self) -> float:
         return (self.input_tokens / 1e6) * self.price_in + (self.output_tokens / 1e6) * self.price_out
 
-    def record(self, input_tokens: int, output_tokens: int) -> None:
+    def record(self, input_tokens: int, output_tokens: int, equivalent_usd: float = 0.0) -> None:
         self.input_tokens += int(input_tokens or 0)
         self.output_tokens += int(output_tokens or 0)
+        self.equivalent_usd += float(equivalent_usd or 0.0)
         self.calls += 1
 
     def exhausted(self) -> str | None:
         """Reason the budget is spent, or None. Checked before each API call."""
         if self.stopped_reason:
             return self.stopped_reason
-        if self.input_tokens >= self.max_input:
+        if self.calls >= self.max_calls:
+            self.stopped_reason = f"call ceiling reached ({self.calls}/{self.max_calls})"
+        elif self.input_tokens >= self.max_input:
             self.stopped_reason = f"input token ceiling reached ({self.input_tokens:,}/{self.max_input:,})"
         elif self.output_tokens >= self.max_output:
             self.stopped_reason = f"output token ceiling reached ({self.output_tokens:,}/{self.max_output:,})"
-        elif self.cost_usd >= self.max_usd:
+        elif self.billed and self.cost_usd >= self.max_usd:
             self.stopped_reason = f"cost ceiling reached (${self.cost_usd:.4f}/${self.max_usd:.2f})"
         return self.stopped_reason
 
     def summary(self) -> dict:
-        return {
+        out = {
             "calls": self.calls,
             "input_tokens": self.input_tokens,
             "output_tokens": self.output_tokens,
-            "cost_usd": round(self.cost_usd, 5),
+            "billed": self.billed,
             "stopped": self.stopped_reason,
         }
+        if self.billed:
+            out["cost_usd"] = round(self.cost_usd, 5)
+        else:
+            # Named so a subscription run is never read as a bill.
+            out["equivalent_usd_not_charged"] = round(self.equivalent_usd, 5)
+            out["cost_usd"] = 0.0
+        return out
 
     def save(self, run_label: str, extra: dict | None = None) -> None:
         entry = {"run": run_label, "at": str(today()), **self.summary(), **(extra or {})}

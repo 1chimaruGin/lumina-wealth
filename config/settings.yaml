@@ -12,18 +12,42 @@ schedule:
   weekly_day: sunday
 
 model:
-  # Scoring + summarising model. Haiku is the cost/quality sweet spot here.
+  # Which backend does the scoring:
+  #   claude-code  the Claude Code CLI. No API key — it runs on your Claude
+  #                subscription. Locally that means you have signed in with
+  #                `claude`; in CI it means a CLAUDE_CODE_OAUTH_TOKEN secret
+  #                made with `claude setup-token`.
+  #   api          the Anthropic API, needs ANTHROPIC_API_KEY.
+  #   offline      deterministic heuristic scorer, no network at all.
+  #   auto         claude-code if the CLI is present, else api, else offline.
+  # An unavailable backend degrades to the next one; it never fails the run,
+  # and the brief always names the scorer that actually produced it.
+  backend: claude-code
+
+  # Model for the API backend.
   scorer: claude-haiku-4-5
+  # Model alias for the CLI backend (haiku | sonnet | opus).
+  cli_model: haiku
+  # A batch of 8 takes ~80s; this is the per-call ceiling, not a target.
+  cli_timeout_seconds: 420
+
   max_output_tokens: 2000
   temperature: 0.2
-  # How many items are packed into a single scoring request.
+  # How many items are packed into a single scoring request. Bigger batches
+  # mean fewer calls, which is what the subscription rate limit actually counts.
   batch_size: 8
 
 budget:
-  # Hard stop. When a run crosses either ceiling it stops calling the API,
+  # Hard stop. When a run crosses a ceiling it stops calling the model,
   # composes the brief from whatever was already scored, and says so in the
   # "Run notes" section. A run is never failed because of budget.
-  max_input_tokens_per_run: 120000
+  #
+  # On the claude-code backend nothing is billed per call, so the dollar
+  # ceilings are ignored and the call ceiling is the one that matters — calls
+  # are what a subscription rate limit actually counts.
+  max_calls_per_run: 12
+  max_calls_per_backfill: 90
+  max_input_tokens_per_run: 400000
   max_output_tokens_per_run: 30000
   max_usd_per_run: 0.25
   # Backfill runs many days at once; this caps the whole backfill job.

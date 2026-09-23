@@ -82,7 +82,9 @@ brief live in `config/settings.yaml` under `select`.
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements-dev.txt
 
-export ANTHROPIC_API_KEY=sk-ant-...      # optional; see "Without a key" below
+# Scoring runs through the Claude Code CLI on your Claude subscription.
+# No API key. If you can run `claude` you are already authenticated.
+npm install -g @anthropic-ai/claude-code   # if you don't have it
 
 python scripts/collect.py                # per-source report, writes nothing
 python scripts/compose.py --dry-run      # build today's brief to stdout
@@ -90,18 +92,55 @@ python scripts/compose.py                # build and write it
 python scripts/weekly.py                 # this week's digest
 python scripts/backfill.py --days 7      # rebuild the last 7 days
 python scripts/site.py --open            # build the dashboard, print a file:// URL
-python -m pytest tests/ -q               # 44 tests, no network
+python -m pytest tests/ -q               # 63 tests, no network
 ```
 
-### Without a key
+## Scoring backends
 
-Everything runs. `--no-llm`, a missing `ANTHROPIC_API_KEY`, a rate limit, or a
-blown budget all fall through to the offline scorer: real sources, real
-selection, real structure — heuristic scores, and Mind pieces shown as the feed's
-own excerpt, **labelled as such rather than passed off as a summary**. The brief
-always states which scorer produced it.
+There is no `ANTHROPIC_API_KEY` in this project. Scoring goes through the
+**Claude Code CLI**, which authenticates against a Claude subscription.
 
-To upgrade offline briefs once a key is set:
+Set `model.backend` in `config/settings.yaml`:
+
+| Backend | What it needs | Billing |
+|---|---|---|
+| `claude-code` *(default)* | The `claude` CLI, signed in | Your Claude subscription — nothing per call |
+| `api` | `ANTHROPIC_API_KEY` | Per token |
+| `offline` | Nothing at all | Free, and much blunter |
+| `auto` | — | CLI if present, else a key if present, else offline |
+
+Override for one run with `LUMINA_BACKEND=offline python scripts/compose.py`.
+
+An unavailable backend **degrades to the next one instead of failing the run**,
+and every brief names the scorer that actually produced it in its Run notes.
+The offline scorer never fakes a summary: it shows the feed's own excerpt,
+labelled as an excerpt.
+
+### In GitHub Actions
+
+The workflows install the CLI and authenticate with a long-lived token:
+
+```bash
+claude setup-token        # on your machine; prints a token
+```
+
+Then add it as the repo secret **`CLAUDE_CODE_OAUTH_TOKEN`**
+(Settings → Secrets and variables → Actions). That is the only secret the
+system needs.
+
+### Cost control on a subscription
+
+A subscription is not billed per call, so the dollar ceilings in
+`config/settings.yaml` are ignored on this backend and **`max_calls_per_run`**
+is the ceiling that matters — calls are what a rate limit actually counts. A
+day costs 2 calls (one Mind summary, one batch of stream scores); the default
+allows 12. Crossing it stops scoring and still writes the brief, saying so.
+
+`data/usage.json` records tokens per run and reports the CLI's equivalent API
+price as `equivalent_usd_not_charged`, named so a subscription run is never
+misread as a bill.
+
+### Rebuilding
 
 ```bash
 python scripts/backfill.py --days 7 --overwrite
@@ -187,7 +226,8 @@ hardcoded, and the repo runs without any of them.
 
 | Secret | Needed for |
 |---|---|
-| `ANTHROPIC_API_KEY` | Real scoring and summaries. Without it, briefs build offline |
+| `CLAUDE_CODE_OAUTH_TOKEN` | Scoring. Make it with `claude setup-token`. **The only one you need** |
+| `ANTHROPIC_API_KEY` | Only if you switch `model.backend` to `api` |
 | `SLACK_WEBHOOK_URL` | Only if `notify.channel: slack` |
 | `SMTP_HOST` / `SMTP_PORT` / `SMTP_USER` / `SMTP_PASSWORD` | Only if `notify.channel: email` |
 | `PRODUCTHUNT_TOKEN`, `REDDIT_CLIENT_ID` / `REDDIT_CLIENT_SECRET` | Optional; upgrades those sources to their APIs |
@@ -196,12 +236,11 @@ hardcoded, and the repo runs without any of them.
 
 ## Cost
 
-Scoring uses Claude Haiku 4.5 in batches of eight, behind a two-stage filter: a
-local heuristic picks the plausible candidates, and only those reach the API. A
-typical day is a handful of calls. `config/settings.yaml` sets hard ceilings on
-input tokens, output tokens, and dollars per run; crossing one **stops scoring and
-still writes the brief**, noting the stop. Spend is logged per run to
-`data/usage.json`.
+Scoring uses Haiku in batches of eight, behind a two-stage filter: a local
+heuristic picks the plausible candidates, and only those reach the model. A
+typical day is two calls. On the default `claude-code` backend that is
+subscription usage, not a bill — see **Scoring backends** above for the
+ceilings that apply.
 
 ## Copyright
 
@@ -215,6 +254,7 @@ excerpt at 60 words on the way in, and a test enforces it.
 config/       settings.yaml, sources.yaml, profile.yaml
 curriculum/   principles.md, books.md
 lumina/       the package — collect, classify, score, compose, streams, site
+              (claude_cli.py is the subscription-backed scoring backend)
 scripts/      thin CLI entry points, including stream.py
 templates/    daily.md.j2, weekly.md.j2, site/index.html.j2
 daily/        generated briefs
@@ -222,7 +262,7 @@ digests/      weekly digests
 ideas/inbox/  scored opportunities, captured not activated
 streams/      active.md · running/ (graduated) · archive/ (killed or pivoted)
 data/         seen.json, usage.json, principles.json, runs.jsonl
-tests/        44 tests, no network
+tests/        63 tests, no network
 ```
 
 Data flows one way: `collect → classify → prefilter → score → select → compose →
