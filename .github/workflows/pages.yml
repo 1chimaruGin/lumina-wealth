@@ -1,6 +1,11 @@
 name: Dashboard
 
 # Publishes site/index.html to GitHub Pages whenever the content changes.
+#
+# Requires Pages to be enabled: Settings -> Pages -> Source: GitHub Actions.
+# On a private repo that needs GitHub Pro; on a public one it is free. Until
+# then this workflow fails and the Daily job's "dashboard" artifact is the way
+# to get the page.
 on:
   push:
     branches: [main]

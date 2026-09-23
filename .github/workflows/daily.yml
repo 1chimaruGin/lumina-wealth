@@ -46,6 +46,18 @@ jobs:
             ${{ inputs.date && format('--date {0}', inputs.date) || '' }} \
             ${{ inputs.no_llm && '--no-llm' || '' }}
 
+      - name: Build the dashboard
+        run: python scripts/site.py
+
+      - name: Upload the dashboard
+        # GitHub Pages needs a paid plan on a private repo. This keeps the
+        # dashboard one download away regardless.
+        uses: actions/upload-artifact@v4
+        with:
+          name: dashboard
+          path: site/index.html
+          retention-days: 30
+
       - name: Notify
         # Only fires when config/settings.yaml sets notify.channel to slack or email.
         continue-on-error: true

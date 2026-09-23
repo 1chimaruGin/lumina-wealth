@@ -164,6 +164,13 @@ every push that changes content.
 
 `site/` is not committed — it is a build artifact, rebuilt from the repo on deploy.
 
+**Pages on a private repo needs GitHub Pro.** Until it is enabled
+(Settings → Pages → Source: GitHub Actions), the `Dashboard` workflow will fail;
+every Daily run also uploads the page as a downloadable `dashboard` artifact, so
+the page is always one click away from the run summary. Making the repo public
+enables Pages for free — but this repo holds your goals and revenue numbers, so
+that is a real decision, not a formality.
+
 ## Configuration
 
 | File | What it is for |

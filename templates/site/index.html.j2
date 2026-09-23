@@ -1,0 +1,554 @@
+{% if not fragment %}<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="{{ data.tagline }}">
+{% endif %}
+<title>{{ data.title }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;450;500;600&display=swap">
+<style>
+:root{
+  --paper:#f7f8f6; --surface:#ffffff; --surface-2:#eef2ef; --sunken:#e7ece9;
+  --ink:#16211e; --ink-2:#47534f; --ink-3:#6c7873;
+  --line:#dce3df; --line-2:#c9d3ce;
+  --accent:#1f6f5c; --accent-ink:#134336; --accent-soft:#e3efea;
+  --good:#2f7d4f; --warn:#9d6a17; --crit:#a33a2e;
+  --good-soft:#e5f1e8; --warn-soft:#f6eddc; --crit-soft:#f7e6e3;
+  --shadow:0 1px 2px rgba(22,33,30,.05), 0 8px 24px -16px rgba(22,33,30,.22);
+  --display:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --r:10px;
+}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
+  --paper:#0e1412; --surface:#151d1a; --surface-2:#1b2522; --sunken:#111917;
+  --ink:#e8eeea; --ink-2:#a8b5b0; --ink-3:#7b8984;
+  --line:#26322e; --line-2:#33423d;
+  --accent:#5cc0a2; --accent-ink:#a9e2d1; --accent-soft:#14302a;
+  --good:#6cb98a; --warn:#d2a154; --crit:#dd8072;
+  --good-soft:#15291d; --warn-soft:#2a2216; --crit-soft:#2c1c19;
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 26px -18px rgba(0,0,0,.7);
+}}
+:root[data-theme="dark"]{
+  --paper:#0e1412; --surface:#151d1a; --surface-2:#1b2522; --sunken:#111917;
+  --ink:#e8eeea; --ink-2:#a8b5b0; --ink-3:#7b8984;
+  --line:#26322e; --line-2:#33423d;
+  --accent:#5cc0a2; --accent-ink:#a9e2d1; --accent-soft:#14302a;
+  --good:#6cb98a; --warn:#d2a154; --crit:#dd8072;
+  --good-soft:#15291d; --warn-soft:#2a2216; --crit-soft:#2c1c19;
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 26px -18px rgba(0,0,0,.7);
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font:400 15px/1.6 var(--sans);
+  -webkit-font-smoothing:antialiased;
+  padding-inline:20px; padding-block:0 64px;
+}
+.wrap{max-width:1180px; margin-inline:auto}
+a{color:var(--accent); text-decoration-thickness:1px; text-underline-offset:2px}
+a:hover{color:var(--accent-ink)}
+:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:4px}
+h1,h2,h3,h4{font-family:var(--display); font-weight:500; text-wrap:balance; margin:0}
+.num{font-family:var(--mono); font-variant-numeric:tabular-nums}
+
+/* ---------- masthead ---------- */
+.masthead{
+  display:flex; align-items:baseline; gap:16px; flex-wrap:wrap;
+  padding-block:28px 20px; border-bottom:1px solid var(--line);
+}
+.brand{font-family:var(--display); font-size:27px; font-weight:600; letter-spacing:-.015em}
+.brand .dot{color:var(--accent)}
+.tagline{color:var(--ink-3); font-size:13.5px}
+.masthead .spacer{flex:1 1 auto}
+.stamp{font-family:var(--mono); font-size:11.5px; color:var(--ink-3); letter-spacing:.02em}
+.theme-btn{
+  font:500 12px/1 var(--sans); color:var(--ink-2); cursor:pointer;
+  background:var(--surface); border:1px solid var(--line); border-radius:999px;
+  padding:7px 13px;
+}
+.theme-btn:hover{border-color:var(--line-2); color:var(--ink)}
+
+/* ---------- status strip ---------- */
+.status{
+  margin-top:22px; background:var(--surface); border:1px solid var(--line);
+  border-radius:var(--r); box-shadow:var(--shadow); overflow:hidden;
+}
+.status-head{display:flex; align-items:flex-start; gap:14px; flex-wrap:wrap; padding:18px 20px 14px}
+.status-title{font-family:var(--display); font-size:21px; font-weight:600; line-height:1.25}
+.status-sub{color:var(--ink-3); font-size:13px; margin-top:3px}
+.chip{
+  font:500 11px/1 var(--mono); letter-spacing:.03em; padding:5px 8px; border-radius:5px;
+  background:var(--accent-soft); color:var(--accent-ink); border:1px solid transparent; white-space:nowrap;
+}
+:root[data-theme="dark"] .chip, :root:not([data-theme="light"]) .chip{border-color:var(--line)}
+.chip.neutral{background:var(--surface-2); color:var(--ink-2)}
+.chip.good{background:var(--good-soft); color:var(--good)}
+.chip.warn{background:var(--warn-soft); color:var(--warn)}
+.chip.crit{background:var(--crit-soft); color:var(--crit)}
+
+/* 90-day rail: one tick per day of the cycle — the count is the point */
+.rail{padding:4px 20px 0}
+.rail-ticks{display:flex; gap:1px; height:26px; align-items:flex-end}
+.tick{flex:1 1 0; min-width:1px; background:var(--sunken); border-radius:1px; height:11px}
+.tick.done{background:var(--accent); opacity:.42; height:15px}
+.tick.today{background:var(--accent); opacity:1; height:26px; border-radius:2px}
+.rail-legend{
+  display:flex; justify-content:space-between; font-family:var(--mono);
+  font-size:10.5px; color:var(--ink-3); padding-top:6px; letter-spacing:.02em;
+}
+.stats{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  border-top:1px solid var(--line); margin-top:14px;
+}
+.stat{padding:14px 20px; border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat-k{font:500 10.5px/1 var(--sans); letter-spacing:.09em; text-transform:uppercase; color:var(--ink-3)}
+.stat-v{font-family:var(--mono); font-size:22px; font-weight:500; margin-top:7px; letter-spacing:-.01em}
+.stat-v small{font-size:13px; color:var(--ink-3); font-weight:400}
+.stat-note{font-size:12px; color:var(--ink-3); margin-top:3px}
+
+/* empty slot state */
+.slot-open{padding:24px 20px}
+.slot-open h2{font-size:23px; margin-bottom:6px}
+.slot-open p{color:var(--ink-2); max-width:62ch; margin:0 0 14px}
+.cmd{
+  font:400 12.5px/1.7 var(--mono); background:var(--sunken); color:var(--ink-2);
+  border:1px solid var(--line); border-radius:8px; padding:11px 13px;
+  overflow-x:auto; white-space:pre;
+}
+
+/* ---------- grid ---------- */
+.grid{display:grid; grid-template-columns:minmax(0,1fr) 316px; gap:22px; margin-top:22px; align-items:start}
+@media (max-width:900px){ .grid{grid-template-columns:minmax(0,1fr)} }
+
+.card{background:var(--surface); border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow)}
+.card + .card{margin-top:16px}
+.card-head{
+  display:flex; align-items:center; gap:9px; padding:13px 16px; border-bottom:1px solid var(--line);
+}
+.card-head h3{font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.09em; text-transform:uppercase; color:var(--ink-3)}
+.card-head .spacer{flex:1}
+.card-body{padding:14px 16px}
+
+/* brief nav */
+.brief-bar{display:flex; align-items:center; gap:8px; flex-wrap:wrap; padding:11px 14px; border-bottom:1px solid var(--line)}
+.seg{display:flex; background:var(--sunken); border-radius:7px; padding:2px; gap:2px}
+.seg button{
+  font:500 12px/1 var(--sans); color:var(--ink-2); background:none; border:0; cursor:pointer;
+  padding:7px 12px; border-radius:5px;
+}
+.seg button[aria-selected="true"]{background:var(--surface); color:var(--ink); box-shadow:0 1px 2px rgba(0,0,0,.08)}
+select.picker{
+  font:500 12.5px/1 var(--mono); color:var(--ink); background:var(--surface);
+  border:1px solid var(--line); border-radius:7px; padding:7px 9px; max-width:100%;
+}
+.nav-btn{
+  font:500 13px/1 var(--sans); color:var(--ink-2); background:var(--surface); cursor:pointer;
+  border:1px solid var(--line); border-radius:7px; width:30px; height:30px;
+}
+.nav-btn:hover:not(:disabled){border-color:var(--line-2); color:var(--ink)}
+.nav-btn:disabled{opacity:.35; cursor:default}
+
+/* ---------- the brief itself ---------- */
+.brief{padding:6px 26px 26px; max-width:none}
+@media (max-width:560px){ .brief{padding:4px 16px 20px} .stat{border-right:0; border-bottom:1px solid var(--line)} }
+.brief h1{font-size:28px; letter-spacing:-.018em; margin:22px 0 4px}
+.brief h2{
+  font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--accent); margin:32px 0 2px; padding-bottom:9px; border-bottom:1px solid var(--line);
+}
+.brief h2:first-of-type{margin-top:20px}
+.brief h3{font-size:19.5px; line-height:1.32; margin:18px 0 2px; letter-spacing:-.01em}
+.brief p{margin:11px 0; max-width:68ch; color:var(--ink-2)}
+.brief p strong, .brief li strong{color:var(--ink); font-weight:600}
+.brief sub{display:block; font-size:12px; color:var(--ink-3); vertical-align:baseline; line-height:1.55; margin-top:3px}
+.brief sub a{color:var(--ink-2)}
+.brief blockquote{
+  margin:14px 0; padding:12px 16px; background:var(--accent-soft); color:var(--ink);
+  border-radius:8px; max-width:68ch; font-size:15px;
+}
+.brief hr{border:0; border-top:1px solid var(--line); margin:26px 0 14px}
+.brief ul{margin:11px 0; padding-left:20px; color:var(--ink-2)}
+.brief ul.tasks{list-style:none; padding-left:0}
+.brief li.task{display:flex; gap:11px; align-items:flex-start; padding:13px 15px; background:var(--sunken); border:1px solid var(--line); border-radius:8px; color:var(--ink); max-width:68ch}
+.brief li.task .box{width:15px; height:15px; border:1.5px solid var(--accent); border-radius:4px; flex:0 0 auto; margin-top:3px}
+.brief .table-wrap{overflow-x:auto; margin:12px 0; max-width:100%}
+.brief table{border-collapse:collapse; font-size:13.5px; min-width:min(100%,340px)}
+.brief th{
+  font:600 10.5px/1 var(--sans); letter-spacing:.07em; text-transform:uppercase; color:var(--ink-3);
+  text-align:left; padding:8px 14px 8px 0; border-bottom:1px solid var(--line); white-space:nowrap;
+}
+.brief td{padding:8px 14px 8px 0; border-bottom:1px solid var(--line); color:var(--ink-2); vertical-align:top}
+.brief td:first-child{color:var(--ink)}
+.brief details{margin:12px 0; max-width:68ch}
+.brief summary{
+  font:500 12px/1 var(--sans); color:var(--ink-3); cursor:pointer; padding:8px 0;
+  list-style:none; display:flex; align-items:center; gap:6px;
+}
+.brief summary::before{content:"▸"; font-size:10px; transition:transform .15s}
+.brief details[open] summary::before{transform:rotate(90deg)}
+.brief summary:hover{color:var(--ink)}
+.brief code{font:400 .89em/1 var(--mono); background:var(--sunken); padding:2px 5px; border-radius:4px; color:var(--ink-2)}
+.brief a{color:var(--accent)}
+
+/* ---------- rail widgets ---------- */
+.gate-list{list-style:none; margin:0; padding:0; font-size:13px}
+.gate-list li{display:flex; gap:9px; padding:6px 0; color:var(--ink-2); align-items:baseline}
+.gate-list li.group{font:600 10.5px/1.4 var(--sans); letter-spacing:.07em; text-transform:uppercase; color:var(--ink-3); padding-top:12px}
+.gate-list li.group:first-child{padding-top:0}
+.gate-list .mark{font-family:var(--mono); font-size:12px; flex:0 0 14px}
+.gate-list .mark.ok{color:var(--good)}
+.gate-list .mark.no{color:var(--ink-3)}
+.gate-list .detail{margin-left:auto; font-family:var(--mono); font-size:11.5px; color:var(--ink-3); white-space:nowrap}
+.reason{font-size:12.5px; color:var(--ink-3); line-height:1.55; margin:11px 0 0; padding-top:11px; border-top:1px solid var(--line)}
+
+.idea{display:block; padding:11px 0; border-bottom:1px solid var(--line); text-decoration:none; color:inherit}
+.idea:last-child{border-bottom:0}
+.idea:hover .idea-t{color:var(--accent)}
+.idea-top{display:flex; align-items:baseline; gap:8px}
+.idea-t{font-size:13.5px; line-height:1.4; font-weight:450; color:var(--ink); flex:1}
+.idea-s{font-family:var(--mono); font-size:13px; font-weight:600; color:var(--accent)}
+.meter{height:3px; background:var(--sunken); border-radius:2px; margin-top:7px; overflow:hidden}
+.meter i{display:block; height:100%; background:var(--accent); border-radius:2px}
+.idea-m{display:flex; gap:7px; margin-top:6px; font-family:var(--mono); font-size:10.5px; color:var(--ink-3); letter-spacing:.02em}
+
+.act-strip{display:flex; gap:3px}
+.act{flex:1; height:30px; border-radius:3px; background:var(--sunken); position:relative}
+.act[data-level="1"]{background:color-mix(in srgb, var(--accent) 34%, var(--sunken))}
+.act[data-level="2"]{background:color-mix(in srgb, var(--accent) 62%, var(--sunken))}
+.act[data-level="3"]{background:var(--accent)}
+.act[data-brief="true"]::after{content:""; position:absolute; left:50%; bottom:-7px; width:3px; height:3px; margin-left:-1.5px; border-radius:50%; background:var(--ink-3)}
+.strip-legend{display:flex; justify-content:space-between; font-family:var(--mono); font-size:10.5px; color:var(--ink-3); margin-top:12px}
+
+.dots{display:flex; flex-wrap:wrap; gap:5px}
+.dot-p{width:15px; height:15px; border-radius:4px; background:var(--sunken); border:1px solid var(--line)}
+.dot-p.seen{background:var(--accent); border-color:transparent; opacity:.8}
+.dot-p.now{background:var(--accent); border-color:var(--accent-ink); opacity:1; box-shadow:0 0 0 2px var(--accent-soft)}
+
+.src{display:flex; align-items:baseline; gap:8px; padding:5px 0; font-size:12.5px; color:var(--ink-2)}
+.src .st{font-family:var(--mono); font-size:11px; flex:0 0 auto}
+.src .st.ok{color:var(--good)} .src .st.off{color:var(--ink-3)}
+.src .why{color:var(--ink-3); font-size:11.5px; margin-left:auto}
+
+.empty{color:var(--ink-3); font-size:13px; line-height:1.6; margin:0}
+footer{
+  margin-top:34px; padding-top:18px; border-top:1px solid var(--line);
+  color:var(--ink-3); font-size:12.5px; display:flex; gap:14px; flex-wrap:wrap;
+}
+@media (prefers-reduced-motion:reduce){ *{transition:none!important; animation:none!important} }
+</style>
+{% if not fragment %}</head>
+<body>
+{% endif %}
+<div class="wrap">
+
+<header class="masthead">
+  <div>
+    <div class="brand">{{ data.title }}<span class="dot">.</span></div>
+    <div class="tagline">{{ data.tagline }}</div>
+  </div>
+  <div class="spacer"></div>
+  <span class="stamp">built {{ data.generated_at.replace('T', ' ') }} JST</span>
+  <button class="theme-btn" id="theme-btn" type="button">Theme</button>
+</header>
+
+{# ---------- status: the one active stream, or the open slot ---------- #}
+{% set s = data.stream %}
+<section class="status">
+{% if s.active %}
+  <div class="status-head">
+    <div>
+      <div class="status-title">{{ s.name }}</div>
+      <div class="status-sub">{{ s.goal or "no goal set" }} · started {{ s.started }}</div>
+    </div>
+    <div class="spacer" style="flex:1"></div>
+    <span class="chip">{{ s.rung }}</span>
+    {% if data.gate.passed %}<span class="chip good">gate passed · route {{ data.gate.route }}</span>
+    {% else %}<span class="chip neutral">gate not passed</span>{% endif %}
+  </div>
+  <div class="rail">
+    <div class="rail-ticks" role="img" aria-label="Day {{ s.day }} of {{ s.cycle }}">
+      {% for n in range(1, s.cycle + 1) %}<span class="tick{% if n < s.day %} done{% elif n == s.day %} today{% endif %}"></span>{% endfor %}
+    </div>
+    <div class="rail-legend"><span>day 1</span><span>day {{ s.day }} of {{ s.cycle }}</span><span>day {{ s.cycle }}</span></div>
+  </div>
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-k">Day</div>
+      <div class="stat-v num">{{ s.day }}<small> / {{ s.cycle }}</small></div>
+      <div class="stat-note">{{ s.cycle - s.day }} days left in the cycle</div>
+    </div>
+    <div class="stat">
+      <div class="stat-k">Revenue</div>
+      <div class="stat-v num">{{ s.revenue }}</div>
+      <div class="stat-note">{% if s.revenue_jpy %}route A is open{% else %}the first yen is the milestone{% endif %}</div>
+    </div>
+    <div class="stat">
+      <div class="stat-k">Key metric</div>
+      <div class="stat-v num">{{ s.metric_value.split(' ')[0] }}<small> this week</small></div>
+      <div class="stat-note">{{ s.metric }}</div>
+    </div>
+    <div class="stat">
+      <div class="stat-k">Consistency</div>
+      <div class="stat-v num">{{ s.logged_days }}<small> days logged</small></div>
+      <div class="stat-note">{{ s.actions }} actions recorded</div>
+    </div>
+  </div>
+{% else %}
+  <div class="slot-open">
+    <h2>The slot is open.</h2>
+    <p>No stream is active, so the daily brief has no action to give you. Exactly one
+      stream may run at a time — that constraint is the point, but an empty slot is the
+      one state the system can't fix on its own.{% if data.inbox %} The inbox has
+      {{ data.inbox|length }} scored candidate{{ '' if data.inbox|length == 1 else 's' }} waiting;
+      the top one is <strong>{{ data.inbox[0].title }}</strong> at
+      <span class="num">{{ data.inbox[0].score }}</span>/10.{% endif %}</p>
+    <div class="cmd">python scripts/stream.py activate \
+  --name "{{ data.inbox[0].title[:46] if data.inbox else 'your first stream' }}" \
+  --rung {{ data.inbox[0].rung if data.inbox else '1-skills' }} \
+  --goal "¥100,000 in 90 days" --metric "conversations per week"</div>
+  </div>
+{% endif %}
+</section>
+
+<div class="grid">
+
+  {# ---------- main column: briefs and digests ---------- #}
+  <main class="card" style="overflow:hidden">
+    <div class="brief-bar">
+      <div class="seg" role="tablist">
+        <button type="button" role="tab" id="tab-daily" aria-selected="true">Daily</button>
+        <button type="button" role="tab" id="tab-weekly" aria-selected="false">Weekly</button>
+      </div>
+      <div class="spacer" style="flex:1"></div>
+      <button class="nav-btn" id="prev" type="button" aria-label="Older">‹</button>
+      <select class="picker" id="picker" aria-label="Choose a brief">
+        {% for b in data.briefs %}<option value="{{ b.date }}">{{ b.date }} · {{ b.weekday[:3] }}{% if b.mode == 'backfill' %} · backfilled{% endif %}</option>{% endfor %}
+      </select>
+      <button class="nav-btn" id="next" type="button" aria-label="Newer">›</button>
+    </div>
+
+    <div id="pane-daily">
+      {% if data.briefs %}
+        {% for b in data.briefs %}
+        <article class="brief" data-date="{{ b.date }}"{% if not loop.first %} hidden{% endif %}>{{ b.html }}</article>
+        {% endfor %}
+      {% else %}
+        <div class="brief"><p class="empty">No briefs yet. Run <code>python scripts/compose.py</code> to build today's.</p></div>
+      {% endif %}
+    </div>
+
+    <div id="pane-weekly" hidden>
+      {% if data.digests %}
+        {% for w in data.digests %}
+        <article class="brief" data-week="{{ w.week }}"{% if not loop.first %} hidden{% endif %}>{{ w.html }}</article>
+        {% endfor %}
+      {% else %}
+        <div class="brief"><p class="empty">No weekly digests yet. They are written on Sundays, or on demand with <code>python scripts/weekly.py</code>.</p></div>
+      {% endif %}
+    </div>
+  </main>
+
+  {# ---------- rail ---------- #}
+  <aside>
+
+    <div class="card">
+      <div class="card-head">
+        <h3>The gate</h3><div class="spacer"></div>
+        {% if data.gate.passed %}<span class="chip good">open</span>{% else %}<span class="chip neutral">closed</span>{% endif %}
+      </div>
+      <div class="card-body">
+        <ul class="gate-list">
+          {% for c in data.gate.checks %}
+            {% if c.label.startswith('—') %}
+          <li class="group">{{ c.label.strip('— ') }}</li>
+            {% else %}
+          <li><span class="mark {{ 'ok' if c.ok else 'no' }}">{{ '✓' if c.ok else '○' }}</span>
+            <span>{{ c.label }}</span><span class="detail">{{ c.detail }}</span></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+        <p class="reason">{{ data.gate.reasons[0] }}</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h3>Inbox — next slot</h3><div class="spacer"></div>
+        <span class="chip neutral">{{ data.inbox|length }}</span>
+      </div>
+      <div class="card-body">
+        {% if data.inbox %}
+        {% for i in data.inbox[:6] %}
+        <a class="idea" href="{{ i.url }}" rel="noopener" target="_blank">
+          <div class="idea-top">
+            <span class="idea-t">{{ i.opportunity or i.title }}</span>
+            <span class="idea-s num">{{ '%.1f'|format(i.score) }}</span>
+          </div>
+          <div class="meter"><i style="width:{{ (i.score * 10)|round|int }}%"></i></div>
+          <div class="idea-m"><span>{{ i.rung }}</span><span>·</span><span>{{ i.captured }}</span></div>
+        </a>
+        {% endfor %}
+        {% else %}
+        <p class="empty">Nothing captured yet. Scored opportunities land here automatically — and stay here until you choose one.</p>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><h3>Last 21 days</h3></div>
+      <div class="card-body">
+        <div class="act-strip">
+          {% for a in data.activity %}
+          <span class="act" data-level="{{ 3 if a.actions >= 3 else a.actions }}" data-brief="{{ 'true' if a.brief else 'false' }}"
+                title="{{ a.date }} — {{ a.actions }} action{{ '' if a.actions == 1 else 's' }}{% if a.brief %}, brief written{% endif %}"></span>
+          {% endfor %}
+        </div>
+        <div class="strip-legend"><span>{{ data.activity[0].date[5:] }}</span><span>actions logged · dot = brief</span><span>{{ data.activity[-1].date[5:] }}</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h3>Principles</h3><div class="spacer"></div>
+        <span class="chip neutral">{{ data.principles|selectattr('seen')|list|length }} / {{ data.principles|length }}</span>
+      </div>
+      <div class="card-body">
+        <div class="dots">
+          {% for p in data.principles %}
+          <span class="dot-p{% if p.seen %} seen{% endif %}{% if data.briefs and p.id == data.briefs[0].principle %} now{% endif %}"
+                title="{{ p.id }} · {{ p.title }}{% if p.last %} — last shown {{ p.last }}{% else %} — not yet shown{% endif %}"></span>
+          {% endfor %}
+        </div>
+        <p class="reason">Each square is one principle. Filled means it has been resurfaced; the outlined one is in today's brief.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h3>Sources</h3><div class="spacer"></div>
+        <span class="chip neutral">{{ data.sources.enabled|length }} on</span>
+      </div>
+      <div class="card-body">
+        {% for s in data.sources.enabled %}
+        <div class="src"><span class="st ok">●</span><span>{{ s.name }}</span>
+          <span class="why">{{ 'backfills' if s.backfill else 'live only' }}</span></div>
+        {% endfor %}
+        {% for s in data.sources.disabled %}
+        <div class="src"><span class="st off">○</span><span style="color:var(--ink-3)">{{ s.name }}</span>
+          <span class="why">no feed / ToS</span></div>
+        {% endfor %}
+        <p class="reason">Disabled sources have no public feed or forbid automated access. Nothing here is scraped.</p>
+      </div>
+    </div>
+
+  </aside>
+</div>
+
+<footer>
+  <span>Generated by GitHub Actions · summaries and links only, never article text.</span>
+  <span class="spacer" style="flex:1"></span>
+  <span class="num">{{ data.briefs|length }} briefs · {{ data.digests|length }} digests · {{ data.inbox|length }} ideas</span>
+</footer>
+
+</div>
+
+<script id="lumina-data" type="application/json">{{ data_json }}</script>
+<script>
+(function () {
+  "use strict";
+  var root = document.documentElement;
+
+  /* theme: cycle system → light → dark, remembered per viewer only */
+  var THEMES = ["system", "light", "dark"];
+  function applyTheme(t) {
+    if (t === "system") root.removeAttribute("data-theme");
+    else root.setAttribute("data-theme", t);
+  }
+  var current = "system";
+  try { current = localStorage.getItem("lumina-theme") || "system"; } catch (e) {}
+  if (THEMES.indexOf(current) < 0) current = "system";
+  applyTheme(current);
+  var btn = document.getElementById("theme-btn");
+  function label() { btn.textContent = current === "system" ? "Theme" : (current === "dark" ? "Dark" : "Light"); }
+  label();
+  btn.addEventListener("click", function () {
+    current = THEMES[(THEMES.indexOf(current) + 1) % THEMES.length];
+    applyTheme(current); label();
+    try { localStorage.setItem("lumina-theme", current); } catch (e) {}
+  });
+
+  /* brief switching — every brief is already in the page, so this only toggles */
+  var picker = document.getElementById("picker");
+  var prev = document.getElementById("prev");
+  var next = document.getElementById("next");
+  var paneDaily = document.getElementById("pane-daily");
+  var paneWeekly = document.getElementById("pane-weekly");
+  var dailies = [].slice.call(paneDaily.querySelectorAll("[data-date]"));
+  var weeklies = [].slice.call(paneWeekly.querySelectorAll("[data-week]"));
+  var mode = "daily";
+
+  function list() { return mode === "daily" ? dailies : weeklies; }
+  function keyOf(el) { return mode === "daily" ? el.getAttribute("data-date") : el.getAttribute("data-week"); }
+
+  function show(index) {
+    var items = list();
+    if (!items.length) { prev.disabled = true; next.disabled = true; return; }
+    index = Math.max(0, Math.min(items.length - 1, index));
+    items.forEach(function (el, i) { el.hidden = i !== index; });
+    picker.selectedIndex = index;
+    /* the list is newest-first, so "older" walks forward */
+    next.disabled = index === 0;
+    prev.disabled = index === items.length - 1;
+  }
+
+  function fillPicker() {
+    var items = list();
+    picker.innerHTML = "";
+    items.forEach(function (el) {
+      var opt = document.createElement("option");
+      opt.value = keyOf(el);
+      opt.textContent = mode === "daily"
+        ? keyOf(el) + (el.querySelector("h1") ? "" : "")
+        : keyOf(el);
+      picker.appendChild(opt);
+    });
+    picker.disabled = !items.length;
+  }
+
+  picker.addEventListener("change", function () { show(picker.selectedIndex); });
+  prev.addEventListener("click", function () { show(picker.selectedIndex + 1); });
+  next.addEventListener("click", function () { show(picker.selectedIndex - 1); });
+
+  var tabDaily = document.getElementById("tab-daily");
+  var tabWeekly = document.getElementById("tab-weekly");
+  function setMode(m) {
+    mode = m;
+    var daily = m === "daily";
+    tabDaily.setAttribute("aria-selected", String(daily));
+    tabWeekly.setAttribute("aria-selected", String(!daily));
+    paneDaily.hidden = !daily;
+    paneWeekly.hidden = daily;
+    fillPicker();
+    show(0);
+  }
+  tabDaily.addEventListener("click", function () { setMode("daily"); });
+  tabWeekly.addEventListener("click", function () { setMode("weekly"); });
+
+  fillPicker();
+  show(0);
+
+  document.addEventListener("keydown", function (e) {
+    if (e.target && /^(INPUT|SELECT|TEXTAREA)$/.test(e.target.tagName)) return;
+    if (e.key === "ArrowLeft") { show(picker.selectedIndex + 1); }
+    if (e.key === "ArrowRight") { show(picker.selectedIndex - 1); }
+  });
+})();
+</script>
+{% if not fragment %}</body>
+</html>
+{% endif %}
