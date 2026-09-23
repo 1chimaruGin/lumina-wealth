@@ -1,7 +1,9 @@
 # Lumina Daily
 
-A private briefing system with two jobs: rewire how I think about money, and
-find one income stream at a time worth actually building.
+**Dashboard: https://1chimarugin.github.io/lumina-wealth/**
+
+A briefing system with two jobs: rewire how I think about money, and find one
+income stream at a time worth actually building.
 
 Every morning at **11:00 JST** a GitHub Action writes `daily/YYYY-MM-DD.md` and
 commits it. On Sunday it writes a weekly digest. A dashboard renders all of it
@@ -234,27 +236,39 @@ every push that changes content.
 
 ### About Pages
 
-**GitHub Pages does not work on a private repo on the free plan.** That is an
-account limit, not something the code can route around — the API refuses with
-`Your current plan does not support GitHub Pages for this repository`.
+Pages is live at **https://1chimarugin.github.io/lumina-wealth/**, rebuilt by
+the `Dashboard` workflow whenever content changes.
 
-So the `Dashboard` workflow is **gated off**: its job is skipped unless the
-repository variable `PAGES_ENABLED` is `true`. A skipped job is not a failed
-one, which is the point — an impossible deploy should not look like a broken
-build on every push.
-
-To turn it on, once Pages is available to you:
+The workflow is gated on the repository variable `PAGES_ENABLED`. That exists
+because Pages does not work on a private repo on the free plan, and a deploy
+that cannot succeed should be **skipped, not failed** — otherwise every push
+shows a red build for a reason no code change can fix. If you ever take this
+repo private again, unset the variable:
 
 ```bash
-# 1. Settings -> Pages -> Source: GitHub Actions
-# 2. then:
-gh variable set PAGES_ENABLED --body true --repo <owner>/<repo>
+gh variable unset PAGES_ENABLED
 ```
 
-Two ways to get there: **GitHub Pro** (Pages on private repos), or **making the
-repo public** (Pages free). Public is a real decision, not a formality — this
-repo holds your income goals, revenue figures and the ideas you have not acted
-on yet.
+## What is public
+
+This repo is public, so everything in it is world-readable — including things
+that accumulate rather than things you wrote once:
+
+| Path | What ends up there |
+|---|---|
+| `daily/`, `digests/` | Every brief, with the opportunities you were shown |
+| `ideas/inbox/` | Every scored idea, including ones you have not acted on |
+| `streams/active.md` | The active stream's name, goal, **revenue figures** and daily log |
+| `streams/running/`, `streams/archive/` | What worked, what you killed, and why |
+| `config/profile.yaml` | Your role, city, skills, weekly hours and capital |
+| `data/usage.json` | Token counts per run |
+
+Nothing here is a credential — `CLAUDE_CODE_OAUTH_TOKEN` is a GitHub secret and
+never touches the repo. But revenue numbers and unacted-on ideas are genuinely
+yours, and they become visible the moment you log them. If you would rather
+keep the money private while keeping the system public, the smallest change is
+to log revenue as a relative metric instead of an absolute one, or to move
+`streams/` into a private sibling repo and read it in via a submodule.
 
 ## Configuration
 
