@@ -1,5 +1,5 @@
 {
-  "count": 57,
+  "count": 60,
   "items": {
     "03c3fbabf7264a94": {
       "first_seen": "2026-09-18",
@@ -81,10 +81,20 @@
       "source": "hn_show",
       "title": "Show HN: Mini-AGI – Dynamic continual learning model trained on 8GB VRAM"
     },
+    "3f000715446cf13a": {
+      "first_seen": "2026-09-23",
+      "source": "awealthofcommonsense",
+      "title": "Animal Spirits: The Wobbly House of Cards"
+    },
     "43a8eaff6a96cecd": {
       "first_seen": "2026-09-22",
       "source": "ofdollarsanddata",
       "title": "Is Startup Equity a Bad Deal?"
+    },
+    "45a8926dfd57adb3": {
+      "first_seen": "2026-09-22",
+      "source": "hn_show",
+      "title": "Show HN: Npunlock – Run custom C kernels for Intel NPUs"
     },
     "4a311e18c894116a": {
       "first_seen": "2026-09-22",
@@ -111,6 +121,16 @@
       "source": "awealthofcommonsense",
       "title": "The Biggest Risk to the Economy"
     },
+    "5c59206fa8586236": {
+      "first_seen": "2026-09-23",
+      "source": "hn_show",
+      "title": "Show HN: OpenMCP – An open, code-first fork of the Model Context Protocol"
+    },
+    "5eae0ed268831f89": {
+      "first_seen": "2026-09-23",
+      "source": "hn_ask",
+      "title": "Anyone using a Wispr Flow alternative that is non-cloud?"
+    },
     "6002707f9b9b99a7": {
       "first_seen": "2026-09-19",
       "source": "hn_show",
@@ -125,6 +145,11 @@
       "first_seen": "2026-09-19",
       "source": "hn_ask",
       "title": "Ask HN: Losing motivation to work in the IT field, need advice"
+    },
+    "7456cc17fede4498": {
+      "first_seen": "2026-09-22",
+      "source": "hn_show",
+      "title": "Show HN: Hack – my Hacker News mobile client now lets you block AI posts"
     },
     "7737ad254ded6080": {
       "first_seen": "2026-09-23",
@@ -176,11 +201,6 @@
       "source": "hn_show",
       "title": "Show HN: Training a model to identify AI web content from structure alone"
     },
-    "a0977d94805cece8": {
-      "first_seen": "2026-09-23",
-      "source": "awealthofcommonsense",
-      "title": "Why Didn’t We Get a Housing Bubble?"
-    },
     "a0f0ea562df343c7": {
       "first_seen": "2026-09-19",
       "source": "hn_ask",
@@ -210,16 +230,6 @@
       "first_seen": "2026-09-19",
       "source": "hn_show",
       "title": "Show HN: Seal – Letters and passwords that open for your family after you die"
-    },
-    "b6d27ada39475d11": {
-      "first_seen": "2026-09-22",
-      "source": "hn_show",
-      "title": "Show HN: A website that tracks US food prices every day"
-    },
-    "bd209c4cd5607be8": {
-      "first_seen": "2026-09-22",
-      "source": "hn_ask",
-      "title": "Ask HN: Dead Internet"
     },
     "c8901fa7de950728": {
       "first_seen": "2026-09-22",
@@ -275,6 +285,11 @@
       "first_seen": "2026-09-17",
       "source": "hn_ask",
       "title": "Neovim have a ~$800k Bitcoin donation sitting untouched since 2023"
+    },
+    "f0798986480dde8b": {
+      "first_seen": "2026-09-23",
+      "source": "hn_show",
+      "title": "Show HN: Brig – A MicroVM sandbox for AI coding agents on Mac and Linux"
     },
     "f4d4083196277415": {
       "first_seen": "2026-09-20",
