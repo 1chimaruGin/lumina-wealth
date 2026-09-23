@@ -118,15 +118,36 @@ labelled as an excerpt.
 
 ### In GitHub Actions
 
-The workflows install the CLI and authenticate with a long-lived token:
+The workflows install the CLI and authenticate with a long-lived token. Making
+that token is a **local** step — GitHub has no way to log into your Claude
+account, so it cannot be done from the repo.
+
+**1. On your own machine,** in any normal terminal:
 
 ```bash
-claude setup-token        # on your machine; prints a token
+claude setup-token
 ```
 
-Then add it as the repo secret **`CLAUDE_CODE_OAUTH_TOKEN`**
-(Settings → Secrets and variables → Actions). That is the only secret the
-system needs.
+It opens a browser, you approve with your Claude account, and it prints a
+long-lived token.
+
+**2. Give that token to GitHub** as the repo secret
+**`CLAUDE_CODE_OAUTH_TOKEN`** — either through the web UI
+(Settings → Secrets and variables → Actions → New repository secret) or from
+the same terminal:
+
+```bash
+gh secret set CLAUDE_CODE_OAUTH_TOKEN --repo 1chimaruGin/lumina-wealth
+```
+
+`gh` prompts for the value so the token never lands in your shell history.
+
+That is the only secret the system needs. It is a credential to your Claude
+account: treat it like a password, and if it leaks, run `claude setup-token`
+again to issue a new one and overwrite the secret.
+
+The workflows check for it before doing anything and fail with a clear error if
+it is missing, rather than quietly falling back to the offline scorer.
 
 ### Cost control on a subscription
 
