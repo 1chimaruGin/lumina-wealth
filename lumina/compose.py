@@ -14,7 +14,7 @@ from .principles import Principle
 from .rubric import CRITERIA
 from .score import MindPiece, StreamScore
 from .streams import Stream, check_gate, split_frontmatter
-from .util import JST, iso_week, now, one_line, week_bounds, write_text, yen
+from .util import JST, iso_week, now, one_line, shorten, week_bounds, write_text, yen
 
 # Fallback actions when next_actions is empty — 5-15 minutes, rung-appropriate,
 # and deliberately small enough that "no time today" is not a valid excuse.
@@ -57,6 +57,7 @@ def env_for(cfg: Config) -> Environment:
         keep_trailing_newline=True,
     )
     env.filters["yen"] = yen
+    env.filters["shorten"] = shorten
     return env
 
 

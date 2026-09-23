@@ -304,13 +304,16 @@ footer{
     <p>No stream is active, so the daily brief has no action to give you. Exactly one
       stream may run at a time — that constraint is the point, but an empty slot is the
       one state the system can't fix on its own.{% if data.inbox %} The inbox has
-      {{ data.inbox|length }} scored candidate{{ '' if data.inbox|length == 1 else 's' }} waiting;
-      the top one is <strong>{{ data.inbox[0].title }}</strong> at
-      <span class="num">{{ data.inbox[0].score }}</span>/10.{% endif %}</p>
+      {{ data.inbox|length }} scored candidate{{ '' if data.inbox|length == 1 else 's' }} waiting.
+      The highest-scoring one is <strong>{{ data.inbox[0].opportunity or data.inbox[0].title }}</strong>
+      at <span class="num">{{ data.inbox[0].score }}</span>/10 — a starting point, not a verdict.{% endif %}</p>
     <div class="cmd">python scripts/stream.py activate \
-  --name "{{ data.inbox[0].title[:46] if data.inbox else 'your first stream' }}" \
+  --name "{{ (data.inbox[0].opportunity or data.inbox[0].title) | shorten(64) if data.inbox else 'your first stream' }}" \
   --rung {{ data.inbox[0].rung if data.inbox else '1-skills' }} \
-  --goal "¥100,000 in 90 days" --metric "conversations per week"</div>
+  --goal "REPLACE ME — a number and a date you believe" \
+  --metric "REPLACE ME — the one number you move each week"</div>
+    <p style="font-size:13px;color:var(--ink-3);margin-top:12px">Edit the name and both
+      placeholders before running it. A goal you don't believe is worse than no goal.</p>
   </div>
 {% endif %}
 </section>

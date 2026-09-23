@@ -120,6 +120,15 @@ def clip_words(text: str, max_words: int) -> str:
     return " ".join(words[:max_words]).rstrip(",.;:") + "…"
 
 
+def shorten(text: str, max_chars: int = 70) -> str:
+    """Trim to a word boundary. A name cut mid-word reads as a bug, and this
+    text gets pasted straight into a command."""
+    text = re.sub(r"\s+", " ", str(text or "")).strip()
+    if len(text) <= max_chars:
+        return text
+    return text[:max_chars].rsplit(" ", 1)[0].rstrip(",;:—-")
+
+
 def one_line(text: str, max_chars: int = 200) -> str:
     text = re.sub(r"\s+", " ", str(text or "")).strip()
     return text if len(text) <= max_chars else text[: max_chars - 1].rstrip() + "…"

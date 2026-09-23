@@ -154,3 +154,33 @@ def test_budget_stops_rather_than_raising(tmp_path):
     assert usage.exhausted() is None
     usage.record(2000, 2000)
     assert "cost ceiling" in usage.exhausted()
+
+
+def test_shorten_never_cuts_mid_word():
+    from lumina.util import shorten
+    text = "Build and sell pre-built AI agent skills for specific business automation tasks"
+    out = shorten(text, 64)
+    assert len(out) <= 64
+    assert text.startswith(out)          # a real prefix, not a mangled one
+    assert not out.endswith(" ")
+    assert text[len(out)] == " "         # the cut landed on a word boundary
+
+
+def test_shorten_leaves_short_text_alone():
+    from lumina.util import shorten
+    assert shorten("already short", 64) == "already short"
+
+
+def test_inbox_exposes_the_opportunity_not_just_the_headline(cfg, tmp_path):
+    """The dashboard offers the top idea as a stream name. It must offer the
+    thing you would sell, not the Hacker News headline it came from."""
+    from lumina.inbox import save_ideas
+    from lumina.site import collect_data
+    from lumina.score import HeuristicScorer
+
+    score = HeuristicScorer(cfg).score_streams([_item("Show HN: some launch post")])[0]
+    score.opportunity = "Postgres performance audits for agencies"
+    save_ideas(tmp_cfg_inbox := (tmp_path / "inbox"), [score], captured=D)
+    meta, body = split_frontmatter(next(tmp_cfg_inbox.glob("*.md")).read_text())
+    assert "**Opportunity:** Postgres performance audits for agencies" in body
+    assert meta["title"] == "Show HN: some launch post"
