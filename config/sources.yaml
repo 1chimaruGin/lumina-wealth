@@ -1,0 +1,201 @@
+# Lumina Daily — sources.
+#
+# Every entry records what was checked and when, so a future you (or a future
+# collector) knows whether a dead source is a bug or a decision.
+#
+#   kind      : rss | hn_algolia | reddit_rss | producthunt_rss
+#   section   : mind | streams        (classification is source-level and free)
+#   enabled   : false = collected never, reason must be filled in
+#   backfill  : true  = this source can return items for a past date range
+#   auth      : none | optional | required
+#
+# verified: 2026-09-23 (HTTP status + feed shape checked by hand)
+
+mind:
+  - id: collabfund
+    name: Collaborative Fund
+    kind: rss
+    url: http://feeds.feedburner.com/collabfund
+    section: mind
+    enabled: true
+    backfill: true
+    auth: none
+    weight: 1.2
+    notes: >-
+      collabfund.com/rss/ 404s; the live feed is the FeedBurner one declared in
+      the site <head>. Feed carries ~16 items (~10 months), so date-bucketed
+      backfill works well here.
+
+  - id: ofdollarsanddata
+    name: Of Dollars and Data
+    kind: rss
+    url: https://ofdollarsanddata.com/feed/
+    section: mind
+    enabled: true
+    backfill: true
+    auth: none
+    weight: 1.1
+    notes: "Weekly-ish. 10 items ≈ 2 months of history in the feed."
+
+  - id: awealthofcommonsense
+    name: A Wealth of Common Sense
+    kind: rss
+    url: https://awealthofcommonsense.com/feed/
+    section: mind
+    enabled: true
+    backfill: true
+    auth: none
+    weight: 1.0
+    notes: "Posts most weekdays. 10 items ≈ 12 days, so it covers a 7-day backfill."
+
+  - id: farnamstreet
+    name: Farnam Street
+    kind: rss
+    url: https://fs.blog/feed/
+    section: mind
+    enabled: true
+    backfill: true
+    auth: none
+    weight: 1.0
+    notes: "Low frequency (20 items ≈ 7 months). Often contributes nothing to a given day."
+
+  - id: behavioralscientist
+    name: Behavioral Scientist
+    kind: rss
+    url: https://behavioralscientist.org/feed/
+    section: mind
+    enabled: true
+    backfill: true
+    auth: none
+    weight: 1.0
+    notes: "Low frequency, academic tone; good for the decision-making angle."
+
+streams:
+  - id: hn_show
+    name: Hacker News — Show HN
+    kind: hn_algolia
+    url: https://hn.algolia.com/api/v1/search_by_date
+    section: streams
+    enabled: true
+    backfill: true
+    auth: none
+    weight: 1.2
+    params:
+      tags: show_hn
+      min_points: 8
+    notes: >-
+      Official public Algolia API, no key. Supports created_at_i numeric range
+      filters, which is what makes true historical backfill possible at all.
+
+  - id: hn_ask
+    name: Hacker News — Ask HN
+    kind: hn_algolia
+    url: https://hn.algolia.com/api/v1/search_by_date
+    section: streams
+    enabled: true
+    backfill: true
+    auth: none
+    weight: 1.0
+    params:
+      tags: ask_hn
+      min_points: 15
+    notes: "Ask HN surfaces demand ('how do you solve X') more than supply."
+
+  - id: reddit_sideproject
+    name: r/SideProject
+    kind: reddit_rss
+    url: https://www.reddit.com/r/SideProject/new.rss
+    section: streams
+    enabled: true
+    backfill: false
+    auth: optional
+    weight: 0.9
+    notes: >-
+      Public .rss needs no auth, but /new only reaches ~3 hours back, so it
+      cannot backfill. Reddit rate-limits hard (observed 429) and often blocks
+      datacenter IPs, so GitHub Actions runs may skip it — that is expected and
+      lands in Run notes. Set REDDIT_CLIENT_ID/REDDIT_CLIENT_SECRET to upgrade
+      to the authenticated API.
+
+  - id: reddit_saas
+    name: r/SaaS
+    kind: reddit_rss
+    url: https://www.reddit.com/r/SaaS/new.rss
+    section: streams
+    enabled: true
+    backfill: false
+    auth: optional
+    weight: 0.9
+    notes: "Same caveats as r/SideProject."
+
+  - id: reddit_erl
+    name: r/EntrepreneurRideAlong
+    kind: reddit_rss
+    url: https://www.reddit.com/r/EntrepreneurRideAlong/new.rss
+    section: streams
+    enabled: true
+    backfill: false
+    auth: optional
+    weight: 0.9
+    notes: "Same caveats. Returned 429 during source verification on 2026-09-23."
+
+  - id: producthunt
+    name: Product Hunt
+    kind: producthunt_rss
+    url: https://www.producthunt.com/feed
+    section: streams
+    enabled: true
+    backfill: false
+    auth: optional
+    weight: 0.8
+    notes: >-
+      The public Atom feed carries ~1 day (50 items) and needs no auth, so it
+      works daily but cannot backfill. The GraphQL v2 API supports postedAfter
+      date ranges but requires an OAuth token; set PRODUCTHUNT_TOKEN to enable
+      that path and unlock backfill.
+
+  # ---- Disabled: verified unavailable on 2026-09-23. Not scraped on purpose. ----
+
+  - id: indiehackers
+    name: Indie Hackers
+    kind: rss
+    url: https://www.indiehackers.com/
+    section: streams
+    enabled: false
+    backfill: false
+    auth: none
+    weight: 1.0
+    disabled_reason: >-
+      No RSS/Atom feed exists any more. /feed.xml, /rss.xml and the FeedBurner
+      mirror all 404, and the homepage declares no feed link. There is no public
+      API. Collecting would mean scraping a JS-rendered page against the ToS, so
+      it stays off. Re-enable if they restore a feed.
+
+  - id: starterstory
+    name: Starter Story
+    kind: rss
+    url: https://www.starterstory.com/
+    section: streams
+    enabled: false
+    backfill: false
+    auth: none
+    weight: 1.0
+    disabled_reason: >-
+      No feed: /rss.xml, /feed and /blog/rss.xml all 404 and nothing is declared
+      in <head>. Most case studies sit behind a paid wall. Scraping it would
+      breach the ToS, so it stays off.
+
+  - id: acquire
+    name: Acquire.com listings
+    kind: rss
+    url: https://acquire.com/
+    section: streams
+    enabled: false
+    backfill: false
+    auth: required
+    weight: 1.0
+    disabled_reason: >-
+      Listings are behind an account wall and there is no public feed or API.
+      Their terms forbid automated access to listing data. Off by design.
+      Closest legitimate substitute already covered: HN "Show HN" + the acquisition
+      threads on r/SaaS.

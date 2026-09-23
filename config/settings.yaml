@@ -1,0 +1,90 @@
+# Lumina Daily — runtime settings.
+# Secrets NEVER live here. They come from the environment / GitHub repo secrets.
+
+timezone: Asia/Tokyo
+
+schedule:
+  # Informational mirror of .github/workflows/*.yml cron values.
+  # Daily brief   : 11:00 JST  == cron "0 2 * * *"  (UTC)
+  # Weekly digest : 11:30 JST Sunday == cron "30 2 * * 0" (UTC)
+  daily_local_time: "11:00"
+  weekly_local_time: "11:30"
+  weekly_day: sunday
+
+model:
+  # Scoring + summarising model. Haiku is the cost/quality sweet spot here.
+  scorer: claude-haiku-4-5
+  max_output_tokens: 2000
+  temperature: 0.2
+  # How many items are packed into a single scoring request.
+  batch_size: 8
+
+budget:
+  # Hard stop. When a run crosses either ceiling it stops calling the API,
+  # composes the brief from whatever was already scored, and says so in the
+  # "Run notes" section. A run is never failed because of budget.
+  max_input_tokens_per_run: 120000
+  max_output_tokens_per_run: 30000
+  max_usd_per_run: 0.25
+  # Backfill runs many days at once; this caps the whole backfill job.
+  max_usd_per_backfill: 2.00
+  # Per-1M-token prices used only for the local cost estimate in data/usage.json.
+  price_per_mtok_input: 1.00
+  price_per_mtok_output: 5.00
+
+collect:
+  # Per-source HTTP settings.
+  timeout_seconds: 20
+  retries: 2
+  retry_backoff_seconds: 3
+  user_agent: "lumina-wealth/1.0 (personal daily brief; +https://github.com/1chimaruGin/lumina-wealth)"
+  # Items older than this are dropped on a normal daily run.
+  lookback_days: 3
+  # Ceiling on raw items pulled from any one source in a run.
+  max_items_per_source: 40
+
+select:
+  # Spec: cap 8 items per section per run, 1 mind item, 2-3 stream items.
+  max_candidates_per_section: 8
+  mind_picks: 1
+  stream_picks: 3
+  # A stream item below this weighted score is never shown, even if it is the
+  # best available. Better an honest short brief than filler.
+  min_stream_score: 4.5
+
+principles:
+  # Spaced repetition: never resurface a principle seen within this window
+  # unless every principle has been seen inside it.
+  cooldown_days: 21
+
+notify:
+  # one of: none | slack | email
+  channel: none
+  slack:
+    # Webhook itself comes from the SLACK_WEBHOOK_URL secret.
+    username: "Lumina Daily"
+    icon_emoji: ":sunrise:"
+  email:
+    # SMTP_HOST / SMTP_PORT / SMTP_USER / SMTP_PASSWORD come from secrets.
+    to: ""
+    from: ""
+    subject_prefix: "[Lumina]"
+
+stream:
+  # The anti-scatter gate. Both routes are defined here so the rule is data,
+  # not buried logic.
+  cycle_days: 90
+  gate:
+    # Route A: first revenue AND a routine that actually held.
+    min_revenue_jpy: 1
+    min_logged_days: 14
+    routine_window_days: 21
+    min_actions_in_window: 10
+    # Route B: 90 days done AND a written decision filed in streams/archive/.
+    require_written_decision: true
+
+site:
+  title: "Lumina Daily"
+  tagline: "Money psychology · one income stream at a time"
+  # Number of briefs listed on the dashboard.
+  recent_briefs: 30

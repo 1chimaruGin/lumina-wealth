@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+  <title>Sample Mind Blog</title>
+  <item>
+    <title>The lifestyle creep nobody notices</title>
+    <link>https://example.com/lifestyle-creep/?utm_source=rss</link>
+    <pubDate>Mon, 21 Sep 2026 09:00:00 +0000</pubDate>
+    <description>&lt;p&gt;A short note on spending, saving and how habits quietly expand to fill a raise.&lt;/p&gt;</description>
+  </item>
+  <item>
+    <title>Why patience is a risk tolerance question</title>
+    <link>https://example.com/patience/</link>
+    <pubDate>Sat, 19 Sep 2026 09:00:00 +0000</pubDate>
+    <description>On compounding, discipline and loss aversion.</description>
+  </item>
+  <item>
+    <title>An undated musing</title>
+    <link>https://example.com/undated/</link>
+    <description>No pubDate on purpose.</description>
+  </item>
+</channel></rss>

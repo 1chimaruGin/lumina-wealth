@@ -1,0 +1,86 @@
+# Lumina Daily — your profile.
+#
+# This file is fed to the scorer so "skill fit" and "time cost" mean YOUR skills
+# and YOUR week, not a generic founder's.
+#
+# Pre-filled fields are only the ones you stated yourself. Every "TODO:" is a
+# blank left for you deliberately — nothing here is invented. The system runs
+# fine with the TODOs left in; it just scores less sharply.
+
+identity:
+  role: Software engineer
+  employment: Full-time job
+  location: Tokyo, Japan
+  currency: JPY
+  timezone: Asia/Tokyo
+
+skills:
+  strong:
+    - Python
+    - Backend engineering
+    - AI/ML
+    - Cloud
+  # TODO: list the specific things you can ship in a weekend — frameworks,
+  # databases, infra, anything you have actually shipped before. The more
+  # concrete these are, the better "skill fit" scoring gets.
+  working_knowledge: []
+  # TODO: things you explicitly do NOT want to do, even if you technically can
+  # (e.g. "frontend design", "video editing", "cold calling"). Opportunities
+  # leaning on these get marked down.
+  avoid: []
+
+constraints:
+  # Hours per week you can realistically give this around the day job.
+  weekly_hours_available: 8
+  # Usual working window, used to judge whether an opportunity fits your life.
+  usual_slots: "weekday evenings, weekend mornings"
+  # Capital you can put in without it hurting. Kept deliberately near zero:
+  # the rubric rewards ~¥0 starts.
+  capital_available_jpy: 0
+  # Hard no-gos.
+  cannot:
+    - Anything needing meaningful upfront capital
+    - Anything needing a registered company before the first yen
+  # TODO: add your own, e.g. visa/work-rules limits on side income, employer
+  # side-work policy, family commitments.
+
+behaviour:
+  # The patterns the whole system is designed around. These are quoted into the
+  # scoring prompt and into the reflection question.
+  patterns:
+    - id: present_bias
+      description: >-
+        Long-term goals do not motivate me. Short feedback loops and small daily
+        wins do. An opportunity that pays nothing for six months will be dropped.
+    - id: scattered_focus
+      description: >-
+        I drop projects and chase new ideas. Ideas must be captured but only one
+        stream may ever be active.
+    - id: low_capital
+      description: >-
+        Little spare cash. Prefer ~zero-capital opportunities that can earn a
+        first yen fast.
+
+goals:
+  # TODO: a number and a date you actually believe. Leave blank rather than
+  # writing a fantasy — a fake target makes the brief noise.
+  income_target_jpy_per_month: null
+  target_date: null
+  # What "winning" looks like this quarter, in one sentence.
+  # TODO
+  current_focus: ""
+
+preferences:
+  # Ladder rungs you want to be shown, in order of appetite.
+  # 1-skills = freelance/consulting, 2-productized = fixed-scope service,
+  # 3-product = SaaS/app, 4-assets = things that earn without you.
+  ladder_interest:
+    - 1-skills
+    - 2-productized
+    - 3-product
+    - 4-assets
+  # Topics you want more of / less of in the Streams section.
+  # TODO: e.g. "developer tools", "japan-market", "no crypto".
+  favour: []
+  mute: []
+  language: en

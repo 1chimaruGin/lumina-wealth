@@ -1,0 +1,71 @@
+name: Daily brief
+
+on:
+  schedule:
+    # 02:00 UTC == 11:00 JST, every day.
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Build a specific date (YYYY-MM-DD, JST). Blank = today."
+        required: false
+      no_llm:
+        description: "Skip the API and use the offline scorer"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+# One writer at a time: the daily, weekly and backfill jobs all commit to main.
+concurrency:
+  group: lumina-commit
+  cancel-in-progress: false
+
+jobs:
+  brief:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build the brief
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          python scripts/compose.py \
+            ${{ inputs.date && format('--date {0}', inputs.date) || '' }} \
+            ${{ inputs.no_llm && '--no-llm' || '' }}
+
+      - name: Notify
+        # Only fires when config/settings.yaml sets notify.channel to slack or email.
+        continue-on-error: true
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python scripts/notify.py
+
+      - name: Commit
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add daily ideas data
+          if git diff --staged --quiet; then
+            echo "Nothing changed — not committing."
+            exit 0
+          fi
+          git commit -m "Daily brief $(TZ=Asia/Tokyo date +%F)"
+          git push
