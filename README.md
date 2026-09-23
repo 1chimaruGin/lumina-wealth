@@ -222,14 +222,39 @@ checklist, the ranked inbox, a 21-day activity strip, which principles have been
 resurfaced, and source health. The `Dashboard` workflow deploys it to Pages on
 every push that changes content.
 
-`site/` is not committed — it is a build artifact, rebuilt from the repo on deploy.
+`site/` is not committed — it is a build artifact, rebuilt from the repo.
 
-**Pages on a private repo needs GitHub Pro.** Until it is enabled
-(Settings → Pages → Source: GitHub Actions), the `Dashboard` workflow will fail;
-every Daily run also uploads the page as a downloadable `dashboard` artifact, so
-the page is always one click away from the run summary. Making the repo public
-enables Pages for free — but this repo holds your goals and revenue numbers, so
-that is a real decision, not a formality.
+### Three ways to read it
+
+| | How | Good for |
+|---|---|---|
+| **Local** | `python scripts/site.py --open` | Day to day. Builds from the repo you already have and opens it. |
+| **CI artifact** | Download `dashboard` from any Daily run summary | Reading it from a machine without the repo checked out. |
+| **GitHub Pages** | Off by default — see below | A real URL, if you ever want one. |
+
+### About Pages
+
+**GitHub Pages does not work on a private repo on the free plan.** That is an
+account limit, not something the code can route around — the API refuses with
+`Your current plan does not support GitHub Pages for this repository`.
+
+So the `Dashboard` workflow is **gated off**: its job is skipped unless the
+repository variable `PAGES_ENABLED` is `true`. A skipped job is not a failed
+one, which is the point — an impossible deploy should not look like a broken
+build on every push.
+
+To turn it on, once Pages is available to you:
+
+```bash
+# 1. Settings -> Pages -> Source: GitHub Actions
+# 2. then:
+gh variable set PAGES_ENABLED --body true --repo <owner>/<repo>
+```
+
+Two ways to get there: **GitHub Pro** (Pages on private repos), or **making the
+repo public** (Pages free). Public is a real decision, not a formality — this
+repo holds your income goals, revenue figures and the ideas you have not acted
+on yet.
 
 ## Configuration
 

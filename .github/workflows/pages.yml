@@ -1,11 +1,18 @@
 name: Dashboard
 
-# Publishes site/index.html to GitHub Pages whenever the content changes.
+# Publishes site/index.html to GitHub Pages.
 #
-# Requires Pages to be enabled: Settings -> Pages -> Source: GitHub Actions.
-# On a private repo that needs GitHub Pro; on a public one it is free. Until
-# then this workflow fails and the Daily job's "dashboard" artifact is the way
-# to get the page.
+# Pages is unavailable on a private repo on the free plan, so this workflow is
+# OFF until you say otherwise. It does not run — and therefore cannot fail —
+# unless the repository variable PAGES_ENABLED is set to "true".
+#
+# To turn it on, once Pages is actually available to you:
+#   1. Settings -> Pages -> Source: GitHub Actions
+#   2. gh variable set PAGES_ENABLED --body true --repo <owner>/<repo>
+#
+# Until then the Daily workflow uploads the dashboard as a downloadable
+# "dashboard" artifact, and `python scripts/site.py --open` builds it locally.
+
 on:
   push:
     branches: [main]
@@ -28,6 +35,10 @@ concurrency:
 
 jobs:
   publish:
+    # The whole job is skipped unless Pages has been turned on deliberately.
+    # A skipped job is not a failed one, which is the point: an impossible
+    # deploy should not look like a broken build on every push.
+    if: vars.PAGES_ENABLED == 'true'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -44,7 +55,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Build the dashboard
-        # Rebuilt here rather than trusting the committed copy, so the page
+        # Rebuilt here rather than trusting a committed copy, so the page
         # always matches the repo it was deployed from.
         run: python scripts/site.py
 
