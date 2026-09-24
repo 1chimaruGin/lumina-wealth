@@ -4,6 +4,8 @@ start: {{ start }}
 end: {{ end }}
 generated_at: {{ generated_at }}
 briefs: {{ briefs|length }}
+lessons: {{ lessons|length }}
+tracks_covered: [{{ tracks_covered|join(', ') }}]
 ideas_ranked: {{ top_ideas|length }}
 stream: {{ stream.name or "none" }}
 stream_day: {{ stream.day_number(end_obj) if stream.active else 0 }}
@@ -14,10 +16,30 @@ revenue_jpy: {{ stream.revenue_to(end_obj) if stream.active else 0 }}
 
 <sub>{{ start }} → {{ end }} · {{ briefs|length }} brief{{ '' if briefs|length == 1 else 's' }} this week</sub>
 
+## What you learned this week
+
+{% if lessons -%}
+{{ lessons|length }} lesson{{ '' if lessons|length == 1 else 's' }} across {{ tracks_covered|length }} track{{ '' if tracks_covered|length == 1 else 's' }} — {{ tracks_covered|join(', ') }}.
+
+{% for l in lessons %}
+**{{ l.title }}** <sub>`{{ l.track }}` · {{ l.date }}</sub>
+{% if l.key_idea %}
+> {{ l.key_idea }}
+
+{% endif %}
+{%- endfor %}
+{%- else -%}
+No lessons this week. Check that `curriculum/syllabus.yaml` still has untaught
+topics and that the scorer backend is working.
+{%- endif %}
+
+
 ## Top 5 ideas for the *next* slot
 
-<sub>Ranked candidates only. Nothing here is activated, and nothing here should be
-started while a stream is running.</sub>
+<sub>These are deliberately kept out of the daily brief — looking at candidates you
+cannot start is the pressure the one-at-a-time rule exists to remove. This is the
+one place each week to look at them. Nothing here is activated, and nothing here
+should be started while a stream is running.</sub>
 
 {% if top_ideas -%}
 | # | Opportunity | Rung | Score | Captured |

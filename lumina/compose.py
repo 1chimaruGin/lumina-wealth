@@ -216,6 +216,32 @@ REFLECTIONS = [
 ]
 
 
+def week_lessons(cfg: Config, briefs: list[dict]) -> list[dict]:
+    """The lessons taught this week, read back from the cached lesson files.
+
+    The digest is now the only weekly summary of what was actually learned, so
+    it reads the real lessons rather than re-deriving them.
+    """
+    from .curriculum import load_syllabus, lesson_path, load_lesson
+
+    syllabus = load_syllabus(cfg.root / cfg.get("curriculum.syllabus", "curriculum/syllabus.yaml"))
+    out = []
+    for brief in briefs:
+        raw = brief.get("lesson_ids") or []
+        ids = raw if isinstance(raw, list) else [s.strip() for s in str(raw).strip("[]").split(",") if s.strip()]
+        for tid in ids:
+            topic = syllabus.topic(str(tid).strip())
+            if not topic:
+                continue
+            lesson = load_lesson(cfg.root, topic)
+            out.append({
+                "id": topic.id, "title": topic.title, "track": topic.track,
+                "track_name": topic.track_name, "date": str(brief.get("date", "")),
+                "key_idea": lesson.key_idea if lesson else "",
+            })
+    return out
+
+
 def compose_weekly(
     cfg: Config,
     end: date,
@@ -236,8 +262,12 @@ def compose_weekly(
     missing = [str(start.fromordinal(o)) for o in range(start.toordinal(), end.toordinal() + 1)
                if str(start.fromordinal(o)) not in have]
 
+    lessons = week_lessons(cfg, briefs)
+    tracks_covered = sorted({l["track_name"] for l in lessons})
     template = env_for(cfg).get_template("weekly.md.j2")
     return template.render(
+        lessons=lessons,
+        tracks_covered=tracks_covered,
         week=iso_week(end),
         start=str(start),
         end=str(end),
