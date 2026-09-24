@@ -10,13 +10,15 @@ from pathlib import Path
 from .classify import classify_all, prefilter
 from .collect import collect_all, dedupe, within_lookback
 from .compose import compose_daily, compose_weekly, load_inbox, load_week_briefs
+from .curriculum import CurriculumState, get_or_write_lesson, load_syllabus, next_topics
 from .config import Config, load_config
 from .inbox import save_ideas
 from .principles import parse_principles, pick_principle
 from .score import HeuristicScorer, MindPiece, StreamScore, build_scorer
 from .state import PrincipleLog, SeenStore, UsageStore, log_run
 from .streams import load_stream
-from .util import ROOT, daterange, iso_week, log, setup_logging, today, week_bounds, write_text
+from .util import (ROOT, append_jsonl, daterange, iso_week, log, read_jsonl, setup_logging,
+                   today, week_bounds, write_text)
 
 
 @dataclass
@@ -25,6 +27,7 @@ class DailyResult:
     path: Path | None
     text: str
     mind: MindPiece | None
+    lessons: list
     streams: list[StreamScore]
     filed: list[Path]
     sources_ok: int
@@ -45,6 +48,7 @@ def run_daily(
     usage: UsageStore | None = None,
     seen: SeenStore | None = None,
     plog: PrincipleLog | None = None,
+    cstate: CurriculumState | None = None,
 ) -> DailyResult:
     d = d or today()
     owns_state = usage is None
@@ -68,6 +72,12 @@ def run_daily(
         for r in results if not r.ok
     ]
     ok = [r for r in results if r.ok]
+    stale = [r for r in ok if r.stale]
+    if stale:
+        notes.append(
+            "Stale feeds (newest item months old, still enabled): "
+            + ", ".join(f"{r.source.name} ({r.stale_days}d)" for r in stale[:4]) + "."
+        )
     raw = dedupe([i for r in ok for i in r.items])
     if not backfill:
         raw = within_lookback(raw, cfg, reference=d)
@@ -94,9 +104,23 @@ def run_daily(
 
     # --- score ---
     scorer = build_scorer(cfg, usage, use_llm=use_llm)
+
+    # --- lessons: the curriculum spine, cached so a rebuild costs nothing ---
+    syllabus = load_syllabus(cfg.root / cfg.get("curriculum.syllabus", "curriculum/syllabus.yaml"))
+    cstate = cstate if cstate is not None else CurriculumState.load(cfg.data_dir)
+    if owns_state and rebuilding:
+        cstate.forget_since(d)
+    topics = next_topics(syllabus, cstate, d, int(cfg.get("curriculum.lessons_per_day", 2)))
+    lessons = [get_or_write_lesson(cfg.root, topic, scorer) for topic in topics]
+    if topics and not any(l for l in lessons if not l.is_placeholder):
+        notes.append("Lessons could not be written this run; the syllabus entries are shown instead.")
+    if syllabus.tracks and not topics:
+        notes.append("The syllabus is complete — every topic has been taught. Add more to curriculum/syllabus.yaml.")
+
     mind: MindPiece | None = None
     if mind_pool:
         mind = scorer.summarise_mind(mind_pool[0])
+    extra_reading = mind_pool[1 : 1 + int(cfg.get("select.mind_extra_links", 3))]
 
     scored: list[StreamScore] = scorer.score_streams(stream_pool) if stream_pool else []
     scored.sort(key=lambda s: s.total, reverse=True)
@@ -119,7 +143,7 @@ def run_daily(
     cost = f"${usage.cost_usd:.4f}" if usage.calls else ""
     text = compose_daily(
         cfg, d, mind, picks, principle, stream,
-        mode=mode,
+        mode=mode, lessons=lessons, extra_reading=extra_reading,
         sources_ok=len(ok), sources_total=len(results), sources_failed=failed,
         notes=notes, scored_by=getattr(scorer, "name", "heuristic"), cost=cost,
         filed=0,
@@ -132,7 +156,7 @@ def run_daily(
         # Re-render so the "filed to inbox" count is accurate.
         text = compose_daily(
             cfg, d, mind, picks, principle, stream,
-            mode=mode,
+            mode=mode, lessons=lessons, extra_reading=extra_reading,
             sources_ok=len(ok), sources_total=len(results), sources_failed=failed,
             notes=notes, scored_by=getattr(scorer, "name", "heuristic"), cost=cost,
             filed=len(filed),
@@ -143,10 +167,48 @@ def run_daily(
             seen.add(item.key, source=item.source_id, title=item.title, first_seen=d)
         if principle:
             plog.mark(principle.id, d)
+        for topic in topics:
+            cstate.mark(topic.id, d)
         if owns_state:
             seen.save()
             plog.save()
+            cstate.save()
             usage.save(f"daily:{d}", {"mode": mode, "items": len(fresh), "picks": len(picks)})
+        # The river: a flat, append-only record of everything surfaced, so the
+        # dashboard can show one continuous scroll instead of only day-sized pages.
+        river = []
+        for lesson in lessons:
+            if lesson.is_placeholder:
+                continue
+            river.append({
+                "date": str(d), "kind": "lesson", "track": lesson.topic.track,
+                "track_name": lesson.topic.track_name, "id": lesson.topic.id,
+                "title": lesson.topic.title, "url": "",
+                "snippet": lesson.key_idea, "source": "Syllabus",
+            })
+        if mind:
+            river.append({
+                "date": str(d), "kind": "read", "track": getattr(mind.item, "track", ""),
+                "track_name": "", "id": mind.item.key, "title": mind.item.title,
+                "url": mind.item.url, "snippet": mind.key_idea,
+                "source": mind.item.source_name,
+                "media": mind.item.extra.get("kind", "read"),
+                "duration": mind.item.extra.get("duration", ""),
+            })
+        for item in extra_reading:
+            river.append({
+                "date": str(d), "kind": "link", "track": getattr(item, "track", ""),
+                "track_name": "", "id": item.key, "title": item.title,
+                "url": item.url, "snippet": "", "source": item.source_name,
+                "media": item.extra.get("kind", "read"),
+                "duration": item.extra.get("duration", ""),
+            })
+        existing = {r.get("id") for r in read_jsonl(cfg.data_dir / "river.jsonl")
+                    if str(r.get("date")) == str(d)}
+        for entry in river:
+            if entry["id"] not in existing:
+                append_jsonl(cfg.data_dir / "river.jsonl", entry)
+
         log_run(cfg.data_dir, {
             "at": str(d), "mode": mode, "sources_ok": len(ok), "sources_total": len(results),
             "failed": [f["id"] for f in failed], "candidates": len(fresh), "picks": len(picks),
@@ -154,7 +216,7 @@ def run_daily(
         })
 
     return DailyResult(
-        date=d, path=path, text=text, mind=mind, streams=picks, filed=filed,
+        date=d, path=path, text=text, mind=mind, lessons=lessons, streams=picks, filed=filed,
         sources_ok=len(ok), sources_total=len(results), sources_failed=failed,
         notes=notes, scored_by=getattr(scorer, "name", "heuristic"),
     )
@@ -195,9 +257,11 @@ def run_backfill(
     usage.max_output *= days
     seen = SeenStore.load(cfg.data_dir)
     plog = PrincipleLog.load(cfg.data_dir)
+    cstate = CurriculumState.load(cfg.data_dir)
     if overwrite:
         dropped = seen.forget_since(start)
         plog.forget_since(start)
+        cstate.forget_since(start)
         if dropped:
             log.info("forgetting %d item(s) first seen on or after %s so the rebuild is clean", dropped, start)
 
@@ -209,11 +273,12 @@ def run_backfill(
             continue
         out.append(run_daily(
             cfg, d, mode="backfill", use_llm=use_llm, dry_run=dry_run,
-            usage=usage, seen=seen, plog=plog,
+            usage=usage, seen=seen, plog=plog, cstate=cstate,
         ))
     if not dry_run:
         seen.save()
         plog.save()
+        cstate.save()
         usage.save(f"backfill:{start}..{end}", {"days": len(out)})
     return out
 

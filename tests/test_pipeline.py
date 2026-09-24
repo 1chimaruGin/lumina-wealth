@@ -87,15 +87,15 @@ def test_principle_pick_is_stable_for_a_date(cfg, tmp_path):
     assert pick_principle(ps, plog, D).id == pick_principle(ps, plog, D).id
 
 
-def test_compose_daily_renders_all_five_sections(cfg):
+def test_compose_daily_renders_every_section(cfg):
     scorer = HeuristicScorer(cfg)
     mind = scorer.summarise_mind(_item("A money habit piece", section="mind", excerpt="words"))
     streams = scorer.score_streams([_item("Show HN: a tool")])
     principle = parse_principles(cfg.principles_file)[0]
     text = compose_daily(cfg, D, mind, streams, principle, Stream(),
                          sources_ok=9, sources_total=11, sources_failed=[])
-    for heading in ("## 1 · Mind", "## 2 · Streams", "## 3 · Principle",
-                    "## 4 · Today's action", "## 5 · Stream status"):
+    for heading in ("## 1 · Money school", "## 2 · Today's reading", "## 3 · Opportunities",
+                    "## 4 · Principle", "## 5 · Today's action", "## 6 · Stream status"):
         assert heading in text
     meta, _ = split_frontmatter(text)
     assert str(meta["date"]) == "2026-09-23"
@@ -105,7 +105,7 @@ def test_compose_survives_an_empty_day(cfg):
     text = compose_daily(cfg, D, None, [], None, Stream(),
                          sources_ok=0, sources_total=11,
                          sources_failed=[{"name": "X", "id": "x", "reason": "rate limited"}])
-    assert "## 1 · Mind" in text and "rate limited" in text
+    assert "## 1 · Money school" in text and "rate limited" in text
 
 
 def test_failed_sources_are_named_in_the_brief(cfg):
@@ -184,3 +184,42 @@ def test_inbox_exposes_the_opportunity_not_just_the_headline(cfg, tmp_path):
     meta, body = split_frontmatter(next(tmp_cfg_inbox.glob("*.md")).read_text())
     assert "**Opportunity:** Postgres performance audits for agencies" in body
     assert meta["title"] == "Show HN: some launch post"
+
+
+def test_brief_renders_for_items_without_duration_metadata(cfg):
+    """HN items carry an `extra` dict with no duration key. Accessing it as an
+    attribute under StrictUndefined would crash the whole run."""
+    scorer = HeuristicScorer(cfg)
+    item = _item("An HN post", section="mind")
+    item.extra = {"discussion_url": "https://news.ycombinator.com/item?id=1"}
+    mind = scorer.summarise_mind(item)
+    text = compose_daily(cfg, D, mind, [], None, Stream(), extra_reading=[item],
+                         sources_ok=1, sources_total=1, sources_failed=[])
+    assert "An HN post" in text
+
+
+def test_podcast_duration_is_parsed_from_itunes_tags():
+    from lumina.collect import _duration
+
+    class E:
+        itunes_duration = "1:23:45"
+    assert _duration(E()) == ("listen", "1h 23m")
+
+    class S:
+        itunes_duration = "2400"
+    assert _duration(S()) == ("listen", "40 min")
+
+    class N:
+        pass
+    assert _duration(N()) == ("read", "")
+
+
+def test_daily_brief_hides_opportunity_candidates_by_default(cfg):
+    """Seeing candidates you are not allowed to start is the exact pressure the
+    one-stream rule exists to remove. They are filed, not displayed."""
+    scored = HeuristicScorer(cfg).score_streams([_item("Show HN: a very promising thing")])
+    text = compose_daily(cfg, D, None, scored, None, Stream(), filed=3,
+                         sources_ok=1, sources_total=1, sources_failed=[])
+    assert "## 3 · Opportunities" in text
+    assert "a very promising thing" not in text     # captured, not paraded
+    assert "ideas/inbox/" in text                   # but you are told it happened

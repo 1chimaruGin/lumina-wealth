@@ -71,10 +71,31 @@ select:
   # Spec: cap 8 items per section per run, 1 mind item, 2-3 stream items.
   max_candidates_per_section: 8
   mind_picks: 1
+  # Opportunities are still collected, scored and filed to the inbox every day —
+  # capture stays free. They are just not SHOWN daily: seeing candidates you are
+  # not allowed to start is the exact pressure the one-at-a-time rule exists to
+  # remove. They surface in the Sunday digest instead.
+  show_streams_in_daily: false
+  # Extra reading shown as one-line links under the summarised piece — cheap,
+  # skippable, and no extra model calls.
+  mind_extra_links: 3
   stream_picks: 3
   # A stream item below this weighted score is never shown, even if it is the
   # best available. Better an honest short brief than filler.
   min_stream_score: 4.5
+
+curriculum:
+  # Lessons are the spine of the Mind section. Feeds are recency-driven and run
+  # dry — four of the five original Mind sources published weekly or monthly —
+  # whereas a syllabus teaches in sequence and can start in 3000 BC.
+  lessons_per_day: 2
+  # One lesson comes from the weekday's track (see meta.rotation in the
+  # syllabus); the rest come from whichever track is furthest behind, so
+  # coverage stays even on its own.
+  syllabus: curriculum/syllabus.yaml
+  # Written lessons are cached here, which makes rebuilding an old brief free
+  # and deterministic. They accumulate into a personal textbook.
+  lessons_dir: curriculum/lessons
 
 principles:
   # Spaced repetition: never resurface a principle seen within this window
@@ -109,6 +130,6 @@ stream:
 
 site:
   title: "Lumina Daily"
-  tagline: "Money psychology · one income stream at a time"
+  tagline: "Learning money from 3000 BC · building one stream at a time"
   # Number of briefs listed on the dashboard.
   recent_briefs: 30

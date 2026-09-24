@@ -5,6 +5,9 @@ week: {{ week }}
 generated_at: {{ generated_at }}
 mode: {{ mode }}
 principle: {{ principle.id if principle else "none" }}
+lessons: {{ lessons|length }}
+lesson_ids: [{% for l in lessons %}{{ l.topic.id }}{% if not loop.last %}, {% endif %}{% endfor %}]
+tracks: [{% for l in lessons %}{{ l.topic.track }}{% if not loop.last %}, {% endif %}{% endfor %}]
 mind_source: {{ mind.item.source_name if mind else "none" }}
 stream_count: {{ streams|length }}
 top_score: {{ streams[0].total if streams else 0 }}
@@ -22,11 +25,33 @@ scored_by: {{ scored_by }}
 
 {% endif %}
 
-## 1 · Mind
+## 1 · Money school
+
+{% if lessons -%}
+{% for l in lessons %}
+### {{ loop.index }}. {{ l.topic.title }}
+<sub>`{{ l.topic.track }}` · {{ l.topic.track_name }} — *{{ l.topic.question }}*</sub>
+
+{{ l.body }}
+
+> **Key idea.** {{ l.key_idea }}
+
+{% if l.relevance %}**Why it matters to you.** {{ l.relevance }}
+
+{% endif %}**Ask yourself:** {{ l.reflection }}
+
+{% endfor %}
+{%- else -%}
+No lesson today — the syllabus has no untaught topic left for this track. Add
+more to `curriculum/syllabus.yaml`.
+{%- endif %}
+
+
+## 2 · Today's reading
 
 {% if mind -%}
 ### [{{ mind.item.title }}]({{ mind.item.url }})
-<sub>{{ mind.item.source_name }}{% if mind.item.published_date %} · {{ mind.item.published_date }}{% endif %}</sub>
+<sub>{{ mind.item.source_name }}{% if mind.item.published_date %} · {{ mind.item.published_date }}{% endif %}{% if mind.item.extra.get('duration') %} · {{ mind.item.extra.get('kind', 'read') }} {{ mind.item.extra['duration'] }}{% endif %}</sub>
 
 {{ mind.summary }}
 
@@ -34,12 +59,20 @@ scored_by: {{ scored_by }}
 
 **Ask yourself:** {{ mind.reflection }}
 {%- else -%}
-No money-psychology piece came through today. The Mind feeds are low-frequency by
-nature — a gap here is normal, not a failure. {% if sources_failed %}See Run notes.{% endif %}
+Nothing came through the Mind feeds today. They are low-frequency by nature, so
+a gap here is normal — the lessons above are the part that does not run dry.
 {%- endif %}
 
+{% if extra_reading %}
+**Also worth a few minutes**
 
-## 2 · Streams
+{% for i in extra_reading %}
+- [{{ i.title }}]({{ i.url }}) <sub>{{ i.source_name }}{% if i.extra.get('duration') %} · {{ i.extra.get('kind', 'read') }} {{ i.extra['duration'] }}{% endif %}</sub>
+{% endfor %}
+{% endif %}
+
+
+{% if show_streams %}## 3 · Streams
 
 {% if streams -%}
 {% for s in streams %}
@@ -61,16 +94,26 @@ nature — a gap here is normal, not a failure. {% if sources_failed %}See Run n
 </details>
 
 {% endfor %}
-{%- if filed %}
-<sub>Filed to the inbox: {{ filed }} — captured, not activated.</sub>
-{%- endif %}
 {%- else -%}
-Nothing cleared the bar today ({{ min_score }}/10 minimum). An empty section is the
-system working: filler would cost you the ten minutes this brief is supposed to save.
+Nothing cleared the bar today ({{ min_score }}/10 minimum).
 {%- endif %}
 
 
-## 3 · Principle
+{% else %}## 3 · Opportunities
+
+{% if filed %}{{ filed }} new opportunit{{ 'y' if filed == 1 else 'ies' }} scored and filed to
+`ideas/inbox/` today — not shown here on purpose. Looking at candidates you are not
+allowed to start is the pressure this system exists to remove.
+
+The Sunday digest ranks the best of them. Until then, the only stream that matters
+is the one below.
+{%- else %}
+Nothing new cleared the bar for the inbox today. The Sunday digest ranks whatever
+has accumulated.
+{%- endif %}
+
+
+{% endif %}## 4 · Principle
 
 {% if principle -%}
 ### {{ principle.id }} · {{ principle.title }}
@@ -84,7 +127,7 @@ No principles found in `curriculum/principles.md`.
 {%- endif %}
 
 
-## 4 · Today's action
+## 5 · Today's action
 
 {% if stream.active -%}
 - [ ] **{{ action }}**
@@ -100,7 +143,7 @@ fixing today. The weekly digest ranks the top 5 candidates for you.
 {%- endif %}
 
 
-## 5 · Stream status
+## 6 · Stream status
 
 {% if stream.active -%}
 | | |

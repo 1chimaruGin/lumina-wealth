@@ -22,6 +22,13 @@
   --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
   --r:10px;
+  /* One hue per track, so a chip is scannable before it is read. */
+  --tr-psychology:#6b4d9e; --tr-psychology-bg:#ece7f5;
+  --tr-intelligence:#1f5f8b; --tr-intelligence-bg:#e2edf4;
+  --tr-history:#8a5a1b;     --tr-history-bg:#f5ebdc;
+  --tr-financing:#1f6f5c;   --tr-financing-bg:#e3efea;
+  --tr-management:#9c3f58;  --tr-management-bg:#f7e5ea;
+  --tr-stories:#8a5a1b;     --tr-stories-bg:#f5ebdc;
 }
 @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
   --paper:#0e1412; --surface:#151d1a; --surface-2:#1b2522; --sunken:#111917;
@@ -31,6 +38,12 @@
   --good:#6cb98a; --warn:#d2a154; --crit:#dd8072;
   --good-soft:#15291d; --warn-soft:#2a2216; --crit-soft:#2c1c19;
   --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 26px -18px rgba(0,0,0,.7);
+  --tr-psychology:#b49ae0; --tr-psychology-bg:#241d33;
+  --tr-intelligence:#7db6dd; --tr-intelligence-bg:#152532;
+  --tr-history:#d5a35e;    --tr-history-bg:#2a2115;
+  --tr-financing:#5cc0a2;  --tr-financing-bg:#14302a;
+  --tr-management:#dd8ba2; --tr-management-bg:#2e1a21;
+  --tr-stories:#d5a35e;    --tr-stories-bg:#2a2115;
 }}
 :root[data-theme="dark"]{
   --paper:#0e1412; --surface:#151d1a; --surface-2:#1b2522; --sunken:#111917;
@@ -40,8 +53,15 @@
   --good:#6cb98a; --warn:#d2a154; --crit:#dd8072;
   --good-soft:#15291d; --warn-soft:#2a2216; --crit-soft:#2c1c19;
   --shadow:0 1px 2px rgba(0,0,0,.3), 0 10px 26px -18px rgba(0,0,0,.7);
+  --tr-psychology:#b49ae0; --tr-psychology-bg:#241d33;
+  --tr-intelligence:#7db6dd; --tr-intelligence-bg:#152532;
+  --tr-history:#d5a35e;    --tr-history-bg:#2a2115;
+  --tr-financing:#5cc0a2;  --tr-financing-bg:#14302a;
+  --tr-management:#dd8ba2; --tr-management-bg:#2e1a21;
+  --tr-stories:#d5a35e;    --tr-stories-bg:#2a2115;
 }
 *{box-sizing:border-box}
+[hidden]{display:none!important}
 body{
   margin:0; background:var(--paper); color:var(--ink);
   font:400 15px/1.6 var(--sans);
@@ -239,6 +259,91 @@ footer{
   margin-top:34px; padding-top:18px; border-top:1px solid var(--line);
   color:var(--ink-3); font-size:12.5px; display:flex; gap:14px; flex-wrap:wrap;
 }
+
+/* ---------- tracks ---------- */
+.tchip{
+  font:500 10.5px/1 var(--mono); letter-spacing:.04em; padding:4px 7px; border-radius:5px;
+  white-space:nowrap; background:var(--surface-2); color:var(--ink-2);
+}
+.tchip[data-track="psychology"]{background:var(--tr-psychology-bg); color:var(--tr-psychology)}
+.tchip[data-track="intelligence"]{background:var(--tr-intelligence-bg); color:var(--tr-intelligence)}
+.tchip[data-track="history"]{background:var(--tr-history-bg); color:var(--tr-history)}
+.tchip[data-track="stories"]{background:var(--tr-stories-bg); color:var(--tr-stories)}
+.tchip[data-track="financing"]{background:var(--tr-financing-bg); color:var(--tr-financing)}
+.tchip[data-track="management"]{background:var(--tr-management-bg); color:var(--tr-management)}
+
+.tprog{display:flex; flex-direction:column; gap:11px}
+.tprog-row{display:grid; grid-template-columns:1fr auto; gap:4px 10px; align-items:baseline}
+.tprog-name{font-size:13px; color:var(--ink)}
+.tprog-n{font-family:var(--mono); font-size:11.5px; color:var(--ink-3)}
+.tprog-bar{grid-column:1/-1; height:4px; background:var(--sunken); border-radius:2px; overflow:hidden}
+.tprog-bar i{display:block; height:100%; border-radius:2px; background:var(--accent)}
+.tprog-row[data-track="psychology"] .tprog-bar i{background:var(--tr-psychology)}
+.tprog-row[data-track="intelligence"] .tprog-bar i{background:var(--tr-intelligence)}
+.tprog-row[data-track="history"] .tprog-bar i{background:var(--tr-history)}
+.tprog-row[data-track="financing"] .tprog-bar i{background:var(--tr-financing)}
+.tprog-row[data-track="management"] .tprog-bar i{background:var(--tr-management)}
+.tprog-next{grid-column:1/-1; font-size:11.5px; color:var(--ink-3); margin-top:-1px}
+
+/* ---------- river ---------- */
+.filters{display:flex; gap:7px; flex-wrap:wrap; padding:11px 14px; border-bottom:1px solid var(--line); align-items:center}
+.filter{
+  font:500 11.5px/1 var(--sans); padding:6px 10px; border-radius:999px; cursor:pointer;
+  border:1px solid var(--line); background:var(--surface); color:var(--ink-2);
+}
+.filter[aria-pressed="true"]{background:var(--ink); color:var(--paper); border-color:var(--ink)}
+.filter:hover:not([aria-pressed="true"]){border-color:var(--line-2); color:var(--ink)}
+input.search{
+  font:400 13px/1 var(--sans); color:var(--ink); background:var(--surface);
+  flex:1 0 100%; border:1px solid var(--line); border-radius:999px; padding:8px 14px;
+}
+@media (min-width:760px){ input.search{flex:1 1 210px} }
+input.search::placeholder{color:var(--ink-3)}
+
+.river{padding:4px 0 8px}
+.river-day{
+  position:sticky; top:env(safe-area-inset-top, 0px); z-index:2;
+  background:var(--surface); padding:11px 22px 8px;
+  font:600 10.5px/1 var(--sans); letter-spacing:.09em; text-transform:uppercase; color:var(--ink-3);
+  border-bottom:1px solid var(--line);
+}
+.flow{display:block; padding:15px 22px; border-bottom:1px solid var(--line); text-decoration:none; color:inherit}
+.flow:last-child{border-bottom:0}
+.flow-meta{display:flex; gap:7px; align-items:center; flex-wrap:wrap; margin-bottom:6px}
+.kind{font:600 9.5px/1 var(--sans); letter-spacing:.1em; text-transform:uppercase; color:var(--ink-3)}
+.kind[data-kind="lesson"]{color:var(--accent)}
+.flow-t{font-family:var(--display); font-size:17.5px; line-height:1.35; color:var(--ink); margin:0}
+a.flow:hover .flow-t{color:var(--accent)}
+.flow-s{font-size:13.5px; color:var(--ink-2); margin:6px 0 0; max-width:70ch}
+.flow-src{font-family:var(--mono); font-size:10.5px; color:var(--ink-3); margin-top:7px; letter-spacing:.02em}
+.river-empty{padding:40px 22px; text-align:center; color:var(--ink-3); font-size:13.5px}
+
+/* ---------- library ---------- */
+.lib-group{border-bottom:1px solid var(--line)}
+.lib-group:last-child{border-bottom:0}
+.lib-head{
+  display:flex; align-items:center; gap:10px; padding:13px 22px; background:var(--sunken);
+  font:600 10.5px/1 var(--sans); letter-spacing:.09em; text-transform:uppercase; color:var(--ink-2);
+}
+.lib-item{border-top:1px solid var(--line)}
+.lib-item summary{
+  display:flex; gap:10px; align-items:baseline; padding:13px 22px; cursor:pointer; list-style:none;
+}
+.lib-item summary::before{content:"\25B8"; color:var(--ink-3); font-size:10px; transition:transform .15s}
+.lib-item[open] summary::before{transform:rotate(90deg)}
+.tdot{width:9px; height:9px; border-radius:3px; background:var(--accent); flex:0 0 auto}
+.tdot[data-track="psychology"]{background:var(--tr-psychology)}
+.tdot[data-track="intelligence"]{background:var(--tr-intelligence)}
+.tdot[data-track="history"]{background:var(--tr-history)}
+.tdot[data-track="financing"]{background:var(--tr-financing)}
+.tdot[data-track="management"]{background:var(--tr-management)}
+.lib-item summary::-webkit-details-marker{display:none}
+.lib-item summary:hover{background:var(--sunken)}
+.lib-item .lt{font-size:14.5px; color:var(--ink); flex:1}
+.lib-item .ld{font-family:var(--mono); font-size:10.5px; color:var(--ink-3)}
+.lib-body{padding:0 22px 20px}
+.lib-body p{color:var(--ink-2); max-width:70ch; margin:11px 0}
+
 @media (prefers-reduced-motion:reduce){ *{transition:none!important; animation:none!important} }
 </style>
 {% if not fragment %}</head>
@@ -326,13 +431,17 @@ footer{
       <div class="seg" role="tablist">
         <button type="button" role="tab" id="tab-daily" aria-selected="true">Daily</button>
         <button type="button" role="tab" id="tab-weekly" aria-selected="false">Weekly</button>
+        <button type="button" role="tab" id="tab-river" aria-selected="false">River</button>
+        <button type="button" role="tab" id="tab-library" aria-selected="false">Library</button>
       </div>
       <div class="spacer" style="flex:1"></div>
-      <button class="nav-btn" id="prev" type="button" aria-label="Older">‹</button>
-      <select class="picker" id="picker" aria-label="Choose a brief">
-        {% for b in data.briefs %}<option value="{{ b.date }}">{{ b.date }} · {{ b.weekday[:3] }}{% if b.mode == 'backfill' %} · backfilled{% endif %}</option>{% endfor %}
-      </select>
-      <button class="nav-btn" id="next" type="button" aria-label="Newer">›</button>
+      <div id="pager" style="display:flex; gap:8px; align-items:center">
+        <button class="nav-btn" id="prev" type="button" aria-label="Older">‹</button>
+        <select class="picker" id="picker" aria-label="Choose a brief">
+          {% for b in data.briefs %}<option value="{{ b.date }}">{{ b.date }} · {{ b.weekday[:3] }}{% if b.mode == 'backfill' %} · backfilled{% endif %}</option>{% endfor %}
+        </select>
+        <button class="nav-btn" id="next" type="button" aria-label="Newer">›</button>
+      </div>
     </div>
 
     <div id="pane-daily">
@@ -342,6 +451,67 @@ footer{
         {% endfor %}
       {% else %}
         <div class="brief"><p class="empty">No briefs yet. Run <code>python scripts/compose.py</code> to build today's.</p></div>
+      {% endif %}
+    </div>
+
+    <div id="pane-river" hidden>
+      <div class="filters">
+        <input class="search" id="river-search" type="search" placeholder="Search lessons and reading…" aria-label="Search the river">
+        <button class="filter" type="button" data-f="all" aria-pressed="true">All</button>
+        <button class="filter" type="button" data-f="lesson" aria-pressed="false">Lessons</button>
+        <button class="filter" type="button" data-f="read" aria-pressed="false">Reading</button>
+        {% for tr in data.tracks %}<button class="filter" type="button" data-f="track:{{ tr.key }}" aria-pressed="false">{{ tr.name }}</button>{% endfor %}
+      </div>
+      <div class="river" id="river">
+        {% set ns = namespace(day='') %}
+        {% for r in data.river %}
+          {% if r.date != ns.day %}{% set ns.day = r.date %}
+        <div class="river-day" data-day="{{ r.date }}">{{ r.date }}</div>
+          {% endif %}
+        {% if r.url %}<a class="flow" href="{{ r.url }}" target="_blank" rel="noopener"{% else %}<div class="flow"{% endif %}
+           data-kind="{{ r.kind }}" data-track="{{ r.track }}"
+           data-text="{{ (r.title ~ ' ' ~ (r.snippet or '') ~ ' ' ~ (r.source or ''))|lower }}">
+          <div class="flow-meta">
+            <span class="kind" data-kind="{{ r.kind }}">{{ 'Lesson' if r.kind == 'lesson' else ('Read' if r.kind == 'read' else 'Link') }}</span>
+            {% if r.track %}<span class="tchip" data-track="{{ r.track }}">{{ r.track }}</span>{% endif %}
+            {% if r.duration %}<span class="tchip">{{ r.media }} {{ r.duration }}</span>{% endif %}
+          </div>
+          <p class="flow-t">{{ r.title }}</p>
+          {% if r.snippet %}<p class="flow-s">{{ r.snippet }}</p>{% endif %}
+          <div class="flow-src">{{ r.source }}</div>
+        {% if r.url %}</a>{% else %}</div>{% endif %}
+        {% endfor %}
+        {% if not data.river %}<p class="river-empty">The river fills as briefs are generated. Run <code>python scripts/compose.py</code>.</p>{% endif %}
+      </div>
+      <p class="river-empty" id="river-none" hidden>Nothing matches that.</p>
+    </div>
+
+    <div id="pane-library" hidden>
+      <div class="filters">
+        <input class="search" id="lib-search" type="search" placeholder="Search the library…" aria-label="Search the library">
+        <span class="stamp">{{ data.library|length }} of {{ data.syllabus_total }} lessons written</span>
+      </div>
+      {% if data.library %}
+      {% for tr in data.tracks %}
+        {% set lessons = data.library|selectattr('track', 'equalto', tr.key)|list %}
+        {% if lessons %}
+      <div class="lib-group" data-track="{{ tr.key }}">
+        <div class="lib-head"><span class="tdot" data-track="{{ tr.key }}"></span>{{ tr.name }}
+          <span style="flex:1"></span><span class="ld">{{ lessons|length }} written</span></div>
+        {% for l in lessons %}
+        <details class="lib-item" data-text="{{ (l.title ~ ' ' ~ l.key_idea)|lower }}">
+          <summary><span class="lt">{{ l.title }}</span><span class="ld">{{ l.taught }}</span></summary>
+          <div class="lib-body">{{ l.html }}
+            {% if l.key_idea %}<blockquote><strong>Key idea.</strong> {{ l.key_idea }}</blockquote>{% endif %}
+            {% if l.reflection %}<p><strong>Ask yourself:</strong> {{ l.reflection }}</p>{% endif %}
+          </div>
+        </details>
+        {% endfor %}
+      </div>
+        {% endif %}
+      {% endfor %}
+      {% else %}
+      <p class="river-empty">No lessons written yet. They accumulate here as the briefs are generated.</p>
       {% endif %}
     </div>
 
@@ -399,6 +569,26 @@ footer{
         {% else %}
         <p class="empty">Nothing captured yet. Scored opportunities land here automatically — and stay here until you choose one.</p>
         {% endif %}
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h3>Syllabus</h3><div class="spacer"></div>
+        <span class="chip neutral">{{ data.syllabus_done }} / {{ data.syllabus_total }}</span>
+      </div>
+      <div class="card-body">
+        <div class="tprog">
+          {% for tr in data.tracks %}
+          <div class="tprog-row" data-track="{{ tr.key }}">
+            <span class="tprog-name">{{ tr.name }}</span>
+            <span class="tprog-n">{{ tr.done }}/{{ tr.total }}</span>
+            <span class="tprog-bar"><i style="width:{{ tr.pct }}%"></i></span>
+            {% if tr.next %}<span class="tprog-next">next · {{ tr.next }}</span>{% endif %}
+          </div>
+          {% endfor %}
+        </div>
+        <p class="reason">One track per weekday; the rest fill from whichever is furthest behind, so coverage evens out on its own.</p>
       </div>
     </div>
 
@@ -527,23 +717,99 @@ footer{
   prev.addEventListener("click", function () { show(picker.selectedIndex + 1); });
   next.addEventListener("click", function () { show(picker.selectedIndex - 1); });
 
-  var tabDaily = document.getElementById("tab-daily");
-  var tabWeekly = document.getElementById("tab-weekly");
+  var paneRiver = document.getElementById("pane-river");
+  var paneLibrary = document.getElementById("pane-library");
+  var TABS = {
+    daily: {tab: document.getElementById("tab-daily"), pane: paneDaily, paged: true},
+    weekly: {tab: document.getElementById("tab-weekly"), pane: paneWeekly, paged: true},
+    river: {tab: document.getElementById("tab-river"), pane: paneRiver, paged: false},
+    library: {tab: document.getElementById("tab-library"), pane: paneLibrary, paged: false}
+  };
+  var pager = document.getElementById("pager");
+
   function setMode(m) {
+    if (!TABS[m]) return;
     mode = m;
-    var daily = m === "daily";
-    tabDaily.setAttribute("aria-selected", String(daily));
-    tabWeekly.setAttribute("aria-selected", String(!daily));
-    paneDaily.hidden = !daily;
-    paneWeekly.hidden = daily;
-    fillPicker();
-    show(0);
+    Object.keys(TABS).forEach(function (k) {
+      TABS[k].tab.setAttribute("aria-selected", String(k === m));
+      TABS[k].pane.hidden = k !== m;
+    });
+    /* the date pager only means something for the paged views */
+    pager.hidden = !TABS[m].paged;
+    if (TABS[m].paged) { fillPicker(); show(0); }
+    try { localStorage.setItem("lumina-tab", m); } catch (e) {}
   }
-  tabDaily.addEventListener("click", function () { setMode("daily"); });
-  tabWeekly.addEventListener("click", function () { setMode("weekly"); });
+  Object.keys(TABS).forEach(function (k) {
+    TABS[k].tab.addEventListener("click", function () { setMode(k); });
+  });
+
+  /* ---- river: filter by kind or track, plus free-text search ---- */
+  var flows = [].slice.call(document.querySelectorAll("#river .flow"));
+  var dayHeads = [].slice.call(document.querySelectorAll("#river .river-day"));
+  var riverSearch = document.getElementById("river-search");
+  var riverNone = document.getElementById("river-none");
+  var activeFilter = "all";
+
+  function applyRiver() {
+    var q = (riverSearch.value || "").trim().toLowerCase();
+    var shown = 0;
+    flows.forEach(function (el) {
+      var okFilter =
+        activeFilter === "all" ||
+        (activeFilter === "lesson" && el.getAttribute("data-kind") === "lesson") ||
+        (activeFilter === "read" && el.getAttribute("data-kind") !== "lesson") ||
+        (activeFilter.indexOf("track:") === 0 &&
+         el.getAttribute("data-track") === activeFilter.slice(6));
+      var okText = !q || (el.getAttribute("data-text") || "").indexOf(q) !== -1;
+      var visible = okFilter && okText;
+      el.hidden = !visible;
+      if (visible) shown++;
+    });
+    /* hide a date heading whose items are all filtered out */
+    dayHeads.forEach(function (h) {
+      var any = false, n = h.nextElementSibling;
+      while (n && !n.classList.contains("river-day")) {
+        if (n.classList.contains("flow") && !n.hidden) { any = true; break; }
+        n = n.nextElementSibling;
+      }
+      h.hidden = !any;
+    });
+    riverNone.hidden = shown !== 0 || flows.length === 0;
+  }
+
+  [].slice.call(document.querySelectorAll(".filters .filter")).forEach(function (b) {
+    b.addEventListener("click", function () {
+      activeFilter = b.getAttribute("data-f");
+      [].slice.call(document.querySelectorAll(".filters .filter")).forEach(function (o) {
+        o.setAttribute("aria-pressed", String(o === b));
+      });
+      applyRiver();
+    });
+  });
+  if (riverSearch) riverSearch.addEventListener("input", applyRiver);
+
+  /* ---- library search ---- */
+  var libSearch = document.getElementById("lib-search");
+  if (libSearch) {
+    libSearch.addEventListener("input", function () {
+      var q = (libSearch.value || "").trim().toLowerCase();
+      [].slice.call(document.querySelectorAll(".lib-group")).forEach(function (g) {
+        var any = false;
+        [].slice.call(g.querySelectorAll(".lib-item")).forEach(function (it) {
+          var hit = !q || (it.getAttribute("data-text") || "").indexOf(q) !== -1;
+          it.hidden = !hit;
+          if (hit) any = true;
+        });
+        g.hidden = !any;
+      });
+    });
+  }
 
   fillPicker();
   show(0);
+  var savedTab = "daily";
+  try { savedTab = localStorage.getItem("lumina-tab") || "daily"; } catch (e) {}
+  setMode(TABS[savedTab] ? savedTab : "daily");
 
   document.addEventListener("keydown", function (e) {
     if (e.target && /^(INPUT|SELECT|TEXTAREA)$/.test(e.target.tagName)) return;

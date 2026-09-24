@@ -13,6 +13,7 @@ from pathlib import Path
 
 from .config import Config
 from .markdown import render as render_md
+from .curriculum import CurriculumState, load_syllabus
 from .principles import parse_principles
 from .state import PrincipleLog
 from .streams import check_gate, load_stream, split_frontmatter
@@ -117,6 +118,59 @@ def collect_data(cfg: Config) -> dict:
 
     runs = read_jsonl(cfg.data_dir / "runs.jsonl")[-30:]
 
+    # --- the river: one continuous reverse-chronological scroll ---
+    river = read_jsonl(cfg.data_dir / "river.jsonl")
+    # Normalise here rather than guarding in the template: entries are written
+    # by different code paths (a lesson has no duration, a link has no snippet)
+    # and a missing key is a hard error under StrictUndefined.
+    river = [
+        {
+            "date": str(r.get("date", "")), "kind": r.get("kind", "link"),
+            "track": r.get("track", "") or "", "title": r.get("title", ""),
+            "url": r.get("url", "") or "", "snippet": r.get("snippet", "") or "",
+            "source": r.get("source", "") or "", "media": r.get("media", "read"),
+            "duration": r.get("duration", "") or "", "id": r.get("id", ""),
+        }
+        for r in river
+    ]
+    _KIND_ORDER = {"lesson": 0, "read": 1, "link": 2}
+    # Newest day first, but within a day the lessons lead: they are the spine,
+    # and reverse-alphabetical sorting had been burying them under the links.
+    river.sort(key=lambda r: (r["date"], -_KIND_ORDER.get(r["kind"], 9)), reverse=True)
+
+    # --- syllabus progress, per track ---
+    syllabus = load_syllabus(cfg.root / cfg.get("curriculum.syllabus", "curriculum/syllabus.yaml"))
+    cstate = CurriculumState.load(cfg.data_dir)
+    taught_counts = cstate.taught_by_track(syllabus)
+    tracks = []
+    for key, track in syllabus.tracks.items():
+        total = len(track.topics)
+        done = taught_counts.get(key, 0)
+        tracks.append({
+            "key": key, "name": track.name, "question": track.question,
+            "blurb": track.blurb, "total": total, "done": done,
+            "pct": round(done / total * 100) if total else 0,
+            "next": next((t.title for t in track.topics if not cstate.is_taught(t.id)), None),
+        })
+
+    # --- the library: every lesson written so far ---
+    library = []
+    lessons_dir = cfg.root / "curriculum" / "lessons"
+    if lessons_dir.exists():
+        for path in sorted(lessons_dir.glob("*.md")):
+            meta, body = _meta_of(path)
+            if not meta:
+                continue
+            library.append({
+                "id": meta.get("id", path.stem), "title": meta.get("title", path.stem),
+                "track": meta.get("track", ""), "track_name": meta.get("track_name", ""),
+                "key_idea": meta.get("key_idea", ""), "reflection": meta.get("reflection", ""),
+                "relevance": meta.get("relevance", ""),
+                "taught": cstate.taught.get(meta.get("id", ""), ""),
+                "html": render_md(body),
+            })
+    library.sort(key=lambda l: (l["track"], l["id"]))
+
     return {
         "generated_at": now().isoformat(timespec="minutes"),
         "today": str(d),
@@ -152,6 +206,11 @@ def collect_data(cfg: Config) -> dict:
         "principles": principles,
         "activity": activity,
         "runs": runs,
+        "river": river[:400],
+        "tracks": tracks,
+        "library": library,
+        "syllabus_total": sum(t["total"] for t in tracks),
+        "syllabus_done": sum(t["done"] for t in tracks),
         "sources": {
             "enabled": [{"id": s.id, "name": s.name, "section": s.section, "backfill": s.backfill}
                         for s in cfg.enabled_sources()],

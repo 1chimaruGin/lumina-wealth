@@ -166,6 +166,49 @@ MIND_TOOL = {
 }
 
 
+LESSON_SYSTEM = """You write one lesson in a personal money curriculum, for one specific reader.
+
+You are teaching, not summarising a news article. The reader wants to understand
+money properly — its mechanics, its psychology, and its history from 3000 BC to now.
+
+Write:
+- body: 260-340 words. Plain English, your own words, second person or neutral.
+  Be concrete: real dates, real numbers, real names where the topic has them. A
+  lesson about the Roman denarius should say how much silver came out and over
+  what period. Explain the mechanism, not just the moral. Do not open with
+  "In this lesson" or close with a summary paragraph — start with the substance.
+- key_idea: the one transferable sentence, <= 28 words.
+- reflection: ONE question the reader answers by examining their own recent
+  behaviour or situation, connected to a named pattern of theirs. Never generic.
+- relevance: one sentence, <= 30 words, on why this specifically matters to a
+  salaried software engineer in Tokyo trying to build a side income.
+
+Hard rules:
+- Accuracy over fluency. If a popular version of a story is wrong (tulip mania,
+  the marshmallow test), teach the corrected version and say what the myth was.
+- Never invent statistics, quotations or dates. If you are unsure of a figure,
+  describe the magnitude qualitatively instead.
+- No filler, no motivational padding, no headings inside the body.
+"""
+
+LESSON_TOOL = {
+    "name": "record_lesson",
+    "description": "Record the written lesson.",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "body": {"type": "string", "description": "260-340 words of teaching."},
+            "key_idea": {"type": "string"},
+            "reflection": {"type": "string"},
+            "relevance": {"type": "string"},
+        },
+        "required": ["body", "key_idea", "reflection", "relevance"],
+        "additionalProperties": False,
+    },
+    "strict": True,
+}
+
+
 def profile_block(cfg: Config) -> str:
     """The person, rendered for the prompt. Only fields that are filled in."""
     p = cfg.profile
@@ -251,6 +294,22 @@ class HeuristicScorer:
                 )
             )
         return out
+
+    def write_lesson(self, topic):
+        """Offline mode cannot teach. It shows the syllabus entry and says so,
+        rather than producing something that looks like a lesson and is not."""
+        from .curriculum import Lesson
+
+        return Lesson(
+            topic=topic,
+            body=(f"*This lesson has not been written yet — the offline scorer cannot teach. "
+                  f"It will be written on the next run with a working Claude backend.*\n\n"
+                  f"**Scope:** {topic.scope}"),
+            key_idea=topic.scope,
+            reflection=f"What do I already believe about {topic.title.lower()}, and where did that belief come from?",
+            relevance="",
+            written_by="heuristic",
+        )
 
     def summarise_mind(self, item: Item) -> MindPiece:
         excerpt = clip_words(item.excerpt, 35)
@@ -342,6 +401,30 @@ class _LLMScorer:
             key_idea=one_line(payload.get("key_idea", ""), 200),
             reflection=one_line(payload.get("reflection", ""), 240),
             summarised_by=self.name,
+        )
+
+    def write_lesson(self, topic):
+        from .curriculum import Lesson
+
+        user = (
+            f"THE READER:\n{self.profile}\n\n"
+            f"LESSON\ntrack: {topic.track_name} — {topic.question}\n"
+            f"title: {topic.title}\n"
+            f"scope: {topic.scope}"
+        )
+        payload = self._call(LESSON_SYSTEM, user, LESSON_TOOL)
+        if payload is None:
+            return self.fallback.write_lesson(topic)
+        body = str(payload.get("body", "")).strip()
+        if not body:
+            return self.fallback.write_lesson(topic)
+        return Lesson(
+            topic=topic,
+            body=body,
+            key_idea=one_line(payload.get("key_idea", ""), 220),
+            reflection=one_line(payload.get("reflection", ""), 260),
+            relevance=one_line(payload.get("relevance", ""), 200),
+            written_by=self.name,
         )
 
     def close(self) -> None:

@@ -17,19 +17,58 @@ at a glance.
 
 ## The brief
 
-Five sections, in this order, every day:
-
-1. **Mind** — one money-psychology piece: summary, key idea, and a reflection
-   question aimed at my actual behaviour this week.
-2. **Streams** — 2–3 income-stream signals, each scored against the rubric below
-   with a one-line verdict.
-3. **Principle** — one idea resurfaced from `curriculum/principles.md`, spaced so
+1. **Money school** — two lessons from the syllabus, written for me.
+2. **Today's reading** — one piece summarised, plus a few links worth a few minutes.
+3. **Opportunities** — a count, not a list. See below.
+4. **Principle** — one idea resurfaced from `curriculum/principles.md`, spaced so
    nothing repeats inside three weeks.
-4. **Today's action** — one 5–15 minute task for the active stream.
-5. **Stream status** — day N of 90, revenue so far, this week's metric.
+5. **Today's action** — one 5–15 minute task for the active stream.
+6. **Stream status** — day N of 90, revenue so far, this week's metric.
 
-A section with nothing worth showing says so. Filler would cost the ten minutes
-the brief exists to save.
+A section with nothing worth showing says so. Filler would cost the time the
+brief exists to save.
+
+### Why lessons and not just feeds
+
+Feeds are recency-driven, and they run dry. Four of the five original Mind
+sources published weekly or monthly; 2026-09-18 produced no Mind item at all.
+
+So the spine is a **syllabus** — 152 topics across five tracks, starting in
+3000 BC — and the feeds are the supplement. A syllabus teaches in sequence and
+never runs out.
+
+| Day | Track | The question |
+|---|---|---|
+| Mon | Psychology | How do I behave with money? |
+| Tue | Intelligence | How does money actually work? |
+| Wed | History & Stories | Who did this before, and what happened? |
+| Thu | Financing | Where does capital come from, and what does it cost? |
+| Fri | Management | How do I run what I have? |
+| Sat | History & Stories | The long-read slot |
+| Sun | — | Digest day |
+
+One lesson comes from the weekday's track; the rest come from whichever track
+is furthest behind, so coverage evens out without anyone managing it. Lessons
+are written once, cached in `curriculum/lessons/`, and accumulate into a
+personal textbook — which also makes rebuilding an old brief free and
+deterministic.
+
+Change the pace in `config/settings.yaml`:
+
+```yaml
+curriculum:
+  lessons_per_day: 2
+```
+
+### Why opportunities are a count, not a list
+
+Income-stream candidates are still collected, scored and filed to
+`ideas/inbox/` every day — capture stays free. They are simply **not shown**
+daily. Looking at candidates you are not allowed to start is the exact pressure
+the one-stream rule exists to remove.
+
+They surface in the **Sunday digest**, ranked. Set
+`select.show_streams_in_daily: true` if you disagree.
 
 ## The rule that matters
 
@@ -94,7 +133,7 @@ python scripts/compose.py                # build and write it
 python scripts/weekly.py                 # this week's digest
 python scripts/backfill.py --days 7      # rebuild the last 7 days
 python scripts/site.py --open            # build the dashboard, print a file:// URL
-python -m pytest tests/ -q               # 63 tests, no network
+python -m pytest tests/ -q               # 73 tests, no network
 ```
 
 ## Scoring backends
@@ -217,6 +256,18 @@ brief under Run notes.
 
 ## The dashboard
 
+Four views:
+
+| Tab | What it is |
+|---|---|
+| **Daily** | One brief at a time, with a date picker and arrow-key navigation |
+| **Weekly** | The Sunday digest, where opportunities are ranked |
+| **River** | One continuous reverse-chronological scroll of every lesson and reading, filterable by track or kind and searchable |
+| **Library** | Every lesson written so far, grouped by track — the textbook as it accumulates |
+
+The rail carries the gate's checklist, the ranked inbox, a 21-day activity
+strip, syllabus progress per track, and source health.
+
 `python scripts/site.py` builds `site/index.html` — one self-contained file with
 the data inlined, so it works from GitHub Pages, from `file://`, or anywhere else
 you drop it. It shows the active stream as a 90-tick cycle rail, the gate's
@@ -312,7 +363,7 @@ excerpt at 60 words on the way in, and a test enforces it.
 
 ```
 config/       settings.yaml, sources.yaml, profile.yaml
-curriculum/   principles.md, books.md
+curriculum/   syllabus.yaml (152 topics), principles.md, books.md, lessons/ (generated)
 lumina/       the package — collect, classify, score, compose, streams, site
               (claude_cli.py is the subscription-backed scoring backend)
 scripts/      thin CLI entry points, including stream.py
@@ -321,8 +372,8 @@ daily/        generated briefs
 digests/      weekly digests
 ideas/inbox/  scored opportunities, captured not activated
 streams/      active.md · running/ (graduated) · archive/ (killed or pivoted)
-data/         seen.json, usage.json, principles.json, runs.jsonl
-tests/        63 tests, no network
+data/         seen.json, usage.json, principles.json, curriculum.json, river.jsonl, runs.jsonl
+tests/        73 tests, no network
 ```
 
 Data flows one way: `collect → classify → prefilter → score → select → compose →

@@ -33,11 +33,14 @@ class Source:
     kind: str
     url: str
     section: str
+    track: str = ""          # psychology | intelligence | stories | financing | management
+    media: str = "text"      # text | audio
     enabled: bool = True
     backfill: bool = False
     auth: str = "none"
     weight: float = 1.0
     params: dict = field(default_factory=dict)
+    headers: dict = field(default_factory=dict)
     notes: str = ""
     disabled_reason: str = ""
 

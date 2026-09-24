@@ -17,6 +17,7 @@ mind:
     kind: rss
     url: http://feeds.feedburner.com/collabfund
     section: mind
+    track: psychology
     enabled: true
     backfill: true
     auth: none
@@ -31,6 +32,7 @@ mind:
     kind: rss
     url: https://ofdollarsanddata.com/feed/
     section: mind
+    track: intelligence
     enabled: true
     backfill: true
     auth: none
@@ -42,6 +44,7 @@ mind:
     kind: rss
     url: https://awealthofcommonsense.com/feed/
     section: mind
+    track: psychology
     enabled: true
     backfill: true
     auth: none
@@ -53,6 +56,7 @@ mind:
     kind: rss
     url: https://fs.blog/feed/
     section: mind
+    track: psychology
     enabled: true
     backfill: true
     auth: none
@@ -64,11 +68,245 @@ mind:
     kind: rss
     url: https://behavioralscientist.org/feed/
     section: mind
+    track: psychology
     enabled: true
     backfill: true
     auth: none
     weight: 1.0
     notes: "Low frequency, academic tone; good for the decision-making angle."
+
+  # ---- added 2026-09-24: the tracks were starved by low-frequency sources ----
+  # Verified by fetching each feed and checking BOTH that it returns items and
+  # that the newest one is recent. Two candidates returned HTTP 200 and were
+  # rejected anyway: Get Rich Slowly (newest post Dec 2022) and The Irrelevant
+  # Investor (zero items). A status code is not proof of life.
+
+  - id: klement
+    name: Klement on Investing
+    kind: rss
+    url: https://klementoninvesting.substack.com/feed
+    section: mind
+    track: psychology
+    enabled: true
+    backfill: true
+    auth: none
+    weight: 1.1
+    notes: >-
+      Daily behavioural finance. Left enabled despite intermittent 403s: curl
+      succeeds where httpx does not, which points at TLS fingerprinting rather
+      than a policy block, and two other Substack feeds here (Lenny's, Not
+      Boring) work fine. Spoofing a fingerprint to get around an access control
+      is not something this repo does, so when it 403s the source is simply
+      skipped and named in the brief's Run notes.
+
+  - id: indicator
+    name: The Indicator (NPR)
+    kind: rss
+    url: https://feeds.npr.org/510325/podcast.xml
+    section: mind
+    track: intelligence
+    media: audio
+    enabled: true
+    backfill: true
+    auth: none
+    weight: 1.0
+    notes: "~10 minute daily economics explainers. 300 episodes in the feed."
+
+  - id: planetmoney
+    name: Planet Money (NPR)
+    kind: rss
+    url: https://feeds.npr.org/510289/podcast.xml
+    section: mind
+    track: stories
+    media: audio
+    enabled: true
+    backfill: true
+    auth: none
+    weight: 1.1
+    notes: "Money as narrative. 355 episodes, publishes most days."
+
+  - id: timharford
+    name: Tim Harford
+    kind: rss
+    url: https://timharford.com/feed/
+    section: mind
+    track: intelligence
+    enabled: true
+    backfill: true
+    auth: none
+    weight: 1.0
+    notes: "Undercover Economist. Economics through concrete stories."
+
+  - id: marginalrevolution
+    name: Marginal Revolution
+    kind: rss
+    url: https://marginalrevolution.com/feed
+    section: mind
+    track: intelligence
+    enabled: true
+    backfill: true
+    auth: none
+    weight: 0.9
+    notes: "Publishes several times a day; the prefilter does the sifting."
+
+  - id: freakonomics
+    name: Freakonomics Radio
+    kind: rss
+    url: https://feeds.simplecast.com/Y8lFbOT4
+    section: mind
+    track: stories
+    media: audio
+    enabled: true
+    backfill: true
+    auth: none
+    weight: 1.0
+    notes: "938 episodes of incentives and behaviour as narrative."
+
+  - id: founders
+    name: Founders Podcast
+    kind: rss
+    url: https://feeds.simplecast.com/3hnxp7yk
+    section: mind
+    track: stories
+    media: audio
+    enabled: true
+    backfill: true
+    auth: none
+    weight: 1.1
+    notes: "Biographies of entrepreneurs. The closest thing to a stories track in feed form."
+
+  - id: howibuiltthis
+    name: How I Built This
+    kind: rss
+    url: https://feeds.npr.org/510313/podcast.xml
+    section: mind
+    track: stories
+    media: audio
+    enabled: true
+    backfill: true
+    auth: none
+    weight: 1.0
+    notes: "Founder interviews, 870 episodes."
+
+  - id: damodaran
+    name: Damodaran (Musings on Markets)
+    kind: rss
+    url: https://aswathdamodaran.blogspot.com/feeds/posts/default?alt=rss
+    section: mind
+    track: financing
+    enabled: true
+    backfill: true
+    auth: none
+    weight: 1.1
+    notes: "Valuation from the person who teaches it. Low frequency but high value."
+
+  - id: moneystuff
+    name: Money Stuff (Matt Levine)
+    kind: rss
+    url: https://www.bloomberg.com/opinion/authors/ARbTQlRLRjE/matthew-s-levine.rss
+    section: mind
+    track: financing
+    enabled: true
+    backfill: true
+    auth: none
+    weight: 1.0
+    notes: "Daily. Finance mechanics explained clearly. Feed may be summary-only."
+
+  - id: stratechery
+    name: Stratechery (free posts)
+    kind: rss
+    url: https://stratechery.com/feed/
+    section: mind
+    track: financing
+    enabled: true
+    backfill: true
+    auth: none
+    weight: 0.9
+    notes: "Business strategy and models. Most posts are paywalled; the feed carries the free ones."
+
+  - id: sethgodin
+    name: Seth Godin
+    kind: rss
+    url: https://seths.blog/feed/
+    section: mind
+    track: management
+    enabled: true
+    backfill: true
+    auth: none
+    weight: 0.9
+    notes: "Daily, very short. Good for the management track's frequency."
+
+  - id: lennys
+    name: Lenny's Newsletter
+    kind: rss
+    url: https://www.lennysnewsletter.com/feed
+    section: mind
+    track: management
+    enabled: true
+    backfill: true
+    auth: none
+    weight: 0.9
+    notes: "Product and growth operations."
+
+  - id: notboring
+    name: Not Boring
+    kind: rss
+    url: https://www.notboring.co/feed
+    section: mind
+    track: management
+    enabled: true
+    backfill: true
+    auth: none
+    weight: 0.9
+    notes: "Business strategy essays, narrative style."
+
+  - id: sivers
+    name: Derek Sivers
+    kind: rss
+    url: https://sive.rs/en.atom
+    section: mind
+    track: management
+    enabled: true
+    backfill: true
+    auth: none
+    weight: 0.9
+    notes: "Short, contrarian, operator-minded."
+
+  - id: paulgraham
+    name: Paul Graham
+    kind: rss
+    url: http://www.aaronsw.com/2002/feeds/pgessays.rss
+    section: mind
+    track: management
+    enabled: true
+    backfill: true
+    auth: none
+    weight: 1.0
+    notes: "Third-party feed of the essays; pg publishes no official one. 219 essays."
+
+  # ---- rejected on 2026-09-24, recorded so nobody re-adds them ----
+
+  - id: getrichslowly
+    name: Get Rich Slowly
+    kind: rss
+    url: https://www.getrichslowly.org/feed/
+    section: mind
+    enabled: false
+    backfill: false
+    auth: none
+    disabled_reason: >-
+      Feed returns HTTP 200 but the newest item is from December 2022. Abandoned,
+      not broken — which is exactly the case a status-code check misses.
+
+  - id: irrelevantinvestor
+    name: The Irrelevant Investor
+    kind: rss
+    url: https://theirrelevantinvestor.com/feed/
+    section: mind
+    enabled: false
+    backfill: false
+    auth: none
+    disabled_reason: "HTTP 200 with zero items in the feed."
 
 streams:
   - id: hn_show

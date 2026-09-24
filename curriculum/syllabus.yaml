@@ -1,0 +1,218 @@
+# The syllabus — what to teach, in what order.
+#
+# This file is a MAP, not the lessons themselves. Each topic is a title and a
+# one-line scope; the pipeline writes the lesson from it (see lumina/curriculum.py)
+# and files the result in curriculum/lessons/ so they accumulate into a personal
+# textbook you can reread.
+#
+# Why a syllabus instead of only feeds: feeds are recency-driven and run dry —
+# four of the original five Mind sources published weekly or monthly, and
+# 2026-09-18 produced no Mind item at all. A syllabus never runs dry, teaches in
+# sequence, and can start in 3000 BC.
+#
+# One track per weekday, so each day is one thing and the week covers the map.
+# Add topics freely; `order` is advisory and ties are broken by list position.
+
+meta:
+  version: 1
+  rotation:            # weekday -> track  (0 = Monday)
+    0: psychology
+    1: intelligence
+    2: history
+    3: financing
+    4: management
+    5: history         # Saturday: the long-read slot, still narrative
+    6: null            # Sunday: digest day, no new lesson
+
+tracks:
+
+  psychology:
+    name: Psychology
+    question: How do I behave with money?
+    blurb: >-
+      The gap between what I know and what I do. This track is the one aimed
+      squarely at present bias and scattered focus.
+    topics:
+      - {id: psy-01, title: "Loss aversion", scope: "Why losing ¥10,000 hurts more than gaining it pleases, and what that does to selling decisions."}
+      - {id: psy-02, title: "Mental accounting", scope: "Why money is not fungible in practice — bonus money, 'found' money, and the jar problem."}
+      - {id: psy-03, title: "Present bias and hyperbolic discounting", scope: "Why a reward now beats a larger reward later, and how to engineer the payoff forward."}
+      - {id: psy-04, title: "The endowment effect", scope: "Why owning a thing raises its price in your head, including owning an idea."}
+      - {id: psy-05, title: "Anchoring", scope: "How the first number spoken sets the range, in salary talks and in pricing."}
+      - {id: psy-06, title: "Social comparison and the hedonic treadmill", scope: "Why the target moves every time a peer does better."}
+      - {id: psy-07, title: "Lifestyle creep", scope: "How a raise disappears, and the one habit that stops it."}
+      - {id: psy-08, title: "The sunk cost fallacy", scope: "Why you keep funding the thing that is not working — projects included."}
+      - {id: psy-09, title: "Overconfidence and the illusion of control", scope: "Why most people think they are above-average investors and operators."}
+      - {id: psy-10, title: "The narrative fallacy", scope: "Why a good story about a company beats the numbers, and how to notice it happening."}
+      - {id: psy-11, title: "Availability bias", scope: "Why the vivid recent thing dominates your risk estimates."}
+      - {id: psy-12, title: "Defaults and status quo bias", scope: "The most powerful lever in personal finance, and why it is boring."}
+      - {id: psy-13, title: "Scarcity and the bandwidth tax", scope: "How being short of money measurably reduces the thinking you have available."}
+      - {id: psy-14, title: "Money scripts", scope: "The beliefs about money absorbed before you were ten, and how to surface yours."}
+      - {id: psy-15, title: "The pain of paying", scope: "Why cash feels different from a card, and how businesses exploit it."}
+      - {id: psy-16, title: "Choice overload", scope: "Why more options reduce action — in funds, and in side-project ideas."}
+      - {id: psy-17, title: "Regret aversion", scope: "The decisions you avoid because they could be wrong, and their hidden cost."}
+      - {id: psy-18, title: "Herding", scope: "Why crowds form in markets and in startup niches, and what it signals."}
+      - {id: psy-19, title: "Recency bias", scope: "Why the last twelve months feel like the permanent state of the world."}
+      - {id: psy-20, title: "Identity and spending", scope: "Buying to become someone, and why that spending resists budgeting."}
+      - {id: psy-21, title: "What the marshmallow study actually showed", scope: "Delayed gratification, replication problems, and what survived."}
+      - {id: psy-22, title: "Commitment devices", scope: "Binding your future self on purpose: the mechanism behind the 90-day gate."}
+      - {id: psy-23, title: "Financial avoidance and shame", scope: "Why people do not open the statement, and the cost of not looking."}
+      - {id: psy-24, title: "Windfall psychology", scope: "Why unexpected money is spent differently from earned money."}
+      - {id: psy-25, title: "The planning fallacy", scope: "Why your estimate is always optimistic, and the outside-view correction."}
+      - {id: psy-26, title: "Risk tolerance versus risk capacity", scope: "The difference between what you can stomach and what you can afford."}
+      - {id: psy-27, title: "Framing effects in pricing", scope: "Same price, different decision — anchors, decoys, and per-day framing."}
+      - {id: psy-28, title: "The IKEA effect", scope: "Why you overvalue what you built, and why it makes killing a project hard."}
+      - {id: psy-29, title: "Optimism bias in business plans", scope: "Why the spreadsheet always hockey-sticks, and what a base rate would say."}
+      - {id: psy-30, title: "Enough: satisficing versus maximising", scope: "Choosing a number and stopping — the decision that ends the treadmill."}
+
+  intelligence:
+    name: Intelligence
+    question: How does money actually work?
+    blurb: >-
+      The mechanics. Not opinions about money — the plumbing underneath it.
+    topics:
+      - {id: int-01, title: "What money actually is", scope: "Unit of account, medium of exchange, store of value — and why the order matters."}
+      - {id: int-02, title: "Where money comes from", scope: "Bank lending creates deposits. The counter-intuitive fact most people have backwards."}
+      - {id: int-03, title: "Central banks and the policy rate", scope: "What a central bank actually controls, and what it only influences."}
+      - {id: int-04, title: "Inflation", scope: "Demand-pull, cost-push, and expectations — three different diseases with one symptom."}
+      - {id: int-05, title: "Real versus nominal", scope: "The single most common mistake in thinking about returns and salaries."}
+      - {id: int-06, title: "Compound interest and the rule of 72", scope: "Doubling time, and why the early years feel like nothing is happening."}
+      - {id: int-07, title: "Present value and discounting", scope: "Why ¥1,000,000 in ten years is not ¥1,000,000, and how to price that."}
+      - {id: int-08, title: "Opportunity cost", scope: "The cost that never appears on an invoice, and the one that decides most outcomes."}
+      - {id: int-09, title: "Exchange rates and purchasing power", scope: "Why the same salary means different lives in different places."}
+      - {id: int-10, title: "The yield curve", scope: "What the shape of it says, and why people watch it so closely."}
+      - {id: int-11, title: "Bonds: price, yield, duration", scope: "Why bond prices fall when rates rise, made concrete."}
+      - {id: int-12, title: "Equities: what a share actually is", scope: "Ownership, claims on cash flow, and what you are really buying."}
+      - {id: int-13, title: "Risk and return", scope: "Volatility versus permanent loss of capital — not the same thing."}
+      - {id: int-14, title: "Diversification and correlation", scope: "The only free lunch, and the conditions under which it stops working."}
+      - {id: int-15, title: "Fees and the arithmetic of active management", scope: "Why small percentages decide large outcomes over decades."}
+      - {id: int-16, title: "Taxes: marginal versus effective", scope: "The rate that governs decisions versus the rate you actually pay."}
+      - {id: int-17, title: "GDP and what it misses", scope: "What the number counts, what it ignores, and why that matters to you."}
+      - {id: int-18, title: "Unemployment and wages", scope: "Labour markets, bargaining power, and where your salary really comes from."}
+      - {id: int-19, title: "Money supply and its aggregates", scope: "M0 to M3, and why 'printing money' is a misleading phrase."}
+      - {id: int-20, title: "Bank capital and reserves", scope: "What actually constrains bank lending, and what does not."}
+      - {id: int-21, title: "Credit cycles", scope: "The rhythm underneath most booms and busts."}
+      - {id: int-22, title: "Leverage", scope: "How borrowed money magnifies both directions, with the arithmetic."}
+      - {id: int-23, title: "Liquidity versus solvency", scope: "The distinction that decides which failing businesses survive."}
+      - {id: int-24, title: "Market structure: who is on the other side", scope: "Every trade has a counterparty. Knowing who changes how you think."}
+      - {id: int-25, title: "Index funds and passive flows", scope: "What indexing actually does to price discovery."}
+      - {id: int-26, title: "The yen, the carry trade and the BOJ", scope: "Japan-specific: why the yen moves, and what it means living on one."}
+      - {id: int-27, title: "Insurance and risk transfer", scope: "What you are buying, and when buying it is irrational."}
+      - {id: int-28, title: "Pensions and long-horizon money", scope: "How money is managed across forty years, and what that teaches."}
+      - {id: int-29, title: "Inflation-linked assets", scope: "What actually protects purchasing power, and what only claims to."}
+      - {id: int-30, title: "How to recognise a bubble", scope: "The recurring features, and why recognising one does not help as much as you expect."}
+
+  history:
+    name: History & Stories
+    question: Who did this before, and what happened?
+    blurb: >-
+      Money from 3000 BC to now, as a sequence of experiments — most of which
+      had already been tried before anyone thought they were new.
+    topics:
+      - {id: his-01, title: "Before coins: grain, silver and the shekel", scope: "Mesopotamia c.3000 BC — accounting existed before money did."}
+      - {id: his-02, title: "Debt came first", scope: "Temple credit, tallies and the jubilee — why debt predates coinage by millennia."}
+      - {id: his-03, title: "Commodity money", scope: "Cowrie shells, cattle, salt — what makes a thing work as money."}
+      - {id: his-04, title: "Lydia and the first coins", scope: "c.600 BC — electrum, standardisation, and the state's stamp."}
+      - {id: his-05, title: "Athens, silver and empire", scope: "The Laurion mines, the owl tetradrachm, and money as power."}
+      - {id: his-06, title: "The Roman denarius and debasement", scope: "Three centuries of quietly removing silver, and what it did."}
+      - {id: his-07, title: "Diocletian's Edict on Maximum Prices", scope: "301 AD — the first well-documented failure of price controls."}
+      - {id: his-08, title: "The solidus: seven centuries of stable money", scope: "Byzantium's counter-example, and what it cost to maintain."}
+      - {id: his-09, title: "The Islamic golden age of finance", scope: "The dinar, the sakk (from which 'cheque'), and early credit networks."}
+      - {id: his-10, title: "Song dynasty paper money", scope: "c.1000 AD — the first government paper currency, and its inflation."}
+      - {id: his-11, title: "Bills of exchange and the Champagne fairs", scope: "How medieval Europe moved money without moving metal."}
+      - {id: his-12, title: "The Medici bank", scope: "Branch networks, correspondent banking, and political capital."}
+      - {id: his-13, title: "Double-entry bookkeeping", scope: "Pacioli, 1494 — the technology that made modern business legible."}
+      - {id: his-14, title: "Potosí silver and the first global inflation", scope: "How a mountain in Bolivia changed prices in Ming China."}
+      - {id: his-15, title: "Tulip mania, 1637", scope: "What actually happened, versus the story everyone repeats."}
+      - {id: his-16, title: "The VOC and the first shares", scope: "Amsterdam, 1602 — joint-stock ownership and a secondary market."}
+      - {id: his-17, title: "The Bank of England, 1694", scope: "Turning a war debt into a permanent institution."}
+      - {id: his-18, title: "John Law and the Mississippi Bubble", scope: "A brilliant theory of money, tested to destruction."}
+      - {id: his-19, title: "The South Sea Bubble, 1720", scope: "Newton lost a fortune. Why intelligence was not protective."}
+      - {id: his-20, title: "The Rothschilds and the bond market", scope: "How sovereign debt became an asset class."}
+      - {id: his-21, title: "The classical gold standard", scope: "What it disciplined, and what it broke."}
+      - {id: his-22, title: "Weimar hyperinflation, 1923", scope: "How fast money can die, and what it does to a society."}
+      - {id: his-23, title: "1929 and the Great Depression", scope: "Leverage, policy error, and the decade that followed."}
+      - {id: his-24, title: "Bretton Woods, 1944", scope: "Designing a monetary order on purpose, in a hotel."}
+      - {id: his-25, title: "The Nixon shock, 1971", scope: "The day money stopped being redeemable for anything."}
+      - {id: his-26, title: "Japan's bubble and the lost decades", scope: "1989 to now — the most relevant case study available from Tokyo."}
+      - {id: his-27, title: "Black Monday, 1987", scope: "Portfolio insurance, feedback loops, and a 22% day."}
+      - {id: his-28, title: "Long-Term Capital Management, 1998", scope: "Two Nobel laureates, and what leverage does to being right."}
+      - {id: his-29, title: "The dot-com boom and bust", scope: "Eyeballs, burn rates, and which survivors justified the mania."}
+      - {id: his-30, title: "2008", scope: "Securitisation, ratings, leverage — the mechanism, not the morality tale."}
+      - {id: his-31, title: "Quantitative easing and the cheap decade", scope: "What a decade of near-zero rates did to asset prices and behaviour."}
+      - {id: his-32, title: "Bitcoin and the question money keeps asking", scope: "Who gets to issue money, and who has to trust whom."}
+
+  financing:
+    name: Financing
+    question: Where does capital come from, and what does it cost?
+    blurb: >-
+      How ventures get funded and valued — including the part where the right
+      answer is 'do not raise anything'.
+    topics:
+      - {id: fin-01, title: "Debt versus equity", scope: "The fundamental choice, and what each one really costs."}
+      - {id: fin-02, title: "Cost of capital", scope: "Why money is never free, even when it is yours."}
+      - {id: fin-03, title: "Bootstrapping", scope: "Funding from revenue: the constraints it imposes and the freedom it buys."}
+      - {id: fin-04, title: "Revenue-based financing", scope: "Repaying from a share of sales, and when it beats both debt and equity."}
+      - {id: fin-05, title: "How venture capital actually works", scope: "Fund economics, power laws, and why VCs need outliers."}
+      - {id: fin-06, title: "Dilution and cap tables", scope: "What each round does to your ownership, with the arithmetic."}
+      - {id: fin-07, title: "Convertible notes and SAFEs", scope: "Deferring the valuation question, and the surprises that follow."}
+      - {id: fin-08, title: "Valuation: discounted cash flow", scope: "The honest method, and why its inputs are guesses."}
+      - {id: fin-09, title: "Valuation: multiples", scope: "How things actually get priced in practice, and its circularity."}
+      - {id: fin-10, title: "Unit economics", scope: "CAC, LTV and payback period — the numbers that decide viability."}
+      - {id: fin-11, title: "Gross margin", scope: "Why it quietly determines what kind of business you can be."}
+      - {id: fin-12, title: "Working capital and the cash conversion cycle", scope: "Why profitable businesses run out of money."}
+      - {id: fin-13, title: "Runway and burn", scope: "The two numbers a founder should know without looking."}
+      - {id: fin-14, title: "Break-even analysis", scope: "The point where the thing sustains itself, and how to find it early."}
+      - {id: fin-15, title: "Bank debt for a small business", scope: "What lenders look for, and why the first loan is the hardest."}
+      - {id: fin-16, title: "Japan: policy finance and small-business lending", scope: "日本政策金融公庫 and the state-backed lending route."}
+      - {id: fin-17, title: "Japan: grants and subsidies", scope: "補助金 and 助成金 — what exists for a small operator, and the catch."}
+      - {id: fin-18, title: "Invoice factoring", scope: "Selling receivables for cash now, and what it costs."}
+      - {id: fin-19, title: "Crowdfunding", scope: "Pre-selling as financing, and as demand validation."}
+      - {id: fin-20, title: "Buying versus building", scope: "Acquiring a small business instead of starting one."}
+      - {id: fin-21, title: "Selling a business", scope: "Multiples, earn-outs, and what buyers actually pay for."}
+      - {id: fin-22, title: "Term sheets: the clauses that matter", scope: "The handful of terms that decide outcomes, and the noise around them."}
+      - {id: fin-23, title: "Liquidation preferences", scope: "Why a big headline valuation can still leave founders with nothing."}
+      - {id: fin-24, title: "Equity compensation", scope: "Options, RSUs, strike prices and the tax timing that trips people up."}
+      - {id: fin-25, title: "Profit versus cash flow", scope: "Two different questions, and which one kills you first."}
+      - {id: fin-26, title: "Reading a P&L", scope: "The income statement, line by line, in plain language."}
+      - {id: fin-27, title: "Reading a balance sheet", scope: "What is owned, what is owed, and what is left."}
+      - {id: fin-28, title: "Reading a cash flow statement", scope: "The one that is hardest to fake, and why analysts start there."}
+      - {id: fin-29, title: "Judging a company from its numbers", scope: "A short checklist for reading any business quickly."}
+      - {id: fin-30, title: "When not to raise money", scope: "The cases where outside capital makes a good business worse."}
+
+  management:
+    name: Management
+    question: How do I run the money I have?
+    blurb: >-
+      Operations. The unglamorous half that decides whether earning more
+      actually changes anything.
+    topics:
+      - {id: man-01, title: "Pay yourself first, mechanically", scope: "Setting the order of operations so discipline is not required."}
+      - {id: man-02, title: "The emergency fund", scope: "How much, where to keep it, and what it is actually for."}
+      - {id: man-03, title: "An automation architecture", scope: "Designing account flows so the right thing happens by default."}
+      - {id: man-04, title: "Budgeting systems that survive contact", scope: "Why most budgets fail, and the few structures that do not."}
+      - {id: man-05, title: "Tracking net worth", scope: "The one number worth updating monthly, and how to do it in ten minutes."}
+      - {id: man-06, title: "Paying down debt", scope: "Avalanche versus snowball — the maths and the psychology disagree."}
+      - {id: man-07, title: "Credit and what it costs", scope: "How credit is priced, and what carrying a balance really means."}
+      - {id: man-08, title: "Japan: taxes on side income", scope: "確定申告, 雑所得 versus 事業所得, and the 200,000 yen line."}
+      - {id: man-09, title: "Japan: 個人事業主 versus 合同会社 versus 株式会社", scope: "When incorporating starts to make sense, and what it costs."}
+      - {id: man-10, title: "Separating business and personal money", scope: "Why one account for everything eventually breaks something."}
+      - {id: man-11, title: "Pricing your work", scope: "Cost-plus, market rate and value-based — and why engineers underprice."}
+      - {id: man-12, title: "Raising your rate", scope: "The mechanics of asking, and the arithmetic that makes it urgent."}
+      - {id: man-13, title: "Invoicing and getting paid", scope: "Terms, deposits, late payment — the boring systems that protect cash."}
+      - {id: man-14, title: "Contracts for freelancers", scope: "Scope, IP, payment terms and termination, in plain language."}
+      - {id: man-15, title: "Time as the binding constraint", scope: "Costing your own hour, and what that reveals about your choices."}
+      - {id: man-16, title: "Saying no", scope: "Opportunity cost applied to a calendar rather than a budget."}
+      - {id: man-17, title: "The one-page financial plan", scope: "Everything that matters, on a single sheet."}
+      - {id: man-18, title: "The annual review ritual", scope: "A yearly audit of money, time and direction that takes two hours."}
+      - {id: man-19, title: "Insurance you actually need", scope: "Insuring the catastrophic, self-insuring the rest."}
+      - {id: man-20, title: "Japan: NISA and iDeCo", scope: "The two tax-advantaged accounts, and how they differ."}
+      - {id: man-21, title: "Retirement arithmetic", scope: "Withdrawal rates, the 25x rule, and its assumptions."}
+      - {id: man-22, title: "Defining your enough number", scope: "Turning a vague ambition into a figure you could actually hit."}
+      - {id: man-23, title: "Money and relationships", scope: "Joint decisions, disclosure, and the arguments that are not about money."}
+      - {id: man-24, title: "Buying back time", scope: "Delegation as an investment decision, with a hurdle rate."}
+      - {id: man-25, title: "Systems versus goals", scope: "Why the weekly motion beats the annual target."}
+      - {id: man-26, title: "Measuring what matters", scope: "Choosing one metric per stream, and resisting the dashboard urge."}
+      - {id: man-27, title: "The busy trap", scope: "Motion that feels like progress, and how to tell the difference."}
+      - {id: man-28, title: "Building an asset versus selling hours", scope: "The ladder, revisited — and what actually moves you up a rung."}
+      - {id: man-29, title: "Exit thinking from day one", scope: "Designing something that could be sold, even if you never sell it."}
+      - {id: man-30, title: "The annual money calendar", scope: "What to do each month so nothing is ever a surprise."}

@@ -22,7 +22,7 @@ def _patch_fetch(monkeypatch, body: bytes):
             raise AssertionError("not json")
 
     monkeypatch.setattr(collect, "_fetch", lambda *a, **k: FakeResponse())
-    monkeypatch.setattr(collect, "_client", lambda cfg: _NullCtx())
+    monkeypatch.setattr(collect, "_client", lambda cfg, src=None: _NullCtx())
 
 
 class _NullCtx:
@@ -101,3 +101,55 @@ def test_within_lookback_keeps_undated(cfg):
     urls = {i.url for i in kept}
     assert "https://example.com/old" not in urls
     assert "https://example.com/new" in urls and "https://example.com/undated" in urls
+
+
+def test_podcast_entry_without_a_link_falls_back_to_the_enclosure():
+    """Podcast feeds routinely omit per-episode <link>; the episode lives in
+    <enclosure> and the guid is an internal id. Requiring <link> silently
+    emptied two 800-episode feeds."""
+    from lumina.collect import _entry_url
+
+    class Entry:
+        link = ""
+        enclosures = [{"href": "https://cdn.example.com/ep42.mp3"}]
+
+    assert _entry_url(Entry(), "https://show.example.com") == "https://cdn.example.com/ep42.mp3"
+
+
+def test_entry_url_prefers_a_real_link():
+    from lumina.collect import _entry_url
+
+    class Entry:
+        link = "https://example.com/episode-42"
+        enclosures = [{"href": "https://cdn.example.com/ep42.mp3"}]
+
+    assert _entry_url(Entry(), "") == "https://example.com/episode-42"
+
+
+def test_cap_is_applied_after_filtering_not_before(cfg, rss_source, monkeypatch):
+    """The first N entries of a podcast feed can all be unusable. Capping first
+    turned an 870-episode feed into zero items."""
+    entries = "".join(
+        f"<item><title>No link {i}</title><pubDate>Mon, 21 Sep 2026 09:00:00 +0000</pubDate></item>"
+        for i in range(45)
+    ) + "".join(
+        f'<item><title>Good {i}</title><link>https://example.com/g{i}</link>'
+        f"<pubDate>Mon, 21 Sep 2026 09:00:00 +0000</pubDate></item>"
+        for i in range(5)
+    )
+    feed = f"<?xml version='1.0'?><rss version='2.0'><channel><title>T</title>{entries}</channel></rss>"
+    _patch_fetch(monkeypatch, feed.encode())
+    items = collect.collect_rss(rss_source, cfg, None)
+    assert len(items) == 5
+    assert all(i.url.startswith("https://example.com/g") for i in items)
+
+
+def test_stale_feed_is_reported_but_not_dropped(cfg, rss_source, monkeypatch):
+    old = ("<?xml version='1.0'?><rss version='2.0'><channel><title>T</title>"
+           "<item><title>Ancient</title><link>https://example.com/a</link>"
+           "<pubDate>Fri, 02 Dec 2022 09:00:00 +0000</pubDate></item></channel></rss>")
+    _patch_fetch(monkeypatch, old.encode())
+    result = collect.collect_source(rss_source, cfg, None)
+    assert result.ok                 # still usable, not an error
+    assert result.stale              # but flagged
+    assert result.stale_days > 365

@@ -12,6 +12,7 @@ Contract every collector honours:
 from __future__ import annotations
 
 import os
+import re
 import time as _time
 from dataclasses import dataclass, field, asdict
 from datetime import date, datetime, timezone
@@ -26,6 +27,10 @@ from .util import JST, clip_words, day_bounds, log, strip_html, to_jst
 
 # Copyright guard: never hold more than this much of someone else's prose.
 EXCERPT_WORDS = 60
+
+# A feed whose newest item is older than this is reported as stale. Some good
+# sources genuinely publish quarterly, so this flags rather than disables.
+STALE_AFTER_DAYS = 180
 
 
 @dataclass
@@ -42,6 +47,7 @@ class Item:
     points: int = 0
     comments: int = 0
     weight: float = 1.0
+    track: str = ""
     extra: dict = field(default_factory=dict)
 
     @property
@@ -65,23 +71,31 @@ class SourceResult:
     items: list[Item] = field(default_factory=list)
     error: str | None = None
     skipped: str | None = None
+    stale_days: int | None = None
 
     @property
     def ok(self) -> bool:
         return self.error is None and self.skipped is None
 
+    @property
+    def stale(self) -> bool:
+        return self.stale_days is not None
+
 
 # --- http -------------------------------------------------------------------
 
 
-def _client(cfg: Config) -> httpx.Client:
+def _client(cfg: Config, src: Source | None = None) -> httpx.Client:
+    headers = {
+        "User-Agent": cfg.get("collect.user_agent", "lumina-wealth/1.0"),
+        "Accept": "application/rss+xml, application/atom+xml, application/xml, application/json;q=0.9, */*;q=0.8",
+    }
+    if src and src.headers:
+        headers.update(src.headers)
     return httpx.Client(
         timeout=float(cfg.get("collect.timeout_seconds", 20)),
         follow_redirects=True,
-        headers={
-            "User-Agent": cfg.get("collect.user_agent", "lumina-wealth/1.0"),
-            "Accept": "application/rss+xml, application/atom+xml, application/xml, application/json;q=0.9, */*;q=0.8",
-        },
+        headers=headers,
     )
 
 
@@ -114,6 +128,52 @@ def _fetch(client: httpx.Client, url: str, cfg: Config, **kwargs) -> httpx.Respo
     raise last if last else RuntimeError("fetch failed")
 
 
+_DUR = re.compile(r"^(?:(\d+):)?(\d{1,2}):(\d{2})$")
+
+
+def _entry_url(entry, feed_link: str = "") -> str:
+    """Resolve a usable link.
+
+    Podcast feeds frequently carry no per-episode <link> — the episode lives in
+    the <enclosure> and the guid is an internal id like
+    `gid://art19-episode-locator/...`. Falling back to the enclosure gives a
+    link that both plays and is unique enough to dedupe on.
+    """
+    link = (getattr(entry, "link", "") or "").strip()
+    if link:
+        return link
+    for enc in (getattr(entry, "enclosures", None) or []):
+        href = (enc.get("href") or "").strip()
+        if href:
+            return href
+    for l in (getattr(entry, "links", None) or []):
+        href = (l.get("href") or "").strip()
+        if href:
+            return href
+    return feed_link or ""
+
+
+def _duration(entry) -> tuple[str, str]:
+    """(kind, human duration). Podcast feeds carry itunes:duration as either
+    seconds or h:mm:ss; articles carry nothing."""
+    raw = str(getattr(entry, "itunes_duration", "") or "").strip()
+    if not raw:
+        return "read", ""
+    seconds = None
+    if raw.isdigit():
+        seconds = int(raw)
+    else:
+        m = _DUR.match(raw)
+        if m:
+            h, mm, ss = m.group(1) or 0, m.group(2), m.group(3)
+            seconds = int(h) * 3600 + int(mm) * 60 + int(ss)
+    if seconds is None:
+        return "listen", raw
+    if seconds >= 3600:
+        return "listen", f"{seconds // 3600}h {(seconds % 3600) // 60:02d}m"
+    return "listen", f"{max(1, round(seconds / 60))} min"
+
+
 def _entry_datetime(entry) -> datetime | None:
     for attr in ("published_parsed", "updated_parsed", "created_parsed"):
         parsed = getattr(entry, attr, None)
@@ -129,7 +189,7 @@ def _entry_datetime(entry) -> datetime | None:
 
 
 def collect_rss(src: Source, cfg: Config, window: tuple[datetime, datetime] | None) -> list[Item]:
-    with _client(cfg) as client:
+    with _client(cfg, src) as client:
         resp = _fetch(client, src.url, cfg)
     parsed = feedparser.parse(resp.content)
     # bozo just means "not strictly well-formed"; most real feeds trip it and
@@ -137,9 +197,15 @@ def collect_rss(src: Source, cfg: Config, window: tuple[datetime, datetime] | No
     if parsed.bozo and not parsed.entries:
         raise RuntimeError(f"unparseable feed ({getattr(parsed, 'bozo_exception', 'unknown')})")
 
+    feed_link = (getattr(parsed.feed, "link", "") or "").strip()
+    limit = int(cfg.get("collect.max_items_per_source", 40))
     items: list[Item] = []
-    for entry in parsed.entries[: int(cfg.get("collect.max_items_per_source", 40))]:
-        url = (getattr(entry, "link", "") or "").strip()
+    # Cap AFTER filtering, not before: the first 40 entries of a podcast feed
+    # can all lack a <link>, which silently produced an empty source.
+    for entry in parsed.entries:
+        if len(items) >= limit:
+            break
+        url = _entry_url(entry, feed_link)
         title = strip_html(getattr(entry, "title", "")).strip()
         if not url or not title:
             continue
@@ -153,6 +219,7 @@ def collect_rss(src: Source, cfg: Config, window: tuple[datetime, datetime] | No
         summary = getattr(entry, "summary", "") or ""
         if not summary and getattr(entry, "content", None):
             summary = entry.content[0].get("value", "")
+        kind, duration = _duration(entry)
         items.append(
             Item(
                 key=item_key(url, title),
@@ -165,6 +232,8 @@ def collect_rss(src: Source, cfg: Config, window: tuple[datetime, datetime] | No
                 excerpt=clip_words(summary, EXCERPT_WORDS),
                 author=strip_html(getattr(entry, "author", "")) or "",
                 weight=src.weight,
+                track=src.track,
+                extra={"kind": kind, "duration": duration, "media": src.media},
             )
         )
     return items
@@ -278,8 +347,21 @@ def collect_source(
         return SourceResult(source=src, error=note)
     except Exception as exc:  # deliberately broad: one bad source never ends a run
         return SourceResult(source=src, error=f"{type(exc).__name__}: {exc}"[:180])
+    # A feed can return HTTP 200, parse cleanly, and still be abandoned — Get
+    # Rich Slowly answered 200 with a newest post from December 2022. Report
+    # age so a dead source is visible rather than silently contributing nothing.
+    stale_days = None
+    dated = [i.published for i in items if i.published]
+    if dated:
+        age = (datetime.now(timezone.utc) - max(dated)).days
+        if age > STALE_AFTER_DAYS:
+            stale_days = age
+            log.warning("  %-24s newest item is %d days old — treating as stale", src.id, age)
+    elif items:
+        log.debug("  %-24s items carry no dates; cannot judge freshness", src.id)
+
     log.info("  %-24s %3d items", src.id, len(items))
-    return SourceResult(source=src, items=items)
+    return SourceResult(source=src, items=items, stale_days=stale_days)
 
 
 def collect_all(
