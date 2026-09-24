@@ -71,6 +71,14 @@ class SeenStore:
             "first_seen": str(first_seen or today()),
         }
 
+    def forget_on(self, d: date | str) -> int:
+        """Drop items first seen on exactly this day (single-day rebuild)."""
+        day = str(d)
+        stale = [k for k, v in self.entries.items() if str(v.get("first_seen", "")) == day]
+        for k in stale:
+            del self.entries[k]
+        return len(stale)
+
     def forget_since(self, d: date | str) -> int:
         """Drop everything first seen on or after `d`.
 
@@ -209,6 +217,18 @@ class PrincipleLog:
     def last_shown(self, pid: str) -> date | None:
         value = self.shown.get(pid)
         return date.fromisoformat(value) if value else None
+
+    def forget_on(self, d: date | str) -> int:
+        """Drop the mark for exactly this day.
+
+        Rebuilding ONE old day must not disturb the rotation of the days after
+        it, which is what forget_since would do.
+        """
+        day = str(d)
+        stale = [k for k, v in self.shown.items() if str(v) == day]
+        for k in stale:
+            del self.shown[k]
+        return len(stale)
 
     def forget_since(self, d: date | str) -> int:
         """Drop marks on or after `d`, so a rebuilt range replays the same

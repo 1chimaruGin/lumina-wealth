@@ -21,11 +21,51 @@
       "output_tokens": 103031,
       "run": "backfill:2026-09-17..2026-09-23",
       "stopped": null
+    },
+    {
+      "at": "2026-09-24",
+      "billed": false,
+      "calls": 25,
+      "cost_usd": 0.0,
+      "days": 7,
+      "equivalent_usd_not_charged": 1.43235,
+      "input_tokens": 765672,
+      "output_tokens": 212854,
+      "run": "backfill:2026-09-18..2026-09-24",
+      "stopped": "output token ceiling reached (212,854/210,000)"
+    },
+    {
+      "at": "2026-09-24",
+      "billed": false,
+      "calls": 3,
+      "cost_usd": 0.0,
+      "equivalent_usd_not_charged": 0.19068,
+      "input_tokens": 92191,
+      "items": 147,
+      "mode": "daily",
+      "output_tokens": 30410,
+      "picks": 3,
+      "run": "daily:2026-09-24",
+      "stopped": null
+    },
+    {
+      "at": "2026-09-24",
+      "billed": false,
+      "calls": 4,
+      "cost_usd": 0.0,
+      "equivalent_usd_not_charged": 0.23708,
+      "input_tokens": 122704,
+      "items": 94,
+      "mode": "daily",
+      "output_tokens": 37178,
+      "picks": 3,
+      "run": "daily:2026-09-17",
+      "stopped": null
     }
   ],
   "totals_last_400_runs": {
     "cost_usd": 0.0,
-    "input_tokens": 371603,
-    "output_tokens": 103031
+    "input_tokens": 1352170,
+    "output_tokens": 383473
   }
 }

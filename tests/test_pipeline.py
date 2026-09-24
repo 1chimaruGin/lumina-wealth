@@ -223,3 +223,48 @@ def test_daily_brief_hides_opportunity_candidates_by_default(cfg):
     assert "## 3 · Opportunities" in text
     assert "a very promising thing" not in text     # captured, not paraded
     assert "ideas/inbox/" in text                   # but you are told it happened
+
+
+def test_forget_on_leaves_later_days_alone(tmp_path):
+    """Rebuilding one old day must not reset the days after it."""
+    from lumina.curriculum import CurriculumState
+
+    st = CurriculumState(path=tmp_path / "c.json", taught={
+        "a": "2026-09-17", "b": "2026-09-18", "c": "2026-09-19"})
+    assert st.forget_on("2026-09-17") == 1
+    assert set(st.taught) == {"b", "c"}
+
+
+def test_forget_since_still_clears_a_whole_range(tmp_path):
+    from lumina.curriculum import CurriculumState
+
+    st = CurriculumState(path=tmp_path / "c.json", taught={
+        "a": "2026-09-17", "b": "2026-09-18", "c": "2026-09-19"})
+    assert st.forget_since("2026-09-18") == 2
+    assert set(st.taught) == {"a"}
+
+
+def test_seen_store_forget_on_is_exact(tmp_path):
+    from lumina.state import SeenStore
+
+    s = SeenStore.load(tmp_path)
+    s.add("k1", source="x", title="t", first_seen="2026-09-17")
+    s.add("k2", source="x", title="t", first_seen="2026-09-18")
+    assert s.forget_on("2026-09-17") == 1
+    assert s.has("k2") and not s.has("k1")
+
+
+def test_every_state_store_has_both_forget_variants(tmp_path):
+    """A patch once added forget_on to the wrong class and the suite stayed
+    green, because nothing exercised PrincipleLog's copy."""
+    from lumina.curriculum import CurriculumState
+    from lumina.state import PrincipleLog, SeenStore
+
+    plog = PrincipleLog(path=tmp_path / "p.json", shown={"P01": "2026-09-17", "P02": "2026-09-18"})
+    assert plog.forget_on("2026-09-17") == 1
+    assert set(plog.shown) == {"P02"}
+    assert plog.forget_since("2026-09-18") == 1
+    assert plog.shown == {}
+
+    for store in (SeenStore.load(tmp_path), CurriculumState.load(tmp_path)):
+        assert hasattr(store, "forget_on") and hasattr(store, "forget_since")

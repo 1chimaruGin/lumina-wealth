@@ -1,10 +1,15 @@
 {
-  "count": 60,
+  "count": 72,
   "items": {
     "03c3fbabf7264a94": {
       "first_seen": "2026-09-18",
       "source": "hn_show",
       "title": "Show HN: Snapdrop: Instantly share files between devices. No setup, no signup"
+    },
+    "05049c22f724c510": {
+      "first_seen": "2026-09-23",
+      "source": "hn_ask",
+      "title": "LinkedIn is a terrible quality website"
     },
     "075dbf6e272e1e5a": {
       "first_seen": "2026-09-20",
@@ -20,6 +25,11 @@
       "first_seen": "2026-09-17",
       "source": "hn_show",
       "title": "Show HN: I built a new version of my fun spatial 3D online meeting app"
+    },
+    "0b540d37febda4a8": {
+      "first_seen": "2026-09-24",
+      "source": "hn_show",
+      "title": "Show HN: I built a post-mortem debugger for native Windows x64/x86 crashes"
     },
     "0ea575d9c4e561dc": {
       "first_seen": "2026-09-21",
@@ -41,11 +51,6 @@
       "source": "hn_show",
       "title": "Show HN: LiveWorld – Every 24/7 YouTube live camera on one globe"
     },
-    "1793e44c65831307": {
-      "first_seen": "2026-09-17",
-      "source": "awealthofcommonsense",
-      "title": "Animal Spirits: How to Talk To Your Clients About Ray Dalio"
-    },
     "229228a0add68ee8": {
       "first_seen": "2026-09-21",
       "source": "hn_show",
@@ -66,15 +71,30 @@
       "source": "hn_show",
       "title": "Show HN: Rickub – The Smartest Git in the Universe"
     },
+    "2aa6acd28e1a954f": {
+      "first_seen": "2026-09-17",
+      "source": "hn_show",
+      "title": "Show HN: How Stale Is Your AI? Release age and training cutoff for 20 models"
+    },
     "2b017119b467ede2": {
       "first_seen": "2026-09-19",
       "source": "awealthofcommonsense",
       "title": "5% Bond Yields"
     },
+    "376c796fbe430399": {
+      "first_seen": "2026-09-23",
+      "source": "hn_show",
+      "title": "Show HN: RxFilm Studio–Create and edit your product videos with AI agent"
+    },
     "38778c30c8849ec0": {
       "first_seen": "2026-09-18",
       "source": "hn_show",
       "title": "Show HN: Aclif – Agent CLI framework: one grammar, canonical names across SaaS"
+    },
+    "39a6302e63e54638": {
+      "first_seen": "2026-09-23",
+      "source": "hn_show",
+      "title": "Show HN: Jevper – the Jev interface on top of any OpenAI-compatible model"
     },
     "3b3507d83f0e90dc": {
       "first_seen": "2026-09-21",
@@ -85,11 +105,6 @@
       "first_seen": "2026-09-23",
       "source": "awealthofcommonsense",
       "title": "Animal Spirits: The Wobbly House of Cards"
-    },
-    "43a8eaff6a96cecd": {
-      "first_seen": "2026-09-22",
-      "source": "ofdollarsanddata",
-      "title": "Is Startup Equity a Bad Deal?"
     },
     "45a8926dfd57adb3": {
       "first_seen": "2026-09-22",
@@ -121,10 +136,10 @@
       "source": "awealthofcommonsense",
       "title": "The Biggest Risk to the Economy"
     },
-    "5c59206fa8586236": {
-      "first_seen": "2026-09-23",
-      "source": "hn_show",
-      "title": "Show HN: OpenMCP – An open, code-first fork of the Model Context Protocol"
+    "569ae022ea2f0e60": {
+      "first_seen": "2026-09-24",
+      "source": "reddit_sideproject",
+      "title": "InvGen - A simple invoice and quotation maker for Indian businesses, with or without GST"
     },
     "5eae0ed268831f89": {
       "first_seen": "2026-09-23",
@@ -186,6 +201,21 @@
       "source": "hn_show",
       "title": "Show HN: Ax-check.com – Can agents use your product?"
     },
+    "84fe7e7085b7660f": {
+      "first_seen": "2026-09-24",
+      "source": "hn_show",
+      "title": "Show HN: An open-source manufacturing ERP/MES/QMS"
+    },
+    "88362ab1cef9a649": {
+      "first_seen": "2026-09-18",
+      "source": "sethgodin",
+      "title": "A series of bad decisions"
+    },
+    "8c2aa81a2d6a6bea": {
+      "first_seen": "2026-09-17",
+      "source": "hn_show",
+      "title": "Show HN: Swift-Qwen3.8-27B, -58.3% thinking, x1.95 speed, accuracy of xhigh"
+    },
     "8caf905bf681196c": {
       "first_seen": "2026-09-18",
       "source": "hn_show",
@@ -201,6 +231,11 @@
       "source": "hn_show",
       "title": "Show HN: Training a model to identify AI web content from structure alone"
     },
+    "a0977d94805cece8": {
+      "first_seen": "2026-09-24",
+      "source": "awealthofcommonsense",
+      "title": "Why Didn’t We Get a Housing Bubble?"
+    },
     "a0f0ea562df343c7": {
       "first_seen": "2026-09-19",
       "source": "hn_ask",
@@ -211,15 +246,15 @@
       "source": "hn_show",
       "title": "Show HN: InstinctFlash – High-Performance Serving Runtime for Robotics Models"
     },
-    "a80dad169f1b876f": {
-      "first_seen": "2026-09-17",
-      "source": "hn_ask",
-      "title": "Ask HN: AI Panic, you buying it?"
-    },
     "abf452cf9e18fc22": {
       "first_seen": "2026-09-21",
       "source": "awealthofcommonsense",
       "title": "Talk Your Book: Price is the Ultimate Factor"
+    },
+    "ac1a9187f664f42d": {
+      "first_seen": "2026-09-23",
+      "source": "hn_show",
+      "title": "Show HN: Ive Sent It – online courier for files, with signed proof of delivery"
     },
     "ae66baacc0cd771d": {
       "first_seen": "2026-09-23",
@@ -231,15 +266,45 @@
       "source": "hn_show",
       "title": "Show HN: Seal – Letters and passwords that open for your family after you die"
     },
+    "b6d27ada39475d11": {
+      "first_seen": "2026-09-24",
+      "source": "hn_show",
+      "title": "Show HN: A website that tracks US food prices every day"
+    },
+    "bd209c4cd5607be8": {
+      "first_seen": "2026-09-24",
+      "source": "hn_ask",
+      "title": "Ask HN: Dead Internet"
+    },
+    "c851d13813897def": {
+      "first_seen": "2026-09-24",
+      "source": "hn_show",
+      "title": "Show HN: How long do I need to work at my salary before I can coast, or retire?"
+    },
     "c8901fa7de950728": {
       "first_seen": "2026-09-22",
       "source": "hn_show",
       "title": "Show HN: JevBench, a reproducible benchmark for typed decision models"
     },
+    "cab07fce8c766aec": {
+      "first_seen": "2026-09-24",
+      "source": "hn_show",
+      "title": "Show HN: Conway's Game of Life in boot sector"
+    },
     "cd69215e60e4b7a4": {
       "first_seen": "2026-09-21",
       "source": "hn_show",
       "title": "Show HN: Lightspeed, build real time apps the Laravel way (+asteroids demo)"
+    },
+    "d2963bd75db6285b": {
+      "first_seen": "2026-09-22",
+      "source": "lennys",
+      "title": "Advanced evals: How to find (and fix) hidden AI failures in your product"
+    },
+    "d441541cb42d2da5": {
+      "first_seen": "2026-09-22",
+      "source": "hn_show",
+      "title": "Show HN: An atlas of system designs with interactive architecture diagrams"
     },
     "d7dddac5c9c6043e": {
       "first_seen": "2026-09-18",
@@ -252,7 +317,7 @@
       "title": "Ask HN: Is it impossible to disable Siri on macOS 27?"
     },
     "df38c4228663d91d": {
-      "first_seen": "2026-09-22",
+      "first_seen": "2026-09-24",
       "source": "hn_ask",
       "title": "Tell HN: Claude Code just accepted and signed a contract for me. Without asking"
     },
@@ -260,11 +325,6 @@
       "first_seen": "2026-09-20",
       "source": "hn_show",
       "title": "Show HN: Set, offline Markdown note-taking app with device-to-device sync"
-    },
-    "e65c2ed3c5de473e": {
-      "first_seen": "2026-09-17",
-      "source": "hn_show",
-      "title": "Show HN: Halo 3's Guardian, playable in the browser, as my personal website"
     },
     "e86027df822f90e5": {
       "first_seen": "2026-09-20",
@@ -286,15 +346,15 @@
       "source": "hn_ask",
       "title": "Neovim have a ~$800k Bitcoin donation sitting untouched since 2023"
     },
-    "f0798986480dde8b": {
-      "first_seen": "2026-09-23",
-      "source": "hn_show",
-      "title": "Show HN: Brig – A MicroVM sandbox for AI coding agents on Mac and Linux"
-    },
     "f4d4083196277415": {
       "first_seen": "2026-09-20",
       "source": "hn_show",
       "title": "Show HN: Rubrol – Sub-10ms PDF engine using Typst instead of Headless Chrome"
+    },
+    "f6ae2f8548ecbe45": {
+      "first_seen": "2026-09-17",
+      "source": "awealthofcommonsense",
+      "title": "Why Are Valuations Falling in a Bull Market?"
     },
     "feacb1c4ff8cc40f": {
       "first_seen": "2026-09-20",

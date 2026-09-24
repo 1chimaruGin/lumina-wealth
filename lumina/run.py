@@ -59,8 +59,8 @@ def run_daily(
     if owns_state and rebuilding:
         # Same reason as backfill --overwrite: a rebuild must reproduce the day,
         # not pick over what the first run left behind.
-        seen.forget_since(d)
-        plog.forget_since(d)
+        seen.forget_on(d)
+        plog.forget_on(d)
     notes: list[str] = []
 
     # --- collect ---
@@ -109,7 +109,7 @@ def run_daily(
     syllabus = load_syllabus(cfg.root / cfg.get("curriculum.syllabus", "curriculum/syllabus.yaml"))
     cstate = cstate if cstate is not None else CurriculumState.load(cfg.data_dir)
     if owns_state and rebuilding:
-        cstate.forget_since(d)
+        cstate.forget_on(d)
     topics = next_topics(syllabus, cstate, d, int(cfg.get("curriculum.lessons_per_day", 2)))
     lessons = [get_or_write_lesson(cfg.root, topic, scorer) for topic in topics]
     if topics and not any(l for l in lessons if not l.is_placeholder):

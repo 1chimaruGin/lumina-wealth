@@ -106,6 +106,19 @@ class CurriculumState:
         if not existing or str(on) < existing:
             self.taught[topic_id] = str(on)
 
+    def forget_on(self, d: date | str) -> int:
+        """Drop entries for exactly this day.
+
+        Rebuilding ONE old day must not disturb the days after it — which is
+        what forget_since would do, since it drops everything from that date
+        onward.
+        """
+        day = str(d)
+        stale = [k for k, v in self.taught.items() if str(v) == day]
+        for k in stale:
+            del self.taught[k]
+        return len(stale)
+
     def forget_since(self, d: date | str) -> int:
         """Rebuilding a date must replay the same lessons, not skip ahead."""
         cutoff = str(d)

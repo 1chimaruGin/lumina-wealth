@@ -48,7 +48,9 @@ budget:
   max_calls_per_run: 12
   max_calls_per_backfill: 90
   max_input_tokens_per_run: 400000
-  max_output_tokens_per_run: 30000
+  # Lessons are output-heavy: ~2-3k tokens each, and the CLI counts thinking
+  # tokens too. Sized for scoring alone, this tripped mid-backfill.
+  max_output_tokens_per_run: 90000
   max_usd_per_run: 0.25
   # Backfill runs many days at once; this caps the whole backfill job.
   max_usd_per_backfill: 2.00
