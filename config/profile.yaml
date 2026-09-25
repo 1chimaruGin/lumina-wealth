@@ -66,9 +66,17 @@ goals:
   # writing a fantasy — a fake target makes the brief noise.
   income_target_jpy_per_month: null
   target_date: null
-  # What "winning" looks like this quarter, in one sentence.
-  # TODO
-  current_focus: ""
+  # The stated priority, in order. This is the yardstick everything is judged
+  # against, so it matters that it is current: a book note once dismissed a
+  # serious history of debt for "offering zero income path", which was the wrong
+  # question to ask of it.
+  primary: >-
+    Understand money properly — its mechanics, its history, investing, markets
+    and crypto. Learning is the goal in itself, not a means to a side project.
+  secondary: >-
+    Build one income stream at a time, eventually. Captured but not urgent; no
+    stream is active and that is fine.
+  current_focus: "Money theory, investing and markets. Depth over speed." 
 
 preferences:
   # Ladder rungs you want to be shown, in order of appetite.

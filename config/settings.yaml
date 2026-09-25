@@ -45,7 +45,7 @@ budget:
   # On the claude-code backend nothing is billed per call, so the dollar
   # ceilings are ignored and the call ceiling is the one that matters — calls
   # are what a subscription rate limit actually counts.
-  max_calls_per_run: 12
+  max_calls_per_run: 16
   max_calls_per_backfill: 90
   max_input_tokens_per_run: 400000
   # Lessons are output-heavy: ~2-3k tokens each, and the CLI counts thinking
@@ -81,6 +81,9 @@ select:
   # Extra reading shown as one-line links under the summarised piece — cheap,
   # skippable, and no extra model calls.
   mind_extra_links: 3
+  # Headlines handed to the triage step. It returns at most 4, and says what
+  # kind of story it ignored — the filter is the lesson, not the picks.
+  news_candidates: 18
   stream_picks: 3
   # A stream item below this weighted score is never shown, even if it is the
   # best available. Better an honest short brief than filler.

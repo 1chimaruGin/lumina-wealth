@@ -437,3 +437,101 @@ streams:
       Their terms forbid automated access to listing data. Off by design.
       Closest legitimate substitute already covered: HN "Show HN" + the acquisition
       threads on r/SaaS.
+
+# ---------------------------------------------------------------------------
+# News. Treated differently from the essays above: headlines are cheap to
+# collect and mostly noise, so the brief shows a handful with one line on the
+# mechanism, and says plainly what it ignored. Verified 2026-09-26. Rejected:
+# Reuters (public RSS retired), Japan Times business (404), NHK World (404).
+# ---------------------------------------------------------------------------
+news:
+  - id: boj
+    name: Bank of Japan
+    kind: rss
+    url: https://www.boj.or.jp/en/rss/whatsnew.xml
+    section: news
+    track: intelligence
+    enabled: true
+    backfill: true
+    auth: none
+    weight: 1.4
+    notes: >-
+      The primary source. Policy statements, minutes and speeches from the
+      institution that actually sets the rate — worth more than any number of
+      articles about what it might do.
+
+  - id: economist_fin
+    name: The Economist — Finance
+    kind: rss
+    url: https://www.economist.com/finance-and-economics/rss.xml
+    section: news
+    track: intelligence
+    enabled: true
+    backfill: true
+    auth: none
+    weight: 1.2
+    notes: "Mechanism-first coverage. Feed is headline+standfirst; full text is paywalled."
+
+  - id: ft_companies
+    name: Financial Times
+    kind: rss
+    url: https://www.ft.com/companies?format=rss
+    section: news
+    track: financing
+    enabled: true
+    backfill: true
+    auth: none
+    weight: 1.1
+    notes: "Headlines only; most articles are paywalled. Useful for what is being discussed."
+
+  - id: nikkei_asia
+    name: Nikkei Asia
+    kind: rss
+    url: https://asia.nikkei.com/rss/feed/nar
+    section: news
+    track: intelligence
+    enabled: true
+    backfill: true
+    auth: none
+    weight: 1.2
+    notes: "Japan and Asia. The market you actually live and earn in."
+
+  - id: marketwatch
+    name: MarketWatch
+    kind: rss
+    url: https://feeds.content.dowjones.io/public/rss/mw_topstories
+    section: news
+    track: markets
+    enabled: true
+    backfill: true
+    auth: none
+    weight: 0.8
+    notes: >-
+      Retail market coverage. Deliberately low weight: this is the register that
+      makes trading feel urgent, which is itself worth learning to recognise.
+
+  - id: bbc_business
+    name: BBC Business
+    kind: rss
+    url: https://feeds.bbci.co.uk/news/business/rss.xml
+    section: news
+    track: intelligence
+    enabled: true
+    backfill: true
+    auth: none
+    weight: 0.9
+    notes: "Broad, unpaywalled, low jargon."
+
+  - id: coindesk
+    name: CoinDesk
+    kind: rss
+    url: https://www.coindesk.com/arc/outboundfeeds/rss/
+    section: news
+    track: crypto
+    enabled: true
+    backfill: true
+    auth: none
+    weight: 0.8
+    notes: >-
+      Crypto trade press. Read it knowing the industry funds the industry's
+      media — useful for what happened, not for whether it was good.

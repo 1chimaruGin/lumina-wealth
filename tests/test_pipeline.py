@@ -34,8 +34,10 @@ def test_declared_section_is_respected():
 
 
 def test_noise_is_dropped():
-    assert is_noise(_item("The best memecoin airdrop strategy"))
-    kept = classify_all([_item("Show HN: a CLI"), _item("Crypto airdrop guide")])
+    # Crypto itself is a taught track now; what gets dropped is the
+    # promise-of-easy-money register, whatever asset it is attached to.
+    assert is_noise(_item("Guaranteed returns, risk-free profit"))
+    kept = classify_all([_item("Show HN: a CLI"), _item("Get rich quick with our trading course")])
     assert len(kept) == 1
 
 
@@ -94,8 +96,9 @@ def test_compose_daily_renders_every_section(cfg):
     principle = parse_principles(cfg.principles_file)[0]
     text = compose_daily(cfg, D, mind, streams, principle, Stream(),
                          sources_ok=9, sources_total=11, sources_failed=[])
-    for heading in ("## 1 · Money school", "## 2 · Today's reading", "## 3 · Opportunities",
-                    "## 4 · Principle", "## 5 · Today's action", "## 6 · Stream status"):
+    for heading in ("## 1 · Money school", "## 2 · Book", "## 3 · News",
+                    "## 4 · Today's reading", "## 5 · Opportunities",
+                    "## 6 · Principle", "## 7 · Today's action", "## 8 · Stream status"):
         assert heading in text
     meta, _ = split_frontmatter(text)
     assert str(meta["date"]) == "2026-09-23"
@@ -220,7 +223,7 @@ def test_daily_brief_hides_opportunity_candidates_by_default(cfg):
     scored = HeuristicScorer(cfg).score_streams([_item("Show HN: a very promising thing")])
     text = compose_daily(cfg, D, None, scored, None, Stream(), filed=3,
                          sources_ok=1, sources_total=1, sources_failed=[])
-    assert "## 3 · Opportunities" in text
+    assert "## 5 · Opportunities" in text
     assert "a very promising thing" not in text     # captured, not paraded
     assert "ideas/inbox/" in text                   # but you are told it happened
 
@@ -329,3 +332,70 @@ def test_lesson_prompt_guards_against_generalised_tax_rates():
     flat = " ".join(LESSON_SYSTEM.split())
     assert "Never generalise a rate across instruments" in flat
     assert "confirm it against the current NTA or FSA source" in flat
+
+
+def test_crypto_news_survives_the_noise_filter(cfg):
+    """The noise pattern listed crypto/token/nft from when they were out of
+    scope. Crypto is now a taught track, and the filter was silently discarding
+    every item from the crypto news source."""
+    from lumina.classify import classify_all, is_noise
+
+    for title in ("Bitcoin ETF sees record inflows", "Ethereum upgrade cuts fees",
+                  "Yen weakens past 160 against the dollar"):
+        assert not is_noise(_item(title, section="news"))
+    kept = classify_all([_item("Bitcoin ETF sees record inflows", section="news")],
+                        keep_sections={"news"})
+    assert len(kept) == 1 and kept[0].section == "news"
+
+
+def test_the_scam_register_is_still_filtered(cfg):
+    from lumina.classify import is_noise
+
+    for title in ("Guaranteed returns from our signal group",
+                  "Get rich quick with this dropshipping course",
+                  "Join the pump and dump"):
+        assert is_noise(_item(title))
+
+
+def test_news_keeps_its_section(cfg):
+    from lumina.classify import classify_all
+
+    item = _item("BOJ holds rates steady", section="news", source_id="boj")
+    assert classify_all([item], keep_sections={"news"})[0].section == "news"
+
+
+def test_news_triage_prompt_teaches_the_filter():
+    from lumina.score import NEWS_SYSTEM
+
+    flat = " ".join(NEWS_SYSTEM.split())
+    assert "ignored" in flat
+    assert "quiet day is a real finding" in flat
+    assert "no advice to buy or sell" in flat.lower()
+
+
+def test_book_note_roundtrips(tmp_path):
+    from lumina.books import Book, BookNote, load_note, save_note
+
+    b = Book(id="bk-99", title="A Book", author="Someone", year=2020, track="investing")
+    n = BookNote(book=b, argument="It argues a thing.", one_idea="One idea.",
+                 verdict="Read chapters 1-3 and stop.", caveat="Dated on tax.",
+                 written_by="claude-code")
+    save_note(tmp_path, n)
+    back = load_note(tmp_path, b)
+    assert back.verdict == n.verdict and back.caveat == n.caveat
+
+
+def test_book_rotation_prefers_unread_then_repeats(tmp_path):
+    from lumina.books import Book, BookState, next_book
+    import datetime as dt
+
+    books = [Book(id="a", title="A", author="x", weight=1.0),
+             Book(id="b", title="B", author="x", weight=2.0)]
+    st = BookState(path=tmp_path / "b.json", read={})
+    first = next_book(books, st, dt.date(2026, 9, 26))
+    assert first.id == "b"                      # higher weight first
+    st.mark("b", dt.date(2026, 9, 26))
+    assert next_book(books, st, dt.date(2026, 9, 27)).id == "a"
+    st.mark("a", dt.date(2026, 9, 27))
+    # everything read: returns to the longest ago rather than stopping
+    assert next_book(books, st, dt.date(2026, 9, 28)).id == "b"

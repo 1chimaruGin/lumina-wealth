@@ -31,10 +31,14 @@ _STREAM_PATTERNS = re.compile(
     re.I,
 )
 
-# Never money advice, however money-flavoured the words are.
+# Junk, not subject matter. Crypto and FX used to be listed here from when they
+# were out of scope; they are now taught tracks, and leaving them in silently
+# discarded every item from the crypto news source. What remains is the
+# promise-of-easy-money register, which is noise in any asset class.
 _NOISE_PATTERNS = re.compile(
-    r"\b(crypto|token|airdrop|nft|meme ?coin|forex|casino|gambling|betting|"
-    r"get rich quick|mlm|dropship\w* course)\b",
+    r"\b(get rich quick|make money fast|guaranteed returns?|risk[- ]free profit|"
+    r"mlm|multi[- ]level marketing|dropship\w* course|signal group|"
+    r"trading course|copy ?trading service|pump and dump)\b",
     re.I,
 )
 
@@ -65,12 +69,18 @@ def classify(item: Item) -> str:
     return item.section
 
 
-def classify_all(items: Iterable[Item], drop_noise: bool = True) -> list[Item]:
+def classify_all(items: Iterable[Item], drop_noise: bool = True,
+                 keep_sections: set[str] | None = None) -> list[Item]:
+    """keep_sections are passed through untouched — news is already correctly
+    sectioned by its source and must not be re-sorted into mind or streams by
+    keyword matching."""
+    keep = keep_sections or set()
     out = []
     for item in items:
         if drop_noise and is_noise(item):
             continue
-        item.section = classify(item)
+        if item.section not in keep:
+            item.section = classify(item)
         out.append(item)
     return out
 

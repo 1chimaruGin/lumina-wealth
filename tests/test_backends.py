@@ -121,3 +121,29 @@ def test_usage_json_names_subscription_spend_unambiguously(tmp_path):
     assert entry["billed"] is False
     assert entry["cost_usd"] == 0.0
     assert entry["equivalent_usd_not_charged"] == 0.5
+
+
+def test_a_subscription_run_never_prints_a_dollar_figure(cfg, tmp_path, monkeypatch):
+    """The brief printed '$0.2420' for a run billed to a Claude subscription.
+    Nothing was charged; the figure is an equivalent API price and reads as a bill."""
+    from lumina.compose import compose_daily
+    from lumina.streams import Stream
+    import datetime as dt
+
+    usage = UsageStore.load(tmp_path, {"price_per_mtok_input": 1.0, "price_per_mtok_output": 5.0})
+    usage.billed = False
+    usage.record(300_000, 60_000, equivalent_usd=0.24)
+    assert usage.cost_usd > 0          # the raw property still computes it
+    assert usage.summary()["cost_usd"] == 0.0
+
+    cost = "" if not usage.calls else (
+        f"${usage.cost_usd:.4f}" if usage.billed
+        else f"{usage.calls} calls · {(usage.input_tokens + usage.output_tokens) / 1000:.0f}k tokens · not billed per call"
+    )
+    assert "$" not in cost
+    assert "not billed" in cost
+
+    text = compose_daily(cfg, dt.date(2026, 9, 26), None, [], None, Stream(),
+                         cost=cost, sources_ok=1, sources_total=1, sources_failed=[])
+    assert "not billed per call" in text
+    assert "$0." not in text

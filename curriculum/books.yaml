@@ -1,0 +1,81 @@
+# The reading list.
+#
+# One book surfaces per day. The generated note is not a review and not a sales
+# pitch — it states the argument, the one idea worth keeping, and whether the
+# book is actually worth your hours or whether the summary is enough. Most money
+# books are one insight and two hundred pages of padding; saying so is the point.
+#
+# `weight` nudges ordering. `track` ties a book to a syllabus track.
+# Add your own freely; `id` must stay unique.
+
+books:
+  # ---- psychology & behaviour ----
+  - {id: bk-01, title: "The Psychology of Money", author: "Morgan Housel", year: 2020, track: psychology, weight: 1.3}
+  - {id: bk-02, title: "Thinking, Fast and Slow", author: "Daniel Kahneman", year: 2011, track: psychology, weight: 1.2}
+  - {id: bk-03, title: "Misbehaving", author: "Richard Thaler", year: 2015, track: psychology, weight: 1.1}
+  - {id: bk-04, title: "Your Money and Your Brain", author: "Jason Zweig", year: 2007, track: psychology, weight: 1.0}
+  - {id: bk-05, title: "Scarcity", author: "Mullainathan & Shafir", year: 2013, track: psychology, weight: 1.1}
+  - {id: bk-06, title: "Atomic Habits", author: "James Clear", year: 2018, track: management, weight: 1.0}
+  - {id: bk-07, title: "Influence", author: "Robert Cialdini", year: 1984, track: psychology, weight: 1.1}
+  - {id: bk-08, title: "Fooled by Randomness", author: "Nassim Nicholas Taleb", year: 2001, track: psychology, weight: 1.1}
+
+  # ---- how money and markets work ----
+  - {id: bk-10, title: "A Random Walk Down Wall Street", author: "Burton Malkiel", year: 1973, track: investing, weight: 1.3}
+  - {id: bk-11, title: "The Little Book of Common Sense Investing", author: "John C. Bogle", year: 2007, track: investing, weight: 1.3}
+  - {id: bk-12, title: "The Intelligent Investor", author: "Benjamin Graham", year: 1949, track: investing, weight: 1.2}
+  - {id: bk-13, title: "Common Stocks and Uncommon Profits", author: "Philip Fisher", year: 1958, track: investing, weight: 0.9}
+  - {id: bk-14, title: "The Four Pillars of Investing", author: "William Bernstein", year: 2002, track: investing, weight: 1.2}
+  - {id: bk-15, title: "Winning the Loser's Game", author: "Charles Ellis", year: 1998, track: investing, weight: 1.1}
+  - {id: bk-16, title: "Expectations Investing", author: "Mauboussin & Rappaport", year: 2001, track: investing, weight: 0.9}
+  - {id: bk-17, title: "The Most Important Thing", author: "Howard Marks", year: 2011, track: investing, weight: 1.1}
+  - {id: bk-18, title: "Narrative Economics", author: "Robert Shiller", year: 2019, track: intelligence, weight: 0.9}
+  - {id: bk-19, title: "Irrational Exuberance", author: "Robert Shiller", year: 2000, track: investing, weight: 1.0}
+  - {id: bk-20, title: "Where Are the Customers' Yachts?", author: "Fred Schwed Jr.", year: 1940, track: markets, weight: 1.0}
+
+  # ---- markets, trading, risk ----
+  - {id: bk-21, title: "Reminiscences of a Stock Operator", author: "Edwin Lefèvre", year: 1923, track: markets, weight: 1.0}
+  - {id: bk-22, title: "Market Wizards", author: "Jack Schwager", year: 1989, track: markets, weight: 0.9}
+  - {id: bk-23, title: "When Genius Failed", author: "Roger Lowenstein", year: 2000, track: markets, weight: 1.2}
+  - {id: bk-24, title: "The Black Swan", author: "Nassim Nicholas Taleb", year: 2007, track: markets, weight: 1.0}
+  - {id: bk-25, title: "Flash Boys", author: "Michael Lewis", year: 2014, track: markets, weight: 0.9}
+  - {id: bk-26, title: "Liar's Poker", author: "Michael Lewis", year: 1989, track: markets, weight: 0.9}
+  - {id: bk-27, title: "The Big Short", author: "Michael Lewis", year: 2010, track: financing, weight: 1.0}
+  - {id: bk-28, title: "Trading in the Zone", author: "Mark Douglas", year: 2000, track: markets, weight: 0.7}
+  - {id: bk-29, title: "What I Learned Losing a Million Dollars", author: "Paul & Moynihan", year: 1994, track: markets, weight: 1.1}
+  - {id: bk-30, title: "A Man for All Markets", author: "Edward O. Thorp", year: 2017, track: markets, weight: 1.1}
+
+  # ---- money, history, power ----
+  - {id: bk-31, title: "Debt: The First 5000 Years", author: "David Graeber", year: 2011, track: history, weight: 1.2}
+  - {id: bk-32, title: "The Ascent of Money", author: "Niall Ferguson", year: 2008, track: history, weight: 1.1}
+  - {id: bk-33, title: "Lords of Finance", author: "Liaquat Ahamed", year: 2009, track: history, weight: 1.1}
+  - {id: bk-34, title: "Manias, Panics and Crashes", author: "Kindleberger & Aliber", year: 1978, track: history, weight: 1.2}
+  - {id: bk-35, title: "Extraordinary Popular Delusions", author: "Charles Mackay", year: 1841, track: history, weight: 0.8}
+  - {id: bk-36, title: "This Time Is Different", author: "Reinhart & Rogoff", year: 2009, track: history, weight: 0.9}
+  - {id: bk-37, title: "The Bubble Economy", author: "Christopher Wood", year: 1992, track: history, weight: 1.0}
+  - {id: bk-38, title: "Princes of the Yen", author: "Richard Werner", year: 2001, track: history, weight: 1.0}
+  - {id: bk-39, title: "Money: The Unauthorised Biography", author: "Felix Martin", year: 2013, track: intelligence, weight: 1.0}
+  - {id: bk-40, title: "Capital in the Twenty-First Century", author: "Thomas Piketty", year: 2013, track: intelligence, weight: 1.0}
+
+  # ---- earning, business, financing ----
+  - {id: bk-41, title: "The Millionaire Next Door", author: "Stanley & Danko", year: 1996, track: management, weight: 1.0}
+  - {id: bk-42, title: "I Will Teach You to Be Rich", author: "Ramit Sethi", year: 2009, track: management, weight: 1.0}
+  - {id: bk-43, title: "The Richest Man in Babylon", author: "George S. Clason", year: 1926, track: management, weight: 0.9}
+  - {id: bk-44, title: "The Mom Test", author: "Rob Fitzpatrick", year: 2013, track: financing, weight: 1.1}
+  - {id: bk-45, title: "Company of One", author: "Paul Jarvis", year: 2019, track: management, weight: 0.9}
+  - {id: bk-46, title: "Financial Intelligence for Entrepreneurs", author: "Berman & Knight", year: 2008, track: financing, weight: 1.1}
+  - {id: bk-47, title: "Venture Deals", author: "Feld & Mendelson", year: 2011, track: financing, weight: 1.1}
+  - {id: bk-48, title: "The Personal MBA", author: "Josh Kaufman", year: 2010, track: financing, weight: 0.8}
+  - {id: bk-49, title: "Profit First", author: "Mike Michalowicz", year: 2014, track: management, weight: 0.7}
+  - {id: bk-50, title: "Die With Zero", author: "Bill Perkins", year: 2020, track: management, weight: 0.9}
+
+  # ---- crypto ----
+  - {id: bk-51, title: "The Bitcoin Standard", author: "Saifedean Ammous", year: 2018, track: crypto, weight: 0.8}
+  - {id: bk-52, title: "Digital Gold", author: "Nathaniel Popper", year: 2015, track: crypto, weight: 1.0}
+  - {id: bk-53, title: "Number Go Up", author: "Zeke Faux", year: 2023, track: crypto, weight: 1.1}
+  - {id: bk-54, title: "Going Infinite", author: "Michael Lewis", year: 2023, track: crypto, weight: 0.8}
+
+  # ---- japan ----
+  - {id: bk-55, title: "Japanese Money Fiction: Kaiji", author: "Nobuyuki Fukumoto", year: 1996, track: psychology, weight: 1.0,
+     note: "Manga. Treat as a text on the structure of asymmetric games and on debt at toichi rates, not as a how-to."}
+  - {id: bk-56, title: "Japanese Money Fiction: Gin to Kin", author: "Nobuyuki Fukumoto", year: 1992, track: financing, weight: 1.0,
+     note: "Manga. Tax structures, land sharking, art as an opaque asset, political money — closer to how money actually moves than most non-fiction."}

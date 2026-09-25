@@ -10,6 +10,7 @@ from pathlib import Path
 from .classify import classify_all, prefilter
 from .collect import collect_all, dedupe, within_lookback
 from .compose import compose_daily, compose_weekly, load_inbox, load_week_briefs
+from .books import BookState, get_or_write_note, load_books, next_book
 from .curriculum import CurriculumState, get_or_write_lesson, load_syllabus, next_topics
 from .config import Config, load_config
 from .inbox import save_ideas
@@ -49,6 +50,7 @@ def run_daily(
     seen: SeenStore | None = None,
     plog: PrincipleLog | None = None,
     cstate: CurriculumState | None = None,
+    bstate: BookState | None = None,
 ) -> DailyResult:
     d = d or today()
     owns_state = usage is None
@@ -92,7 +94,7 @@ def run_daily(
             )
 
     # --- classify + dedupe against history ---
-    items = classify_all(raw)
+    items = classify_all(raw, keep_sections={"news"})
     fresh = [i for i in items if not seen.has(i.key)]
     if len(items) != len(fresh):
         log.info("  %d already seen in an earlier brief", len(items) - len(fresh))
@@ -117,6 +119,19 @@ def run_daily(
     if syllabus.tracks and not topics:
         notes.append("The syllabus is complete — every topic has been taught. Add more to curriculum/syllabus.yaml.")
 
+    # --- book of the day, cached like lessons ---
+    books = load_books(cfg.root / "curriculum" / "books.yaml")
+    bstate = bstate if bstate is not None else BookState.load(cfg.data_dir)
+    if owns_state and rebuilding:
+        bstate.forget_on(d)
+    book = next_book(books, bstate, d, prefer_track=(topics[0].track if topics else ""))
+    book_note = get_or_write_note(cfg.root, book, scorer) if book else None
+
+    # --- news: triaged, not summarised ---
+    news_pool = prefilter([i for i in items if i.section == "news" and not seen.has(i.key)],
+                          "news", int(cfg.get("select.news_candidates", 18)))
+    news_picks, news_ignored = scorer.triage_news(news_pool) if news_pool else ([], "")
+
     mind: MindPiece | None = None
     if mind_pool:
         mind = scorer.summarise_mind(mind_pool[0])
@@ -140,10 +155,19 @@ def run_daily(
     principles = parse_principles(cfg.principles_file)
     principle = pick_principle(principles, plog, d, int(cfg.get("principles.cooldown_days", 21)))
 
-    cost = f"${usage.cost_usd:.4f}" if usage.calls else ""
+    # The brief was printing a dollar figure for a subscription run that is not
+    # billed per call — the exact misreading the usage store is careful to avoid.
+    if not usage.calls:
+        cost = ""
+    elif usage.billed:
+        cost = f"${usage.cost_usd:.4f}"
+    else:
+        cost = (f"{usage.calls} calls · {(usage.input_tokens + usage.output_tokens) / 1000:.0f}k tokens"
+                f" · not billed per call")
     text = compose_daily(
         cfg, d, mind, picks, principle, stream,
         mode=mode, lessons=lessons, extra_reading=extra_reading,
+        book=book_note, news=news_picks, news_ignored=news_ignored,
         sources_ok=len(ok), sources_total=len(results), sources_failed=failed,
         notes=notes, scored_by=getattr(scorer, "name", "heuristic"), cost=cost,
         filed=0,
@@ -157,6 +181,7 @@ def run_daily(
         text = compose_daily(
             cfg, d, mind, picks, principle, stream,
             mode=mode, lessons=lessons, extra_reading=extra_reading,
+            book=book_note, news=news_picks, news_ignored=news_ignored,
             sources_ok=len(ok), sources_total=len(results), sources_failed=failed,
             notes=notes, scored_by=getattr(scorer, "name", "heuristic"), cost=cost,
             filed=len(filed),
@@ -169,10 +194,15 @@ def run_daily(
             plog.mark(principle.id, d)
         for topic in topics:
             cstate.mark(topic.id, d)
+        if book:
+            bstate.mark(book.id, d)
+        for item, _why in news_picks:
+            seen.add(item.key, source=item.source_id, title=item.title, first_seen=d)
         if owns_state:
             seen.save()
             plog.save()
             cstate.save()
+            bstate.save()
             usage.save(f"daily:{d}", {"mode": mode, "items": len(fresh), "picks": len(picks)})
         # The river: a flat, append-only record of everything surfaced, so the
         # dashboard can show one continuous scroll instead of only day-sized pages.
@@ -258,10 +288,12 @@ def run_backfill(
     seen = SeenStore.load(cfg.data_dir)
     plog = PrincipleLog.load(cfg.data_dir)
     cstate = CurriculumState.load(cfg.data_dir)
+    bstate = BookState.load(cfg.data_dir)
     if overwrite:
         dropped = seen.forget_since(start)
         plog.forget_since(start)
         cstate.forget_since(start)
+        bstate.forget_since(start)
         if dropped:
             log.info("forgetting %d item(s) first seen on or after %s so the rebuild is clean", dropped, start)
 
@@ -273,12 +305,13 @@ def run_backfill(
             continue
         out.append(run_daily(
             cfg, d, mode="backfill", use_llm=use_llm, dry_run=dry_run,
-            usage=usage, seen=seen, plog=plog, cstate=cstate,
+            usage=usage, seen=seen, plog=plog, cstate=cstate, bstate=bstate,
         ))
     if not dry_run:
         seen.save()
         plog.save()
         cstate.save()
+        bstate.save()
         usage.save(f"backfill:{start}..{end}", {"days": len(out)})
     return out
 

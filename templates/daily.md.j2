@@ -6,6 +6,8 @@ generated_at: {{ generated_at }}
 mode: {{ mode }}
 principle: {{ principle.id if principle else "none" }}
 lessons: {{ lessons|length }}
+book: {{ book.book.id if book else "none" }}
+news: {{ news|length }}
 lesson_ids: [{% for l in lessons %}{{ l.topic.id }}{% if not loop.last %}, {% endif %}{% endfor %}]
 tracks: [{% for l in lessons %}{{ l.topic.track }}{% if not loop.last %}, {% endif %}{% endfor %}]
 mind_source: {{ mind.item.source_name if mind else "none" }}
@@ -49,7 +51,44 @@ more to `curriculum/syllabus.yaml`.
 {%- endif %}
 
 
-## 2 · Today's reading
+## 2 · Book
+
+{% if book and book.argument -%}
+### {{ book.book.title }}
+<sub>{{ book.book.author }}{% if book.book.year %} · {{ book.book.year }}{% endif %} · `{{ book.book.track }}`</sub>
+
+{{ book.argument }}
+
+> **The one idea.** {{ book.one_idea }}
+
+**Verdict.** {{ book.verdict }}
+
+{% if book.caveat %}**Caveat.** {{ book.caveat }}{% endif %}
+{%- elif book -%}
+**{{ book.book.label }}** — no note was written this run.
+{%- else -%}
+No book today. Add more to `curriculum/books.yaml`.
+{%- endif %}
+
+
+## 3 · News
+
+{% if news -%}
+{% for item, why in news %}
+- **[{{ item.title }}]({{ item.url }})** <sub>{{ item.source_name }}</sub>
+  {{ why }}
+{% endfor %}
+{%- else -%}
+Nothing in today's headlines had a mechanism worth explaining. That is a normal
+outcome, not a gap.
+{%- endif %}
+
+{% if news_ignored %}
+<sub>**Ignored:** {{ news_ignored }}</sub>
+{% endif %}
+
+
+## 4 · Today's reading
 
 {% if mind -%}
 ### [{{ mind.item.title }}]({{ mind.item.url }})
@@ -74,7 +113,7 @@ a gap here is normal — the lessons above are the part that does not run dry.
 {% endif %}
 
 
-{% if show_streams %}## 3 · Streams
+{% if show_streams %}## 5 · Streams
 
 {% if streams -%}
 {% for s in streams %}
@@ -101,7 +140,7 @@ Nothing cleared the bar today ({{ min_score }}/10 minimum).
 {%- endif %}
 
 
-{% else %}## 3 · Opportunities
+{% else %}## 5 · Opportunities
 
 {% if filed %}{{ filed }} new opportunit{{ 'y' if filed == 1 else 'ies' }} scored and filed to
 `ideas/inbox/` today — not shown here on purpose. Looking at candidates you are not
@@ -115,7 +154,7 @@ has accumulated.
 {%- endif %}
 
 
-{% endif %}## 4 · Principle
+{% endif %}## 6 · Principle
 
 {% if principle -%}
 ### {{ principle.id }} · {{ principle.title }}
@@ -129,7 +168,7 @@ No principles found in `curriculum/principles.md`.
 {%- endif %}
 
 
-## 5 · Today's action
+## 7 · Today's action
 
 {% if stream.active -%}
 - [ ] **{{ action }}**
@@ -145,7 +184,7 @@ fixing today. The weekly digest ranks the top 5 candidates for you.
 {%- endif %}
 
 
-## 6 · Stream status
+## 8 · Stream status
 
 {% if stream.active -%}
 | | |

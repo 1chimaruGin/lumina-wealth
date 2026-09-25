@@ -238,6 +238,113 @@ LESSON_TOOL = {
 }
 
 
+BOOK_SYSTEM = """You write the daily book note for a reader who asked for the blunt version.
+
+This is not a review and not a recommendation. The reader's scarcest resource is
+hours, and most money books are one genuine insight padded to two hundred pages.
+Your job is to tell them which this is.
+
+Write:
+- argument: what the book actually claims, 3 sentences, your own words.
+- one_idea: the single transferable idea worth keeping if they read nothing else,
+  <= 30 words.
+- verdict: worth their hours or not, and in what form. Be specific and be willing
+  to say "the summary above is enough" or "read chapters 1-4 and stop". If it IS
+  worth reading in full, say that too — but only when it earns it.
+- caveat: what it gets wrong, what has dated badly, whose interests it serves, or
+  who should not bother. <= 45 words. Every book has one; find the real one
+  rather than a token criticism.
+
+Hard rules:
+- Judge the book, not its reputation. A classic can be outdated; a bestseller can
+  be one blog post. Say so.
+- Judge the BOOK, not the reader. Do not predict what they will do, whether they
+  will finish it, or what they "know about themselves". You may note that a book
+  is long, dense or slow — that is a fact about the book. "You will abandon it"
+  is not.
+- "Does this earn money" is not the test. They are learning how money works; a
+  history or a critique can be worth the hours on its own terms.
+- Never invent quotations, page numbers, sales figures or specific passages.
+  Describe the argument, not fabricated detail.
+- Never invent the reader's biography or what they have read.
+- Where a book's central claim is contested, say who contests it and why.
+- No motivational padding, no "a must-read", no jacket-copy register.
+"""
+
+BOOK_TOOL = {
+    "name": "record_book_note",
+    "description": "Record the note on this book.",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "argument": {"type": "string"},
+            "one_idea": {"type": "string"},
+            "verdict": {"type": "string", "description": "Worth the hours or not, and in what form."},
+            "caveat": {"type": "string"},
+        },
+        "required": ["argument", "one_idea", "verdict", "caveat"],
+        "additionalProperties": False,
+    },
+    "strict": True,
+}
+
+NEWS_SYSTEM = """You triage the day's money headlines for a reader learning how money works.
+
+Most financial news is noise: price moves with a story attached afterwards,
+speculation about decisions not yet made, and company results that change nothing
+for anyone reading them. Your job is to find the few items with a MECHANISM worth
+understanding, and to say plainly what you ignored.
+
+Pick at most 4. Prefer, in order:
+1. A decision by an institution that actually sets conditions — a central bank,
+   a regulator, a tax authority.
+2. Something that illustrates a mechanism the reader is learning: how credit is
+   priced, how a market breaks, how an incentive plays out.
+3. Something specific to Japan or the yen, which is where they earn and spend.
+
+Actively deprioritise: daily index moves, single-company earnings without a
+wider lesson, price predictions, and anything whose headline is a question.
+
+For each pick write `why`: <= 25 words on the mechanism it shows — not a summary
+of the article. Then write `ignored`: <= 30 words naming the KIND of story you
+skipped and why, so the reader learns the filter rather than just the result.
+
+If nothing clears the bar, return an empty list and say so in `ignored`. A quiet
+day is a real finding, not a failure.
+
+Hard rules:
+- You have headlines and short excerpts only. Never assert detail beyond them,
+  and never imply you read the full article.
+- No price predictions, no advice to buy or sell anything.
+"""
+
+NEWS_TOOL = {
+    "name": "record_news",
+    "description": "Record the triaged headlines.",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "picks": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "id": {"type": "string", "description": "The item id given in the prompt."},
+                        "why": {"type": "string"},
+                    },
+                    "required": ["id", "why"],
+                    "additionalProperties": False,
+                },
+            },
+            "ignored": {"type": "string"},
+        },
+        "required": ["picks", "ignored"],
+        "additionalProperties": False,
+    },
+    "strict": True,
+}
+
+
 def profile_block(cfg: Config) -> str:
     """The person, rendered for the prompt. Only fields that are filled in."""
     p = cfg.profile
@@ -268,8 +375,13 @@ def profile_block(cfg: Config) -> str:
         lines.append(f"More interested in: {', '.join(prefs['favour'])}.")
     if prefs.get("mute"):
         lines.append(f"Not interested in: {', '.join(prefs['mute'])}.")
-    if (p.get("goals", {}) or {}).get("current_focus"):
-        lines.append(f"Current focus: {p['goals']['current_focus']}")
+    goals = p.get("goals", {}) or {}
+    if goals.get("primary"):
+        lines.append(f"Stated priority: {one_line(goals['primary'], 260)}")
+    if goals.get("secondary"):
+        lines.append(f"Secondary, not urgent: {one_line(goals['secondary'], 220)}")
+    if goals.get("current_focus"):
+        lines.append(f"Current focus: {goals['current_focus']}")
     return "\n".join(lines)
 
 
@@ -325,6 +437,17 @@ class HeuristicScorer:
                 )
             )
         return out
+
+    def write_book_note(self, book):
+        from .books import BookNote
+
+        return BookNote(book=book, argument="", one_idea="",
+                        verdict="No note yet — the offline scorer cannot judge a book.",
+                        caveat="", written_by="heuristic")
+
+    def triage_news(self, items):
+        """Offline: take the highest-weighted few and say nothing about why."""
+        return [(i, "") for i in items[:3]], "Headlines were not triaged — offline mode."
 
     def write_lesson(self, topic):
         """Offline mode cannot teach. It shows the syllabus entry and says so,
@@ -459,6 +582,50 @@ class _LLMScorer:
             relevance=one_line(payload.get("relevance", ""), 200),
             written_by=self.name,
         )
+
+    def write_book_note(self, book):
+        from .books import BookNote
+
+        user = (
+            f"THE READER:\n{self.profile}\n\n"
+            f"BOOK\ntitle: {book.title}\nauthor: {book.author}\n"
+            f"year: {book.year or 'unknown'}\ntrack: {book.track}"
+            + (f"\nnote from the list: {book.note}" if book.note else "")
+        )
+        payload = self._call(BOOK_SYSTEM, user, BOOK_TOOL)
+        if payload is None:
+            return self.fallback.write_book_note(book)
+        argument = str(payload.get("argument", "")).strip()
+        if not argument:
+            return self.fallback.write_book_note(book)
+        return BookNote(
+            book=book, argument=argument,
+            one_idea=one_line(payload.get("one_idea", ""), 240),
+            verdict=one_line(payload.get("verdict", ""), 320),
+            caveat=one_line(payload.get("caveat", ""), 320),
+            written_by=self.name,
+        )
+
+    def triage_news(self, items):
+        if not items:
+            return [], "No headlines were collected."
+        lines = ["HEADLINES:"]
+        for idx, it in enumerate(items, 1):
+            lines.append(f"\n[{idx}] {it.title}")
+            lines.append(f"    source: {it.source_name}")
+            if it.excerpt:
+                lines.append(f"    excerpt: {clip_words(it.excerpt, 40)}")
+        payload = self._call(NEWS_SYSTEM, "\n".join(lines), NEWS_TOOL)
+        if payload is None:
+            return self.fallback.triage_news(items)
+        picked = []
+        for row in payload.get("picks", [])[:4]:
+            try:
+                item = items[int(str(row.get("id")).strip()) - 1]
+            except (ValueError, IndexError, TypeError):
+                continue
+            picked.append((item, one_line(row.get("why", ""), 200)))
+        return picked, one_line(payload.get("ignored", ""), 220)
 
     def close(self) -> None:
         pass
