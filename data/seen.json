@@ -1,5 +1,5 @@
 {
-  "count": 72,
+  "count": 81,
   "items": {
     "03c3fbabf7264a94": {
       "first_seen": "2026-09-18",
@@ -141,6 +141,11 @@
       "source": "reddit_sideproject",
       "title": "InvGen - A simple invoice and quotation maker for Indian businesses, with or without GST"
     },
+    "5cc84770752caa45": {
+      "first_seen": "2026-09-25",
+      "source": "reddit_sideproject",
+      "title": "Remix a launch video the way you fork a repo. My side project after 6 months."
+    },
     "5eae0ed268831f89": {
       "first_seen": "2026-09-23",
       "source": "hn_ask",
@@ -151,6 +156,11 @@
       "source": "hn_show",
       "title": "Show HN: Sigabrt.dev – cronjob monitor with an SSH TUI"
     },
+    "644978a1273ab2c3": {
+      "first_seen": "2026-09-25",
+      "source": "hn_ask",
+      "title": "Ask HN: I just talked to an AI-obsessed client, and I need a shower afterwards"
+    },
     "67a22ef4c1c325b4": {
       "first_seen": "2026-09-21",
       "source": "hn_show",
@@ -160,6 +170,11 @@
       "first_seen": "2026-09-19",
       "source": "hn_ask",
       "title": "Ask HN: Losing motivation to work in the IT field, need advice"
+    },
+    "70359c27b4e5e0d8": {
+      "first_seen": "2026-09-25",
+      "source": "hn_show",
+      "title": "Show HN: Whiteboard (YC W26) – An open-source IDE for thoughtful software design"
     },
     "7456cc17fede4498": {
       "first_seen": "2026-09-22",
@@ -210,6 +225,11 @@
       "first_seen": "2026-09-18",
       "source": "sethgodin",
       "title": "A series of bad decisions"
+    },
+    "8bf440f9048ed7d6": {
+      "first_seen": "2026-09-25",
+      "source": "hn_show",
+      "title": "Show HN: AgentRun: DSL to turn agents into workflows"
     },
     "8c2aa81a2d6a6bea": {
       "first_seen": "2026-09-17",
@@ -266,10 +286,20 @@
       "source": "hn_show",
       "title": "Show HN: Seal – Letters and passwords that open for your family after you die"
     },
+    "b5344f6ddd1c1770": {
+      "first_seen": "2026-09-25",
+      "source": "paulgraham",
+      "title": "Modeling a Wealth Tax"
+    },
     "b6d27ada39475d11": {
       "first_seen": "2026-09-24",
       "source": "hn_show",
       "title": "Show HN: A website that tracks US food prices every day"
+    },
+    "b7a60ac418578a94": {
+      "first_seen": "2026-09-25",
+      "source": "hn_show",
+      "title": "Show HN: Koi.rest – watch some fish and regain your balance"
     },
     "bd209c4cd5607be8": {
       "first_seen": "2026-09-24",
@@ -311,6 +341,11 @@
       "source": "hn_show",
       "title": "Show HN: Cactus Needle 3: 8-29MB automation models can match DeepSeek V4 Flash"
     },
+    "dabd36d6ac350fc5": {
+      "first_seen": "2026-09-25",
+      "source": "hn_show",
+      "title": "Show HN: Air-gapped file encryption as self-decrypting HTML page"
+    },
     "dbb06f4b858fb0a2": {
       "first_seen": "2026-09-21",
       "source": "hn_ask",
@@ -351,6 +386,11 @@
       "source": "hn_show",
       "title": "Show HN: Rubrol – Sub-10ms PDF engine using Typst instead of Headless Chrome"
     },
+    "f5f57bec11c7a234": {
+      "first_seen": "2026-09-25",
+      "source": "hn_show",
+      "title": "Show HN: Make cursed fonts like Times New Bastard"
+    },
     "f6ae2f8548ecbe45": {
       "first_seen": "2026-09-17",
       "source": "awealthofcommonsense",
@@ -360,6 +400,11 @@
       "first_seen": "2026-09-20",
       "source": "hn_show",
       "title": "Show HN: CUA-S1 – A System One Model for Computer Use"
+    },
+    "ff580beb46fca679": {
+      "first_seen": "2026-09-25",
+      "source": "hn_show",
+      "title": "Show HN: Treepeat – Code similarity detection using Tree-sitter"
     }
   }
 }
