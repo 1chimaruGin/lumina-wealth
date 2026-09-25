@@ -191,11 +191,18 @@ def _entry_datetime(entry) -> datetime | None:
 def collect_rss(src: Source, cfg: Config, window: tuple[datetime, datetime] | None) -> list[Item]:
     with _client(cfg, src) as client:
         resp = _fetch(client, src.url, cfg)
-    parsed = feedparser.parse(resp.content)
-    # bozo just means "not strictly well-formed"; most real feeds trip it and
-    # still parse fine, so only an empty result is actually a failure.
-    if parsed.bozo and not parsed.entries:
-        raise RuntimeError(f"unparseable feed ({getattr(parsed, 'bozo_exception', 'unknown')})")
+        parsed = feedparser.parse(resp.content)
+        # bozo just means "not strictly well-formed"; most real feeds trip it and
+        # still parse fine, so only an empty result is actually a failure.
+        if parsed.bozo and not parsed.entries:
+            # A truncated or momentarily corrupt response parses to nothing and
+            # is fine seconds later. Re-fetch once before calling it broken.
+            log.debug("  %-24s unparseable, re-fetching once", src.id)
+            _time.sleep(1.5)
+            resp = _fetch(client, src.url, cfg)
+            parsed = feedparser.parse(resp.content)
+            if parsed.bozo and not parsed.entries:
+                raise RuntimeError(f"unparseable feed ({getattr(parsed, 'bozo_exception', 'unknown')})")
 
     feed_link = (getattr(parsed.feed, "link", "") or "").strip()
     limit = int(cfg.get("collect.max_items_per_source", 40))
@@ -293,6 +300,26 @@ def collect_hn_algolia(src: Source, cfg: Config, window: tuple[datetime, datetim
     return items
 
 
+class _RedditConfig:
+    """Wraps Config with a longer backoff, for Reddit only.
+
+    Everything else should fail fast; Reddit is the one source where waiting
+    actually changes the outcome.
+    """
+
+    def __init__(self, cfg: Config):
+        self._cfg = cfg
+
+    def get(self, dotted: str, default=None):
+        overrides = {"collect.retry_backoff_seconds": 20, "collect.retries": 2}
+        if dotted in overrides:
+            return overrides[dotted]
+        return self._cfg.get(dotted, default)
+
+    def __getattr__(self, name):
+        return getattr(self._cfg, name)
+
+
 def collect_reddit_rss(src: Source, cfg: Config, window: tuple[datetime, datetime] | None) -> list[Item]:
     """Reddit public .rss.
 
@@ -304,7 +331,10 @@ def collect_reddit_rss(src: Source, cfg: Config, window: tuple[datetime, datetim
     """
     if os.getenv("REDDIT_CLIENT_ID") and os.getenv("REDDIT_CLIENT_SECRET"):
         log.debug("reddit credentials present but the OAuth path is not enabled; using public rss")
-    items = collect_rss(src, cfg, window)
+    # Reddit's unauthenticated limit needs far longer than a generic 429 backoff;
+    # 3s then 6s never cleared it. Give this source its own, patient settings.
+    patient = _RedditConfig(cfg)
+    items = collect_rss(src, patient, window)
     for it in items:
         it.extra.setdefault("subreddit", src.name)
     return items

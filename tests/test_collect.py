@@ -153,3 +153,57 @@ def test_stale_feed_is_reported_but_not_dropped(cfg, rss_source, monkeypatch):
     assert result.ok                 # still usable, not an error
     assert result.stale              # but flagged
     assert result.stale_days > 365
+
+
+def test_a_momentarily_unparseable_feed_is_refetched_once(cfg, rss_source, monkeypatch):
+    """Tim Harford's feed failed a single run with 'not well-formed (invalid
+    token)' and parsed fine seconds later. One bad response should not lose the
+    source for the day."""
+    good = ("<?xml version='1.0'?><rss version='2.0'><channel><title>T</title>"
+            "<item><title>Real</title><link>https://example.com/a</link>"
+            "<pubDate>Mon, 21 Sep 2026 09:00:00 +0000</pubDate></item></channel></rss>").encode()
+    calls = {"n": 0}
+
+    class R:
+        def __init__(self, body): self.content = body
+
+    def fetch(client, url, cfg_, **kw):
+        calls["n"] += 1
+        return R(b"<rss><chan" if calls["n"] == 1 else good)   # truncated, then fine
+
+    monkeypatch.setattr(collect, "_fetch", fetch)
+    monkeypatch.setattr(collect, "_client", lambda cfg_, src=None: _NullCtx())
+    monkeypatch.setattr(collect._time, "sleep", lambda s: None)
+
+    items = collect.collect_rss(rss_source, cfg, None)
+    assert calls["n"] == 2
+    assert [i.title for i in items] == ["Real"]
+
+
+def test_a_persistently_broken_feed_still_fails(cfg, rss_source, monkeypatch):
+    class R:
+        content = b"<rss><chan"
+
+    monkeypatch.setattr(collect, "_fetch", lambda *a, **k: R())
+    monkeypatch.setattr(collect, "_client", lambda cfg_, src=None: _NullCtx())
+    monkeypatch.setattr(collect._time, "sleep", lambda s: None)
+    result = collect.collect_source(rss_source, cfg, None)
+    assert not result.ok and "unparseable" in result.error
+
+
+def test_reddit_gets_a_longer_backoff_than_everything_else(cfg):
+    """A generic 3s/6s backoff never cleared Reddit's rate limit."""
+    from lumina.collect import _RedditConfig
+
+    patient = _RedditConfig(cfg)
+    assert patient.get("collect.retry_backoff_seconds") == 20
+    assert cfg.get("collect.retry_backoff_seconds") < 20
+    # everything else passes through untouched
+    assert patient.get("collect.timeout_seconds") == cfg.get("collect.timeout_seconds")
+
+
+def test_the_builder_subreddits_are_one_request_not_three(cfg):
+    reddit = [s for s in cfg.enabled_sources() if s.kind == "reddit_rss"]
+    assert len(reddit) <= 2, "each Reddit source is another chance to be rate limited"
+    builders = next((s for s in reddit if "SideProject" in s.url), None)
+    assert builders and "+" in builders.url        # multireddit form

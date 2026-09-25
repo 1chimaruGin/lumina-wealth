@@ -87,17 +87,42 @@ mind:
     url: https://klementoninvesting.substack.com/feed
     section: mind
     track: psychology
+    enabled: false
+    backfill: false
+    auth: none
+    weight: 1.1
+    disabled_reason: >-
+      Reproducible 403 from httpx while curl gets 200 — Cloudflare is
+      fingerprinting the client, not rejecting the request. Switching HTTP
+      client or spoofing a fingerprint would get around it, and that is the
+      same act as spoofing a user agent, which this repo does not do. The job
+      it did — daily behavioural finance — is covered by Abnormal Returns.
+
+  - id: abnormalreturns
+    name: Abnormal Returns
+    kind: rss
+    url: https://abnormalreturns.com/feed/
+    section: mind
+    track: psychology
     enabled: true
     backfill: true
     auth: none
-    weight: 1.1
+    weight: 1.0
+    notes: "Daily curated finance linkfest. Replaces Klement for the behavioural track."
+
+  - id: japanfinance
+    name: r/JapanFinance
+    kind: reddit_rss
+    url: https://www.reddit.com/r/JapanFinance/new.rss
+    section: mind
+    track: management
+    enabled: true
+    backfill: false
+    auth: optional
+    weight: 1.2
     notes: >-
-      Daily behavioural finance. Left enabled despite intermittent 403s: curl
-      succeeds where httpx does not, which points at TLS fingerprinting rather
-      than a policy block, and two other Substack feeds here (Lenny's, Not
-      Boring) work fine. Spoofing a fingerprint to get around an access control
-      is not something this repo does, so when it 403s the source is simply
-      skipped and named in the brief's Run notes.
+      Japan-specific tax, NISA, iDeCo and investing discussion — the jurisdiction
+      actually being lived in. Subject to the same Reddit rate limiting as below.
 
   - id: indicator
     name: The Indicator (NPR)
@@ -339,43 +364,23 @@ streams:
       min_points: 15
     notes: "Ask HN surfaces demand ('how do you solve X') more than supply."
 
-  - id: reddit_sideproject
-    name: r/SideProject
+  - id: reddit_builders
+    name: r/SideProject + r/SaaS + r/EntrepreneurRideAlong
     kind: reddit_rss
-    url: https://www.reddit.com/r/SideProject/new.rss
+    url: https://www.reddit.com/r/SideProject+SaaS+EntrepreneurRideAlong/new.rss
     section: streams
+    track: ""
     enabled: true
     backfill: false
     auth: optional
     weight: 0.9
     notes: >-
-      Public .rss needs no auth, but /new only reaches ~3 hours back, so it
-      cannot backfill. Reddit rate-limits hard (observed 429) and often blocks
-      datacenter IPs, so GitHub Actions runs may skip it — that is expected and
-      lands in Run notes. Set REDDIT_CLIENT_ID/REDDIT_CLIENT_SECRET to upgrade
-      to the authenticated API.
-
-  - id: reddit_saas
-    name: r/SaaS
-    kind: reddit_rss
-    url: https://www.reddit.com/r/SaaS/new.rss
-    section: streams
-    enabled: true
-    backfill: false
-    auth: optional
-    weight: 0.9
-    notes: "Same caveats as r/SideProject."
-
-  - id: reddit_erl
-    name: r/EntrepreneurRideAlong
-    kind: reddit_rss
-    url: https://www.reddit.com/r/EntrepreneurRideAlong/new.rss
-    section: streams
-    enabled: true
-    backfill: false
-    auth: optional
-    weight: 0.9
-    notes: "Same caveats. Returned 429 during source verification on 2026-09-23."
+      One multireddit request in place of three separate ones. Reddit rate-limits
+      per IP and trips after very few unauthenticated requests — three sources
+      meant three chances to be refused, and two of them usually were. This is
+      still best-effort: a 429 is normal from CI and lands in Run notes.
+      REDDIT_CLIENT_ID/REDDIT_CLIENT_SECRET would upgrade it to the authenticated
+      API and remove the problem.
 
   - id: producthunt
     name: Product Hunt
