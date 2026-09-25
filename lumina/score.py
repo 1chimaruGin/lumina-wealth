@@ -115,6 +115,8 @@ Hard rules:
   that are not in it. If the excerpt is thin, write about the idea the title and
   excerpt genuinely support, and keep it general rather than fabricating detail.
 - Never reproduce the article's sentences. Summarise in your own words only.
+- Refer to the reader's habits in plain English. Never echo an identifier,
+  a field name, or snake_case text from the profile you were given.
 """
 
 SCORE_TOOL = {
@@ -189,6 +191,8 @@ Hard rules:
 - Never invent statistics, quotations or dates. If you are unsure of a figure,
   describe the magnitude qualitatively instead.
 - No filler, no motivational padding, no headings inside the body.
+- Refer to the reader's habits in plain English. Never echo an identifier,
+  a field name, or snake_case text from the profile you were given.
 """
 
 LESSON_TOOL = {
@@ -232,7 +236,9 @@ def profile_block(cfg: Config) -> str:
     if cons.get("cannot"):
         lines.append("Hard constraints: " + "; ".join(cons["cannot"]) + ".")
     for pat in (p.get("behaviour", {}) or {}).get("patterns", []) or []:
-        lines.append(f"Behavioural pattern — {pat.get('id')}: {one_line(pat.get('description', ''), 240)}")
+        # Deliberately no id: it is a YAML key, and the model echoed it into a
+        # lesson as "You have present_bias and scattered_focus."
+        lines.append(f"Behavioural pattern: {one_line(pat.get('description', ''), 240)}")
     if prefs.get("favour"):
         lines.append(f"More interested in: {', '.join(prefs['favour'])}.")
     if prefs.get("mute"):

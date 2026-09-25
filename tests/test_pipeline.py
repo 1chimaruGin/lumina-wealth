@@ -268,3 +268,16 @@ def test_every_state_store_has_both_forget_variants(tmp_path):
 
     for store in (SeenStore.load(tmp_path), CurriculumState.load(tmp_path)):
         assert hasattr(store, "forget_on") and hasattr(store, "forget_since")
+
+
+def test_profile_block_does_not_expose_raw_pattern_ids(cfg):
+    """The model echoed 'You have present_bias and scattered_focus' into a
+    lesson. Those are YAML keys, not English."""
+    from lumina.score import profile_block
+
+    block = profile_block(cfg)
+    assert "present_bias" not in block
+    assert "scattered_focus" not in block
+    assert "low_capital" not in block
+    # the substance must survive
+    assert "short feedback loops" in block.lower()
