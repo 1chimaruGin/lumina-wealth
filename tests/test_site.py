@@ -59,7 +59,9 @@ def test_site_builds_from_an_empty_repo(tmp_cfg):
     out = build_site(tmp_cfg, tmp_cfg.root / "site" / "index.html")
     html = out.read_text(encoding="utf-8")
     assert "<title>" in html
-    assert "The slot is open" in html
+    assert "No income stream active" in html
+    # the learning tracks must not depend on a stream existing
+    assert "Money school" in html or "Syllabus" in html
 
 
 def test_site_builds_as_a_fragment_without_the_document_wrapper(tmp_cfg):
