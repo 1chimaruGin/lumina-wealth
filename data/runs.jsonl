@@ -24,3 +24,4 @@
 {"at": "2026-09-24", "mode": "daily", "sources_ok": 23, "sources_total": 27, "failed": ["klement", "timharford", "reddit_saas", "reddit_erl"], "candidates": 142, "picks": 3, "scored_by": "claude-code", "cost_usd": 0.14284}
 {"at": "2026-09-25", "mode": "daily", "sources_ok": 23, "sources_total": 27, "failed": ["klement", "timharford", "reddit_saas", "reddit_erl"], "candidates": 149, "picks": 3, "scored_by": "claude-code", "cost_usd": 0.24202}
 {"at": "2026-09-26", "mode": "daily", "sources_ok": 32, "sources_total": 34, "failed": ["klement", "reddit_erl"], "candidates": 315, "picks": 3, "scored_by": "claude-code", "cost_usd": 0.42592}
+{"at": "2026-09-26", "mode": "daily", "sources_ok": 33, "sources_total": 33, "failed": [], "candidates": 308, "picks": 3, "scored_by": "claude-code", "cost_usd": 0.26391}

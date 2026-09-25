@@ -1,6 +1,11 @@
 {
-  "count": 94,
+  "count": 93,
   "items": {
+    "0120dc65a5a10382": {
+      "first_seen": "2026-09-26",
+      "source": "hn_ask",
+      "title": "Ask HN: What job boards are good these days?"
+    },
     "03c3fbabf7264a94": {
       "first_seen": "2026-09-18",
       "source": "hn_show",
@@ -30,6 +35,11 @@
       "first_seen": "2026-09-24",
       "source": "hn_show",
       "title": "Show HN: I built a post-mortem debugger for native Windows x64/x86 crashes"
+    },
+    "0d4ee8d3a656eb91": {
+      "first_seen": "2026-09-26",
+      "source": "reddit_builders",
+      "title": "What are you using for usage based billing?"
     },
     "0ea575d9c4e561dc": {
       "first_seen": "2026-09-21",
@@ -86,10 +96,10 @@
       "source": "awealthofcommonsense",
       "title": "5% Bond Yields"
     },
-    "30886dfac6b3cfa5": {
+    "34c146c1bc5c134d": {
       "first_seen": "2026-09-26",
-      "source": "reddit_saas",
-      "title": "Got my first paying customer even with generous free tier"
+      "source": "hn_show",
+      "title": "Show HN: Agentic CUDA Kernel Optimizer"
     },
     "376c796fbe430399": {
       "first_seen": "2026-09-23",
@@ -115,21 +125,6 @@
       "first_seen": "2026-09-26",
       "source": "marketwatch",
       "title": "A new bill in Congress would lower the retirement age to 60. See who would qualify."
-    },
-    "3e865beae71429b0": {
-      "first_seen": "2026-09-26",
-      "source": "marketwatch",
-      "title": "8% mortgage rates are ‘not an impossibility’ as the 30-year fixed rate surges"
-    },
-    "3e8edb6c3aae715f": {
-      "first_seen": "2026-09-26",
-      "source": "reddit_saas",
-      "title": "Pricing my niche farm software: first client pays $400/month and now wants custom sensor integrations"
-    },
-    "3eb0fc3c598410b2": {
-      "first_seen": "2026-09-26",
-      "source": "reddit_saas",
-      "title": "My first customer (i am so dumb)"
     },
     "3f000715446cf13a": {
       "first_seen": "2026-09-23",
@@ -161,20 +156,10 @@
       "source": "hn_show",
       "title": "Show HN: Snail Walk – escape Bob the giant snail by walking more IRL"
     },
-    "51680a18a478375e": {
-      "first_seen": "2026-09-26",
-      "source": "reddit_saas",
-      "title": "New to sales, wondering if I am heading in the right direction"
-    },
     "5429009826d5ff1b": {
       "first_seen": "2026-09-20",
       "source": "awealthofcommonsense",
       "title": "The Biggest Risk to the Economy"
-    },
-    "5653f431ec165a35": {
-      "first_seen": "2026-09-26",
-      "source": "reddit_saas",
-      "title": "Anyone have one SaaS customer who turned out to be worth like 10+ customers?"
     },
     "569ae022ea2f0e60": {
       "first_seen": "2026-09-24",
@@ -191,6 +176,11 @@
       "source": "hn_ask",
       "title": "Anyone using a Wispr Flow alternative that is non-cloud?"
     },
+    "5f06d68178e6da5a": {
+      "first_seen": "2026-09-26",
+      "source": "hn_show",
+      "title": "Show HN: Trader News – Hacker News for Finance"
+    },
     "6002707f9b9b99a7": {
       "first_seen": "2026-09-19",
       "source": "hn_show",
@@ -200,11 +190,6 @@
       "first_seen": "2026-09-25",
       "source": "hn_ask",
       "title": "Ask HN: I just talked to an AI-obsessed client, and I need a shower afterwards"
-    },
-    "672e235d7ee97df8": {
-      "first_seen": "2026-09-26",
-      "source": "reddit_saas",
-      "title": "Does user acquisition begin long before you even start building your SaaS?"
     },
     "67a22ef4c1c325b4": {
       "first_seen": "2026-09-21",
@@ -316,11 +301,6 @@
       "source": "hn_show",
       "title": "Show HN: InstinctFlash – High-Performance Serving Runtime for Robotics Models"
     },
-    "ab8b8254654a9025": {
-      "first_seen": "2026-09-26",
-      "source": "ft_companies",
-      "title": "Houthis promise not to target European ships"
-    },
     "abf452cf9e18fc22": {
       "first_seen": "2026-09-21",
       "source": "awealthofcommonsense",
@@ -345,6 +325,11 @@
       "first_seen": "2026-09-25",
       "source": "paulgraham",
       "title": "Modeling a Wealth Tax"
+    },
+    "b5c30ecf844d89d3": {
+      "first_seen": "2026-09-26",
+      "source": "hn_show",
+      "title": "Show HN: Avoid smooth spinners, use low-FPS spinners"
     },
     "b6d27ada39475d11": {
       "first_seen": "2026-09-24",
@@ -381,6 +366,11 @@
       "source": "hn_show",
       "title": "Show HN: Lightspeed, build real time apps the Laravel way (+asteroids demo)"
     },
+    "d02fb1281f749011": {
+      "first_seen": "2026-09-26",
+      "source": "hn_show",
+      "title": "Show HN: Radix – Visual UI for agentic programming"
+    },
     "d2963bd75db6285b": {
       "first_seen": "2026-09-22",
       "source": "lennys",
@@ -396,11 +386,6 @@
       "source": "hn_show",
       "title": "Show HN: Cactus Needle 3: 8-29MB automation models can match DeepSeek V4 Flash"
     },
-    "d7de7916b84b215b": {
-      "first_seen": "2026-09-26",
-      "source": "reddit_saas",
-      "title": "Day 732 of building SaaS"
-    },
     "dabd36d6ac350fc5": {
       "first_seen": "2026-09-25",
       "source": "hn_show",
@@ -411,10 +396,20 @@
       "source": "hn_ask",
       "title": "Ask HN: Is it impossible to disable Siri on macOS 27?"
     },
+    "ded0e18f39e00679": {
+      "first_seen": "2026-09-26",
+      "source": "ft_companies",
+      "title": "BASF makes takeover approach for chemicals rival Evonik"
+    },
     "df38c4228663d91d": {
       "first_seen": "2026-09-24",
       "source": "hn_ask",
       "title": "Tell HN: Claude Code just accepted and signed a contract for me. Without asking"
+    },
+    "e0ff8c3a76cfd4f6": {
+      "first_seen": "2026-09-26",
+      "source": "reddit_builders",
+      "title": "Do you keep a separate staging environment running for every client project?"
     },
     "e25c770944ccc7cc": {
       "first_seen": "2026-09-20",
