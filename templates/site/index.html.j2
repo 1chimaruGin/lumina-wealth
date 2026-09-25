@@ -141,10 +141,18 @@ h1,h2,h3,h4{font-family:var(--display); font-weight:500; text-wrap:balance; marg
 .stat-v small{font-size:13px; color:var(--ink-3); font-weight:400}
 .stat-note{font-size:12px; color:var(--ink-3); margin-top:3px}
 
-/* empty slot state */
-.slot-open{padding:24px 20px}
-.slot-open h2{font-size:23px; margin-bottom:6px}
-.slot-open p{color:var(--ink-2); max-width:62ch; margin:0 0 14px}
+/* No active stream is an ordinary state, not a headline. It used to fill the
+   top of the page with a call to action for something the reader has said they
+   are not doing right now. */
+.slot-quiet{display:flex; gap:16px; align-items:baseline; flex-wrap:wrap; padding:14px 20px; font-size:13.5px}
+.slot-quiet strong{color:var(--ink); font-weight:600}
+.slot-quiet span{color:var(--ink-3)}
+.slot-how{margin-left:auto}
+.slot-how summary{font:500 12px/1 var(--sans); color:var(--accent); cursor:pointer; list-style:none; padding:4px 0}
+.slot-how summary::-webkit-details-marker{display:none}
+.slot-how > .cmd, .slot-how > .slot-note{margin-top:10px}
+.slot-note{font-size:12.5px; color:var(--ink-3); margin:8px 0 0}
+@media (max-width:640px){ .slot-how{margin-left:0} }
 .cmd{
   font:400 12.5px/1.7 var(--mono); background:var(--sunken); color:var(--ink-2);
   border:1px solid var(--line); border-radius:8px; padding:11px 13px;
@@ -353,6 +361,7 @@ a.flow:hover .flow-t{color:var(--accent)}
 .lib-item .ld{font-family:var(--mono); font-size:10.5px; color:var(--ink-3)}
 .lib-body{padding:0 22px 20px}
 .lib-body p{color:var(--ink-2); max-width:70ch; margin:11px 0}
+.harsh{border-left:2px solid var(--crit); padding-left:12px; color:var(--ink)!important}
 
 
 /* ---------- explainers ---------- */
@@ -445,21 +454,21 @@ a.flow:hover .flow-t{color:var(--accent)}
     </div>
   </div>
 {% else %}
-  <div class="slot-open">
-    <h2>The slot is open.</h2>
-    <p>No stream is active, so the daily brief has no action to give you. Exactly one
-      stream may run at a time — that constraint is the point, but an empty slot is the
-      one state the system can't fix on its own.{% if data.inbox %} The inbox has
-      {{ data.inbox|length }} scored candidate{{ '' if data.inbox|length == 1 else 's' }} waiting.
-      The highest-scoring one is <strong>{{ data.inbox[0].opportunity or data.inbox[0].title }}</strong>
-      at <span class="num">{{ data.inbox[0].score }}</span>/10 — a starting point, not a verdict.{% endif %}</p>
-    <div class="cmd">python scripts/stream.py activate \
+  <div class="slot-quiet">
+    <div>
+      <strong>No income stream active.</strong>
+      <span>The learning tracks below do not need one. Start a stream only when you want to;
+        nothing here is waiting on it.</span>
+    </div>
+    <details class="slot-how">
+      <summary>How to start one</summary>
+      <div class="cmd">python scripts/stream.py activate \
   --name "{{ (data.inbox[0].opportunity or data.inbox[0].title) | shorten(64) if data.inbox else 'your first stream' }}" \
   --rung {{ data.inbox[0].rung if data.inbox else '1-skills' }} \
-  --goal "REPLACE ME — a number and a date you believe" \
-  --metric "REPLACE ME — the one number you move each week"</div>
-    <p style="font-size:13px;color:var(--ink-3);margin-top:12px">Edit the name and both
-      placeholders before running it. A goal you don't believe is worse than no goal.</p>
+  --goal "REPLACE ME" --metric "REPLACE ME"</div>
+      <p class="slot-note">{{ data.inbox|length }} scored candidates sit in <code>ideas/inbox/</code>.
+        They are captured, not queued — nothing activates itself.</p>
+    </details>
   </div>
 {% endif %}
 </section>
@@ -547,7 +556,8 @@ a.flow:hover .flow-t{color:var(--accent)}
           <summary><span class="lt">{{ l.title }}</span><span class="ld">{{ l.taught }}</span></summary>
           <div class="lib-body">{{ l.html }}
             {% if l.key_idea %}<blockquote><strong>Key idea.</strong> {{ l.key_idea }}</blockquote>{% endif %}
-            {% if l.reflection %}<p><strong>Ask yourself:</strong> {{ l.reflection }}</p>{% endif %}
+            {% if l.hard_truth %}<p class="harsh"><strong>Hard truth.</strong> {{ l.hard_truth }}</p>{% endif %}
+            {% if l.check %}<p><strong>Check it yourself:</strong> {{ l.check }}</p>{% endif %}
           </div>
         </details>
         {% endfor %}

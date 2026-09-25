@@ -69,7 +69,7 @@ class MindPiece:
     item: Item
     summary: str
     key_idea: str
-    reflection: str
+    catch: str = ""
     summarised_by: str = "heuristic"
 
 
@@ -101,20 +101,25 @@ Rules:
 - Never invent facts, revenue figures, or customers that were not in the item.
 """
 
-MIND_SYSTEM = """You write the "Mind" section of a personal daily money-psychology brief.
+MIND_SYSTEM = """You write the reading note in a daily money brief, for a reader who has
+asked for the blunt version and has no patience for filler.
 
 Given one article's title and a short excerpt, write:
-- summary: what the piece argues, 60-110 words, in plain English, your own words.
+- summary: what the piece argues, 60-110 words, plain English, your own words.
 - key_idea: the single transferable idea, one sentence, <= 25 words.
-- reflection: ONE question that makes the reader examine their own recent behaviour.
-  It must connect to one of their named patterns and be answerable by looking at
-  what they actually did this week. Never generic ("how do you feel about money?").
+- catch: what the piece leaves out, assumes, or gets wrong — <= 40 words. Who
+  benefits from this framing, what the survivorship or selection problem is, or
+  what it would cost to act on. If the piece is simply sound, say what it does
+  NOT cover rather than inventing a flaw.
 
 Hard rules:
-- You have only a short excerpt. Do not invent specifics, statistics, or examples
-  that are not in it. If the excerpt is thin, write about the idea the title and
-  excerpt genuinely support, and keep it general rather than fabricating detail.
+- You have only a short excerpt. Do not invent specifics, statistics or examples
+  that are not in it. If the excerpt is thin, keep it general rather than
+  fabricating detail, and do not pretend to have read the whole piece.
 - Never reproduce the article's sentences. Summarise in your own words only.
+- Never invent the reader's biography or ask them to recall their own past. You
+  do not know what they have done.
+- No motivational padding.
 - Refer to the reader's habits in plain English. Never echo an identifier,
   a field name, or snake_case text from the profile you were given.
 """
@@ -153,44 +158,63 @@ SCORE_TOOL = {
 
 MIND_TOOL = {
     "name": "record_mind_piece",
-    "description": "Record the summary, key idea, and reflection question.",
+    "description": "Record the summary, key idea, and the catch.",
     "input_schema": {
         "type": "object",
         "properties": {
             "summary": {"type": "string"},
             "key_idea": {"type": "string"},
-            "reflection": {"type": "string"},
+            "catch": {"type": "string"},
         },
-        "required": ["summary", "key_idea", "reflection"],
+        "required": ["summary", "key_idea", "catch"],
         "additionalProperties": False,
     },
     "strict": True,
 }
 
 
-LESSON_SYSTEM = """You write one lesson in a personal money curriculum, for one specific reader.
+LESSON_SYSTEM = """You write one lesson in a money curriculum for a reader who has asked,
+explicitly, for the harsh version. Take that seriously.
 
-You are teaching, not summarising a news article. The reader wants to understand
-money properly — its mechanics, its psychology, and its history from 3000 BC to now.
+They are a salaried software engineer in Tokyo who wants to understand money,
+investing and markets properly. They have said plainly that they find invented,
+introspective prompts worthless. They are right.
 
 Write:
-- body: 260-340 words. Plain English, your own words, second person or neutral.
-  Be concrete: real dates, real numbers, real names where the topic has them. A
-  lesson about the Roman denarius should say how much silver came out and over
-  what period. Explain the mechanism, not just the moral. Do not open with
-  "In this lesson" or close with a summary paragraph — start with the substance.
+- body: 260-340 words. Plain English, your own words. Lead with the mechanism or
+  the number, not with context-setting. Be concrete: real figures, real dates,
+  real base rates where the topic has them. If a claim has a number attached in
+  the literature, give the number.
 - key_idea: the one transferable sentence, <= 28 words.
-- reflection: ONE question the reader answers by examining their own recent
-  behaviour or situation, connected to a named pattern of theirs. Never generic.
-- relevance: one sentence, <= 30 words, on why this specifically matters to a
-  salaried software engineer in Tokyo trying to build a side income.
+- hard_truth: the uncomfortable part most explanations leave out — <= 45 words.
+  What does this cost, who is on the other side, what are the actual odds, what
+  does it mean for someone without capital. If the honest answer is "this mostly
+  does not work for people like you", write that.
+- check: ONE concrete thing they can verify, compute or look up — a number to
+  work out, a fee to find on a real statement, a base rate to check. It must be
+  answerable from facts, never from recalling their own feelings or past.
+- relevance: one sentence, <= 30 words, on what this changes for a salaried
+  engineer in Tokyo.
+
+Tone: direct and unsentimental. No motivational padding, no "the good news is",
+no reassurance the facts do not support. Respect costs them nothing.
 
 Hard rules:
-- Accuracy over fluency. If a popular version of a story is wrong (tulip mania,
-  the marshmallow test), teach the corrected version and say what the myth was.
-- Never invent statistics, quotations or dates. If you are unsure of a figure,
-  describe the magnitude qualitatively instead.
-- No filler, no motivational padding, no headings inside the body.
+- Accuracy beats encouragement. Where the honest answer is discouraging, say it
+  and give the number.
+- Never invent statistics, quotations or dates. If unsure of a figure, describe
+  the magnitude qualitatively and say it is approximate.
+- Tax and regulation are where confident answers go wrong. Different instruments
+  in the same country are taxed under completely different regimes — in Japan,
+  listed equities and 店頭FX are flat 20.315% separate taxation, while crypto is
+  雑所得 taxed progressively. Never generalise a rate across instruments. If you
+  state any rate, limit or rule, name the exact instrument it applies to and add
+  that the reader should confirm it against the current NTA or FSA source,
+  because these change.
+- Never invent the reader's biography. You do not know what they have done,
+  bought, tried or abandoned. Do not write "think back to when you...".
+- This is education, not advice. Explain how instruments and markets work and
+  what the evidence says. Never tell them what to buy, sell or hold.
 - Refer to the reader's habits in plain English. Never echo an identifier,
   a field name, or snake_case text from the profile you were given.
 """
@@ -203,10 +227,11 @@ LESSON_TOOL = {
         "properties": {
             "body": {"type": "string", "description": "260-340 words of teaching."},
             "key_idea": {"type": "string"},
-            "reflection": {"type": "string"},
+            "hard_truth": {"type": "string", "description": "The uncomfortable part most explanations omit."},
+            "check": {"type": "string", "description": "Something factual to verify or compute. Never introspection."},
             "relevance": {"type": "string"},
         },
-        "required": ["body", "key_idea", "reflection", "relevance"],
+        "required": ["body", "key_idea", "hard_truth", "check", "relevance"],
         "additionalProperties": False,
     },
     "strict": True,
@@ -312,7 +337,8 @@ class HeuristicScorer:
                   f"It will be written on the next run with a working Claude backend.*\n\n"
                   f"**Scope:** {topic.scope}"),
             key_idea=topic.scope,
-            reflection=f"What do I already believe about {topic.title.lower()}, and where did that belief come from?",
+            check=f"Look up the primary source for: {topic.scope}",
+            hard_truth="",
             relevance="",
             written_by="heuristic",
         )
@@ -330,7 +356,7 @@ class HeuristicScorer:
             item=item,
             summary=summary,
             key_idea=one_line(item.title, 120),
-            reflection="What did I do this week that this piece would have talked me out of?",
+            catch="",
             summarised_by=self.name,
         )
 
@@ -405,7 +431,7 @@ class _LLMScorer:
             item=item,
             summary=str(payload.get("summary", "")).strip() or self.fallback.summarise_mind(item).summary,
             key_idea=one_line(payload.get("key_idea", ""), 200),
-            reflection=one_line(payload.get("reflection", ""), 240),
+            catch=one_line(payload.get("catch", ""), 260),
             summarised_by=self.name,
         )
 
@@ -428,7 +454,8 @@ class _LLMScorer:
             topic=topic,
             body=body,
             key_idea=one_line(payload.get("key_idea", ""), 220),
-            reflection=one_line(payload.get("reflection", ""), 260),
+            hard_truth=one_line(payload.get("hard_truth", ""), 300),
+            check=one_line(payload.get("check", ""), 300),
             relevance=one_line(payload.get("relevance", ""), 200),
             written_by=self.name,
         )

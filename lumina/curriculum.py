@@ -192,7 +192,8 @@ class Lesson:
     topic: Topic
     body: str
     key_idea: str
-    reflection: str
+    hard_truth: str = ""
+    check: str = ""
     relevance: str = ""
     written_by: str = "heuristic"
 
@@ -228,7 +229,8 @@ def load_lesson(root: Path, topic: Topic) -> Lesson | None:
         topic=topic,
         body=body,
         key_idea=meta.get("key_idea", ""),
-        reflection=meta.get("reflection", ""),
+        hard_truth=meta.get("hard_truth", ""),
+        check=meta.get("check", ""),
         relevance=meta.get("relevance", ""),
         written_by=meta.get("written_by", "heuristic"),
     )
@@ -243,7 +245,8 @@ def save_lesson(root: Path, lesson: Lesson) -> Path:
         "track_name": t.track_name,
         "scope": t.scope,
         "key_idea": lesson.key_idea,
-        "reflection": lesson.reflection,
+        "hard_truth": lesson.hard_truth,
+        "check": lesson.check,
         "relevance": lesson.relevance,
         "written_by": lesson.written_by,
     }
@@ -258,7 +261,9 @@ def save_lesson(root: Path, lesson: Lesson) -> Path:
 
 **Key idea.** {lesson.key_idea}
 
-**Ask yourself:** {lesson.reflection}
+**Hard truth.** {lesson.hard_truth}
+
+**Check it yourself:** {lesson.check}
 """
     return write_text(lesson_path(root, lesson.topic), doc)
 

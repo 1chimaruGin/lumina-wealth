@@ -164,7 +164,8 @@ def collect_data(cfg: Config) -> dict:
             library.append({
                 "id": meta.get("id", path.stem), "title": meta.get("title", path.stem),
                 "track": meta.get("track", ""), "track_name": meta.get("track_name", ""),
-                "key_idea": meta.get("key_idea", ""), "reflection": meta.get("reflection", ""),
+                "key_idea": meta.get("key_idea", ""), "hard_truth": meta.get("hard_truth", ""),
+                "check": meta.get("check", ""),
                 "relevance": meta.get("relevance", ""),
                 "taught": cstate.taught.get(meta.get("id", ""), ""),
                 "html": render_md(body),

@@ -281,3 +281,51 @@ def test_profile_block_does_not_expose_raw_pattern_ids(cfg):
     assert "low_capital" not in block
     # the substance must survive
     assert "short feedback loops" in block.lower()
+
+
+def test_prompts_forbid_inventing_the_readers_biography():
+    """A lesson asked the reader to 'think back to when you switched between
+    your last two side projects'. It does not know that. Ever."""
+    from lumina.score import LESSON_SYSTEM, MIND_SYSTEM
+
+    for prompt in (LESSON_SYSTEM, MIND_SYSTEM):
+        # normalise wrapping before matching
+        flat = " ".join(prompt.split())
+        assert "Never invent the reader's biography" in flat
+        assert "You do not know what they have done" in flat
+
+
+def test_lesson_schema_asks_for_a_checkable_fact_not_introspection():
+    from lumina.score import LESSON_TOOL
+
+    required = LESSON_TOOL["input_schema"]["properties"]
+    assert "check" in required and "hard_truth" in required
+    assert "reflection" not in required
+    assert "verify" in required["check"]["description"].lower()
+
+
+def test_lesson_roundtrips_the_harsh_fields(tmp_path):
+    from lumina.curriculum import Lesson, Topic, load_lesson, save_lesson
+
+    topic = Topic(id="inv-03", title="Why index funds beat most professionals",
+                  scope="arithmetic", track="investing", track_name="Investing",
+                  question="q", position=0)
+    lesson = Lesson(topic=topic, body="Body text.", key_idea="Costs decide.",
+                    hard_truth="Most active managers lose after fees.",
+                    check="Find the expense ratio on your own statement.",
+                    relevance="Applies to any fund you hold.", written_by="claude-code")
+    save_lesson(tmp_path, lesson)
+    back = load_lesson(tmp_path, topic)
+    assert back.hard_truth == lesson.hard_truth
+    assert back.check == lesson.check
+
+
+def test_lesson_prompt_guards_against_generalised_tax_rates():
+    """A generated lesson claimed FX and crypto both face 'up to 45%' in Japan.
+    FX is flat 20.315%; crypto is progressive miscellaneous income. Confidently
+    wrong on tax is worse than silent."""
+    from lumina.score import LESSON_SYSTEM
+
+    flat = " ".join(LESSON_SYSTEM.split())
+    assert "Never generalise a rate across instruments" in flat
+    assert "confirm it against the current NTA or FSA source" in flat

@@ -36,9 +36,11 @@ scored_by: {{ scored_by }}
 
 > **Key idea.** {{ l.key_idea }}
 
-{% if l.relevance %}**Why it matters to you.** {{ l.relevance }}
+{% if l.hard_truth %}**Hard truth.** {{ l.hard_truth }}
 
-{% endif %}**Ask yourself:** {{ l.reflection }}
+{% endif %}{% if l.relevance %}**What it changes for you.** {{ l.relevance }}
+
+{% endif %}{% if l.check %}**Check it yourself:** {{ l.check }}{% endif %}
 
 {% endfor %}
 {%- else -%}
@@ -57,7 +59,7 @@ more to `curriculum/syllabus.yaml`.
 
 > **Key idea.** {{ mind.key_idea }}
 
-**Ask yourself:** {{ mind.reflection }}
+{% if mind.catch %}**The catch.** {{ mind.catch }}{% endif %}
 {%- else -%}
 Nothing came through the Mind feeds today. They are low-frequency by nature, so
 a gap here is normal — the lessons above are the part that does not run dry.

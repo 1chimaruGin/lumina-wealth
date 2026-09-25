@@ -216,3 +216,113 @@ tracks:
       - {id: man-28, title: "Building an asset versus selling hours", scope: "The ladder, revisited — and what actually moves you up a rung."}
       - {id: man-29, title: "Exit thinking from day one", scope: "Designing something that could be sold, even if you never sell it."}
       - {id: man-30, title: "The annual money calendar", scope: "What to do each month so nothing is ever a surprise."}
+
+  investing:
+    name: Investing
+    question: What actually produces returns, and what only looks like it does?
+    blurb: >-
+      Owning things that pay you. Most of this track is arithmetic that is
+      unpleasant rather than complicated — fees, base rates, and how much of
+      your outcome was decided before you made a single choice.
+    topics:
+      - {id: inv-01, title: "What an asset actually is", scope: "Something that produces cash. If it does not, you are speculating on the next buyer — say so plainly."}
+      - {id: inv-02, title: "The three sources of return", scope: "Income, growth, and multiple expansion. Only two are earned; the third is other people changing their minds."}
+      - {id: inv-03, title: "Why index funds beat most professionals", scope: "Not a belief — arithmetic. The average active dollar must underperform the market by its costs. SPIVA data over 10-20 years."}
+      - {id: inv-04, title: "Fees, and the third of your money they take", scope: "1% a year over 40 years removes roughly a third of the final balance. Work the number rather than quoting it."}
+      - {id: inv-05, title: "Asset allocation decides most of your outcome", scope: "The stock/bond split explains far more variance than any security you pick."}
+      - {id: inv-06, title: "Diversification and what it cannot protect you from", scope: "It removes idiosyncratic risk and nothing else. Correlations go to one in the crisis you were diversifying against."}
+      - {id: inv-07, title: "Stocks: what you own and what you are owed", scope: "A residual claim. Last in line, unlimited upside, no promises."}
+      - {id: inv-08, title: "Bonds: lending, and what you are pricing", scope: "Duration, credit, and inflation. Three separate bets sold as one instrument."}
+      - {id: inv-09, title: "Real estate: leverage wearing a safety costume", scope: "Returns come mostly from borrowed money. Illiquidity hides volatility rather than removing it."}
+      - {id: inv-10, title: "Gold and commodities produce nothing", scope: "No cash flow means the only return is the next buyer. That is not a criticism, it is a definition."}
+      - {id: inv-11, title: "Japan: NISA and iDeCo, mechanics and limits", scope: "Contribution caps, what is shielded, the lock-up, and what happens on exit."}
+      - {id: inv-12, title: "Lump sum versus dollar-cost averaging", scope: "The data favours lump sum about two thirds of the time. DCA buys regret insurance, and insurance costs money."}
+      - {id: inv-13, title: "Rebalancing", scope: "Selling what worked to buy what did not. Mechanically uncomfortable, which is why it works."}
+      - {id: inv-14, title: "Valuation multiples are a story, not a number", scope: "P/E is one number over another; everything interesting is in why the denominator will change."}
+      - {id: inv-15, title: "The dividend irrelevance proposition", scope: "A dividend is your own money returned with a tax event attached. Why the preference persists anyway."}
+      - {id: inv-16, title: "Survivorship bias in every track record you will see", scope: "Dead funds leave the database. Failed traders stop posting. The average you are shown is not the average."}
+      - {id: inv-17, title: "Sequence-of-returns risk", scope: "Same average return, different order, completely different outcome once you are withdrawing."}
+      - {id: inv-18, title: "The equity risk premium is not owed to you", scope: "It is compensation for risk that must sometimes actually happen, or it would not be a premium."}
+      - {id: inv-19, title: "Home bias and currency risk on a yen salary", scope: "You earn, spend and retire in yen. What hedging costs and when it is worth it."}
+      - {id: inv-20, title: "Japan: tax on investment income", scope: "20.315% on gains and dividends, 特定口座 versus 一般口座, and loss carry-forward."}
+      - {id: inv-21, title: "The behaviour gap", scope: "Investor returns trail fund returns by 1-2% a year because of when people buy and sell. The gap is the whole subject."}
+      - {id: inv-22, title: "Concentration is how fortunes are made and lost", scope: "Diversification protects wealth; concentration builds it. Both statements are true and the order matters."}
+      - {id: inv-23, title: "Your human capital is your largest asset", scope: "The present value of your future earnings dwarfs your portfolio for most of your life. Price it."}
+      - {id: inv-24, title: "Private markets and the illiquidity premium", scope: "Some of that premium is real compensation; some is just unmarked losses."}
+      - {id: inv-25, title: "When to sell", scope: "The decision nobody writes rules for in advance, which is why it is made badly."}
+      - {id: inv-26, title: "What a realistic long-run return looks like", scope: "Real returns after inflation, tax and fees — the number that actually applies to you."}
+      - {id: inv-27, title: "Risk tolerance is measured in a drawdown, not a questionnaire", scope: "Everyone is aggressive until they watch 40% disappear."}
+      - {id: inv-28, title: "Inflation-linked assets", scope: "What genuinely protects purchasing power, and what only claims to."}
+      - {id: inv-29, title: "Compounding needs capital you do not have yet", scope: "The uncomfortable order of operations: income first, returns second. Rate of return on a small number is a small number."}
+      - {id: inv-30, title: "The portfolio you can actually hold", scope: "The optimal allocation you abandon in a crash is worse than a mediocre one you keep."}
+
+  markets:
+    name: Markets & Trading
+    question: Who is on the other side, and why do they expect to win?
+    blurb: >-
+      Trading mechanics, honestly. Most of this track explains why the activity
+      is harder than it looks and who is collecting the difference.
+    topics:
+      - {id: mkt-01, title: "Who is on the other side of your trade", scope: "Every trade has a counterparty who thinks you are wrong. Often it is a firm with better data, lower latency and lower costs."}
+      - {id: mkt-02, title: "Why most active traders lose money", scope: "The actual figures from broker disclosures and academic studies — 70-80% of retail accounts lose. Not a warning label, a base rate."}
+      - {id: mkt-03, title: "The bid-ask spread is a tax you pay on entry and exit", scope: "Cross it twice per round trip. At high frequency it dominates everything else."}
+      - {id: mkt-04, title: "Order types and what each one costs", scope: "Market, limit, stop. Each trades certainty of execution against certainty of price."}
+      - {id: mkt-05, title: "Liquidity disappears exactly when you need it", scope: "Depth is a fair-weather number. The exit is narrower than the entrance."}
+      - {id: mkt-06, title: "Market makers and payment for order flow", scope: "Why your commission-free trade is not free, and who pays for the platform."}
+      - {id: mkt-07, title: "Expectancy: edge times frequency minus costs", scope: "The formula that decides whether a strategy makes money. Most 'edges' are negative after costs."}
+      - {id: mkt-08, title: "Risk of ruin and position sizing", scope: "How a positive-expectancy strategy still bankrupts you if the bets are too large."}
+      - {id: mkt-09, title: "Margin calls", scope: "Forced selling at the worst possible price, by someone who is not you."}
+      - {id: mkt-10, title: "Short selling", scope: "Limited upside, unlimited downside, and a borrow cost that compounds against you."}
+      - {id: mkt-11, title: "Options: what you are actually buying", scope: "A right with an expiry. Time decay is the price of the optionality."}
+      - {id: mkt-12, title: "Implied volatility", scope: "The market's price for uncertainty, and why buying options before a known event rarely works."}
+      - {id: mkt-13, title: "Futures, contango and roll yield", scope: "Why a commodity ETF can fall while the commodity rises."}
+      - {id: mkt-14, title: "Technical analysis: what survives testing", scope: "Momentum has evidence. Most chart patterns do not. Treat the distinction seriously."}
+      - {id: mkt-15, title: "Backtesting and overfitting", scope: "Any strategy can be made profitable on past data. The number of parameters is the tell."}
+      - {id: mkt-16, title: "Slippage", scope: "The gap between the backtest price and the price you got."}
+      - {id: mkt-17, title: "Japan: tax drag on frequent trading", scope: "Every realised gain is a taxable event. Turnover converts deferred compounding into paid tax."}
+      - {id: mkt-18, title: "You are not competing with other retail traders", scope: "HFT, latency, and why 'beating the market' means beating specialists."}
+      - {id: mkt-19, title: "Momentum and mean reversion", scope: "Two opposite strategies that both work sometimes. Knowing which regime you are in is the hard part."}
+      - {id: mkt-20, title: "Factor investing", scope: "Value, size, quality, momentum. Real effects, long droughts, heavy crowding."}
+      - {id: mkt-21, title: "Market efficiency, the useful version", scope: "Not 'prices are right' but 'you need a reason why this is mispriced and you noticed'."}
+      - {id: mkt-22, title: "The news is already in the price", scope: "By the time you read it, it has been traded. What is left is your reaction."}
+      - {id: mkt-23, title: "Stop losses: the comfort and the cost", scope: "They cap a loss and guarantee you sell the bottom sometimes. Both are true."}
+      - {id: mkt-24, title: "Drawdowns", scope: "How long recovery actually takes, and what a 50% loss requires to undo."}
+      - {id: mkt-25, title: "Measuring a strategy honestly", scope: "Log every trade including the ones you do not want to remember. Without that you have anecdotes."}
+      - {id: mkt-26, title: "Prop firms and signal sellers", scope: "Follow the revenue. If the business earns from your fees rather than your profits, you are the product."}
+      - {id: mkt-27, title: "Paper trading does not test the thing that fails", scope: "It removes the only variable that matters, which is your behaviour with real money at risk."}
+      - {id: mkt-28, title: "Bubbles from the inside", scope: "They feel like insight, not mania. Everyone getting rich around you is the symptom."}
+      - {id: mkt-29, title: "When trading is actually rational", scope: "Hedging a real exposure, providing liquidity, or a genuine structural edge. Three cases, none of them vibes."}
+      - {id: mkt-30, title: "The opportunity cost of the hours", scope: "Time spent trading is time not spent on income, which for most people has a far higher expected return."}
+
+  crypto:
+    name: Crypto
+    question: What is actually happening, underneath the price?
+    blurb: >-
+      Mechanics and base rates, without evangelism or dismissal. Most of the
+      money here has been made by intermediaries and early holders; understand
+      the structure before the story.
+    topics:
+      - {id: cry-01, title: "What a blockchain actually does", scope: "An append-only ledger with no admin. What that buys you and what it costs."}
+      - {id: cry-02, title: "Bitcoin's design", scope: "Fixed supply, proof of work, and the specific problem it was built to solve."}
+      - {id: cry-03, title: "Proof of work versus proof of stake", scope: "Two ways to make lying expensive, with different failure modes."}
+      - {id: cry-04, title: "Custody: not your keys, not your coins", scope: "What self-custody actually means operationally, and how people lose everything to it."}
+      - {id: cry-05, title: "Exchanges are the counterparty you forgot", scope: "Mt. Gox and FTX were not protocol failures. They were ordinary custody failures."}
+      - {id: cry-06, title: "Stablecoins and what backs them", scope: "Fiat-backed, over-collateralised, algorithmic. One of these has failed repeatedly."}
+      - {id: cry-07, title: "Ethereum and smart contracts", scope: "Programmable settlement, and why code being law cuts both ways."}
+      - {id: cry-08, title: "Gas and fees", scope: "You are bidding for block space against everyone else."}
+      - {id: cry-09, title: "AMMs and how a DEX prices things", scope: "Constant-product market making, explained with the actual arithmetic."}
+      - {id: cry-10, title: "Impermanent loss is neither", scope: "It is permanent once you withdraw, and it is a real cost of providing liquidity."}
+      - {id: cry-11, title: "Where the yield actually comes from", scope: "Lending, staking, token emissions, or someone else's deposit. Only some of these are sustainable."}
+      - {id: cry-12, title: "The negative-sum arithmetic", scope: "Fees, spreads and MEV leave the participant pool. Before any price move, the aggregate is negative."}
+      - {id: cry-13, title: "Tokenomics and unlock schedules", scope: "Who holds it, at what cost, and when they are allowed to sell. Usually the whole story."}
+      - {id: cry-14, title: "Memecoins", scope: "Explicitly a game of finding the next buyer. Honest about it, which is more than some alternatives."}
+      - {id: cry-15, title: "MEV", scope: "Being front-run by design, and what it extracts from ordinary transactions."}
+      - {id: cry-16, title: "Rug pulls and the standard fraud patterns", scope: "Liquidity removal, mint functions, honeypots. The repeatable shapes."}
+      - {id: cry-17, title: "On-chain analysis", scope: "What is genuinely visible on a public ledger, and what is confident guessing."}
+      - {id: cry-18, title: "Japan: crypto is taxed as miscellaneous income", scope: "雑所得, progressive up to 55%, no loss carry-forward against other income. This changes everything about strategy."}
+      - {id: cry-19, title: "Japan: registered exchanges and the FSA regime", scope: "What registration protects and what it does not."}
+      - {id: cry-20, title: "Bridges are where the money gets stolen", scope: "The largest hacks by value, and the structural reason."}
+      - {id: cry-21, title: "Layer 2s", scope: "Moving execution off the main chain, and the trust assumptions that reappear."}
+      - {id: cry-22, title: "Terra, and how an algorithmic peg fails", scope: "The reflexive loop, in sequence, over a few days."}
+      - {id: cry-23, title: "Volatility and position sizing", scope: "80-90% drawdowns are ordinary here. Size accordingly or do not participate."}
+      - {id: cry-24, title: "Is it an asset class? The honest answer", scope: "No cash flow, short history, correlated with risk assets when it matters. State the case both ways and let the reader decide."}
