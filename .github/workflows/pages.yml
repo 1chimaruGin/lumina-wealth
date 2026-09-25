@@ -14,14 +14,13 @@ name: Dashboard
 # "dashboard" artifact, and `python scripts/site.py --open` builds it locally.
 
 on:
+  # No path filter. The page is rendered from the templates, the config, the
+  # lumina package AND the content, so almost any change can alter it — a
+  # narrow filter has now twice left the site stale after a real change. The
+  # build takes about a minute; over-triggering is much cheaper than the
+  # alternative.
   push:
     branches: [main]
-    paths:
-      - "daily/**"
-      - "digests/**"
-      - "ideas/**"
-      - "streams/**"
-      - "templates/site/**"
 
   # A push made with GITHUB_TOKEN does NOT trigger other workflows — GitHub
   # blocks that to prevent recursion. So the bot's daily commit never fired the
