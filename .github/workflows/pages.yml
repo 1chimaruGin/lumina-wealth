@@ -22,6 +22,18 @@ on:
       - "ideas/**"
       - "streams/**"
       - "templates/site/**"
+
+  # A push made with GITHUB_TOKEN does NOT trigger other workflows — GitHub
+  # blocks that to prevent recursion. So the bot's daily commit never fired the
+  # push trigger above, and the dashboard sat frozen on the date of the last
+  # HUMAN push while the repo moved on without it.
+  #
+  # workflow_run is the documented way out: rebuild after the jobs that write
+  # content finish, whoever pushed.
+  workflow_run:
+    workflows: ["Daily brief", "Weekly digest", "Backfill"]
+    types: [completed]
+
   workflow_dispatch:
 
 permissions:
@@ -38,13 +50,22 @@ jobs:
     # The whole job is skipped unless Pages has been turned on deliberately.
     # A skipped job is not a failed one, which is the point: an impossible
     # deploy should not look like a broken build on every push.
-    if: vars.PAGES_ENABLED == 'true'
+    # Skip a rebuild when the workflow that triggered this one failed; a push
+    # or a manual run always rebuilds.
+    if: >-
+      vars.PAGES_ENABLED == 'true' &&
+      (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          # On a workflow_run event the default ref is the commit that started
+          # the triggering run, which is one commit BEHIND the content that run
+          # just committed. Take the branch tip instead.
+          ref: main
 
       - uses: actions/setup-python@v5
         with:

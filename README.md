@@ -297,6 +297,13 @@ every push that changes content.
 
 ### About Pages
 
+The dashboard rebuilds **after** the Daily brief, Weekly digest and Backfill
+workflows, not from their pushes. That is not a stylistic choice: a push made
+with `GITHUB_TOKEN` does not trigger other workflows — GitHub blocks it to
+prevent recursion — so the bot's daily commit never fired a `push` trigger, and
+the dashboard sat frozen on the date of the last *human* push while the repo
+moved on. `workflow_run` is the documented way around it.
+
 Pages is live at **https://1chimarugin.github.io/lumina-wealth/**, rebuilt by
 the `Dashboard` workflow whenever content changes.
 
