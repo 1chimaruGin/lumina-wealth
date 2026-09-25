@@ -1,0 +1,98 @@
+{# Interactive money mechanics. Each one answers a question you can feel the
+   answer to by dragging something, which is the point: a number that moves
+   while you move beats three paragraphs you skim. #}
+<div id="pane-explain" hidden>
+  <div class="filters">
+    <span class="stamp">Drag the controls. The numbers update as you move.</span>
+  </div>
+
+  <div class="xp" data-xp="compound">
+    <div class="xp-head">
+      <h3 class="xp-title">Why saving feels pointless for two years, then doesn't</h3>
+      <p class="xp-sub">Compounding pays almost nothing early and almost everything late. That shape is the whole reason patience is hard — the feedback arrives last.</p>
+    </div>
+    <div class="xp-body">
+      <div class="xp-controls">
+        <label>Monthly amount<input type="range" id="c-amt" min="5000" max="100000" step="5000" value="20000"><output id="c-amt-o"></output></label>
+        <label>Annual return<input type="range" id="c-ret" min="0" max="12" step="0.5" value="5"><output id="c-ret-o"></output></label>
+        <label>Years<input type="range" id="c-yrs" min="1" max="40" step="1" value="20"><output id="c-yrs-o"></output></label>
+      </div>
+      <div class="xp-out">
+        <div class="hero"><span class="hero-n" id="c-total">—</span><span class="hero-l">total after <span id="c-yrs-l">20</span> years</span></div>
+        <div class="hero-split">
+          <span><i class="sw" style="background:var(--viz-1)"></i>You put in <b id="c-in">—</b></span>
+          <span><i class="sw" style="background:var(--viz-2)"></i>Growth added <b id="c-gain">—</b></span>
+        </div>
+      </div>
+      <figure class="xp-fig"><svg id="c-svg" viewBox="0 0 560 220" role="img" aria-labelledby="c-cap"></svg>
+        <figcaption id="c-cap">Total balance against the money you actually contributed.</figcaption></figure>
+      <p class="xp-note" id="c-note"></p>
+    </div>
+  </div>
+
+  <div class="xp" data-xp="inflation">
+    <div class="xp-head">
+      <h3 class="xp-title">What your cash quietly loses</h3>
+      <p class="xp-sub">Money sitting still shrinks. Rome did this deliberately by removing silver from the denarius; modern inflation does it without anyone deciding.</p>
+    </div>
+    <div class="xp-body">
+      <div class="xp-controls">
+        <label>Starting amount<input type="range" id="i-amt" min="100000" max="10000000" step="100000" value="1000000"><output id="i-amt-o"></output></label>
+        <label>Inflation<input type="range" id="i-rate" min="0" max="10" step="0.1" value="2"><output id="i-rate-o"></output></label>
+        <label>Years<input type="range" id="i-yrs" min="1" max="40" step="1" value="20"><output id="i-yrs-o"></output></label>
+      </div>
+      <div class="xp-out">
+        <div class="hero"><span class="hero-n" id="i-val">—</span><span class="hero-l">what it still buys</span></div>
+        <div class="hero-split"><span>Lost to inflation <b id="i-lost">—</b></span></div>
+      </div>
+      <figure class="xp-fig"><svg id="i-svg" viewBox="0 0 560 220" role="img" aria-labelledby="i-cap"></svg>
+        <figcaption id="i-cap">Purchasing power of the same nominal amount over time.</figcaption></figure>
+      <p class="xp-note" id="i-note"></p>
+    </div>
+  </div>
+
+  <div class="xp" data-xp="leverage">
+    <div class="xp-head">
+      <h3 class="xp-title">What borrowing does to being wrong</h3>
+      <p class="xp-sub">Leverage multiplies the move, not the odds. The same multiple that doubles a gain doubles the loss — and a big enough loss ends the game.</p>
+    </div>
+    <div class="xp-body">
+      <div class="xp-controls">
+        <label>Your own money<input type="range" id="l-eq" min="100000" max="5000000" step="100000" value="1000000"><output id="l-eq-o"></output></label>
+        <label>Leverage<input type="range" id="l-x" min="1" max="10" step="0.5" value="3"><output id="l-x-o"></output></label>
+        <label>Asset moves<input type="range" id="l-mv" min="-50" max="50" step="1" value="10"><output id="l-mv-o"></output></label>
+      </div>
+      <div class="xp-out">
+        <div class="hero"><span class="hero-n" id="l-res">—</span><span class="hero-l" id="l-res-l">your money afterwards</span></div>
+        <div class="hero-split"><span>Return on your money <b id="l-pct">—</b></span></div>
+      </div>
+      <figure class="xp-fig"><svg id="l-svg" viewBox="0 0 560 200" role="img" aria-labelledby="l-cap"></svg>
+        <figcaption id="l-cap">Your outcome at this leverage across the range of possible moves.</figcaption></figure>
+      <p class="xp-note" id="l-note"></p>
+    </div>
+  </div>
+
+  <div class="xp" data-xp="cash">
+    <div class="xp-head">
+      <h3 class="xp-title">How a profitable business runs out of money</h3>
+      <p class="xp-sub">Profit is an opinion about timing; cash is a fact. You pay costs now and get paid later, so the faster you grow the deeper the hole goes first.</p>
+    </div>
+    <div class="xp-body">
+      <div class="xp-controls">
+        <label>Monthly sales growth<input type="range" id="k-g" min="0" max="40" step="1" value="15"><output id="k-g-o"></output></label>
+        <label>Clients pay after<input type="range" id="k-d" min="0" max="120" step="5" value="60"><output id="k-d-o"></output></label>
+        <label>Gross margin<input type="range" id="k-m" min="10" max="90" step="5" value="50"><output id="k-m-o"></output></label>
+      </div>
+      <div class="xp-out">
+        <div class="hero"><span class="hero-n" id="k-low">—</span><span class="hero-l">deepest cash hole</span></div>
+        <div class="hero-split">
+          <span><i class="sw" style="background:var(--viz-1)"></i>Cumulative profit <b id="k-prof">—</b></span>
+          <span><i class="sw" style="background:var(--viz-3)"></i>Cash in the bank <b id="k-cash">—</b></span>
+        </div>
+      </div>
+      <figure class="xp-fig"><svg id="k-svg" viewBox="0 0 560 220" role="img" aria-labelledby="k-cap"></svg>
+        <figcaption id="k-cap">Cumulative profit against actual cash, over 24 months.</figcaption></figure>
+      <p class="xp-note" id="k-note"></p>
+    </div>
+  </div>
+</div>

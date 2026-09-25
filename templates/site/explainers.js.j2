@@ -1,0 +1,209 @@
+/* ---- explainers: small charts drawn by hand, no library ---- */
+(function () {
+  "use strict";
+  var NS = "http://www.w3.org/2000/svg";
+  var $ = function (id) { return document.getElementById(id); };
+  var yen = function (n) {
+    var a = Math.abs(Math.round(n));
+    if (a >= 100000000) return (n < 0 ? "-" : "") + "¥" + (a / 100000000).toFixed(2) + "億";
+    if (a >= 10000) return (n < 0 ? "-" : "") + "¥" + (a / 10000).toFixed(a >= 1000000 ? 0 : 1) + "万";
+    return (n < 0 ? "-" : "") + "¥" + a.toLocaleString();
+  };
+  function el(tag, attrs) {
+    var e = document.createElementNS(NS, tag);
+    for (var k in attrs) e.setAttribute(k, attrs[k]);
+    return e;
+  }
+  function clear(svg) { while (svg.firstChild) svg.removeChild(svg.firstChild); }
+
+  /* One line/area chart routine for every explainer.
+     series: [{points:[[x,y]...], color, label, fill}]  */
+  function drawLines(svg, series, opts) {
+    opts = opts || {};
+    clear(svg);
+    var vb = svg.viewBox.baseVal, W = vb.width, H = vb.height;
+    var m = {t: 14, r: 64, b: 26, l: 8};
+    var iw = W - m.l - m.r, ih = H - m.t - m.b;
+    var all = series.reduce(function (a, s) { return a.concat(s.points); }, []);
+    if (!all.length) return;
+    var xs = all.map(function (p) { return p[0]; }), ys = all.map(function (p) { return p[1]; });
+    var x0 = Math.min.apply(null, xs), x1 = Math.max.apply(null, xs);
+    var y0 = Math.min(0, Math.min.apply(null, ys)), y1 = Math.max.apply(null, ys);
+    if (y1 === y0) y1 = y0 + 1;
+    var X = function (v) { return m.l + (x1 === x0 ? 0 : (v - x0) / (x1 - x0)) * iw; };
+    var Y = function (v) { return m.t + ih - ((v - y0) / (y1 - y0)) * ih; };
+
+    /* recessive grid: four lines, no box */
+    for (var g = 0; g <= 3; g++) {
+      var gy = m.t + (ih / 3) * g;
+      svg.appendChild(el("line", {x1: m.l, y1: gy, x2: m.l + iw, y2: gy,
+        stroke: "var(--line)", "stroke-width": 1}));
+    }
+    if (y0 < 0) {
+      svg.appendChild(el("line", {x1: m.l, y1: Y(0), x2: m.l + iw, y2: Y(0),
+        stroke: "var(--ink-3)", "stroke-width": 1, "stroke-dasharray": "3 3"}));
+    }
+
+    series.forEach(function (s) {
+      var d = s.points.map(function (p, i) { return (i ? "L" : "M") + X(p[0]).toFixed(1) + " " + Y(p[1]).toFixed(1); }).join(" ");
+      if (s.fill) {
+        svg.appendChild(el("path", {d: d + " L" + X(x1) + " " + Y(0) + " L" + X(x0) + " " + Y(0) + " Z",
+          fill: s.color, opacity: 0.1, stroke: "none"}));
+      }
+      svg.appendChild(el("path", {d: d, fill: "none", stroke: s.color,
+        "stroke-width": 2, "stroke-linejoin": "round", "stroke-linecap": "round"}));
+      /* emphasised endpoint + direct label, so identity is never colour alone */
+      var last = s.points[s.points.length - 1];
+      svg.appendChild(el("circle", {cx: X(last[0]), cy: Y(last[1]), r: 4, fill: s.color,
+        stroke: "var(--surface)", "stroke-width": 2}));
+      var t = el("text", {x: X(last[0]) + 9, y: Y(last[1]) + 4,
+        fill: "var(--ink-2)", "font-size": 11, "font-family": "var(--mono)"});
+      t.textContent = s.label;
+      svg.appendChild(t);
+    });
+
+    if (opts.xLabel) {
+      var xt = el("text", {x: m.l, y: H - 6, fill: "var(--ink-3)", "font-size": 10.5, "font-family": "var(--mono)"});
+      xt.textContent = opts.xLabel;
+      svg.appendChild(xt);
+    }
+    if (opts.xEnd) {
+      var xe = el("text", {x: m.l + iw, y: H - 6, fill: "var(--ink-3)", "font-size": 10.5,
+        "font-family": "var(--mono)", "text-anchor": "end"});
+      xe.textContent = opts.xEnd;
+      svg.appendChild(xe);
+    }
+  }
+
+  /* ---------- 1. compounding ---------- */
+  function compound() {
+    var amt = +$("c-amt").value, ret = +$("c-ret").value, yrs = +$("c-yrs").value;
+    $("c-amt-o").textContent = yen(amt) + "/mo";
+    $("c-ret-o").textContent = ret.toFixed(1) + "%";
+    $("c-yrs-o").textContent = yrs + " yr";
+    $("c-yrs-l").textContent = yrs;
+
+    var r = ret / 100 / 12, bal = 0, contrib = 0, tot = [], put = [];
+    for (var mth = 0; mth <= yrs * 12; mth++) {
+      if (mth) { bal = bal * (1 + r) + amt; contrib += amt; }
+      if (mth % 3 === 0) { tot.push([mth / 12, bal]); put.push([mth / 12, contrib]); }
+    }
+    $("c-total").textContent = yen(bal);
+    $("c-in").textContent = yen(contrib);
+    $("c-gain").textContent = yen(bal - contrib);
+    drawLines($("c-svg"), [
+      {points: put, color: "var(--viz-1)", label: "put in", fill: true},
+      {points: tot, color: "var(--viz-2)", label: "total"}
+    ], {xLabel: "year 0", xEnd: "year " + yrs});
+
+    var share = bal > 0 ? (bal - contrib) / bal * 100 : 0;
+    var half = null;
+    for (var y = 1; y <= yrs; y++) {
+      var b = 0, c = 0;
+      for (var k = 1; k <= y * 12; k++) { b = b * (1 + r) + amt; c += amt; }
+      if (b - c >= c && half === null) half = y;
+    }
+    $("c-note").textContent = share < 1
+      ? "At this return, growth is a rounding error. The habit is what you are building, not the balance."
+      : "Growth is " + share.toFixed(0) + "% of the total" +
+        (half ? ", and only after year " + half + " does it exceed what you put in" : "") +
+        ". The first two years look like nothing because they are nothing — that is the shape, not a failure.";
+  }
+
+  /* ---------- 2. inflation ---------- */
+  function inflation() {
+    var amt = +$("i-amt").value, rate = +$("i-rate").value, yrs = +$("i-yrs").value;
+    $("i-amt-o").textContent = yen(amt);
+    $("i-rate-o").textContent = rate.toFixed(1) + "%";
+    $("i-yrs-o").textContent = yrs + " yr";
+
+    var pts = [];
+    for (var y = 0; y <= yrs; y++) pts.push([y, amt / Math.pow(1 + rate / 100, y)]);
+    var end = pts[pts.length - 1][1];
+    $("i-val").textContent = yen(end);
+    $("i-lost").textContent = yen(amt - end) + " (" + ((1 - end / amt) * 100).toFixed(0) + "%)";
+    drawLines($("i-svg"), [{points: pts, color: "var(--viz-2)", label: "real value", fill: true}],
+      {xLabel: "today", xEnd: "year " + yrs});
+
+    var halving = rate > 0 ? Math.log(2) / Math.log(1 + rate / 100) : null;
+    $("i-note").textContent = rate === 0
+      ? "At zero inflation nothing is lost — which has almost never been true for long."
+      : "At " + rate.toFixed(1) + "%, your money halves in purchasing power every " +
+        halving.toFixed(0) + " years. Nobody announces it; the number in the account never changes.";
+  }
+
+  /* ---------- 3. leverage ---------- */
+  function leverage() {
+    var eq = +$("l-eq").value, x = +$("l-x").value, mv = +$("l-mv").value;
+    $("l-eq-o").textContent = yen(eq);
+    $("l-x-o").textContent = x.toFixed(1) + "×";
+    $("l-mv-o").textContent = (mv > 0 ? "+" : "") + mv + "%";
+
+    var result = function (move) { return Math.max(0, eq * (1 + x * move / 100)); };
+    var end = result(mv), pct = (end - eq) / eq * 100;
+    $("l-res").textContent = yen(end);
+    $("l-res-l").textContent = end === 0 ? "wiped out" : "your money afterwards";
+    $("l-pct").textContent = (pct > 0 ? "+" : "") + pct.toFixed(0) + "%";
+    $("l-res").className = "hero-n " + (end === 0 ? "bad" : pct > 0 ? "good" : pct < 0 ? "bad" : "");
+
+    var pts = [];
+    for (var m2 = -50; m2 <= 50; m2 += 2) pts.push([m2, result(m2)]);
+    drawLines($("l-svg"), [{points: pts, color: "var(--viz-3)", label: "your money"}],
+      {xLabel: "-50%", xEnd: "+50%"});
+
+    var ruin = -100 / x;
+    $("l-note").textContent = "At " + x.toFixed(1) + "× leverage a " + ruin.toFixed(0) +
+      "% move against you wipes you out completely. Being right eventually does not help if you are gone before it happens.";
+  }
+
+  /* ---------- 4. cash versus profit ---------- */
+  function cashflow() {
+    var g = +$("k-g").value / 100, days = +$("k-d").value, marg = +$("k-m").value / 100;
+    $("k-g-o").textContent = (g * 100).toFixed(0) + "%/mo";
+    $("k-d-o").textContent = days + " days";
+    $("k-m-o").textContent = (marg * 100).toFixed(0) + "%";
+
+    var lag = Math.round(days / 30), sales = 1000000, prof = [], cash = [];
+    var cumP = 0, cumC = 0, hist = [];
+    for (var m3 = 0; m3 <= 24; m3++) {
+      var s = sales * Math.pow(1 + g, m3);
+      hist.push(s);
+      cumP += s * marg;
+      cumC -= s * (1 - marg);                       // costs paid this month
+      if (m3 - lag >= 0) cumC += hist[m3 - lag];    // revenue collected, late
+      prof.push([m3, cumP]);
+      cash.push([m3, cumC]);
+    }
+    var low = Math.min.apply(null, cash.map(function (p) { return p[1]; }));
+    $("k-low").textContent = yen(low);
+    $("k-low").className = "hero-n " + (low < 0 ? "bad" : "good");
+    $("k-prof").textContent = yen(cumP);
+    $("k-cash").textContent = yen(cumC);
+    drawLines($("k-svg"), [
+      {points: prof, color: "var(--viz-1)", label: "profit"},
+      {points: cash, color: "var(--viz-3)", label: "cash"}
+    ], {xLabel: "month 0", xEnd: "month 24"});
+
+    $("k-note").textContent = low < 0
+      ? "Profitable the whole time, and still " + yen(-low) +
+        " short at the worst point. That gap is what a business actually dies of."
+      : "At these terms cash never goes negative. Shorten payment terms or raise margin and the hole disappears — that is the entire lever.";
+  }
+
+  var RUN = {compound: compound, inflation: inflation, leverage: leverage, cash: cashflow};
+
+  function bind() {
+    Object.keys(RUN).forEach(function (k) {
+      var box = document.querySelector('[data-xp="' + k + '"]');
+      if (!box) return;
+      [].slice.call(box.querySelectorAll("input[type=range]")).forEach(function (inp) {
+        inp.addEventListener("input", RUN[k]);
+      });
+      RUN[k]();
+    });
+  }
+  if (document.querySelector("[data-xp]")) bind();
+  /* redraw on theme change so marks pick up the other mode's tokens */
+  var mo = new MutationObserver(function () { Object.keys(RUN).forEach(function (k) { RUN[k](); }); });
+  mo.observe(document.documentElement, {attributes: true, attributeFilter: ["data-theme"]});
+})();

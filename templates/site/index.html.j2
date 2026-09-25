@@ -8,7 +8,7 @@
 <title>{{ data.title }}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;450;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;450;500;600&family=Noto+Sans+JP:wght@400;500;600&display=swap">
 <style>
 :root{
   --paper:#f7f8f6; --surface:#ffffff; --surface-2:#eef2ef; --sunken:#e7ece9;
@@ -18,9 +18,9 @@
   --good:#2f7d4f; --warn:#9d6a17; --crit:#a33a2e;
   --good-soft:#e5f1e8; --warn-soft:#f6eddc; --crit-soft:#f7e6e3;
   --shadow:0 1px 2px rgba(22,33,30,.05), 0 8px 24px -16px rgba(22,33,30,.22);
-  --display:"Newsreader",Georgia,"Times New Roman",serif;
-  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --display:"Newsreader",Georgia,"Noto Sans JP","Hiragino Sans","Yu Gothic","Times New Roman",serif;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI","Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,"Noto Sans JP","Hiragino Sans","Yu Gothic",monospace;
   --r:10px;
   /* One hue per track, so a chip is scannable before it is read. */
   --tr-psychology:#6b4d9e; --tr-psychology-bg:#ece7f5;
@@ -29,6 +29,10 @@
   --tr-financing:#1f6f5c;   --tr-financing-bg:#e3efea;
   --tr-management:#9c3f58;  --tr-management-bg:#f7e5ea;
   --tr-stories:#8a5a1b;     --tr-stories-bg:#f5ebdc;
+  /* Chart marks are a SEPARATE palette from the UI chips above: the chip hues
+     are deliberately low-chroma and fail a categorical-palette check (they read
+     as gray, and jade/blue sit only ΔE 10 apart). These pass all six. */
+  --viz-1:#0d8a6a; --viz-2:#c2410c; --viz-3:#6d28d9;
 }
 @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
   --paper:#0e1412; --surface:#151d1a; --surface-2:#1b2522; --sunken:#111917;
@@ -44,6 +48,9 @@
   --tr-financing:#5cc0a2;  --tr-financing-bg:#14302a;
   --tr-management:#dd8ba2; --tr-management-bg:#2e1a21;
   --tr-stories:#d5a35e;    --tr-stories-bg:#2a2115;
+  /* Dark marks are stepped for the dark surface (L 0.48–0.67), not lightened
+     versions of the light ones. */
+  --viz-1:#17a281; --viz-2:#d4762a; --viz-3:#8a6fe0;
 }}
 :root[data-theme="dark"]{
   --paper:#0e1412; --surface:#151d1a; --surface-2:#1b2522; --sunken:#111917;
@@ -59,6 +66,9 @@
   --tr-financing:#5cc0a2;  --tr-financing-bg:#14302a;
   --tr-management:#dd8ba2; --tr-management-bg:#2e1a21;
   --tr-stories:#d5a35e;    --tr-stories-bg:#2a2115;
+  /* Dark marks are stepped for the dark surface (L 0.48–0.67), not lightened
+     versions of the light ones. */
+  --viz-1:#17a281; --viz-2:#d4762a; --viz-3:#8a6fe0;
 }
 *{box-sizing:border-box}
 [hidden]{display:none!important}
@@ -344,6 +354,37 @@ a.flow:hover .flow-t{color:var(--accent)}
 .lib-body{padding:0 22px 20px}
 .lib-body p{color:var(--ink-2); max-width:70ch; margin:11px 0}
 
+
+/* ---------- explainers ---------- */
+.xp{border-bottom:1px solid var(--line)}
+.xp:last-child{border-bottom:0}
+.xp-head{padding:20px 22px 0}
+.xp-title{font-family:var(--display); font-size:21px; line-height:1.3; color:var(--ink)}
+.xp-sub{font-size:14px; color:var(--ink-2); margin:7px 0 0; max-width:66ch}
+.xp-body{display:grid; grid-template-columns:210px 1fr; gap:18px 22px; padding:18px 22px 24px; align-items:start}
+@media (max-width:720px){ .xp-body{grid-template-columns:1fr} }
+.xp-controls{display:flex; flex-direction:column; gap:14px; grid-row:1 / span 3}
+@media (max-width:720px){ .xp-controls{grid-row:auto} }
+.xp-controls label{display:grid; gap:5px; font:500 11px/1 var(--sans); letter-spacing:.07em; text-transform:uppercase; color:var(--ink-3)}
+.xp-controls output{font-family:var(--mono); font-size:13px; color:var(--ink); letter-spacing:-.01em}
+.xp-controls input[type=range]{width:100%; accent-color:var(--accent); height:20px; cursor:pointer}
+.xp-out{grid-column:2; display:flex; flex-direction:column; gap:9px}
+@media (max-width:720px){ .xp-out{grid-column:1} }
+.hero{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap}
+.hero-n{font-family:var(--mono); font-size:30px; font-weight:600; letter-spacing:-.02em; color:var(--ink); font-variant-numeric:tabular-nums}
+.hero-n.good{color:var(--good)} .hero-n.bad{color:var(--crit)}
+.hero-l{font-size:13px; color:var(--ink-3)}
+.hero-split{display:flex; gap:18px; flex-wrap:wrap; font-size:13px; color:var(--ink-2)}
+.hero-split b{font-family:var(--mono); color:var(--ink); font-weight:500}
+.sw{display:inline-block; width:9px; height:9px; border-radius:2px; margin-right:6px; vertical-align:baseline}
+.xp-fig{grid-column:2; margin:0}
+@media (max-width:720px){ .xp-fig{grid-column:1} }
+.xp-fig svg{width:100%; height:auto; overflow:visible}
+.xp-fig figcaption{font-size:12px; color:var(--ink-3); margin-top:8px}
+.xp-note{grid-column:2; margin:0; font-size:13.5px; line-height:1.6; color:var(--ink-2); max-width:70ch;
+  padding:11px 14px; background:var(--sunken); border-radius:8px}
+@media (max-width:720px){ .xp-note{grid-column:1} }
+
 @media (prefers-reduced-motion:reduce){ *{transition:none!important; animation:none!important} }
 </style>
 {% if not fragment %}</head>
@@ -432,6 +473,7 @@ a.flow:hover .flow-t{color:var(--accent)}
         <button type="button" role="tab" id="tab-daily" aria-selected="true">Daily</button>
         <button type="button" role="tab" id="tab-weekly" aria-selected="false">Weekly</button>
         <button type="button" role="tab" id="tab-river" aria-selected="false">River</button>
+        <button type="button" role="tab" id="tab-explain" aria-selected="false">Explain</button>
         <button type="button" role="tab" id="tab-library" aria-selected="false">Library</button>
       </div>
       <div class="spacer" style="flex:1"></div>
@@ -453,6 +495,8 @@ a.flow:hover .flow-t{color:var(--accent)}
         <div class="brief"><p class="empty">No briefs yet. Run <code>python scripts/compose.py</code> to build today's.</p></div>
       {% endif %}
     </div>
+
+{% include "site/explainers.html.j2" %}
 
     <div id="pane-river" hidden>
       <div class="filters">
@@ -723,6 +767,7 @@ a.flow:hover .flow-t{color:var(--accent)}
     daily: {tab: document.getElementById("tab-daily"), pane: paneDaily, paged: true},
     weekly: {tab: document.getElementById("tab-weekly"), pane: paneWeekly, paged: true},
     river: {tab: document.getElementById("tab-river"), pane: paneRiver, paged: false},
+    explain: {tab: document.getElementById("tab-explain"), pane: document.getElementById("pane-explain"), paged: false},
     library: {tab: document.getElementById("tab-library"), pane: paneLibrary, paged: false}
   };
   var pager = document.getElementById("pager");
@@ -817,6 +862,9 @@ a.flow:hover .flow-t{color:var(--accent)}
     if (e.key === "ArrowRight") { show(picker.selectedIndex - 1); }
   });
 })();
+</script>
+<script>
+{% include "site/explainers.js.j2" %}
 </script>
 {% if not fragment %}</body>
 </html>
