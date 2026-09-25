@@ -85,4 +85,16 @@ jobs:
             exit 0
           fi
           git commit -m "Backfill ${{ inputs.days }} day(s)"
-          git push
+          # Generation takes minutes, so main may have moved underneath this run —
+          # a human push mid-run made the first attempt fail non-fast-forward and
+          # threw the brief away. Rebase onto whatever landed, then retry.
+          for attempt in 1 2 3; do
+            if git pull --rebase --autostash origin main && git push; then
+              echo "Pushed on attempt $attempt."
+              exit 0
+            fi
+            echo "Push attempt $attempt failed; retrying."
+            sleep 5
+          done
+          echo "::error::Could not push after 3 attempts. The generated files are in this run's workspace only."
+          exit 1
