@@ -2,8 +2,17 @@ name: Daily brief
 
 on:
   schedule:
-    # 02:00 UTC == 11:00 JST, every day.
-    - cron: "0 2 * * *"
+    # GitHub runs `schedule` on a best-effort basis: runs are delayed during
+    # high load and are sometimes dropped entirely. Observed here: 2026-09-24
+    # fired 5h19m late, 2026-09-25 never fired at all.
+    #
+    # Two mitigations. First, avoid the top of the hour, which is the most
+    # contended slot. Second, try again later in the day — the job below exits
+    # early if today's brief already exists, so the extra slots cost nothing
+    # on a normal day and rescue a missed one.
+    - cron: "17 2 * * *"    # 11:17 JST — the intended slot
+    - cron: "17 5 * * *"    # 14:17 JST — first retry
+    - cron: "17 9 * * *"    # 18:17 JST — last chance
   workflow_dispatch:
     inputs:
       date:
@@ -46,7 +55,24 @@ jobs:
         # Claude subscription — no ANTHROPIC_API_KEY anywhere.
         run: npm install -g @anthropic-ai/claude-code
 
+      - name: Has today's brief already been written?
+        id: guard
+        # The retry slots must not rewrite a brief that already exists — that
+        # would burn model calls and churn the file for nothing.
+        run: |
+          TODAY=$(TZ=Asia/Tokyo date +%F)
+          REQUESTED="${{ inputs.date }}"
+          TARGET="${REQUESTED:-$TODAY}"
+          echo "target=$TARGET" >> "$GITHUB_OUTPUT"
+          if [ -f "daily/$TARGET.md" ] && [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "daily/$TARGET.md already exists — nothing to do."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Check Claude Code auth
+        if: steps.guard.outputs.skip != 'true'
         # Without this the run would quietly fall back to the offline scorer
         # and produce a worse brief every day with nothing obviously broken.
         env:
@@ -59,6 +85,7 @@ jobs:
           claude --version
 
       - name: Build the brief
+        if: steps.guard.outputs.skip != 'true'
         env:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           GITHUB_REPOSITORY: ${{ github.repository }}
@@ -68,11 +95,13 @@ jobs:
             ${{ inputs.no_llm && '--no-llm' || '' }}
 
       - name: Build the dashboard
+        if: steps.guard.outputs.skip != 'true'
         run: python scripts/site.py
 
       - name: Upload the dashboard
         # GitHub Pages needs a paid plan on a private repo. This keeps the
         # dashboard one download away regardless.
+        if: steps.guard.outputs.skip != 'true'
         uses: actions/upload-artifact@v4
         with:
           name: dashboard
@@ -81,6 +110,7 @@ jobs:
 
       - name: Notify
         # Only fires when config/settings.yaml sets notify.channel to slack or email.
+        if: steps.guard.outputs.skip != 'true'
         continue-on-error: true
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
@@ -92,6 +122,7 @@ jobs:
         run: python scripts/notify.py
 
       - name: Commit
+        if: steps.guard.outputs.skip != 'true'
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

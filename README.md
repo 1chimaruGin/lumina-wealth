@@ -5,14 +5,24 @@
 A briefing system with two jobs: rewire how I think about money, and find one
 income stream at a time worth actually building.
 
-Every morning at **11:00 JST** a GitHub Action writes `daily/YYYY-MM-DD.md` and
+Every morning at **11:17 JST** a GitHub Action writes `daily/YYYY-MM-DD.md` and
 commits it. On Sunday it writes a weekly digest. A dashboard renders all of it
 at a glance.
 
+> **On the schedule.** GitHub runs `schedule` events on a best-effort basis:
+> they are delayed under load and sometimes dropped entirely. Observed here —
+> 2026-09-24 fired 5h19m late and 2026-09-25 never fired. So the daily workflow
+> avoids the top of the hour (the most contended slot) and books two retry
+> slots later in the day. The job exits early if today's brief already exists,
+> so the retries cost nothing on a normal day and rescue a missed one.
+>
+> If a day is still missed, `python scripts/backfill.py --days 2` fills it in,
+> or trigger the workflow by hand from the Actions tab.
+
 ```
-06:00 ──────── 11:00 JST ──────── Sunday 11:30 JST
+         ──── 11:17 JST ──────── Sunday 11:47 JST
                daily brief         weekly digest
-               ~10 min read        top 5 ideas for the next slot
+               2 lessons + reading top 5 ideas for the next slot
 ```
 
 ## The brief

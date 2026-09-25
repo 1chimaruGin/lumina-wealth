@@ -2,9 +2,12 @@ name: Weekly digest
 
 on:
   schedule:
-    # 02:30 UTC Sunday == 11:30 JST Sunday, half an hour after the daily brief
-    # so the digest can include that morning's entry.
-    - cron: "30 2 * * 0"
+    # 02:47 UTC Sunday == 11:47 JST Sunday, after the daily brief so the digest
+    # can include that morning's entry. Off the top of the hour, and with a
+    # retry, because GitHub's scheduler drops and delays runs under load.
+    # The digest is idempotent, so a second run just rewrites the same file.
+    - cron: "47 2 * * 0"
+    - cron: "47 8 * * 0"
   workflow_dispatch:
     inputs:
       date:
