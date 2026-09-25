@@ -175,12 +175,11 @@ No principles found in `curriculum/principles.md`.
 
 <sub>5–15 minutes. One rep for *{{ stream.name }}*. Log it: `python scripts/stream.py log --action "..." --minutes 10`</sub>
 {%- else -%}
-- [ ] **Pick one idea from `ideas/inbox/` and activate it.**
+Nothing to do here. No income stream is active, which is the current intention —
+the learning tracks above do not depend on one.
 
-No stream is active, so there is no action to do — and that is the one thing worth
-fixing today. The weekly digest ranks the top 5 candidates for you.
-
-<sub>`python scripts/stream.py activate --name "..." --rung 1-skills --goal "..." --metric "..."`</sub>
+<sub>When you do want one: `python scripts/stream.py activate --help`. The
+{{ inbox_count }} scored candidates in `ideas/inbox/` are captured, not queued.</sub>
 {%- endif %}
 
 
@@ -197,8 +196,9 @@ fixing today. The weekly digest ranks the top 5 candidates for you.
 | **Goal** | {{ stream.goal or "—" }} |
 | **Gate** | {{ gate_line }} |
 {%- else -%}
-**No active stream.** Exactly one may be active; right now the slot is open.
+No stream active. Exactly one may be, and the slot is deliberately open.
 {%- endif %}
+
 
 ---
 

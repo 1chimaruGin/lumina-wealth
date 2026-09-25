@@ -399,3 +399,13 @@ def test_book_rotation_prefers_unread_then_repeats(tmp_path):
     st.mark("a", dt.date(2026, 9, 27))
     # everything read: returns to the longest ago rather than stopping
     assert next_book(books, st, dt.date(2026, 9, 28)).id == "b"
+
+
+def test_an_empty_stream_slot_is_not_presented_as_a_problem(cfg):
+    """The brief called an empty slot 'the one thing worth fixing today', which
+    contradicts a stated priority of learning rather than building."""
+    text = compose_daily(cfg, D, None, [], None, Stream(),
+                         sources_ok=1, sources_total=1, sources_failed=[])
+    assert "the one thing worth fixing" not in text
+    assert "Nothing to do here" in text
+    assert "captured, not queued" in text

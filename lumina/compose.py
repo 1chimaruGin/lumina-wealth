@@ -134,6 +134,7 @@ def compose_daily(
         scored_by=scored_by,
         cost=cost,
         filed=filed,
+        inbox_count=len(list(cfg.inbox_dir.glob('*.md'))),
     )
 
 
