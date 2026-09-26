@@ -47,6 +47,8 @@ def collect_data(cfg: Config) -> dict:
             "sources_failed": int(meta.get("sources_failed") or 0),
             "scored_by": meta.get("scored_by", ""),
             "principle": str(meta.get("principle", "")),
+            # the explainer tab picks the day's featured widget from this
+            "tracks": [str(x) for x in (meta.get("tracks") or [])],
             "html": render_md(body),
         })
     briefs = briefs[: int(cfg.get("site.recent_briefs", 30))]

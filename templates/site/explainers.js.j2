@@ -190,7 +190,140 @@
       : "At these terms cash never goes negative. Shorten payment terms or raise margin and the hole disappears — that is the entire lever.";
   }
 
-  var RUN = {compound: compound, inflation: inflation, leverage: leverage, cash: cashflow};
+
+  /* ---------- 5. drawdown recovery ---------- */
+  function drawdown() {
+    var loss = +$("d-loss").value, ret = +$("d-ret").value;
+    $("d-loss-o").textContent = "-" + loss + "%";
+    $("d-ret-o").textContent = ret.toFixed(1) + "%";
+
+    var floor = 1 - loss / 100;
+    var need = (1 / floor - 1) * 100;
+    var yrs = ret > 0 ? Math.log(1 / floor) / Math.log(1 + ret / 100) : Infinity;
+    $("d-need").textContent = "+" + need.toFixed(0) + "%";
+    $("d-yrs").textContent = isFinite(yrs) ? yrs.toFixed(1) : "never";
+    $("d-yrs").className = "hero-n " + (yrs > 7 ? "bad" : "");
+
+    var pts = [[0, 1], [0.35, floor]];
+    var span = isFinite(yrs) ? yrs : 40;
+    for (var i = 1; i <= 40; i++) {
+      var y = (span * i) / 40;
+      pts.push([0.35 + y, floor * Math.pow(1 + ret / 100, y)]);
+    }
+    drawLines($("d-svg"), [{points: pts, color: "var(--viz-2)", label: "value", fill: true}],
+      {xLabel: "the fall", xEnd: isFinite(yrs) ? "+" + yrs.toFixed(1) + " years" : ""});
+
+    $("d-note").textContent = isFinite(yrs)
+      ? "A " + loss + "% fall needs +" + need.toFixed(0) + "% to undo, which at " + ret.toFixed(1) +
+        "% takes " + yrs.toFixed(1) + " years of nothing happening. People do not quit at the bottom because it hurts; they quit somewhere in those " +
+        yrs.toFixed(1) + " years because nothing is happening."
+      : "At zero return the loss is never recovered. That is what a permanent loss of capital means.";
+  }
+
+  /* ---------- 6. time versus rate ---------- */
+  function timerate() {
+    var r1 = +$("t-r1").value, y1 = +$("t-y1").value, r2 = +$("t-r2").value, y2 = +$("t-y2").value;
+    $("t-r1-o").textContent = r1.toFixed(1) + "%";
+    $("t-y1-o").textContent = y1 + " yr";
+    $("t-r2-o").textContent = r2.toFixed(1) + "%";
+    $("t-y2-o").textContent = y2 + " yr";
+
+    var M = 20000;
+    function series(rate, years) {
+      var r = rate / 100 / 12, bal = 0, out = [];
+      for (var m = 0; m <= years * 12; m++) {
+        if (m) bal = bal * (1 + r) + M;
+        if (m % 3 === 0) out.push([m / 12, bal]);
+      }
+      return out;
+    }
+    var a = series(r1, y1), b = series(r2, y2);
+    var va = a[a.length - 1][1], vb = b[b.length - 1][1];
+    $("t-v1").textContent = yen(va);
+    $("t-v2").textContent = yen(vb);
+    $("t-win").textContent = yen(Math.abs(va - vb));
+    $("t-win").className = "hero-n " + (va >= vb ? "good" : "bad");
+    $("t-win-l").textContent = va >= vb
+      ? "more, from patience alone"
+      : "more, from the higher return";
+
+    drawLines($("t-svg"), [
+      {points: a, color: "var(--viz-1)", label: r1.toFixed(1) + "% · " + y1 + "y"},
+      {points: b, color: "var(--viz-2)", label: r2.toFixed(1) + "% · " + y2 + "y"}
+    ], {xLabel: "year 0", xEnd: "year " + Math.max(y1, y2)});
+
+    $("t-note").textContent = va >= vb
+      ? "A " + r1.toFixed(1) + "% return held for " + y1 + " years beats " + r2.toFixed(1) +
+        "% held for " + y2 + ". The patient number is the ordinary one — no skill required, only the horizon."
+      : "Here the higher return wins. Note what it took: " + r2.toFixed(1) +
+        "% a year sustained for " + y2 + " years, which is roughly what the best investors alive manage.";
+  }
+
+  /* ---------- 7. the cost of looking ---------- */
+  function checking() {
+    var mu = +$("k2-r").value / 100, sd = +$("k2-v").value / 100;
+    $("k2-r-o").textContent = (mu * 100).toFixed(1) + "%";
+    $("k2-v-o").textContent = (sd * 100).toFixed(0) + "%";
+
+    /* normal CDF via an erf approximation */
+    function cdf(z) {
+      var s = z < 0 ? -1 : 1, x = Math.abs(z) / Math.SQRT2;
+      var tt = 1 / (1 + 0.3275911 * x);
+      var y = 1 - (((((1.061405429 * tt - 1.453152027) * tt) + 1.421413741) * tt - 0.284496736) * tt + 0.254829592) * tt * Math.exp(-x * x);
+      return 0.5 * (1 + s * y);
+    }
+    function pLoss(years) {
+      if (years <= 0) return 0.5;
+      return cdf(-(mu * years) / (sd * Math.sqrt(years)));
+    }
+    var horizons = [[1 / 252, "daily"], [1 / 52, "weekly"], [1 / 12, "monthly"],
+                    [0.25, "quarterly"], [1, "yearly"], [5, "5 years"], [10, "10 years"]];
+    $("k2-day").textContent = (pLoss(1 / 252) * 100).toFixed(0) + "%";
+    $("k2-yr").textContent = (pLoss(1) * 100).toFixed(0) + "%";
+    $("k2-dec").textContent = (pLoss(10) * 100).toFixed(0) + "%";
+
+    var pts = horizons.map(function (h, i) { return [i, pLoss(h[0]) * 100]; });
+    drawLines($("k2-svg"), [{points: pts, color: "var(--viz-3)", label: "chance of a loss", fill: true}],
+      {xLabel: "daily", xEnd: "every 10 years"});
+
+    $("k2-note").textContent = "Nothing about the asset changes between these numbers — only how often you look. " +
+      "Check daily and you see a loss " + (pLoss(1 / 252) * 100).toFixed(0) +
+      "% of the time; check once a decade and it is " + (pLoss(10) * 100).toFixed(0) +
+      "%. Every look is a chance to feel you should act.";
+  }
+
+  /* ---------- 8. fee drag ---------- */
+  function fees() {
+    var fee = +$("f-fee").value, gross = +$("f-ret").value, yrs = +$("f-yrs").value;
+    $("f-fee-o").textContent = fee.toFixed(2) + "%";
+    $("f-ret-o").textContent = gross.toFixed(1) + "%";
+    $("f-yrs-o").textContent = yrs + " yr";
+
+    var M = 20000, rg = gross / 100 / 12, rn = (gross - fee) / 100 / 12;
+    var bg = 0, bn = 0, g = [], n = [];
+    for (var m = 0; m <= yrs * 12; m++) {
+      if (m) { bg = bg * (1 + rg) + M; bn = bn * (1 + rn) + M; }
+      if (m % 3 === 0) { g.push([m / 12, bg]); n.push([m / 12, bn]); }
+    }
+    var lost = bg - bn, pct = bg > 0 ? (lost / bg) * 100 : 0;
+    $("f-lost").textContent = pct.toFixed(0) + "%";
+    $("f-lost").className = "hero-n " + (pct > 20 ? "bad" : "");
+    $("f-keep").textContent = yen(bn);
+    $("f-take").textContent = yen(lost);
+    drawLines($("f-svg"), [
+      {points: n, color: "var(--viz-1)", label: "you keep"},
+      {points: g, color: "var(--viz-2)", label: "no fee"}
+    ], {xLabel: "year 0", xEnd: "year " + yrs});
+
+    $("f-note").textContent = fee === 0
+      ? "No fee, no drag. This is the whole argument for index funds stated as arithmetic rather than opinion."
+      : fee.toFixed(2) + "% a year sounds negligible and removes " + pct.toFixed(0) +
+        "% of the final balance over " + yrs + " years — " + yen(lost) +
+        ". It compounds against you exactly as returns compound for you.";
+  }
+
+  var RUN = {compound: compound, inflation: inflation, leverage: leverage, cash: cashflow,
+             drawdown: drawdown, timerate: timerate, checking: checking, fees: fees};
 
   function bind() {
     Object.keys(RUN).forEach(function (k) {
@@ -202,7 +335,37 @@
       RUN[k]();
     });
   }
-  if (document.querySelector("[data-xp]")) bind();
+  /* Feature one explainer a day, chosen by the day's lesson track. The site is
+     rebuilt after every brief, so this changes on its own without a scheduler. */
+  function feature() {
+    var data = {};
+    try { data = JSON.parse(document.getElementById("lumina-data").textContent) || {}; } catch (e) {}
+    var today = data.today || "";
+    var track = "";
+    if (data.briefs && data.briefs.length && data.briefs[0].tracks) {
+      track = (data.briefs[0].tracks[0] || "");
+    }
+    var boxes = [].slice.call(document.querySelectorAll("[data-xp]"));
+    if (!boxes.length) return;
+    var matching = boxes.filter(function (b) {
+      return (b.getAttribute("data-tracks") || "").split(/\s+/).indexOf(track) !== -1;
+    });
+    var pool = matching.length ? matching : boxes;
+    /* stable for a given date: same day, same pick */
+    var seed = 0;
+    for (var i = 0; i < today.length; i++) seed = (seed * 31 + today.charCodeAt(i)) >>> 0;
+    var chosen = pool[seed % pool.length];
+    chosen.classList.add("featured");
+    chosen.parentNode.insertBefore(chosen, chosen.parentNode.querySelector("[data-xp]"));
+    var note = document.getElementById("xp-featured-note");
+    if (note) {
+      note.textContent = track
+        ? "Today's pick follows the " + track + " lesson."
+        : "Today's pick.";
+    }
+  }
+
+  if (document.querySelector("[data-xp]")) { bind(); feature(); }
   /* redraw on theme change so marks pick up the other mode's tokens */
   var mo = new MutationObserver(function () { Object.keys(RUN).forEach(function (k) { RUN[k](); }); });
   mo.observe(document.documentElement, {attributes: true, attributeFilter: ["data-theme"]});

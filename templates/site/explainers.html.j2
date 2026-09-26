@@ -4,9 +4,10 @@
 <div id="pane-explain" hidden>
   <div class="filters">
     <span class="stamp">Drag the controls. The numbers update as you move.</span>
+    <span class="stamp" id="xp-featured-note"></span>
   </div>
 
-  <div class="xp" data-xp="compound">
+  <div class="xp" data-xp="compound" data-tracks="time investing psychology">
     <div class="xp-head">
       <h3 class="xp-title">Why saving feels pointless for two years, then doesn't</h3>
       <p class="xp-sub">Compounding pays almost nothing early and almost everything late. That shape is the whole reason patience is hard — the feedback arrives last.</p>
@@ -30,7 +31,7 @@
     </div>
   </div>
 
-  <div class="xp" data-xp="inflation">
+  <div class="xp" data-xp="inflation" data-tracks="intelligence history time">
     <div class="xp-head">
       <h3 class="xp-title">What your cash quietly loses</h3>
       <p class="xp-sub">Money sitting still shrinks. Rome did this deliberately by removing silver from the denarius; modern inflation does it without anyone deciding.</p>
@@ -51,7 +52,7 @@
     </div>
   </div>
 
-  <div class="xp" data-xp="leverage">
+  <div class="xp" data-xp="leverage" data-tracks="markets crypto financing">
     <div class="xp-head">
       <h3 class="xp-title">What borrowing does to being wrong</h3>
       <p class="xp-sub">Leverage multiplies the move, not the odds. The same multiple that doubles a gain doubles the loss — and a big enough loss ends the game.</p>
@@ -72,7 +73,7 @@
     </div>
   </div>
 
-  <div class="xp" data-xp="cash">
+  <div class="xp" data-xp="cash" data-tracks="financing management">
     <div class="xp-head">
       <h3 class="xp-title">How a profitable business runs out of money</h3>
       <p class="xp-sub">Profit is an opinion about timing; cash is a fact. You pay costs now and get paid later, so the faster you grow the deeper the hole goes first.</p>
@@ -93,6 +94,95 @@
       <figure class="xp-fig"><svg id="k-svg" viewBox="0 0 560 220" role="img" aria-labelledby="k-cap"></svg>
         <figcaption id="k-cap">Cumulative profit against actual cash, over 24 months.</figcaption></figure>
       <p class="xp-note" id="k-note"></p>
+    </div>
+  </div>
+
+  <div class="xp" data-xp="drawdown" data-tracks="time psychology investing">
+    <div class="xp-head">
+      <h3 class="xp-title">How long a loss takes to undo</h3>
+      <p class="xp-sub">A 50% fall needs a 100% gain to get back to even. Depth is what people fear; duration is what actually makes them quit.</p>
+    </div>
+    <div class="xp-body">
+      <div class="xp-controls">
+        <label>The fall<input type="range" id="d-loss" min="5" max="80" step="5" value="40"><output id="d-loss-o"></output></label>
+        <label>Return after<input type="range" id="d-ret" min="1" max="15" step="0.5" value="7"><output id="d-ret-o"></output></label>
+      </div>
+      <div class="xp-out">
+        <div class="hero"><span class="hero-n" id="d-yrs">—</span><span class="hero-l">years just to get back to where you started</span></div>
+        <div class="hero-split"><span>Gain required <b id="d-need">—</b></span></div>
+      </div>
+      <figure class="xp-fig"><svg id="d-svg" viewBox="0 0 560 200" role="img" aria-labelledby="d-cap"></svg>
+        <figcaption id="d-cap">Value over time: the fall, then the climb back to the starting line.</figcaption></figure>
+      <p class="xp-note" id="d-note"></p>
+    </div>
+  </div>
+
+  <div class="xp" data-xp="timerate" data-tracks="time investing">
+    <div class="xp-head">
+      <h3 class="xp-title">Time beats rate, and it is not close</h3>
+      <p class="xp-sub">Everyone hunts a better return. Almost nobody extends the horizon, which is the lever that actually moves the number — and the only one fully in your control.</p>
+    </div>
+    <div class="xp-body">
+      <div class="xp-controls">
+        <label>Patient return<input type="range" id="t-r1" min="1" max="12" step="0.5" value="5"><output id="t-r1-o"></output></label>
+        <label>Patient years<input type="range" id="t-y1" min="5" max="40" step="1" value="30"><output id="t-y1-o"></output></label>
+        <label>Impatient return<input type="range" id="t-r2" min="1" max="30" step="0.5" value="12"><output id="t-r2-o"></output></label>
+        <label>Impatient years<input type="range" id="t-y2" min="1" max="40" step="1" value="10"><output id="t-y2-o"></output></label>
+      </div>
+      <div class="xp-out">
+        <div class="hero"><span class="hero-n" id="t-win">—</span><span class="hero-l" id="t-win-l"></span></div>
+        <div class="hero-split">
+          <span><i class="sw" style="background:var(--viz-1)"></i>Patient <b id="t-v1">—</b></span>
+          <span><i class="sw" style="background:var(--viz-2)"></i>Impatient <b id="t-v2">—</b></span>
+        </div>
+      </div>
+      <figure class="xp-fig"><svg id="t-svg" viewBox="0 0 560 200" role="img" aria-labelledby="t-cap"></svg>
+        <figcaption id="t-cap">Same ¥20,000 a month, two different horizons.</figcaption></figure>
+      <p class="xp-note" id="t-note"></p>
+    </div>
+  </div>
+
+  <div class="xp" data-xp="checking" data-tracks="time psychology markets">
+    <div class="xp-head">
+      <h3 class="xp-title">The cost of looking</h3>
+      <p class="xp-sub">The more often you check, the more losses you see — and the less risk you can stomach holding. The asset did not change; your sampling rate did.</p>
+    </div>
+    <div class="xp-body">
+      <div class="xp-controls">
+        <label>Expected return<input type="range" id="k2-r" min="0" max="12" step="0.5" value="7"><output id="k2-r-o"></output></label>
+        <label>Volatility<input type="range" id="k2-v" min="5" max="40" step="1" value="18"><output id="k2-v-o"></output></label>
+      </div>
+      <div class="xp-out">
+        <div class="hero"><span class="hero-n" id="k2-day">—</span><span class="hero-l">chance of a loss if you check daily</span></div>
+        <div class="hero-split"><span>Checking once a year <b id="k2-yr">—</b></span><span>Once a decade <b id="k2-dec">—</b></span></div>
+      </div>
+      <figure class="xp-fig"><svg id="k2-svg" viewBox="0 0 560 200" role="img" aria-labelledby="k2-cap"></svg>
+        <figcaption id="k2-cap">Probability of seeing a loss, by how often you look.</figcaption></figure>
+      <p class="xp-note" id="k2-note"></p>
+    </div>
+  </div>
+
+  <div class="xp" data-xp="fees" data-tracks="investing markets time">
+    <div class="xp-head">
+      <h3 class="xp-title">What 1% a year actually takes</h3>
+      <p class="xp-sub">A fee sounds like a rounding error because it is quoted annually. Over a working life it compounds against you exactly as returns compound for you.</p>
+    </div>
+    <div class="xp-body">
+      <div class="xp-controls">
+        <label>Annual fee<input type="range" id="f-fee" min="0" max="3" step="0.05" value="1"><output id="f-fee-o"></output></label>
+        <label>Gross return<input type="range" id="f-ret" min="1" max="12" step="0.5" value="6"><output id="f-ret-o"></output></label>
+        <label>Years<input type="range" id="f-yrs" min="5" max="45" step="1" value="35"><output id="f-yrs-o"></output></label>
+      </div>
+      <div class="xp-out">
+        <div class="hero"><span class="hero-n" id="f-lost">—</span><span class="hero-l">of your final balance goes to fees</span></div>
+        <div class="hero-split">
+          <span><i class="sw" style="background:var(--viz-1)"></i>You keep <b id="f-keep">—</b></span>
+          <span><i class="sw" style="background:var(--viz-2)"></i>They take <b id="f-take">—</b></span>
+        </div>
+      </div>
+      <figure class="xp-fig"><svg id="f-svg" viewBox="0 0 560 200" role="img" aria-labelledby="f-cap"></svg>
+        <figcaption id="f-cap">Balance with and without the fee, over time.</figcaption></figure>
+      <p class="xp-note" id="f-note"></p>
     </div>
   </div>
 </div>

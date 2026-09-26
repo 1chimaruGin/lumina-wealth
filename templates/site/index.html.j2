@@ -366,6 +366,11 @@ a.flow:hover .flow-t{color:var(--accent)}
 
 /* ---------- explainers ---------- */
 .xp{border-bottom:1px solid var(--line)}
+.xp.featured{background:var(--sunken)}
+.xp.featured .xp-title::before{
+  content:"TODAY"; display:block; font:600 10px/1 var(--sans); letter-spacing:.11em;
+  color:var(--accent); margin-bottom:7px;
+}
 .xp:last-child{border-bottom:0}
 .xp-head{padding:20px 22px 0}
 .xp-title{font-family:var(--display); font-size:21px; line-height:1.3; color:var(--ink)}

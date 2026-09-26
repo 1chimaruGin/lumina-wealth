@@ -69,3 +69,30 @@ def test_site_builds_as_a_fragment_without_the_document_wrapper(tmp_cfg):
     html = out.read_text(encoding="utf-8")
     assert "<!doctype html>" not in html.lower()
     assert "<title>" in html
+
+
+def test_briefs_expose_their_tracks_for_the_explainer_tab(tmp_cfg):
+    """The Explain tab features a widget matched to the day's lesson track. If
+    the track never reaches the page the pick silently falls back to random."""
+    brief = tmp_cfg.daily_dir / "2026-09-27.md"
+    brief.write_text(
+        "---\ndate: 2026-09-27\ntracks: [time, investing]\n---\n\n## 1 · Money school\n",
+        encoding="utf-8")
+    data = collect_data(tmp_cfg)
+    assert data["briefs"][0]["tracks"] == ["time", "investing"]
+
+
+def test_every_explainer_declares_the_tracks_it_serves(cfg):
+    """An untagged widget can never be featured, so it would quietly become
+    decoration."""
+    import re
+
+    src = (cfg.template_dir / "site" / "explainers.html.j2").read_text(encoding="utf-8")
+    widgets = re.findall(r'data-xp="([a-z]+)"', src)
+    tagged = re.findall(r'data-xp="[a-z]+" data-tracks="([^"]+)"', src)
+    assert len(widgets) >= 8
+    assert len(tagged) == len(widgets), "every data-xp needs data-tracks"
+    known = {"psychology", "intelligence", "history", "financing", "management",
+             "investing", "markets", "crypto", "time"}
+    for group in tagged:
+        assert set(group.split()) <= known, f"unknown track in {group!r}"
