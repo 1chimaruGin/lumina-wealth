@@ -1,4 +1,10 @@
-"""One book a day, with an honest verdict on whether it is worth the hours.
+"""The daily study slot: a book, or something you watch.
+
+Books and screen material share one slot and alternate, because a film that
+dramatises a mechanism can land harder than a chapter describing it — and
+because a reader with no patience will not finish a 500-page history every week.
+
+One book a day, with an honest verdict on whether it is worth the hours.
 
 Most money books are one idea and two hundred pages of padding. A note that
 says so — and names the chapter worth reading — is worth more than a review.
@@ -28,6 +34,12 @@ class Book:
     track: str = ""
     weight: float = 1.0
     note: str = ""
+    kind: str = "book"      # book | film | anime | manga | series | documentary
+    teaches: str = ""       # for screen material: the mechanism to aim the note at
+
+    @property
+    def is_screen(self) -> bool:
+        return self.kind != "book"
 
     @property
     def slug(self) -> str:
@@ -36,6 +48,11 @@ class Book:
     @property
     def label(self) -> str:
         return f"{self.title} — {self.author}" + (f" ({self.year})" if self.year else "")
+
+    @property
+    def kind_label(self) -> str:
+        return {"book": "Book", "film": "Film", "anime": "Anime", "manga": "Manga",
+                "series": "Series", "documentary": "Documentary"}.get(self.kind, "Book")
 
 
 @dataclass
@@ -63,6 +80,38 @@ def load_books(path: Path | str) -> list[Book]:
                         year=b.get("year"), track=b.get("track", ""),
                         weight=float(b.get("weight", 1.0)), note=b.get("note", "")))
     return out
+
+
+def load_media(path: Path | str) -> list[Book]:
+    """Screen material, carried in the same shape so one slot can hold either."""
+    path = Path(path)
+    if not path.exists():
+        return []
+    raw = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    out = []
+    for m in raw.get("media") or []:
+        out.append(Book(id=m["id"], title=m["title"], author=m.get("creator", ""),
+                        year=m.get("year"), track=m.get("track", ""),
+                        weight=float(m.get("weight", 1.0)), kind=m.get("kind", "film"),
+                        teaches=(m.get("teaches") or "").strip()))
+    return out
+
+
+def load_study(root: Path) -> list[Book]:
+    return load_books(Path(root) / "curriculum" / "books.yaml") + \
+           load_media(Path(root) / "curriculum" / "media.yaml")
+
+
+def next_study(items: list[Book], state: "BookState", day: date, prefer_track: str = "") -> Book | None:
+    """Alternate between reading and watching by day, so neither crowds the other.
+
+    Odd ordinal days take screen material. If that side is exhausted the other
+    fills in rather than leaving the slot empty.
+    """
+    want_screen = day.toordinal() % 2 == 1
+    side = [b for b in items if b.is_screen == want_screen]
+    pick = next_book(side, state, day, prefer_track) if side else None
+    return pick or next_book(items, state, day, prefer_track)
 
 
 @dataclass
@@ -142,7 +191,8 @@ def load_note(root: Path, book: Book) -> BookNote | None:
 def save_note(root: Path, note: BookNote) -> Path:
     b = note.book
     meta = {"id": b.id, "title": b.title, "author": b.author, "year": b.year,
-            "track": b.track, "argument": note.argument, "one_idea": note.one_idea,
+            "track": b.track, "kind": b.kind,
+            "argument": note.argument, "one_idea": note.one_idea,
             "verdict": note.verdict, "caveat": note.caveat, "written_by": note.written_by}
     fm = yaml.safe_dump(meta, sort_keys=False, allow_unicode=True).rstrip()
     doc = f"""---

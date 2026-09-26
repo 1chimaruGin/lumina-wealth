@@ -409,3 +409,47 @@ def test_an_empty_stream_slot_is_not_presented_as_a_problem(cfg):
     assert "the one thing worth fixing" not in text
     assert "Nothing to do here" in text
     assert "captured, not queued" in text
+
+
+def test_the_study_slot_alternates_between_reading_and_watching(cfg):
+    """A reader with no patience will not finish a 500-page history weekly. The
+    slot alternates so neither side crowds the other."""
+    from lumina.books import BookState, load_study, next_study
+    import datetime as dt
+    from pathlib import Path
+
+    items = load_study(cfg.root)
+    assert any(i.is_screen for i in items) and any(not i.is_screen for i in items)
+
+    st = BookState(path=Path("/tmp/_t.json"), read={})
+    kinds = []
+    for i in range(6):
+        d = dt.date(2026, 9, 27) + dt.timedelta(days=i)
+        pick = next_study(items, st, d)
+        st.mark(pick.id, d)
+        kinds.append(pick.is_screen)
+    # strictly alternating while both sides have unseen items
+    assert kinds == [not kinds[0] if i % 2 else kinds[0] for i in range(6)]
+
+
+def test_note_prompt_demands_the_distortion_in_fiction():
+    """Fiction compresses timelines and lets one clever move decide outcomes.
+    A note that does not name where it lies is useless as instruction."""
+    from lumina.score import BOOK_SYSTEM
+
+    flat = " ".join(BOOK_SYSTEM.split())
+    assert "Name the specific distortion" in flat
+    assert "inverts its actual lesson" in flat
+    assert "never invent" in flat.lower()
+
+
+def test_time_track_exists_and_is_pinned_to_two_weekdays(cfg):
+    """Timing and patience was the stated weakness; it gets fixed slots rather
+    than relying on the balance rule alone."""
+    from lumina.curriculum import load_syllabus
+
+    syl = load_syllabus(cfg.root / "curriculum" / "syllabus.yaml")
+    assert "time" in syl.tracks
+    assert len(syl.tracks["time"].topics) >= 25
+    pinned = [v for v in syl.rotation.values() if v == "time"]
+    assert len(pinned) == 2

@@ -17,12 +17,15 @@ meta:
   version: 1
   rotation:            # weekday -> track  (0 = Monday)
     0: psychology
-    1: intelligence
+    1: time            # their stated weakness gets a fixed slot
     2: history
-    3: financing
-    4: management
-    5: history         # Saturday: the long-read slot, still narrative
+    3: investing
+    4: markets
+    5: time            # Saturday long-read, also Time & Patience
     6: null            # Sunday: digest day, no new lesson
+    # intelligence, financing, management and crypto are not pinned to a day —
+    # the furthest-behind rule pulls them in, which keeps coverage even without
+    # crowding out the track that was asked for.
 
 tracks:
 
@@ -326,3 +329,43 @@ tracks:
       - {id: cry-22, title: "Terra, and how an algorithmic peg fails", scope: "The reflexive loop, in sequence, over a few days."}
       - {id: cry-23, title: "Volatility and position sizing", scope: "80-90% drawdowns are ordinary here. Size accordingly or do not participate."}
       - {id: cry-24, title: "Is it an asset class? The honest answer", scope: "No cash flow, short history, correlated with risk assets when it matters. State the case both ways and let the reader decide."}
+
+  time:
+    name: Time & Patience
+    question: What does waiting actually cost, and what does it buy?
+    blurb: >-
+      Timing and patience are opposites. Timing is predicting when — mostly
+      impossible, and where most money dies. Patience is holding through — the
+      only edge reliably available to someone without capital, speed or access.
+      This track is about telling them apart and building the second one.
+    topics:
+      - {id: tim-01, title: "Timing and patience are opposites", scope: "One is a prediction about when; the other is a decision to stay. Confusing them sends people to the activity that destroys returns."}
+      - {id: tim-02, title: "Time in the market versus timing the market", scope: "The actual studies. Why the arithmetic favours staying, and where the popular version of this argument cheats."}
+      - {id: tim-03, title: "Missing the ten best days — and the flaw in that argument", scope: "The famous statistic, and why the best and worst days cluster together, which the sales version omits."}
+      - {id: tim-04, title: "Being right too early is indistinguishable from being wrong", scope: "Your position is closed, your investors are gone, your conviction is irrelevant. Timing risk in one sentence."}
+      - {id: tim-05, title: "Michael Burry's two years", scope: "Right about the housing market from 2005, nearly destroyed by redemptions before 2007 arrived. What early actually costs."}
+      - {id: tim-06, title: "The J-curve", scope: "Why almost everything worth doing looks like failure before it works, and how to tell that shape from genuine failure."}
+      - {id: tim-07, title: "Base rates for how long things take", scope: "Businesses to profit, skills to competence, investments to compound. Real numbers against the imagined ones."}
+      - {id: tim-08, title: "Hyperbolic discounting, with the arithmetic", scope: "How steeply people discount the future, measured — and why the curve is worse at short horizons."}
+      - {id: tim-09, title: "What ten years looks like month to month", scope: "The long-run chart is smooth. Lived month by month it is mostly flat with occasional terror. Both are the same data."}
+      - {id: tim-10, title: "Drawdown duration breaks people, not depth", scope: "A 30% fall that recovers in six months is survivable. The same fall over four years is not, for most."}
+      - {id: tim-11, title: "Myopic loss aversion: the cost of checking", scope: "Thaler and Benartzi — the more often you look, the more losses you see, and the less risk you can hold."}
+      - {id: tim-12, title: "Illiquidity as a feature", scope: "Assets you cannot sell in a panic protect you from yourself. That is a real return, rarely counted."}
+      - {id: tim-13, title: "Lock-ups, vesting and forced patience", scope: "Structures that remove the option to quit, and why they outperform intentions."}
+      - {id: tim-14, title: "Compounding needs time more than rate", scope: "Run the comparison: a mediocre return over 30 years against an excellent one over 10. The result is uncomfortable."}
+      - {id: tim-15, title: "How much of Buffett's wealth arrived after 60", scope: "The overwhelming majority. The lesson is about duration, not stock picking — and about starting at 11."}
+      - {id: tim-16, title: "Cash on the sidelines has a cost", scope: "Waiting for a better entry is a position with an expected return, usually negative. Price it."}
+      - {id: tim-17, title: "When acting fast IS correct", scope: "Paying off high-interest debt, taking a hedge, closing a position that breaks your rule. Patience is not always the answer."}
+      - {id: tim-18, title: "Optionality and the value of waiting", scope: "Real options: sometimes the right move is to keep the choice open and pay for the privilege."}
+      - {id: tim-19, title: "Deadlines as commitment devices", scope: "Why an arbitrary horizon outperforms an open-ended one, and why 90 days works when 'someday' does not."}
+      - {id: tim-20, title: "Seasonality and calendar effects", scope: "Sell in May, the January effect. What survives out-of-sample testing, which is almost nothing."}
+      - {id: tim-21, title: "\"This time is different\" is usually said late", scope: "The phrase as a timing signal, and why it appears near the top rather than the bottom."}
+      - {id: tim-22, title: "The half-life of an edge", scope: "Any published advantage decays as it is copied. How fast, measured, and what that implies about chasing them."}
+      - {id: tim-23, title: "Time horizon mismatch", scope: "The most common portfolio error: money you need in two years invested for ten, or the reverse."}
+      - {id: tim-24, title: "Sequencing your financial decisions", scope: "Emergency fund, high-interest debt, tax shelter, then investing. Order matters more than selection."}
+      - {id: tim-25, title: "Regret minimisation over a long horizon", scope: "Bezos's framing, and its limits — it optimises for a story you tell later, not for expected value."}
+      - {id: tim-26, title: "Patience is the edge actually available to you", scope: "You cannot outrun professionals on speed, data or access. Holding period is the one axis where a retail investor is not disadvantaged."}
+      - {id: tim-27, title: "The planning fallacy applied to wealth", scope: "Why your timeline is optimistic, and the outside-view correction that fixes it."}
+      - {id: tim-28, title: "Dollar cost averaging as patience technology", scope: "Mathematically suboptimal, behaviourally effective. Both things are true and the second may matter more."}
+      - {id: tim-29, title: "What you can actually control", scope: "Not returns. Time, cost, contribution rate and behaviour — the four levers that are genuinely yours."}
+      - {id: tim-30, title: "Boredom as a signal", scope: "A strategy that feels exciting is usually one that trades too much. Boring is the texture of a working plan."}

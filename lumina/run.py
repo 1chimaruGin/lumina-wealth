@@ -10,7 +10,7 @@ from pathlib import Path
 from .classify import classify_all, prefilter
 from .collect import collect_all, dedupe, within_lookback
 from .compose import compose_daily, compose_weekly, load_inbox, load_week_briefs
-from .books import BookState, get_or_write_note, load_books, next_book
+from .books import BookState, get_or_write_note, load_study, next_study
 from .curriculum import CurriculumState, get_or_write_lesson, load_syllabus, next_topics
 from .config import Config, load_config
 from .inbox import save_ideas
@@ -120,11 +120,11 @@ def run_daily(
         notes.append("The syllabus is complete — every topic has been taught. Add more to curriculum/syllabus.yaml.")
 
     # --- book of the day, cached like lessons ---
-    books = load_books(cfg.root / "curriculum" / "books.yaml")
+    books = load_study(cfg.root)
     bstate = bstate if bstate is not None else BookState.load(cfg.data_dir)
     if owns_state and rebuilding:
         bstate.forget_on(d)
-    book = next_book(books, bstate, d, prefer_track=(topics[0].track if topics else ""))
+    book = next_study(books, bstate, d, prefer_track=(topics[0].track if topics else ""))
     book_note = get_or_write_note(cfg.root, book, scorer) if book else None
 
     # --- news: triaged, not summarised ---

@@ -47,7 +47,7 @@ def test_track_progress_covers_every_syllabus_track(tmp_cfg):
     data = collect_data(tmp_cfg)
     assert {t["key"] for t in data["tracks"]} == {
         "psychology", "intelligence", "history", "financing", "management",
-        "investing", "markets", "crypto"}
+        "investing", "markets", "crypto", "time"}
     assert data["syllabus_total"] == sum(t["total"] for t in data["tracks"])
     for t in data["tracks"]:
         assert 0 <= t["pct"] <= 100

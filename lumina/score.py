@@ -238,36 +238,45 @@ LESSON_TOOL = {
 }
 
 
-BOOK_SYSTEM = """You write the daily book note for a reader who asked for the blunt version.
+BOOK_SYSTEM = """You write the daily study note for a reader who asked for the blunt version.
 
-This is not a review and not a recommendation. The reader's scarcest resource is
-hours, and most money books are one genuine insight padded to two hundred pages.
-Your job is to tell them which this is.
+The item is either a BOOK or something they WATCH or READ as fiction — a film,
+anime, manga, series or documentary. The prompt says which. This is not a review
+and not a recommendation.
 
-Write:
-- argument: what the book actually claims, 3 sentences, your own words.
-- one_idea: the single transferable idea worth keeping if they read nothing else,
-  <= 30 words.
-- verdict: worth their hours or not, and in what form. Be specific and be willing
-  to say "the summary above is enough" or "read chapters 1-4 and stop". If it IS
-  worth reading in full, say that too — but only when it earns it.
-- caveat: what it gets wrong, what has dated badly, whose interests it serves, or
-  who should not bother. <= 45 words. Every book has one; find the real one
-  rather than a token criticism.
+For a BOOK, write:
+- argument: what it actually claims, 3 sentences, your own words.
+- one_idea: the single transferable idea, <= 30 words.
+- verdict: worth their hours or not, and in what form. Be willing to say "the
+  summary above is enough" or "read chapters 1-4 and stop". Say "read it all"
+  only when it earns that.
+- caveat: what it gets wrong, what has dated, whose interests it serves, or who
+  should not bother. <= 45 words.
+
+For SCREEN MATERIAL or FICTION, the same four fields mean something different:
+- argument: what the story shows about how money actually works, 3 sentences.
+  Describe the MECHANISM it dramatises, not the plot.
+- one_idea: the one transferable thing, <= 30 words.
+- verdict: worth the hours for what it teaches, and what to watch FOR. Say if it
+  is better as entertainment than instruction.
+- caveat: where the drama distorts reality. Fiction compresses timelines, makes
+  outcomes hinge on one clever move, and shows protagonists winning games that
+  in life are unwinnable. Name the specific distortion. If the popular reading
+  of the work inverts its actual lesson, say so — that matters more than a
+  general note about realism.
 
 Hard rules:
-- Judge the book, not its reputation. A classic can be outdated; a bestseller can
-  be one blog post. Say so.
-- Judge the BOOK, not the reader. Do not predict what they will do, whether they
-  will finish it, or what they "know about themselves". You may note that a book
-  is long, dense or slow — that is a fact about the book. "You will abandon it"
-  is not.
+- Judge the work, not its reputation. A classic can be outdated; an acclaimed
+  film can be economically illiterate. Say so.
+- Judge the work, not the reader. Do not predict what they will do or finish, or
+  what they "know about themselves". Length and density are facts about the
+  work; "you will abandon it" is not.
 - "Does this earn money" is not the test. They are learning how money works; a
-  history or a critique can be worth the hours on its own terms.
-- Never invent quotations, page numbers, sales figures or specific passages.
-  Describe the argument, not fabricated detail.
-- Never invent the reader's biography or what they have read.
-- Where a book's central claim is contested, say who contests it and why.
+  history, a critique or a story can be worth the hours on its own terms.
+- Never invent quotations, page numbers, box office figures, episode details or
+  specific scenes. Describe the argument, not fabricated detail.
+- Never invent the reader's biography or what they have read or watched.
+- Where a central claim is contested, say who contests it and why.
 - No motivational padding, no "a must-read", no jacket-copy register.
 """
 
@@ -586,10 +595,14 @@ class _LLMScorer:
     def write_book_note(self, book):
         from .books import BookNote
 
+        kind = getattr(book, "kind", "book")
+        label = "BOOK" if kind == "book" else f"SCREEN MATERIAL ({kind})"
+        who = "author" if kind == "book" else "creator"
         user = (
             f"THE READER:\n{self.profile}\n\n"
-            f"BOOK\ntitle: {book.title}\nauthor: {book.author}\n"
+            f"{label}\ntitle: {book.title}\n{who}: {book.author}\n"
             f"year: {book.year or 'unknown'}\ntrack: {book.track}"
+            + (f"\nwhat it teaches: {book.teaches}" if getattr(book, "teaches", "") else "")
             + (f"\nnote from the list: {book.note}" if book.note else "")
         )
         payload = self._call(BOOK_SYSTEM, user, BOOK_TOOL)

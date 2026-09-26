@@ -51,11 +51,11 @@ more to `curriculum/syllabus.yaml`.
 {%- endif %}
 
 
-## 2 · Book
+## 2 · {{ book.book.kind_label if book else 'Book' }}
 
 {% if book and book.argument -%}
 ### {{ book.book.title }}
-<sub>{{ book.book.author }}{% if book.book.year %} · {{ book.book.year }}{% endif %} · `{{ book.book.track }}`</sub>
+<sub>{{ book.book.author }}{% if book.book.year %} · {{ book.book.year }}{% endif %} · `{{ book.book.track }}` · {{ book.book.kind_label|lower }}</sub>
 
 {{ book.argument }}
 

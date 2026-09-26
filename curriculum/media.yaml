@@ -1,0 +1,258 @@
+# Films, anime, manga, documentaries and series about money.
+#
+# Shares the daily study slot with books.yaml — some days a book, some days
+# something you watch. The note is not a review: it says what the story gets
+# RIGHT about money as a mechanism, what it dramatises into nonsense, and the
+# one thing worth taking from it. Fiction is allowed to be wrong; a note that
+# does not say where is useless.
+#
+# `teaches` steers the note toward the mechanism, not the plot.
+
+media:
+  # ---- timing and patience ----
+  - id: md-01
+    title: "The Big Short"
+    creator: "Adam McKay"
+    year: 2015
+    kind: film
+    track: time
+    teaches: >-
+      Being right too early is indistinguishable from being wrong. Burry was
+      correct from 2005 and nearly destroyed by redemptions before 2007 arrived.
+      The film is good on incentives and weak on how ordinary the fraud was.
+
+  - id: md-02
+    title: "Margin Call"
+    creator: "J.C. Chandor"
+    year: 2011
+    kind: film
+    track: markets
+    teaches: >-
+      One night, one decision: sell first and survive, or be fair and die. The
+      best film on what a firm actually does when the numbers turn.
+
+  - id: md-03
+    title: "There Will Be Blood"
+    creator: "Paul Thomas Anderson"
+    year: 2007
+    kind: film
+    track: time
+    teaches: >-
+      Accumulation across decades, and what it costs the accumulator. A study of
+      patience as obsession rather than virtue.
+
+  - id: md-04
+    title: "The Founder"
+    creator: "John Lee Hancock"
+    year: 2016
+    kind: film
+    track: financing
+    teaches: >-
+      Kroc's insight was not burgers, it was that the real business was real
+      estate. The moment the ownership structure changes is the whole film.
+
+  - id: md-05
+    title: "Moneyball"
+    creator: "Bennett Miller"
+    year: 2011
+    kind: film
+    track: investing
+    teaches: >-
+      Buying undervalued inputs when everyone else buys narrative. Also honest
+      that the approach did not win the final prize, which the genre usually hides.
+
+  # ---- japanese: manga and anime ----
+  - id: md-10
+    title: "Kaiji (賭博黙示録カイジ)"
+    creator: "Nobuyuki Fukumoto"
+    year: 1996
+    kind: manga
+    track: psychology
+    teaches: >-
+      Someone built the game, chose to offer it to you, and profits whatever you
+      do. The underground facility is a textbook truck system — company scrip
+      plus debt at toichi rates. Kaiji mostly loses; the winning move was not
+      entering, which most readers take exactly backwards.
+
+  - id: md-11
+    title: "Gin to Kin (銀と金)"
+    creator: "Nobuyuki Fukumoto"
+    year: 1992
+    kind: manga
+    track: financing
+    teaches: >-
+      How money actually moves near the top: tax structures, 地上げ land sharking,
+      art as a valuation-opaque asset, political money. Ginji wins on access and
+      information, not analysis — which is the uncomfortable real lesson.
+
+  - id: md-12
+    title: "Akagi (アカギ)"
+    creator: "Nobuyuki Fukumoto"
+    year: 1991
+    kind: manga
+    track: time
+    teaches: >-
+      Reading pressure and choosing when to act. Closer to a study of nerve under
+      uncertainty than a gambling story.
+
+  - id: md-13
+    title: "Investor Z (インベスターZ)"
+    creator: "Norifusa Mita"
+    year: 2013
+    kind: manga
+    track: investing
+    teaches: >-
+      A school investment club, used as a vehicle for teaching actual investing
+      mechanics. The most directly instructional thing on this list; also the most
+      prone to presenting contested positions as settled.
+
+  - id: md-14
+    title: "Liar Game"
+    creator: "Shinobu Kaitani"
+    year: 2005
+    kind: manga
+    track: psychology
+    teaches: >-
+      Coordination, trust and betrayal as game theory. Useful on why cooperative
+      equilibria collapse when one player defects.
+
+  - id: md-15
+    title: "Usogui (嘘喰い)"
+    creator: "Toshio Sako"
+    year: 2006
+    kind: manga
+    track: markets
+    teaches: >-
+      Rule-lawyering and information asymmetry taken to an extreme. The relevant
+      lesson is that whoever writes the rules has already won.
+
+  - id: md-16
+    title: "C: The Money of Soul and Possibility Control"
+    creator: "Kenji Nakamura"
+    year: 2011
+    kind: anime
+    track: intelligence
+    teaches: >-
+      Wagering your own future as collateral, literally. A strange, uneven series
+      that is unusually direct about what credit actually pledges.
+
+  - id: md-17
+    title: "Hanzawa Naoki (半沢直樹)"
+    creator: "Jun Ikeido"
+    year: 2013
+    kind: series
+    track: financing
+    teaches: >-
+      Japanese banking, lending decisions and institutional politics. Heightened,
+      but the mechanics of credit assessment and corporate restructuring are real.
+
+  # ---- how it goes wrong ----
+  - id: md-20
+    title: "Enron: The Smartest Guys in the Room"
+    creator: "Alex Gibney"
+    year: 2005
+    kind: documentary
+    track: financing
+    teaches: >-
+      Mark-to-market accounting used to book imagined profits. The clearest
+      explanation of how an accounting choice becomes a fraud.
+
+  - id: md-21
+    title: "Inside Job"
+    creator: "Charles Ferguson"
+    year: 2010
+    kind: documentary
+    track: history
+    teaches: >-
+      The 2008 mechanism and the incentives around it, including the ratings
+      agencies and the academics. Angry, and largely accurate.
+
+  - id: md-22
+    title: "Rogue Trader"
+    creator: "James Dearden"
+    year: 1999
+    kind: film
+    track: markets
+    teaches: >-
+      Nick Leeson doubling down in an error account until Barings was gone. The
+      canonical study of hiding a loss instead of taking it.
+
+  - id: md-23
+    title: "Wall Street"
+    creator: "Oliver Stone"
+    year: 1987
+    kind: film
+    track: markets
+    teaches: >-
+      Intended as a warning, adopted as an advertisement. Worth watching partly
+      to notice how thoroughly the audience missed the point.
+
+  - id: md-24
+    title: "Boiler Room"
+    creator: "Ben Younger"
+    year: 2000
+    kind: film
+    track: markets
+    teaches: >-
+      Pump and dump from the inside of the sales floor. Useful for recognising
+      the script when someone runs it on you.
+
+  - id: md-25
+    title: "Dumb Money"
+    creator: "Craig Gillespie"
+    year: 2023
+    kind: film
+    track: markets
+    teaches: >-
+      GameStop, and what a short squeeze mechanically is. Also who was left
+      holding it, which the celebratory version skips.
+
+  - id: md-26
+    title: "Too Big to Fail"
+    creator: "Curtis Hanson"
+    year: 2011
+    kind: film
+    track: history
+    teaches: >-
+      The 2008 rescue from inside the room. Good on why liquidity and solvency
+      are different problems.
+
+  - id: md-27
+    title: "The Wolf of Wall Street"
+    creator: "Martin Scorsese"
+    year: 2013
+    kind: film
+    track: markets
+    teaches: >-
+      Penny-stock fraud dressed as a party. Belfort's customers are almost absent
+      from the film, which is itself the thing to notice.
+
+  - id: md-28
+    title: "Trading Places"
+    creator: "John Landis"
+    year: 1983
+    kind: film
+    track: markets
+    teaches: >-
+      A commodities corner, explained well enough in a comedy that it was used
+      to teach futures for decades.
+
+  - id: md-29
+    title: "Billions"
+    creator: "Koppelman & Levien"
+    year: 2016
+    kind: series
+    track: markets
+    teaches: >-
+      Hedge fund mechanics and the regulatory relationship. Entertaining and
+      steadily less accurate as it goes on.
+
+  - id: md-30
+    title: "Capital in the Twenty-First Century"
+    creator: "Justin Pemberton"
+    year: 2019
+    kind: documentary
+    track: intelligence
+    teaches: >-
+      Piketty's r > g argument in accessible form: returns on capital outpacing
+      growth, and what that does across generations.

@@ -172,6 +172,23 @@ def collect_data(cfg: Config) -> dict:
             })
     library.sort(key=lambda l: (l["track"], l["id"]))
 
+    # --- the shelf: book and screen notes written so far ---
+    shelf = []
+    notes_dir = cfg.root / "curriculum" / "notes"
+    if notes_dir.exists():
+        for path in sorted(notes_dir.glob("*.md")):
+            meta, body = _meta_of(path)
+            if not meta:
+                continue
+            shelf.append({
+                "id": meta.get("id", path.stem), "title": meta.get("title", path.stem),
+                "author": meta.get("author", ""), "year": meta.get("year") or "",
+                "track": meta.get("track", ""), "kind": meta.get("kind", "book"),
+                "one_idea": meta.get("one_idea", ""), "verdict": meta.get("verdict", ""),
+                "caveat": meta.get("caveat", ""), "html": render_md(body),
+            })
+    shelf.sort(key=lambda s: (s["track"], s["id"]))
+
     return {
         "generated_at": now().isoformat(timespec="minutes"),
         "today": str(d),
@@ -210,6 +227,7 @@ def collect_data(cfg: Config) -> dict:
         "river": river[:400],
         "tracks": tracks,
         "library": library,
+        "shelf": shelf,
         "syllabus_total": sum(t["total"] for t in tracks),
         "syllabus_done": sum(t["done"] for t in tracks),
         "sources": {

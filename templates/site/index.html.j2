@@ -544,6 +544,20 @@ a.flow:hover .flow-t{color:var(--accent)}
         <input class="search" id="lib-search" type="search" placeholder="Search the library…" aria-label="Search the library">
         <span class="stamp">{{ data.library|length }} of {{ data.syllabus_total }} lessons written</span>
       </div>
+      {% if data.shelf %}
+      <div class="lib-group">
+        <div class="lib-head"><span class="tdot"></span>Shelf — books and screen
+          <span style="flex:1"></span><span class="ld">{{ data.shelf|length }} noted</span></div>
+        {% for s in data.shelf %}
+        <details class="lib-item" data-text="{{ (s.title ~ ' ' ~ s.author ~ ' ' ~ s.one_idea)|lower }}">
+          <summary><span class="lt">{{ s.title }}</span>
+            <span class="tchip" data-track="{{ s.track }}">{{ s.kind }}</span>
+            <span class="ld">{{ s.author }}</span></summary>
+          <div class="lib-body">{{ s.html }}</div>
+        </details>
+        {% endfor %}
+      </div>
+      {% endif %}
       {% if data.library %}
       {% for tr in data.tracks %}
         {% set lessons = data.library|selectattr('track', 'equalto', tr.key)|list %}
