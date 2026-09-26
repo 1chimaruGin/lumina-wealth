@@ -112,7 +112,8 @@ def run_daily(
     cstate = cstate if cstate is not None else CurriculumState.load(cfg.data_dir)
     if owns_state and rebuilding:
         cstate.forget_on(d)
-    topics = next_topics(syllabus, cstate, d, int(cfg.get("curriculum.lessons_per_day", 2)))
+    topics = next_topics(syllabus, cstate, d, int(cfg.get("curriculum.lessons_per_day", 2)),
+                         focus=str(cfg.get("curriculum.focus", "") or ""))
     lessons = [get_or_write_lesson(cfg.root, topic, scorer) for topic in topics]
     if topics and not any(l for l in lessons if not l.is_placeholder):
         notes.append("Lessons could not be written this run; the syllabus entries are shown instead.")

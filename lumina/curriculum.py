@@ -139,13 +139,18 @@ class CurriculumState:
         write_json(self.path, {"taught": self.taught, "count": len(self.taught)})
 
 
-def next_topics(syllabus: Syllabus, state: CurriculumState, day: date, count: int = 2) -> list[Topic]:
+def next_topics(syllabus: Syllabus, state: CurriculumState, day: date, count: int = 2,
+                focus: str = "") -> list[Topic]:
     """Pick the day's lessons.
 
-    The first comes from the weekday's track, so each day has a theme. The rest
-    come from whichever track is furthest behind, which keeps coverage even
-    without anyone having to manage it — otherwise the tracks that happen to
-    fall on busy weekdays quietly fall behind forever.
+    `focus` names a track that gets one slot EVERY day regardless of the
+    rotation — for deliberately working on a known weak area. Without it the
+    weekday rotation would surface that track only two or three days a week.
+
+    After that, the weekday's track takes a slot so each day has a theme, and
+    the rest come from whichever track is furthest behind. That last rule
+    matters: otherwise tracks that happen to fall on crowded weekdays quietly
+    fall behind forever.
     """
     if not syllabus.tracks:
         return []
@@ -157,11 +162,17 @@ def next_topics(syllabus: Syllabus, state: CurriculumState, day: date, count: in
     picked: list[Topic] = []
     chosen_ids: set[str] = set()
 
-    primary = syllabus.track_for(day)
-    if primary and untaught(primary):
-        first = untaught(primary)[0]
+    if focus and untaught(focus):
+        first = untaught(focus)[0]
         picked.append(first)
         chosen_ids.add(first.id)
+
+    primary = syllabus.track_for(day)
+    if primary and len(picked) < count:
+        remaining = [t for t in untaught(primary) if t.id not in chosen_ids]
+        if remaining:
+            picked.append(remaining[0])
+            chosen_ids.add(remaining[0].id)
 
     counts = state.taught_by_track(syllabus)
     while len(picked) < count:

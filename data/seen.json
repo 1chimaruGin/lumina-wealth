@@ -1,5 +1,5 @@
 {
-  "count": 93,
+  "count": 105,
   "items": {
     "0120dc65a5a10382": {
       "first_seen": "2026-09-26",
@@ -61,6 +61,16 @@
       "source": "hn_show",
       "title": "Show HN: LiveWorld – Every 24/7 YouTube live camera on one globe"
     },
+    "1a6d2491b77e8c89": {
+      "first_seen": "2026-09-27",
+      "source": "marketwatch",
+      "title": "Millions will lose Medicaid once new work rules kick in. These groups will be hit the hardest."
+    },
+    "1e1a1afb952dd46c": {
+      "first_seen": "2026-09-27",
+      "source": "hn_show",
+      "title": "Show HN: Hacker Atlas - A map of what Hacker News talks about"
+    },
     "229228a0add68ee8": {
       "first_seen": "2026-09-21",
       "source": "hn_show",
@@ -111,6 +121,16 @@
       "source": "hn_show",
       "title": "Show HN: Aclif – Agent CLI framework: one grammar, canonical names across SaaS"
     },
+    "38be6ea6b4966762": {
+      "first_seen": "2026-09-27",
+      "source": "hn_show",
+      "title": "Show HN: Jev Plays Pokémon Red"
+    },
+    "398b092189690eb9": {
+      "first_seen": "2026-09-27",
+      "source": "hn_ask",
+      "title": "Ask HN: Who's still keeping a DOS machine up because the business depends on it?"
+    },
     "39a6302e63e54638": {
       "first_seen": "2026-09-23",
       "source": "hn_show",
@@ -145,6 +165,11 @@
       "first_seen": "2026-09-22",
       "source": "hn_show",
       "title": "Show HN: Drop – A rootless Linux sandbox with gVisor support"
+    },
+    "4b894348badcd9a5": {
+      "first_seen": "2026-09-27",
+      "source": "hn_show",
+      "title": "Show HN: A Claude Code skill to analyze your chess games"
     },
     "4e40bb256af08a13": {
       "first_seen": "2026-09-17",
@@ -191,6 +216,11 @@
       "source": "hn_ask",
       "title": "Ask HN: I just talked to an AI-obsessed client, and I need a shower afterwards"
     },
+    "65aebdcbf7d7da2e": {
+      "first_seen": "2026-09-27",
+      "source": "awealthofcommonsense",
+      "title": "Most Stocks Are Losers"
+    },
     "67a22ef4c1c325b4": {
       "first_seen": "2026-09-21",
       "source": "hn_show",
@@ -200,6 +230,11 @@
       "first_seen": "2026-09-19",
       "source": "hn_ask",
       "title": "Ask HN: Losing motivation to work in the IT field, need advice"
+    },
+    "6d94eabab0b15f71": {
+      "first_seen": "2026-09-27",
+      "source": "hn_show",
+      "title": "Show HN: The last day of the dinosaurs, as an interactive painting"
     },
     "70359c27b4e5e0d8": {
       "first_seen": "2026-09-25",
@@ -301,6 +336,11 @@
       "source": "hn_show",
       "title": "Show HN: InstinctFlash – High-Performance Serving Runtime for Robotics Models"
     },
+    "a3d8f734a10741b6": {
+      "first_seen": "2026-09-27",
+      "source": "hn_show",
+      "title": "Show HN: A game about fake news and memes"
+    },
     "abf452cf9e18fc22": {
       "first_seen": "2026-09-21",
       "source": "awealthofcommonsense",
@@ -336,10 +376,25 @@
       "source": "hn_show",
       "title": "Show HN: A website that tracks US food prices every day"
     },
+    "b6eb20d172c5a3ba": {
+      "first_seen": "2026-09-27",
+      "source": "hn_ask",
+      "title": "Tell HN: Codex Is Down [fixed]"
+    },
+    "b794766a1cd5779f": {
+      "first_seen": "2026-09-27",
+      "source": "marketwatch",
+      "title": "Social Security checks are projected to be cut by $540 a month in just six years"
+    },
     "b7a60ac418578a94": {
       "first_seen": "2026-09-25",
       "source": "hn_show",
       "title": "Show HN: Koi.rest – watch some fish and regain your balance"
+    },
+    "bc416201cfee9126": {
+      "first_seen": "2026-09-27",
+      "source": "hn_show",
+      "title": "Show HN: Doom or Bloom, map your AI worldview"
     },
     "bd209c4cd5607be8": {
       "first_seen": "2026-09-24",
@@ -440,6 +495,11 @@
       "first_seen": "2026-09-17",
       "source": "hn_ask",
       "title": "Neovim have a ~$800k Bitcoin donation sitting untouched since 2023"
+    },
+    "f1a976f628fb37e4": {
+      "first_seen": "2026-09-27",
+      "source": "ft_companies",
+      "title": "Burnham to revive Help to Buy scheme in bid to aid first-time buyers"
     },
     "f4d4083196277415": {
       "first_seen": "2026-09-20",

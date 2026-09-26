@@ -93,7 +93,11 @@ curriculum:
   # Lessons are the spine of the Mind section. Feeds are recency-driven and run
   # dry — four of the five original Mind sources published weekly or monthly —
   # whereas a syllabus teaches in sequence and can start in 3000 BC.
-  lessons_per_day: 2
+  lessons_per_day: 3
+  # A track that gets one slot EVERY day, regardless of the weekday rotation.
+  # For deliberately working on a known weak area — the rotation alone would
+  # surface it only two or three days a week. Set to "" to turn it off.
+  focus: time
   # One lesson comes from the weekday's track (see meta.rotation in the
   # syllabus); the rest come from whichever track is furthest behind, so
   # coverage stays even on its own.
