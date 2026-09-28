@@ -9,12 +9,18 @@ Every morning at **11:17 JST** a GitHub Action writes `daily/YYYY-MM-DD.md` and
 commits it. On Sunday it writes a weekly digest. A dashboard renders all of it
 at a glance.
 
-> **On the schedule.** GitHub runs `schedule` events on a best-effort basis:
-> they are delayed under load and sometimes dropped entirely. Observed here —
-> 2026-09-24 fired 5h19m late and 2026-09-25 never fired. So the daily workflow
-> avoids the top of the hour (the most contended slot) and books two retry
-> slots later in the day. The job exits early if today's brief already exists,
-> so the retries cost nothing on a normal day and rescue a missed one.
+> **On the schedule.** GitHub runs `schedule` events on a best-effort basis,
+> and this repo is consistently about **five hours late** — measured across
+> several days at 4h28m to 5h51m, every run without exception.
+>
+> Retries do not fix that. A retry rescues a *dropped* run; it does nothing
+> about a *late* one, and every slot is late by the same amount. So the primary
+> slot is deliberately booked ~5h20m early — `40 20 * * *` targets 11:00 JST the
+> next day — and the later slots exist only for the dropped case. The job exits
+> early when today's brief already exists, so they cost nothing.
+>
+> The cron looks wrong if you read it as a wall-clock time. It is a request
+> submitted early to a queue that runs late.
 >
 > If a day is still missed, `python scripts/backfill.py --days 2` fills it in,
 > or trigger the workflow by hand from the Actions tab.

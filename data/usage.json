@@ -121,21 +121,20 @@
     {
       "at": "2026-09-27",
       "billed": false,
-      "calls": 6,
+      "calls": 30,
       "cost_usd": 0.0,
-      "equivalent_usd_not_charged": 0.39281,
-      "input_tokens": 185414,
-      "items": 291,
-      "mode": "daily",
-      "output_tokens": 51949,
-      "picks": 3,
-      "run": "daily:2026-09-27",
-      "stopped": null
+      "equivalent_usd_not_charged": 1.89112,
+      "failed": 0,
+      "input_tokens": 923990,
+      "output_tokens": 305385,
+      "run": "prewrite:time",
+      "stopped": null,
+      "written": 30
     }
   ],
   "totals_last_400_runs": {
     "cost_usd": 0.0,
-    "input_tokens": 1953173,
-    "output_tokens": 567243
+    "input_tokens": 2691749,
+    "output_tokens": 820679
   }
 }

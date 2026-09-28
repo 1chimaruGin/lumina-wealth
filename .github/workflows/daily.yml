@@ -2,17 +2,32 @@ name: Daily brief
 
 on:
   schedule:
-    # GitHub runs `schedule` on a best-effort basis: runs are delayed during
-    # high load and are sometimes dropped entirely. Observed here: 2026-09-24
-    # fired 5h19m late, 2026-09-25 never fired at all.
+    # These times look wrong. They are not.
     #
-    # Two mitigations. First, avoid the top of the hour, which is the most
-    # contended slot. Second, try again later in the day — the job below exits
-    # early if today's brief already exists, so the extra slots cost nothing
-    # on a normal day and rescue a missed one.
-    - cron: "17 2 * * *"    # 11:17 JST — the intended slot
-    - cron: "17 5 * * *"    # 14:17 JST — first retry
-    - cron: "17 9 * * *"    # 18:17 JST — last chance
+    # GitHub runs `schedule` on a best-effort basis and this repo has been
+    # measured at roughly five hours late, every single day:
+    #
+    #   slot 02:17 UTC -> fired 08:08 (5h51m late)
+    #   slot 05:17 UTC -> fired 10:35 (5h18m late)
+    #   slot 09:17 UTC -> fired 14:42 (5h25m late)
+    #   the day before: 5h22m, 4h38m, 4h28m
+    #
+    # Asking for 02:00 UTC therefore delivers the brief at about 17:00 JST, not
+    # 11:00. So the primary slot is booked ~5h20m EARLY, at 20:40 UTC, which
+    # lands the run near 11:00 JST the following day. Observed delays range
+    # 4h28m-5h51m, putting arrival somewhere in 10:10-11:30 JST.
+    #
+    # Note 20:40 UTC is already past midnight in Tokyo, so the brief is dated
+    # correctly for the JST day either way — the guard step derives the date
+    # with TZ=Asia/Tokyo, not from the cron.
+    #
+    # The later slots exist for the case where a run is dropped entirely rather
+    # than delayed. They cost nothing: the job exits early when today's brief
+    # already exists.
+    - cron: "40 20 * * *"   # target 11:00 JST, booked early to absorb the delay
+    - cron: "0 1 * * *"     # retry
+    - cron: "0 5 * * *"     # retry
+    - cron: "0 9 * * *"     # last chance
   workflow_dispatch:
     inputs:
       date:
