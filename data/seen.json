@@ -1,5 +1,5 @@
 {
-  "count": 117,
+  "count": 129,
   "items": {
     "0120dc65a5a10382": {
       "first_seen": "2026-09-26",
@@ -86,6 +86,11 @@
       "source": "hn_ask",
       "title": "Open-sourced jev architecture last year with model,paper and dataset"
     },
+    "2422dd42acf93020": {
+      "first_seen": "2026-09-29",
+      "source": "reddit_builders",
+      "title": "Before you pay a launch directory for a \"backlink\", check these 4 things. Takes 2 minutes."
+    },
     "24bbbc5418dbd902": {
       "first_seen": "2026-09-20",
       "source": "hn_show",
@@ -126,6 +131,11 @@
       "source": "hn_show",
       "title": "Show HN: Reladraw – A diagram language where you decide where to place things"
     },
+    "3488691bcda7b404": {
+      "first_seen": "2026-09-29",
+      "source": "hn_show",
+      "title": "Show HN: Trail – new kind of logic game"
+    },
     "34c146c1bc5c134d": {
       "first_seen": "2026-09-26",
       "source": "hn_show",
@@ -165,6 +175,11 @@
       "first_seen": "2026-09-21",
       "source": "hn_show",
       "title": "Show HN: Mini-AGI – Dynamic continual learning model trained on 8GB VRAM"
+    },
+    "3b5ea873484b2183": {
+      "first_seen": "2026-09-29",
+      "source": "reddit_builders",
+      "title": "J’ai construit un SaaS pour résoudre un problème que je voyais revenir souvent : trouver ses premiers clients"
     },
     "3d344af9c440b35a": {
       "first_seen": "2026-09-26",
@@ -210,6 +225,11 @@
       "first_seen": "2026-09-20",
       "source": "awealthofcommonsense",
       "title": "The Biggest Risk to the Economy"
+    },
+    "549a1ac34905b494": {
+      "first_seen": "2026-09-29",
+      "source": "hn_show",
+      "title": "Show HN: PaperMono, e-ink fridge magnet shopping list with mobile web page"
     },
     "569ae022ea2f0e60": {
       "first_seen": "2026-09-24",
@@ -275,6 +295,11 @@
       "first_seen": "2026-09-25",
       "source": "hn_show",
       "title": "Show HN: Whiteboard (YC W26) – An open-source IDE for thoughtful software design"
+    },
+    "721246f5ef477a45": {
+      "first_seen": "2026-09-29",
+      "source": "bbc_business",
+      "title": "UK diesel price hits all-time high, the RAC says"
     },
     "7456cc17fede4498": {
       "first_seen": "2026-09-22",
@@ -356,6 +381,11 @@
       "source": "hn_ask",
       "title": "How to Freelance Now?"
     },
+    "96e7da2e2d90b9a4": {
+      "first_seen": "2026-09-29",
+      "source": "ft_companies",
+      "title": "Shein’s profits fall by two-thirds in first earnings report as a public company"
+    },
     "9e3ed547b6b0c997": {
       "first_seen": "2026-09-22",
       "source": "hn_show",
@@ -391,10 +421,20 @@
       "source": "hn_show",
       "title": "Show HN: Ive Sent It – online courier for files, with signed proof of delivery"
     },
+    "addcb9e869faa539": {
+      "first_seen": "2026-09-29",
+      "source": "ft_companies",
+      "title": "TotalEnergies boosts buybacks and dividends as oil prices surge"
+    },
     "ae66baacc0cd771d": {
       "first_seen": "2026-09-23",
       "source": "hn_show",
       "title": "Show HN: AI·rete·RAG – a Rete rule engine decides, RAG explains why"
+    },
+    "b1a6c6a4a4210479": {
+      "first_seen": "2026-09-29",
+      "source": "reddit_builders",
+      "title": "I checked 30 customer accounts. 3 were actually unprofitable."
     },
     "b4840a985d26f811": {
       "first_seen": "2026-09-19",
@@ -441,6 +481,11 @@
       "source": "hn_ask",
       "title": "Ask HN: Dead Internet"
     },
+    "bd51b467a6b479d0": {
+      "first_seen": "2026-09-29",
+      "source": "hn_show",
+      "title": "Show HN: Hntui – A TUI for Hacker News"
+    },
     "c036f9990682fe35": {
       "first_seen": "2026-09-28",
       "source": "ft_companies",
@@ -476,6 +521,11 @@
       "source": "lennys",
       "title": "Advanced evals: How to find (and fix) hidden AI failures in your product"
     },
+    "d2cf9cada8afa0cf": {
+      "first_seen": "2026-09-29",
+      "source": "japanfinance",
+      "title": "My Experience with an NTA Agent Regarding FX Gains/Losses"
+    },
     "d441541cb42d2da5": {
       "first_seen": "2026-09-22",
       "source": "hn_show",
@@ -510,6 +560,11 @@
       "first_seen": "2026-09-26",
       "source": "reddit_builders",
       "title": "Do you keep a separate staging environment running for every client project?"
+    },
+    "e127b664c96655a8": {
+      "first_seen": "2026-09-29",
+      "source": "hn_show",
+      "title": "Show HN: Free alternative to graphics design giants"
     },
     "e25c770944ccc7cc": {
       "first_seen": "2026-09-20",
@@ -555,6 +610,11 @@
       "first_seen": "2026-09-20",
       "source": "hn_show",
       "title": "Show HN: Rubrol – Sub-10ms PDF engine using Typst instead of Headless Chrome"
+    },
+    "f5987a8199ffd88e": {
+      "first_seen": "2026-09-29",
+      "source": "reddit_builders",
+      "title": "launched my first digital product a simple link in bio site template in canva"
     },
     "f5f57bec11c7a234": {
       "first_seen": "2026-09-25",
