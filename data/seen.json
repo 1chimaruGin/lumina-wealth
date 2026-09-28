@@ -1,5 +1,5 @@
 {
-  "count": 105,
+  "count": 117,
   "items": {
     "0120dc65a5a10382": {
       "first_seen": "2026-09-26",
@@ -71,6 +71,11 @@
       "source": "hn_show",
       "title": "Show HN: Hacker Atlas - A map of what Hacker News talks about"
     },
+    "20e150296e94b6f7": {
+      "first_seen": "2026-09-28",
+      "source": "hn_show",
+      "title": "Show HN: Ekselio – Loveable for finance workflows (local first)"
+    },
     "229228a0add68ee8": {
       "first_seen": "2026-09-21",
       "source": "hn_show",
@@ -106,6 +111,21 @@
       "source": "awealthofcommonsense",
       "title": "5% Bond Yields"
     },
+    "2e872540e50a8ee3": {
+      "first_seen": "2026-09-28",
+      "source": "hn_ask",
+      "title": "OpenAI Codex agents go rogue and consumes USD 78,000 without authorization"
+    },
+    "32a99b88d10e1b10": {
+      "first_seen": "2026-09-28",
+      "source": "ft_companies",
+      "title": "UK biodiesel industry attacks rejection of duties on cheaper US imports"
+    },
+    "334a6646400953dd": {
+      "first_seen": "2026-09-28",
+      "source": "hn_show",
+      "title": "Show HN: Reladraw – A diagram language where you decide where to place things"
+    },
     "34c146c1bc5c134d": {
       "first_seen": "2026-09-26",
       "source": "hn_show",
@@ -115,6 +135,11 @@
       "first_seen": "2026-09-23",
       "source": "hn_show",
       "title": "Show HN: RxFilm Studio–Create and edit your product videos with AI agent"
+    },
+    "37c274676494a738": {
+      "first_seen": "2026-09-28",
+      "source": "hn_show",
+      "title": "Show HN: Building a Markdown editor for Mac, iOS and web"
     },
     "38778c30c8849ec0": {
       "first_seen": "2026-09-18",
@@ -191,6 +216,11 @@
       "source": "reddit_sideproject",
       "title": "InvGen - A simple invoice and quotation maker for Indian businesses, with or without GST"
     },
+    "5c62aca4451929a9": {
+      "first_seen": "2026-09-28",
+      "source": "hn_show",
+      "title": "Show HN: Panda, the world's first personal AI computer"
+    },
     "5cc84770752caa45": {
       "first_seen": "2026-09-25",
       "source": "reddit_sideproject",
@@ -210,6 +240,11 @@
       "first_seen": "2026-09-19",
       "source": "hn_show",
       "title": "Show HN: Sigabrt.dev – cronjob monitor with an SSH TUI"
+    },
+    "62f6909d541eadcd": {
+      "first_seen": "2026-09-28",
+      "source": "ft_companies",
+      "title": "AI hyperscalers are transforming debt"
     },
     "644978a1273ab2c3": {
       "first_seen": "2026-09-25",
@@ -316,6 +351,11 @@
       "source": "hn_show",
       "title": "Show HN: Give your AI agents access to WhatsApp"
     },
+    "95d84a62f098cb66": {
+      "first_seen": "2026-09-28",
+      "source": "hn_ask",
+      "title": "How to Freelance Now?"
+    },
     "9e3ed547b6b0c997": {
       "first_seen": "2026-09-22",
       "source": "hn_show",
@@ -400,6 +440,11 @@
       "first_seen": "2026-09-24",
       "source": "hn_ask",
       "title": "Ask HN: Dead Internet"
+    },
+    "c036f9990682fe35": {
+      "first_seen": "2026-09-28",
+      "source": "ft_companies",
+      "title": "The Bank of England’s balance sheet has already stopped shrinking"
     },
     "c851d13813897def": {
       "first_seen": "2026-09-24",
@@ -496,6 +541,11 @@
       "source": "hn_ask",
       "title": "Neovim have a ~$800k Bitcoin donation sitting untouched since 2023"
     },
+    "f16fc592d4331b29": {
+      "first_seen": "2026-09-28",
+      "source": "hn_show",
+      "title": "Show HN: Lofi Cities – Pixel-art city nights with browser-generated lofi"
+    },
     "f1a976f628fb37e4": {
       "first_seen": "2026-09-27",
       "source": "ft_companies",
@@ -516,10 +566,20 @@
       "source": "awealthofcommonsense",
       "title": "Why Are Valuations Falling in a Bull Market?"
     },
+    "fd12eef4f1ff6dc9": {
+      "first_seen": "2026-09-28",
+      "source": "japanfinance",
+      "title": "Looking for skilled and efficient accountant"
+    },
     "feacb1c4ff8cc40f": {
       "first_seen": "2026-09-20",
       "source": "hn_show",
       "title": "Show HN: CUA-S1 – A System One Model for Computer Use"
+    },
+    "feb8ab8ab26f328d": {
+      "first_seen": "2026-09-28",
+      "source": "hn_show",
+      "title": "Show HN: TinyAIArena watch AI agents battle it out"
     },
     "ff580beb46fca679": {
       "first_seen": "2026-09-25",
