@@ -1,5 +1,5 @@
 {
-  "count": 129,
+  "count": 141,
   "items": {
     "0120dc65a5a10382": {
       "first_seen": "2026-09-26",
@@ -45,6 +45,11 @@
       "first_seen": "2026-09-21",
       "source": "hn_show",
       "title": "Show HN: Radius – A Meetup.com Alternative"
+    },
+    "1137a522057ad664": {
+      "first_seen": "2026-09-30",
+      "source": "hn_show",
+      "title": "Show HN: Destroy Any Website with Stickman"
     },
     "11dba99efb7b77f7": {
       "first_seen": "2026-09-21",
@@ -116,6 +121,16 @@
       "source": "awealthofcommonsense",
       "title": "5% Bond Yields"
     },
+    "2b5a00fb5320e887": {
+      "first_seen": "2026-09-30",
+      "source": "marketwatch",
+      "title": "Junk bonds are heading for worst month since 2022 after punishing global selloff"
+    },
+    "2d4d06d64f22a2f0": {
+      "first_seen": "2026-09-30",
+      "source": "hn_show",
+      "title": "Show HN: Raven – The harness of harnesses, built for RSI"
+    },
     "2e872540e50a8ee3": {
       "first_seen": "2026-09-28",
       "source": "hn_ask",
@@ -181,6 +196,11 @@
       "source": "reddit_builders",
       "title": "J’ai construit un SaaS pour résoudre un problème que je voyais revenir souvent : trouver ses premiers clients"
     },
+    "3ca499c72b5e2232": {
+      "first_seen": "2026-09-30",
+      "source": "hn_show",
+      "title": "Show HN: OpenAPPA – open-source deterministic guardrails that don't break agents"
+    },
     "3d344af9c440b35a": {
       "first_seen": "2026-09-26",
       "source": "marketwatch",
@@ -195,6 +215,11 @@
       "first_seen": "2026-09-22",
       "source": "hn_show",
       "title": "Show HN: Npunlock – Run custom C kernels for Intel NPUs"
+    },
+    "45bf5f68962ff1dd": {
+      "first_seen": "2026-09-30",
+      "source": "hn_show",
+      "title": "Show HN: Museum of Numbers"
     },
     "4a311e18c894116a": {
       "first_seen": "2026-09-22",
@@ -220,6 +245,11 @@
       "first_seen": "2026-09-19",
       "source": "hn_show",
       "title": "Show HN: Snail Walk – escape Bob the giant snail by walking more IRL"
+    },
+    "53fc5e3980fdd562": {
+      "first_seen": "2026-09-30",
+      "source": "ft_companies",
+      "title": "Dangote’s $16bn oil refinery blocked by Kenyan court"
     },
     "5429009826d5ff1b": {
       "first_seen": "2026-09-20",
@@ -316,6 +346,11 @@
       "source": "hn_show",
       "title": "Show HN: AI Facial Attractiveness Model Aligned with Human Preferences"
     },
+    "7bd1471e0ccae534": {
+      "first_seen": "2026-09-30",
+      "source": "hn_show",
+      "title": "Show HN: HN.watch – Videos of all Hacker News posts"
+    },
     "7d12fb6a0d1f0f89": {
       "first_seen": "2026-09-18",
       "source": "hn_show",
@@ -340,6 +375,11 @@
       "first_seen": "2026-09-18",
       "source": "hn_show",
       "title": "Show HN: Ax-check.com – Can agents use your product?"
+    },
+    "83f7854c52fd9c7c": {
+      "first_seen": "2026-09-30",
+      "source": "hn_show",
+      "title": "Show HN: Pac-Bench – How well can models one-shot a Pac-Man game?"
     },
     "84fe7e7085b7660f": {
       "first_seen": "2026-09-24",
@@ -370,6 +410,16 @@
       "first_seen": "2026-09-18",
       "source": "hn_show",
       "title": "Show HN: Scry, programmable internet search w/ congestion pricing"
+    },
+    "8cc022e2a886c97e": {
+      "first_seen": "2026-09-30",
+      "source": "hn_ask",
+      "title": "Management is forcing us to use AI"
+    },
+    "905b5151d287988e": {
+      "first_seen": "2026-09-30",
+      "source": "reddit_builders",
+      "title": "Saas marketing"
     },
     "928727e5fe5c949c": {
       "first_seen": "2026-09-17",
@@ -470,6 +520,11 @@
       "first_seen": "2026-09-25",
       "source": "hn_show",
       "title": "Show HN: Koi.rest – watch some fish and regain your balance"
+    },
+    "ba6acbaffda3da50": {
+      "first_seen": "2026-09-30",
+      "source": "bbc_business",
+      "title": "US ban on Canadian alcohol and dairy takes effect as trade war drags on"
     },
     "bc416201cfee9126": {
       "first_seen": "2026-09-27",
@@ -615,6 +670,11 @@
       "first_seen": "2026-09-29",
       "source": "reddit_builders",
       "title": "launched my first digital product a simple link in bio site template in canva"
+    },
+    "f5b1fa17880e37cc": {
+      "first_seen": "2026-09-30",
+      "source": "ofdollarsanddata",
+      "title": "Who Is Really Rich in America? (Hint: Main Street Millionaires)"
     },
     "f5f57bec11c7a234": {
       "first_seen": "2026-09-25",

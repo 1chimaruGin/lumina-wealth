@@ -28,3 +28,4 @@
 {"at": "2026-09-27", "mode": "daily", "sources_ok": 33, "sources_total": 33, "failed": [], "candidates": 291, "picks": 3, "scored_by": "claude-code", "cost_usd": 0.44516}
 {"at": "2026-09-28", "mode": "daily", "sources_ok": 32, "sources_total": 33, "failed": ["reddit_builders"], "candidates": 273, "picks": 3, "scored_by": "claude-code", "cost_usd": 0.4223}
 {"at": "2026-09-29", "mode": "daily", "sources_ok": 33, "sources_total": 33, "failed": [], "candidates": 272, "picks": 3, "scored_by": "claude-code", "cost_usd": 0.27502}
+{"at": "2026-09-30", "mode": "daily", "sources_ok": 33, "sources_total": 33, "failed": [], "candidates": 278, "picks": 3, "scored_by": "claude-code", "cost_usd": 0.31229}
