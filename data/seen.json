@@ -1,10 +1,15 @@
 {
-  "count": 141,
+  "count": 153,
   "items": {
     "0120dc65a5a10382": {
       "first_seen": "2026-09-26",
       "source": "hn_ask",
       "title": "Ask HN: What job boards are good these days?"
+    },
+    "02d05d50ed5e32b6": {
+      "first_seen": "2026-10-01",
+      "source": "hn_show",
+      "title": "Show HN: JBR-001 – An open-source 3D printable desktop robot"
     },
     "03c3fbabf7264a94": {
       "first_seen": "2026-09-18",
@@ -70,6 +75,11 @@
       "first_seen": "2026-09-27",
       "source": "marketwatch",
       "title": "Millions will lose Medicaid once new work rules kick in. These groups will be hit the hardest."
+    },
+    "1d4b2a45374c2f50": {
+      "first_seen": "2026-10-01",
+      "source": "coindesk",
+      "title": "U.S. CFTC seeks event contract definitions that may defy states' gambling claims"
     },
     "1e1a1afb952dd46c": {
       "first_seen": "2026-09-27",
@@ -206,6 +216,11 @@
       "source": "marketwatch",
       "title": "A new bill in Congress would lower the retirement age to 60. See who would qualify."
     },
+    "3e7e94b25224af4a": {
+      "first_seen": "2026-10-01",
+      "source": "hn_ask",
+      "title": "Ask HN: What are you reading?"
+    },
     "3f000715446cf13a": {
       "first_seen": "2026-09-23",
       "source": "awealthofcommonsense",
@@ -246,6 +261,11 @@
       "source": "hn_show",
       "title": "Show HN: Snail Walk – escape Bob the giant snail by walking more IRL"
     },
+    "501f764888363b37": {
+      "first_seen": "2026-10-01",
+      "source": "hn_show",
+      "title": "Show HN: TurboGPT: train 22KiB transformer in 13s"
+    },
     "53fc5e3980fdd562": {
       "first_seen": "2026-09-30",
       "source": "ft_companies",
@@ -265,6 +285,11 @@
       "first_seen": "2026-09-24",
       "source": "reddit_sideproject",
       "title": "InvGen - A simple invoice and quotation maker for Indian businesses, with or without GST"
+    },
+    "5acb10de6eadaf10": {
+      "first_seen": "2026-10-01",
+      "source": "hn_show",
+      "title": "Show HN: Jevstiller – Distill Jev into a local model, with a disagreement bound"
     },
     "5c62aca4451929a9": {
       "first_seen": "2026-09-28",
@@ -390,6 +415,11 @@
       "first_seen": "2026-09-18",
       "source": "sethgodin",
       "title": "A series of bad decisions"
+    },
+    "8912abbe00cc5b8d": {
+      "first_seen": "2026-10-01",
+      "source": "hn_show",
+      "title": "Show HN: NSL – WSL for Linux"
     },
     "8a4d6455521ce750": {
       "first_seen": "2026-09-26",
@@ -541,10 +571,20 @@
       "source": "hn_show",
       "title": "Show HN: Hntui – A TUI for Hacker News"
     },
+    "bf00cdb689bec46e": {
+      "first_seen": "2026-10-01",
+      "source": "ft_companies",
+      "title": "How will Trump ‘accord’ for AI to ‘self-regulate’ work?"
+    },
     "c036f9990682fe35": {
       "first_seen": "2026-09-28",
       "source": "ft_companies",
       "title": "The Bank of England’s balance sheet has already stopped shrinking"
+    },
+    "c4479fafdff7b0f4": {
+      "first_seen": "2026-10-01",
+      "source": "hn_show",
+      "title": "Show HN: Real-time Solar System with 526k asteroids and all tracked satellites"
     },
     "c851d13813897def": {
       "first_seen": "2026-09-24",
@@ -571,6 +611,16 @@
       "source": "hn_show",
       "title": "Show HN: Radix – Visual UI for agentic programming"
     },
+    "d0ee0bd9c8e2762e": {
+      "first_seen": "2026-10-01",
+      "source": "hn_show",
+      "title": "Show HN: Using 2D DFT, dithering, etc. to maximize eInk manga image quality"
+    },
+    "d19c0e19e44793b2": {
+      "first_seen": "2026-10-01",
+      "source": "ft_companies",
+      "title": "SEC proposes performance fees for retail funds in private markets push"
+    },
     "d2963bd75db6285b": {
       "first_seen": "2026-09-22",
       "source": "lennys",
@@ -585,6 +635,11 @@
       "first_seen": "2026-09-22",
       "source": "hn_show",
       "title": "Show HN: An atlas of system designs with interactive architecture diagrams"
+    },
+    "d5844b51c3278a55": {
+      "first_seen": "2026-10-01",
+      "source": "hn_show",
+      "title": "Show HN: A working 3D model of an Enigma machine"
     },
     "d7dddac5c9c6043e": {
       "first_seen": "2026-09-18",
@@ -700,6 +755,11 @@
       "first_seen": "2026-09-28",
       "source": "hn_show",
       "title": "Show HN: TinyAIArena watch AI agents battle it out"
+    },
+    "ff27b312652dc3b1": {
+      "first_seen": "2026-10-01",
+      "source": "japanfinance",
+      "title": "At what level of wealth / inheritance does staying in Japan stop making sense for you?"
     },
     "ff580beb46fca679": {
       "first_seen": "2026-09-25",
