@@ -1,5 +1,5 @@
 {
-  "count": 153,
+  "count": 166,
   "items": {
     "0120dc65a5a10382": {
       "first_seen": "2026-09-26",
@@ -166,6 +166,11 @@
       "source": "hn_show",
       "title": "Show HN: Agentic CUDA Kernel Optimizer"
     },
+    "365dd95e9f3f5fbf": {
+      "first_seen": "2026-10-02",
+      "source": "planetmoney",
+      "title": "Who’s gonna pay for your Social Security?"
+    },
     "376c796fbe430399": {
       "first_seen": "2026-09-23",
       "source": "hn_show",
@@ -201,6 +206,11 @@
       "source": "hn_show",
       "title": "Show HN: Mini-AGI – Dynamic continual learning model trained on 8GB VRAM"
     },
+    "3b44a93f6faadb43": {
+      "first_seen": "2026-10-02",
+      "source": "hn_show",
+      "title": "Show HN: Dental Scope – Interactive 3D dental anatomy"
+    },
     "3b5ea873484b2183": {
       "first_seen": "2026-09-29",
       "source": "reddit_builders",
@@ -225,6 +235,11 @@
       "first_seen": "2026-09-23",
       "source": "awealthofcommonsense",
       "title": "Animal Spirits: The Wobbly House of Cards"
+    },
+    "43af959064d90d37": {
+      "first_seen": "2026-10-02",
+      "source": "hn_show",
+      "title": "Show HN: Strata – an expressive semantic layer that can say no to your LLM"
     },
     "45a8926dfd57adb3": {
       "first_seen": "2026-09-22",
@@ -301,6 +316,11 @@
       "source": "reddit_sideproject",
       "title": "Remix a launch video the way you fork a repo. My side project after 6 months."
     },
+    "5e57a25beb3cfe93": {
+      "first_seen": "2026-10-02",
+      "source": "hn_show",
+      "title": "Show HN: Ledge.sh – Runnable Markdown Notes"
+    },
     "5eae0ed268831f89": {
       "first_seen": "2026-09-23",
       "source": "hn_ask",
@@ -341,6 +361,11 @@
       "source": "hn_ask",
       "title": "Ask HN: Losing motivation to work in the IT field, need advice"
     },
+    "6954c2918556f038": {
+      "first_seen": "2026-10-02",
+      "source": "hn_show",
+      "title": "Show HN: Yantra – an LALR(1) parser generator for C++"
+    },
     "6d94eabab0b15f71": {
       "first_seen": "2026-09-27",
       "source": "hn_show",
@@ -355,6 +380,11 @@
       "first_seen": "2026-09-29",
       "source": "bbc_business",
       "title": "UK diesel price hits all-time high, the RAC says"
+    },
+    "7320319a1718b24e": {
+      "first_seen": "2026-10-02",
+      "source": "ft_companies",
+      "title": "EU countries in crisis talks over release of diesel stocks"
     },
     "7456cc17fede4498": {
       "first_seen": "2026-09-22",
@@ -380,6 +410,11 @@
       "first_seen": "2026-09-18",
       "source": "hn_show",
       "title": "Show HN: Microsoft Office running with Wine on Linux with no virtualization"
+    },
+    "7fc2d2012fea3586": {
+      "first_seen": "2026-10-02",
+      "source": "ft_companies",
+      "title": "Dealmakers line up to test EU’s appetite to create European champions"
     },
     "7fc430b873f2f77f": {
       "first_seen": "2026-09-20",
@@ -446,6 +481,11 @@
       "source": "hn_ask",
       "title": "Management is forcing us to use AI"
     },
+    "8de0d2c1cbc7beef": {
+      "first_seen": "2026-10-02",
+      "source": "marketwatch",
+      "title": "U.S. manufacturers say inflation is bad and not getting any better"
+    },
     "905b5151d287988e": {
       "first_seen": "2026-09-30",
       "source": "reddit_builders",
@@ -471,10 +511,20 @@
       "source": "hn_show",
       "title": "Show HN: Training a model to identify AI web content from structure alone"
     },
+    "9e70e38af71ce6bb": {
+      "first_seen": "2026-10-02",
+      "source": "marketwatch",
+      "title": "30-year mortgage rate posts biggest jump in four years"
+    },
     "a0977d94805cece8": {
       "first_seen": "2026-09-24",
       "source": "awealthofcommonsense",
       "title": "Why Didn’t We Get a Housing Bubble?"
+    },
+    "a0c7550df46155b0": {
+      "first_seen": "2026-10-02",
+      "source": "hn_show",
+      "title": "Show HN: Lathoa, a math app for kids where the AI is wrong on purpose"
     },
     "a0f0ea562df343c7": {
       "first_seen": "2026-09-19",
@@ -616,6 +666,11 @@
       "source": "hn_show",
       "title": "Show HN: Using 2D DFT, dithering, etc. to maximize eInk manga image quality"
     },
+    "d15f741779c79a0b": {
+      "first_seen": "2026-10-02",
+      "source": "reddit_builders",
+      "title": "I launched my B2B SaaS. How do I speed up getting leads on instagram?"
+    },
     "d19c0e19e44793b2": {
       "first_seen": "2026-10-01",
       "source": "ft_companies",
@@ -691,6 +746,11 @@
       "source": "hn_show",
       "title": "Show HN: A competition for small neural networks that play strategy games"
     },
+    "e86335feeed86a9c": {
+      "first_seen": "2026-10-02",
+      "source": "reddit_builders",
+      "title": "Free Platform to show your SAAS from Latin America"
+    },
     "ea90d022311e9479": {
       "first_seen": "2026-09-18",
       "source": "hn_show",
@@ -715,6 +775,11 @@
       "first_seen": "2026-09-27",
       "source": "ft_companies",
       "title": "Burnham to revive Help to Buy scheme in bid to aid first-time buyers"
+    },
+    "f42b726f0675b58b": {
+      "first_seen": "2026-10-02",
+      "source": "hn_show",
+      "title": "Show HN: Parrot – Open-Source Smart Meeting Recorder with Co-Pilot on Mac"
     },
     "f4d4083196277415": {
       "first_seen": "2026-09-20",
