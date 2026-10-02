@@ -1,5 +1,5 @@
 {
-  "count": 166,
+  "count": 177,
   "items": {
     "0120dc65a5a10382": {
       "first_seen": "2026-09-26",
@@ -120,6 +120,11 @@
       "first_seen": "2026-09-18",
       "source": "hn_show",
       "title": "Show HN: Rickub – The Smartest Git in the Universe"
+    },
+    "28aed8cfa03a51c2": {
+      "first_seen": "2026-10-03",
+      "source": "hn_ask",
+      "title": "Muse.ai gets me kicked off fb marketplace"
     },
     "2aa6acd28e1a954f": {
       "first_seen": "2026-09-17",
@@ -251,6 +256,11 @@
       "source": "hn_show",
       "title": "Show HN: Museum of Numbers"
     },
+    "46ee65d794dc7f97": {
+      "first_seen": "2026-10-03",
+      "source": "hn_show",
+      "title": "Show HN: Open-source model routing for coding agents at Astra-level performance"
+    },
     "4a311e18c894116a": {
       "first_seen": "2026-09-22",
       "source": "hn_show",
@@ -261,10 +271,20 @@
       "source": "hn_show",
       "title": "Show HN: Drop – A rootless Linux sandbox with gVisor support"
     },
+    "4b794ebcf4fa144c": {
+      "first_seen": "2026-10-03",
+      "source": "japanfinance",
+      "title": "Moving to Japan and Holding an IBKR portfolio + how to remit a lump sum for living costs without taxes"
+    },
     "4b894348badcd9a5": {
       "first_seen": "2026-09-27",
       "source": "hn_show",
       "title": "Show HN: A Claude Code skill to analyze your chess games"
+    },
+    "4c0dda885d8e8248": {
+      "first_seen": "2026-10-03",
+      "source": "hn_show",
+      "title": "Show HN: Giving Opus 5.5 a simulated paint canvas"
     },
     "4e40bb256af08a13": {
       "first_seen": "2026-09-17",
@@ -280,6 +300,11 @@
       "first_seen": "2026-10-01",
       "source": "hn_show",
       "title": "Show HN: TurboGPT: train 22KiB transformer in 13s"
+    },
+    "50e888fb9132ba09": {
+      "first_seen": "2026-10-03",
+      "source": "hn_ask",
+      "title": "Ask HN: Who is hiring? (October 2026)"
     },
     "53fc5e3980fdd562": {
       "first_seen": "2026-09-30",
@@ -451,6 +476,11 @@
       "source": "sethgodin",
       "title": "A series of bad decisions"
     },
+    "88a1de970ec6cee5": {
+      "first_seen": "2026-10-03",
+      "source": "hn_ask",
+      "title": "Ask HN: Who wants to be hired? (October 2026)"
+    },
     "8912abbe00cc5b8d": {
       "first_seen": "2026-10-01",
       "source": "hn_show",
@@ -505,6 +535,11 @@
       "first_seen": "2026-09-29",
       "source": "ft_companies",
       "title": "Shein’s profits fall by two-thirds in first earnings report as a public company"
+    },
+    "97a5f50a708038f2": {
+      "first_seen": "2026-10-03",
+      "source": "hn_show",
+      "title": "Show HN: Audionaut – an open-source cross-platform multitrack audio editor"
     },
     "9e3ed547b6b0c997": {
       "first_seen": "2026-09-22",
@@ -580,6 +615,11 @@
       "first_seen": "2026-09-26",
       "source": "hn_show",
       "title": "Show HN: Avoid smooth spinners, use low-FPS spinners"
+    },
+    "b666f4ac69b454ed": {
+      "first_seen": "2026-10-03",
+      "source": "ft_companies",
+      "title": "Quant hedge funds reap big gains from global bond sell-off"
     },
     "b6d27ada39475d11": {
       "first_seen": "2026-09-24",
@@ -701,6 +741,11 @@
       "source": "hn_show",
       "title": "Show HN: Cactus Needle 3: 8-29MB automation models can match DeepSeek V4 Flash"
     },
+    "d911ff91163f6c4c": {
+      "first_seen": "2026-10-03",
+      "source": "hn_show",
+      "title": "Show HN: Rhun, an open-source code editor written in assembly"
+    },
     "dabd36d6ac350fc5": {
       "first_seen": "2026-09-25",
       "source": "hn_show",
@@ -710,6 +755,11 @@
       "first_seen": "2026-09-21",
       "source": "hn_ask",
       "title": "Ask HN: Is it impossible to disable Siri on macOS 27?"
+    },
+    "dc1966dd4706332e": {
+      "first_seen": "2026-10-03",
+      "source": "ft_companies",
+      "title": "Investors seek refuge from bond rout in haven German debt"
     },
     "ded0e18f39e00679": {
       "first_seen": "2026-09-26",
@@ -760,6 +810,11 @@
       "first_seen": "2026-09-19",
       "source": "hn_show",
       "title": "Show HN: Jeff – A read-only CLI for semantic code review using Jev"
+    },
+    "eacb7fc5504f72be": {
+      "first_seen": "2026-10-03",
+      "source": "hn_show",
+      "title": "Show HN: Janus – Go binary that runs GGUF models via Vulkan on AMD/Intel/Nvidia"
     },
     "ef88ab8d6b940197": {
       "first_seen": "2026-09-17",
