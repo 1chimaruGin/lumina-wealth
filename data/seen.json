@@ -1,5 +1,5 @@
 {
-  "count": 177,
+  "count": 190,
   "items": {
     "0120dc65a5a10382": {
       "first_seen": "2026-09-26",
@@ -70,6 +70,16 @@
       "first_seen": "2026-09-19",
       "source": "hn_show",
       "title": "Show HN: LiveWorld – Every 24/7 YouTube live camera on one globe"
+    },
+    "13d13608380ca28e": {
+      "first_seen": "2026-10-04",
+      "source": "hn_show",
+      "title": "Show HN: Pi pod – Run your pi coding agent in sandboxes on your own server"
+    },
+    "16212e61438fe737": {
+      "first_seen": "2026-10-04",
+      "source": "hn_show",
+      "title": "Show HN: Made an open-source Lego AI generator"
     },
     "1a6d2491b77e8c89": {
       "first_seen": "2026-09-27",
@@ -251,6 +261,11 @@
       "source": "hn_show",
       "title": "Show HN: Npunlock – Run custom C kernels for Intel NPUs"
     },
+    "45b89bf12c533f30": {
+      "first_seen": "2026-10-04",
+      "source": "reddit_builders",
+      "title": "I built Tasda: would you trust an AI representative to explain your freelance services?"
+    },
     "45bf5f68962ff1dd": {
       "first_seen": "2026-09-30",
       "source": "hn_show",
@@ -286,6 +301,11 @@
       "source": "hn_show",
       "title": "Show HN: Giving Opus 5.5 a simulated paint canvas"
     },
+    "4d294bf285847aac": {
+      "first_seen": "2026-10-04",
+      "source": "ft_companies",
+      "title": "Temu’s UK sales more than double to $171mn"
+    },
     "4e40bb256af08a13": {
       "first_seen": "2026-09-17",
       "source": "hn_show",
@@ -315,6 +335,11 @@
       "first_seen": "2026-09-20",
       "source": "awealthofcommonsense",
       "title": "The Biggest Risk to the Economy"
+    },
+    "54782069d3d0875e": {
+      "first_seen": "2026-10-04",
+      "source": "coindesk",
+      "title": "Crypto job postings triple to over 1,200 in September, but applications fall"
     },
     "549a1ac34905b494": {
       "first_seen": "2026-09-29",
@@ -416,6 +441,11 @@
       "source": "hn_show",
       "title": "Show HN: Hack – my Hacker News mobile client now lets you block AI posts"
     },
+    "75007cfc45592ceb": {
+      "first_seen": "2026-10-04",
+      "source": "reddit_builders",
+      "title": "I built B2B SaaS OS – Next.js 16 + Supabase starter with an automated 8-point security test runner"
+    },
     "7737ad254ded6080": {
       "first_seen": "2026-09-23",
       "source": "hn_show",
@@ -486,10 +516,20 @@
       "source": "hn_show",
       "title": "Show HN: NSL – WSL for Linux"
     },
+    "894ca695df68e574": {
+      "first_seen": "2026-10-04",
+      "source": "marginalrevolution",
+      "title": "Supply is elastic, installment #1637"
+    },
     "8a4d6455521ce750": {
       "first_seen": "2026-09-26",
       "source": "awealthofcommonsense",
       "title": "Can You Be a Boglehead Tech Investor?"
+    },
+    "8b7eafda898be1bd": {
+      "first_seen": "2026-10-04",
+      "source": "hn_show",
+      "title": "Show HN: Offrun – manage every coding agent from one workspace"
     },
     "8bf440f9048ed7d6": {
       "first_seen": "2026-09-25",
@@ -575,6 +615,11 @@
       "first_seen": "2026-09-27",
       "source": "hn_show",
       "title": "Show HN: A game about fake news and memes"
+    },
+    "a502eed1530757c8": {
+      "first_seen": "2026-10-04",
+      "source": "reddit_builders",
+      "title": "Solo SaaS finally has momentum, experienced exited founder wants to join - and I genuinely have no idea what I should do"
     },
     "abf452cf9e18fc22": {
       "first_seen": "2026-09-21",
@@ -726,6 +771,11 @@
       "source": "japanfinance",
       "title": "My Experience with an NTA Agent Regarding FX Gains/Losses"
     },
+    "d3af24f9f6346a49": {
+      "first_seen": "2026-10-04",
+      "source": "reddit_builders",
+      "title": "I made a 34-second animated demo for my IT side project. Does the problem come across?"
+    },
     "d441541cb42d2da5": {
       "first_seen": "2026-09-22",
       "source": "hn_show",
@@ -736,10 +786,20 @@
       "source": "hn_show",
       "title": "Show HN: A working 3D model of an Enigma machine"
     },
+    "d688026b07ab141d": {
+      "first_seen": "2026-10-04",
+      "source": "reddit_builders",
+      "title": "What is the fastest tech stack to build and launch a SaaS MVP?"
+    },
     "d7dddac5c9c6043e": {
       "first_seen": "2026-09-18",
       "source": "hn_show",
       "title": "Show HN: Cactus Needle 3: 8-29MB automation models can match DeepSeek V4 Flash"
+    },
+    "d8085e027bc3b393": {
+      "first_seen": "2026-10-04",
+      "source": "marketwatch",
+      "title": "Switching jobs to get higher pay works best in these industries"
     },
     "d911ff91163f6c4c": {
       "first_seen": "2026-10-03",
@@ -790,6 +850,11 @@
       "first_seen": "2026-09-26",
       "source": "hn_show",
       "title": "Show HN: Most Hated Tools"
+    },
+    "e7f2eb76ffbc1538": {
+      "first_seen": "2026-10-04",
+      "source": "marketwatch",
+      "title": "The Treasury Department started Trump accounts for 60 million kids — but families still have to take this step if they want one"
     },
     "e86027df822f90e5": {
       "first_seen": "2026-09-20",

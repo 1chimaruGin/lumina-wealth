@@ -214,11 +214,25 @@
       "picks": 3,
       "run": "daily:2026-10-03",
       "stopped": null
+    },
+    {
+      "at": "2026-10-04",
+      "billed": false,
+      "calls": 6,
+      "cost_usd": 0.0,
+      "equivalent_usd_not_charged": 0.28453,
+      "input_tokens": 94387,
+      "items": 264,
+      "mode": "daily",
+      "output_tokens": 41124,
+      "picks": 3,
+      "run": "daily:2026-10-04",
+      "stopped": null
     }
   ],
   "totals_last_400_runs": {
     "cost_usd": 0.0,
-    "input_tokens": 3313789,
-    "output_tokens": 1071209
+    "input_tokens": 3408176,
+    "output_tokens": 1112333
   }
 }
