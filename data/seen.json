@@ -1,5 +1,5 @@
 {
-  "count": 190,
+  "count": 202,
   "items": {
     "0120dc65a5a10382": {
       "first_seen": "2026-09-26",
@@ -90,6 +90,11 @@
       "first_seen": "2026-10-01",
       "source": "coindesk",
       "title": "U.S. CFTC seeks event contract definitions that may defy states' gambling claims"
+    },
+    "1d9e0fedc80d5604": {
+      "first_seen": "2026-10-05",
+      "source": "hn_show",
+      "title": "Show HN: AI search for every photo and every frame of video on macOS"
     },
     "1e1a1afb952dd46c": {
       "first_seen": "2026-09-27",
@@ -256,6 +261,11 @@
       "source": "hn_show",
       "title": "Show HN: Strata – an expressive semantic layer that can say no to your LLM"
     },
+    "44caccdb01c9a3b8": {
+      "first_seen": "2026-10-05",
+      "source": "hn_show",
+      "title": "Show HN: Glashütte Trash Clock – A 30-minute pendulum clock made from trash"
+    },
     "45a8926dfd57adb3": {
       "first_seen": "2026-09-22",
       "source": "hn_show",
@@ -366,6 +376,11 @@
       "source": "reddit_sideproject",
       "title": "Remix a launch video the way you fork a repo. My side project after 6 months."
     },
+    "5d63c736fb7cf98e": {
+      "first_seen": "2026-10-05",
+      "source": "hn_show",
+      "title": "Show HN: Our space game has a built-in RISC-V emulator that runs Linux"
+    },
     "5e57a25beb3cfe93": {
       "first_seen": "2026-10-02",
       "source": "hn_show",
@@ -401,6 +416,11 @@
       "source": "awealthofcommonsense",
       "title": "Most Stocks Are Losers"
     },
+    "674262d286f369d0": {
+      "first_seen": "2026-10-05",
+      "source": "hn_show",
+      "title": "Show HN: Pyxel – A Python retro game engine with built-in art and sound editors"
+    },
     "67a22ef4c1c325b4": {
       "first_seen": "2026-09-21",
       "source": "hn_show",
@@ -415,6 +435,11 @@
       "first_seen": "2026-10-02",
       "source": "hn_show",
       "title": "Show HN: Yantra – an LALR(1) parser generator for C++"
+    },
+    "6d455570ede58037": {
+      "first_seen": "2026-10-05",
+      "source": "ft_companies",
+      "title": "Dealmaking slowdown threatens early end to M&A boom"
     },
     "6d94eabab0b15f71": {
       "first_seen": "2026-09-27",
@@ -436,6 +461,11 @@
       "source": "ft_companies",
       "title": "EU countries in crisis talks over release of diesel stocks"
     },
+    "744d2f629b0930e8": {
+      "first_seen": "2026-10-05",
+      "source": "awealthofcommonsense",
+      "title": "The Biggest Risk Everyone Already Knows About"
+    },
     "7456cc17fede4498": {
       "first_seen": "2026-09-22",
       "source": "hn_show",
@@ -455,6 +485,11 @@
       "first_seen": "2026-09-20",
       "source": "hn_show",
       "title": "Show HN: AI Facial Attractiveness Model Aligned with Human Preferences"
+    },
+    "780f6b820b886ddd": {
+      "first_seen": "2026-10-05",
+      "source": "hn_show",
+      "title": "Show HN: Thoreau BASIC – What if BASIC hadn't gone out of fashion?"
     },
     "7bd1471e0ccae534": {
       "first_seen": "2026-09-30",
@@ -580,6 +615,11 @@
       "first_seen": "2026-10-03",
       "source": "hn_show",
       "title": "Show HN: Audionaut – an open-source cross-platform multitrack audio editor"
+    },
+    "9b1a5221e33600cf": {
+      "first_seen": "2026-10-05",
+      "source": "hn_show",
+      "title": "Show HN: Factorio but with unreliable components"
     },
     "9e3ed547b6b0c997": {
       "first_seen": "2026-09-22",
@@ -741,6 +781,11 @@
       "source": "hn_show",
       "title": "Show HN: Lightspeed, build real time apps the Laravel way (+asteroids demo)"
     },
+    "cdab6db8369706e9": {
+      "first_seen": "2026-10-05",
+      "source": "marketwatch",
+      "title": "These bond strategies can help you get a safe 5% return on your cash"
+    },
     "d02fb1281f749011": {
       "first_seen": "2026-09-26",
       "source": "hn_show",
@@ -851,6 +896,11 @@
       "source": "hn_show",
       "title": "Show HN: Most Hated Tools"
     },
+    "e7e8decce2d6b9ef": {
+      "first_seen": "2026-10-05",
+      "source": "ft_companies",
+      "title": "Investors look to shelter portfolios from rising AI concentration risks"
+    },
     "e7f2eb76ffbc1538": {
       "first_seen": "2026-10-04",
       "source": "marketwatch",
@@ -865,6 +915,11 @@
       "first_seen": "2026-10-02",
       "source": "reddit_builders",
       "title": "Free Platform to show your SAAS from Latin America"
+    },
+    "e9abf1e70b491ae8": {
+      "first_seen": "2026-10-05",
+      "source": "hn_show",
+      "title": "Show HN: Breadcrumb, record everything on your mac + context manager for AI"
     },
     "ea90d022311e9479": {
       "first_seen": "2026-09-18",
@@ -930,6 +985,11 @@
       "first_seen": "2026-09-28",
       "source": "japanfinance",
       "title": "Looking for skilled and efficient accountant"
+    },
+    "fe813cb04bae4d16": {
+      "first_seen": "2026-10-05",
+      "source": "hn_show",
+      "title": "Show HN: What 482 hospitals charge vs. what insurers pay, from their own files"
     },
     "feacb1c4ff8cc40f": {
       "first_seen": "2026-09-20",
