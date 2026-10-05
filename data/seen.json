@@ -1,5 +1,5 @@
 {
-  "count": 202,
+  "count": 212,
   "items": {
     "0120dc65a5a10382": {
       "first_seen": "2026-09-26",
@@ -81,6 +81,11 @@
       "source": "hn_show",
       "title": "Show HN: Made an open-source Lego AI generator"
     },
+    "184fa5e897df9de1": {
+      "first_seen": "2026-10-06",
+      "source": "hn_show",
+      "title": "Show HN: Steve Jobs died 15 years ago today. I built an interactive tribute"
+    },
     "1a6d2491b77e8c89": {
       "first_seen": "2026-09-27",
       "source": "marketwatch",
@@ -110,6 +115,11 @@
       "first_seen": "2026-09-21",
       "source": "hn_show",
       "title": "Show HN: Three genlocked RP2350B make a console – 3k sprite pixels per line)"
+    },
+    "23c507f121cabd1e": {
+      "first_seen": "2026-10-06",
+      "source": "hn_show",
+      "title": "Show HN: Local pretrained classifiers, GPU not needed"
     },
     "23e3786b40482667": {
       "first_seen": "2026-09-17",
@@ -491,10 +501,25 @@
       "source": "hn_show",
       "title": "Show HN: Thoreau BASIC – What if BASIC hadn't gone out of fashion?"
     },
+    "7859879abc853f1e": {
+      "first_seen": "2026-10-06",
+      "source": "hn_ask",
+      "title": "Tell HN: Uceprotect is extorting website owners"
+    },
+    "7b06ea738f27b6bf": {
+      "first_seen": "2026-10-06",
+      "source": "ft_companies",
+      "title": "Citi to speed up promotion path for junior bankers as hiring war heats up"
+    },
     "7bd1471e0ccae534": {
       "first_seen": "2026-09-30",
       "source": "hn_show",
       "title": "Show HN: HN.watch – Videos of all Hacker News posts"
+    },
+    "7cd8f4c772468a6d": {
+      "first_seen": "2026-10-06",
+      "source": "hn_show",
+      "title": "Show HN: Minigraf – An embedded, bi-temporal graph database in Rust"
     },
     "7d12fb6a0d1f0f89": {
       "first_seen": "2026-09-18",
@@ -671,6 +696,11 @@
       "source": "hn_show",
       "title": "Show HN: Ive Sent It – online courier for files, with signed proof of delivery"
     },
+    "ad90f0c89b677504": {
+      "first_seen": "2026-10-06",
+      "source": "hn_show",
+      "title": "Show HN: Build with Python – a beginner course where your code draws"
+    },
     "addcb9e869faa539": {
       "first_seen": "2026-09-29",
       "source": "ft_companies",
@@ -715,6 +745,11 @@
       "first_seen": "2026-09-27",
       "source": "hn_ask",
       "title": "Tell HN: Codex Is Down [fixed]"
+    },
+    "b722d5fe788efcd8": {
+      "first_seen": "2026-10-06",
+      "source": "hn_ask",
+      "title": "Tell HN: Bob Cringely has died"
     },
     "b794766a1cd5779f": {
       "first_seen": "2026-09-27",
@@ -866,6 +901,11 @@
       "source": "ft_companies",
       "title": "Investors seek refuge from bond rout in haven German debt"
     },
+    "dd482db15e1f035b": {
+      "first_seen": "2026-10-06",
+      "source": "hn_show",
+      "title": "Show HN: Timeline of the Far Future"
+    },
     "ded0e18f39e00679": {
       "first_seen": "2026-09-26",
       "source": "ft_companies",
@@ -941,6 +981,11 @@
       "source": "hn_ask",
       "title": "Neovim have a ~$800k Bitcoin donation sitting untouched since 2023"
     },
+    "f1157c176aaf4c32": {
+      "first_seen": "2026-10-06",
+      "source": "awealthofcommonsense",
+      "title": "Talk Your Book: How Higher Rates Are Re-shaping Commercial Real Estate"
+    },
     "f16fc592d4331b29": {
       "first_seen": "2026-09-28",
       "source": "hn_show",
@@ -970,6 +1015,11 @@
       "first_seen": "2026-09-30",
       "source": "ofdollarsanddata",
       "title": "Who Is Really Rich in America? (Hint: Main Street Millionaires)"
+    },
+    "f5c8f1f0593963df": {
+      "first_seen": "2026-10-06",
+      "source": "hn_show",
+      "title": "Show HN: Era – Complete Simulated Companies for Your Agents"
     },
     "f5f57bec11c7a234": {
       "first_seen": "2026-09-25",
