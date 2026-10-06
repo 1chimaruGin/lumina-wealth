@@ -1,5 +1,5 @@
 {
-  "count": 212,
+  "count": 223,
   "items": {
     "0120dc65a5a10382": {
       "first_seen": "2026-09-26",
@@ -15,6 +15,11 @@
       "first_seen": "2026-09-18",
       "source": "hn_show",
       "title": "Show HN: Snapdrop: Instantly share files between devices. No setup, no signup"
+    },
+    "03d4072df1ce247c": {
+      "first_seen": "2026-10-07",
+      "source": "reddit_builders",
+      "title": "I built an iMessage agent for startup job hunting"
     },
     "05049c22f724c510": {
       "first_seen": "2026-09-23",
@@ -50,6 +55,11 @@
       "first_seen": "2026-09-21",
       "source": "hn_show",
       "title": "Show HN: Radius – A Meetup.com Alternative"
+    },
+    "108484971e36be76": {
+      "first_seen": "2026-10-07",
+      "source": "hn_show",
+      "title": "Show HN: Parseable, an open observability datalake, handles 100M time-series/min"
     },
     "1137a522057ad664": {
       "first_seen": "2026-09-30",
@@ -321,6 +331,11 @@
       "source": "hn_show",
       "title": "Show HN: Giving Opus 5.5 a simulated paint canvas"
     },
+    "4d20a54c0eac7cc0": {
+      "first_seen": "2026-10-07",
+      "source": "bbc_business",
+      "title": "We're saving £100 a month for our kids but they won't get it until they're 57"
+    },
     "4d294bf285847aac": {
       "first_seen": "2026-10-04",
       "source": "ft_companies",
@@ -390,6 +405,11 @@
       "first_seen": "2026-10-05",
       "source": "hn_show",
       "title": "Show HN: Our space game has a built-in RISC-V emulator that runs Linux"
+    },
+    "5e0d593e160323d9": {
+      "first_seen": "2026-10-07",
+      "source": "hn_show",
+      "title": "Show HN: Nightwatch – a Mac menu-bar app that tells you when tonight is clear"
     },
     "5e57a25beb3cfe93": {
       "first_seen": "2026-10-02",
@@ -461,6 +481,11 @@
       "source": "hn_show",
       "title": "Show HN: Whiteboard (YC W26) – An open-source IDE for thoughtful software design"
     },
+    "7171ac78141d1fbc": {
+      "first_seen": "2026-10-07",
+      "source": "hn_show",
+      "title": "Show HN: Jotbus – a shared encrypted scratchpad for coding agents"
+    },
     "721246f5ef477a45": {
       "first_seen": "2026-09-29",
       "source": "bbc_business",
@@ -470,6 +495,11 @@
       "first_seen": "2026-10-02",
       "source": "ft_companies",
       "title": "EU countries in crisis talks over release of diesel stocks"
+    },
+    "7353d228e9146cbf": {
+      "first_seen": "2026-10-07",
+      "source": "hn_show",
+      "title": "Show HN: MailAccess – the true Email OSINT framework"
     },
     "744d2f629b0930e8": {
       "first_seen": "2026-10-05",
@@ -620,6 +650,11 @@
       "first_seen": "2026-09-30",
       "source": "reddit_builders",
       "title": "Saas marketing"
+    },
+    "905d5231ad655ba6": {
+      "first_seen": "2026-10-07",
+      "source": "marketwatch",
+      "title": "Google makes a fresh bet on nuclear power as the AI energy crunch intensifies"
     },
     "928727e5fe5c949c": {
       "first_seen": "2026-09-17",
@@ -956,6 +991,11 @@
       "source": "reddit_builders",
       "title": "Free Platform to show your SAAS from Latin America"
     },
+    "e877f712940f5c15": {
+      "first_seen": "2026-10-07",
+      "source": "hn_show",
+      "title": "Show HN: SoldStack – sold prices API for secondhand clothes"
+    },
     "e9abf1e70b491ae8": {
       "first_seen": "2026-10-05",
       "source": "hn_show",
@@ -1030,6 +1070,21 @@
       "first_seen": "2026-09-17",
       "source": "awealthofcommonsense",
       "title": "Why Are Valuations Falling in a Bull Market?"
+    },
+    "fa35849781166026": {
+      "first_seen": "2026-10-07",
+      "source": "hn_show",
+      "title": "Show HN: Pumpkins.sh – claim, carve, and display a pumpkin to the world"
+    },
+    "fad77d3af56dffb4": {
+      "first_seen": "2026-10-07",
+      "source": "reddit_builders",
+      "title": "After 5 Months of GRINDING... I hit 11k in revenue!"
+    },
+    "fbdc29cb0da6040f": {
+      "first_seen": "2026-10-07",
+      "source": "indicator",
+      "title": "Inside Norway's sovereign wealth fund dilemma to divest from Israel"
     },
     "fd12eef4f1ff6dc9": {
       "first_seen": "2026-09-28",
