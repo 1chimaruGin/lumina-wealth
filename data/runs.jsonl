@@ -36,3 +36,4 @@
 {"at": "2026-10-05", "mode": "daily", "sources_ok": 32, "sources_total": 33, "failed": ["reddit_builders"], "candidates": 206, "picks": 3, "scored_by": "claude-code", "cost_usd": 0.36037}
 {"at": "2026-10-06", "mode": "daily", "sources_ok": 32, "sources_total": 33, "failed": ["reddit_builders"], "candidates": 197, "picks": 3, "scored_by": "claude-code", "cost_usd": 0.20871}
 {"at": "2026-10-07", "mode": "daily", "sources_ok": 33, "sources_total": 33, "failed": [], "candidates": 220, "picks": 3, "scored_by": "claude-code", "cost_usd": 0.34416}
+{"at": "2026-10-08", "mode": "daily", "sources_ok": 32, "sources_total": 33, "failed": ["sethgodin"], "candidates": 254, "picks": 3, "scored_by": "claude-code", "cost_usd": 0.33148}

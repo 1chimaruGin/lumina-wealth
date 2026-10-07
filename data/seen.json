@@ -1,5 +1,5 @@
 {
-  "count": 223,
+  "count": 236,
   "items": {
     "0120dc65a5a10382": {
       "first_seen": "2026-09-26",
@@ -156,6 +156,11 @@
       "source": "hn_show",
       "title": "Show HN: Rickub – The Smartest Git in the Universe"
     },
+    "278c1d724ea06d22": {
+      "first_seen": "2026-10-08",
+      "source": "hn_show",
+      "title": "Show HN: OpenChart – OSS TradingView alternative with your own AI agent"
+    },
     "28aed8cfa03a51c2": {
       "first_seen": "2026-10-03",
       "source": "hn_ask",
@@ -196,6 +201,16 @@
       "source": "hn_show",
       "title": "Show HN: Reladraw – A diagram language where you decide where to place things"
     },
+    "33e3a64873b42ff7": {
+      "first_seen": "2026-10-08",
+      "source": "hn_show",
+      "title": "Show HN: I turned my iPhone and a $20 smart plug into an f-stop timer"
+    },
+    "345510f3052df01d": {
+      "first_seen": "2026-10-08",
+      "source": "reddit_builders",
+      "title": "Would you pay per request instead of per connection for OAuth integrations?"
+    },
     "3488691bcda7b404": {
       "first_seen": "2026-09-29",
       "source": "hn_show",
@@ -215,6 +230,11 @@
       "first_seen": "2026-09-23",
       "source": "hn_show",
       "title": "Show HN: RxFilm Studio–Create and edit your product videos with AI agent"
+    },
+    "37c1212f528ae0e4": {
+      "first_seen": "2026-10-08",
+      "source": "marketwatch",
+      "title": "More college students have to use credit cards just to cover basic living expenses. Here’s what it’s costing them."
     },
     "37c274676494a738": {
       "first_seen": "2026-09-28",
@@ -276,6 +296,11 @@
       "source": "awealthofcommonsense",
       "title": "Animal Spirits: The Wobbly House of Cards"
     },
+    "40a3cce8ddc83803": {
+      "first_seen": "2026-10-08",
+      "source": "economist_fin",
+      "title": "American investors’ trick to lower taxes: lose money"
+    },
     "43af959064d90d37": {
       "first_seen": "2026-10-02",
       "source": "hn_show",
@@ -285,6 +310,11 @@
       "first_seen": "2026-10-05",
       "source": "hn_show",
       "title": "Show HN: Glashütte Trash Clock – A 30-minute pendulum clock made from trash"
+    },
+    "45a613464e550622": {
+      "first_seen": "2026-10-08",
+      "source": "awealthofcommonsense",
+      "title": "Animal Spirits: Sudden Wealth Syndrome"
     },
     "45a8926dfd57adb3": {
       "first_seen": "2026-09-22",
@@ -721,6 +751,16 @@
       "source": "reddit_builders",
       "title": "Solo SaaS finally has momentum, experienced exited founder wants to join - and I genuinely have no idea what I should do"
     },
+    "a73302ba4a04aa42": {
+      "first_seen": "2026-10-08",
+      "source": "hn_show",
+      "title": "Show HN: A walkable 3D art history museum built from Wikipedia"
+    },
+    "a8c5f1a84102ca1c": {
+      "first_seen": "2026-10-08",
+      "source": "reddit_builders",
+      "title": "I’m looking for some honest advice from people who have actually bought or sold small SaaS products."
+    },
     "abf452cf9e18fc22": {
       "first_seen": "2026-09-21",
       "source": "awealthofcommonsense",
@@ -746,10 +786,20 @@
       "source": "hn_show",
       "title": "Show HN: AI·rete·RAG – a Rete rule engine decides, RAG explains why"
     },
+    "ae89a1220e45f5f4": {
+      "first_seen": "2026-10-08",
+      "source": "hn_ask",
+      "title": "Tell HN: Apple not letting removal of AI models on macOS 27 is outrageous"
+    },
     "b1a6c6a4a4210479": {
       "first_seen": "2026-09-29",
       "source": "reddit_builders",
       "title": "I checked 30 customer accounts. 3 were actually unprofitable."
+    },
+    "b2f712a899907cd6": {
+      "first_seen": "2026-10-08",
+      "source": "ft_companies",
+      "title": "Sleepy European telcos turn to data centre craze"
     },
     "b4840a985d26f811": {
       "first_seen": "2026-09-19",
@@ -941,6 +991,11 @@
       "source": "hn_show",
       "title": "Show HN: Timeline of the Far Future"
     },
+    "dda807656f1c976b": {
+      "first_seen": "2026-10-08",
+      "source": "reddit_builders",
+      "title": "One client can have Paid and Partial jobs at the same time — an iPhone app I built"
+    },
     "ded0e18f39e00679": {
       "first_seen": "2026-09-26",
       "source": "ft_companies",
@@ -965,6 +1020,11 @@
       "first_seen": "2026-09-20",
       "source": "hn_show",
       "title": "Show HN: Set, offline Markdown note-taking app with device-to-device sync"
+    },
+    "e3af9e67d41faaf3": {
+      "first_seen": "2026-10-08",
+      "source": "coindesk",
+      "title": "Tether tapped by Kazakhstan’s central bank to explore stablecoin and tokenization"
     },
     "e6b37f47d4c262f0": {
       "first_seen": "2026-09-26",
@@ -1015,6 +1075,11 @@
       "first_seen": "2026-10-03",
       "source": "hn_show",
       "title": "Show HN: Janus – Go binary that runs GGUF models via Vulkan on AMD/Intel/Nvidia"
+    },
+    "ee4f657a56bd17f5": {
+      "first_seen": "2026-10-08",
+      "source": "hn_show",
+      "title": "Show HN: NanoMuse – An open-source AI agent for your phone and computer"
     },
     "ef88ab8d6b940197": {
       "first_seen": "2026-09-17",
