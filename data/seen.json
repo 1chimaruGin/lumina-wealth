@@ -1,6 +1,11 @@
 {
-  "count": 236,
+  "count": 249,
   "items": {
+    "007e061ec788b834": {
+      "first_seen": "2026-10-09",
+      "source": "marketwatch",
+      "title": "The Treasury market is facing a crucial vote of investor confidence"
+    },
     "0120dc65a5a10382": {
       "first_seen": "2026-09-26",
       "source": "hn_ask",
@@ -10,6 +15,16 @@
       "first_seen": "2026-10-01",
       "source": "hn_show",
       "title": "Show HN: JBR-001 – An open-source 3D printable desktop robot"
+    },
+    "035fa5abb5c7987c": {
+      "first_seen": "2026-10-09",
+      "source": "hn_show",
+      "title": "Show HN: Procinsh – A 3D Linux process inspector"
+    },
+    "0399a0401b25eb75": {
+      "first_seen": "2026-10-09",
+      "source": "marketwatch",
+      "title": "The good, the bad and the ugly of rising interest rates"
     },
     "03c3fbabf7264a94": {
       "first_seen": "2026-09-18",
@@ -120,6 +135,11 @@
       "first_seen": "2026-09-28",
       "source": "hn_show",
       "title": "Show HN: Ekselio – Loveable for finance workflows (local first)"
+    },
+    "2215665ac20f1d7a": {
+      "first_seen": "2026-10-09",
+      "source": "coindesk",
+      "title": "EU securities regulator gives crypto platforms 3 months to remove unauthorized stablecoins"
     },
     "229228a0add68ee8": {
       "first_seen": "2026-09-21",
@@ -285,6 +305,11 @@
       "first_seen": "2026-09-26",
       "source": "marketwatch",
       "title": "A new bill in Congress would lower the retirement age to 60. See who would qualify."
+    },
+    "3e1fccb6ce25ce74": {
+      "first_seen": "2026-10-09",
+      "source": "hn_show",
+      "title": "Show HN: Bigwords.page – Turn any screen into a sign. The URL is the app"
     },
     "3e7e94b25224af4a": {
       "first_seen": "2026-10-01",
@@ -531,6 +556,11 @@
       "source": "hn_show",
       "title": "Show HN: MailAccess – the true Email OSINT framework"
     },
+    "73b24eb698e80244": {
+      "first_seen": "2026-10-09",
+      "source": "hn_show",
+      "title": "Show HN: A modern low-poly SimCity 2000 clone, built by Opus 5.5"
+    },
     "744d2f629b0930e8": {
       "first_seen": "2026-10-05",
       "source": "awealthofcommonsense",
@@ -621,6 +651,11 @@
       "source": "hn_show",
       "title": "Show HN: An open-source manufacturing ERP/MES/QMS"
     },
+    "864cbfe55cb5547f": {
+      "first_seen": "2026-10-09",
+      "source": "hn_show",
+      "title": "Show HN: gtlds.fyi – All the proposed new gTLDs"
+    },
     "88362ab1cef9a649": {
       "first_seen": "2026-09-18",
       "source": "sethgodin",
@@ -655,6 +690,11 @@
       "first_seen": "2026-09-25",
       "source": "hn_show",
       "title": "Show HN: AgentRun: DSL to turn agents into workflows"
+    },
+    "8c286b055cc0e963": {
+      "first_seen": "2026-10-09",
+      "source": "bbc_business",
+      "title": "Bid to run new trains on West Coast Mainline refused"
     },
     "8c2aa81a2d6a6bea": {
       "first_seen": "2026-09-17",
@@ -691,6 +731,11 @@
       "source": "hn_show",
       "title": "Show HN: Give your AI agents access to WhatsApp"
     },
+    "939640ed8e963c3c": {
+      "first_seen": "2026-10-09",
+      "source": "behavioralscientist",
+      "title": "Frontiers: A Roundtable Discussion on the I-Frame vs. S-Frame Debate"
+    },
     "95d84a62f098cb66": {
       "first_seen": "2026-09-28",
       "source": "hn_ask",
@@ -705,6 +750,11 @@
       "first_seen": "2026-10-03",
       "source": "hn_show",
       "title": "Show HN: Audionaut – an open-source cross-platform multitrack audio editor"
+    },
+    "98a1a75f4d9a62cb": {
+      "first_seen": "2026-10-09",
+      "source": "hn_show",
+      "title": "Show HN: Durable Actors – OSS Durable Objects with configurable compute"
     },
     "9b1a5221e33600cf": {
       "first_seen": "2026-10-05",
@@ -816,6 +866,11 @@
       "source": "hn_show",
       "title": "Show HN: Avoid smooth spinners, use low-FPS spinners"
     },
+    "b64d3220bf49bda9": {
+      "first_seen": "2026-10-09",
+      "source": "hn_ask",
+      "title": "Tell HN: I've been paying for a rural Tanzanian's education for 10 years"
+    },
     "b666f4ac69b454ed": {
       "first_seen": "2026-10-03",
       "source": "ft_companies",
@@ -845,6 +900,11 @@
       "first_seen": "2026-09-25",
       "source": "hn_show",
       "title": "Show HN: Koi.rest – watch some fish and regain your balance"
+    },
+    "b856de0518197d6e": {
+      "first_seen": "2026-10-09",
+      "source": "hn_show",
+      "title": "Show HN: Agent.reviews – Where AI agents read and write reviews on tools"
     },
     "ba6acbaffda3da50": {
       "first_seen": "2026-09-30",
@@ -925,6 +985,11 @@
       "first_seen": "2026-10-01",
       "source": "ft_companies",
       "title": "SEC proposes performance fees for retail funds in private markets push"
+    },
+    "d1f03ed1e6e3006a": {
+      "first_seen": "2026-10-09",
+      "source": "hn_ask",
+      "title": "Tell HN: HN has lost the joy for me"
     },
     "d2963bd75db6285b": {
       "first_seen": "2026-09-22",
