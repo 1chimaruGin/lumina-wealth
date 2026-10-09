@@ -1,5 +1,5 @@
 {
-  "count": 249,
+  "count": 262,
   "items": {
     "007e061ec788b834": {
       "first_seen": "2026-10-09",
@@ -116,6 +116,11 @@
       "source": "marketwatch",
       "title": "Millions will lose Medicaid once new work rules kick in. These groups will be hit the hardest."
     },
+    "1b29fcf074775456": {
+      "first_seen": "2026-10-10",
+      "source": "coindesk",
+      "title": "New York AG secures up to $35 million and lifetime crypto ban from Celsius’ Alex Mashinsky"
+    },
     "1d4b2a45374c2f50": {
       "first_seen": "2026-10-01",
       "source": "coindesk",
@@ -125,6 +130,11 @@
       "first_seen": "2026-10-05",
       "source": "hn_show",
       "title": "Show HN: AI search for every photo and every frame of video on macOS"
+    },
+    "1dd845e0f72e08c2": {
+      "first_seen": "2026-10-10",
+      "source": "ft_companies",
+      "title": "Iran attacks tankers beyond Strait of Hormuz"
     },
     "1e1a1afb952dd46c": {
       "first_seen": "2026-09-27",
@@ -220,6 +230,11 @@
       "first_seen": "2026-09-28",
       "source": "hn_show",
       "title": "Show HN: Reladraw – A diagram language where you decide where to place things"
+    },
+    "336fbe00f1f14900": {
+      "first_seen": "2026-10-10",
+      "source": "hn_show",
+      "title": "Show HN: SVG Spark – 10 client-side SVG design and dev tools"
     },
     "33e3a64873b42ff7": {
       "first_seen": "2026-10-08",
@@ -361,6 +376,11 @@
       "source": "hn_show",
       "title": "Show HN: Open-source model routing for coding agents at Astra-level performance"
     },
+    "47f52aa565d83c9c": {
+      "first_seen": "2026-10-10",
+      "source": "hn_show",
+      "title": "Show HN: Rgpu – a PyTorch device whose tensors live on a remote GPU"
+    },
     "4a311e18c894116a": {
       "first_seen": "2026-09-22",
       "source": "hn_show",
@@ -416,6 +436,11 @@
       "source": "hn_ask",
       "title": "Ask HN: Who is hiring? (October 2026)"
     },
+    "52d0c7b75c081c08": {
+      "first_seen": "2026-10-10",
+      "source": "hn_show",
+      "title": "Show HN: Free open source Adobe Lightroom alternative, completely local with AI"
+    },
     "53fc5e3980fdd562": {
       "first_seen": "2026-09-30",
       "source": "ft_companies",
@@ -440,6 +465,16 @@
       "first_seen": "2026-09-24",
       "source": "reddit_sideproject",
       "title": "InvGen - A simple invoice and quotation maker for Indian businesses, with or without GST"
+    },
+    "56ae1b27cc90a7bd": {
+      "first_seen": "2026-10-10",
+      "source": "hn_show",
+      "title": "Show HN: K10s – A Clickable Kubernetes TUI (Go, Bubble Tea)"
+    },
+    "5a782934e5e10573": {
+      "first_seen": "2026-10-10",
+      "source": "japanfinance",
+      "title": "What to expect from the NTA"
     },
     "5acb10de6eadaf10": {
       "first_seen": "2026-10-01",
@@ -545,6 +580,11 @@
       "first_seen": "2026-09-29",
       "source": "bbc_business",
       "title": "UK diesel price hits all-time high, the RAC says"
+    },
+    "72b6bc9a217a2513": {
+      "first_seen": "2026-10-10",
+      "source": "hn_show",
+      "title": "Show HN: Jevman – AI decision models play Pac-Man"
     },
     "7320319a1718b24e": {
       "first_seen": "2026-10-02",
@@ -671,6 +711,11 @@
       "source": "hn_show",
       "title": "Show HN: NSL – WSL for Linux"
     },
+    "8914f1ff3d2bcbd0": {
+      "first_seen": "2026-10-10",
+      "source": "nikkei_asia",
+      "title": "Japan's tourist spending windfall shrinks as Chinese visitors plunge"
+    },
     "894ca695df68e574": {
       "first_seen": "2026-10-04",
       "source": "marginalrevolution",
@@ -725,6 +770,11 @@
       "first_seen": "2026-10-07",
       "source": "marketwatch",
       "title": "Google makes a fresh bet on nuclear power as the AI energy crunch intensifies"
+    },
+    "9139f009d0a21056": {
+      "first_seen": "2026-10-10",
+      "source": "hn_show",
+      "title": "Show HN: Quake ported to safe Rust, playable in browser"
     },
     "928727e5fe5c949c": {
       "first_seen": "2026-09-17",
@@ -800,6 +850,11 @@
       "first_seen": "2026-10-04",
       "source": "reddit_builders",
       "title": "Solo SaaS finally has momentum, experienced exited founder wants to join - and I genuinely have no idea what I should do"
+    },
+    "a7100dc6c0045ce8": {
+      "first_seen": "2026-10-10",
+      "source": "hn_show",
+      "title": "Show HN: Edi Life OS – self-hosted life dashboard with an MCP server for AI"
     },
     "a73302ba4a04aa42": {
       "first_seen": "2026-10-08",
@@ -1051,6 +1106,11 @@
       "source": "ft_companies",
       "title": "Investors seek refuge from bond rout in haven German debt"
     },
+    "dc47cdade83491cb": {
+      "first_seen": "2026-10-10",
+      "source": "economist_fin",
+      "title": "In search of tax alpha"
+    },
     "dd482db15e1f035b": {
       "first_seen": "2026-10-06",
       "source": "hn_show",
@@ -1090,6 +1150,11 @@
       "first_seen": "2026-10-08",
       "source": "coindesk",
       "title": "Tether tapped by Kazakhstan’s central bank to explore stablecoin and tokenization"
+    },
+    "e44323c655e717f3": {
+      "first_seen": "2026-10-10",
+      "source": "reddit_builders",
+      "title": "Most SaaS \"X vs Y\" comparison posts are just citation loops quoting dead pricing pages"
     },
     "e6b37f47d4c262f0": {
       "first_seen": "2026-09-26",

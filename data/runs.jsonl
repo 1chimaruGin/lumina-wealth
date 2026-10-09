@@ -38,3 +38,4 @@
 {"at": "2026-10-07", "mode": "daily", "sources_ok": 33, "sources_total": 33, "failed": [], "candidates": 220, "picks": 3, "scored_by": "claude-code", "cost_usd": 0.34416}
 {"at": "2026-10-08", "mode": "daily", "sources_ok": 32, "sources_total": 33, "failed": ["sethgodin"], "candidates": 254, "picks": 3, "scored_by": "claude-code", "cost_usd": 0.33148}
 {"at": "2026-10-09", "mode": "daily", "sources_ok": 33, "sources_total": 33, "failed": [], "candidates": 277, "picks": 3, "scored_by": "claude-code", "cost_usd": 0.23062}
+{"at": "2026-10-10", "mode": "daily", "sources_ok": 33, "sources_total": 33, "failed": [], "candidates": 284, "picks": 3, "scored_by": "claude-code", "cost_usd": 0.18954}
