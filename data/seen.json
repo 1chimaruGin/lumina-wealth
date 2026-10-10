@@ -1,5 +1,5 @@
 {
-  "count": 262,
+  "count": 275,
   "items": {
     "007e061ec788b834": {
       "first_seen": "2026-10-09",
@@ -10,6 +10,11 @@
       "first_seen": "2026-09-26",
       "source": "hn_ask",
       "title": "Ask HN: What job boards are good these days?"
+    },
+    "01eff61eed2a9591": {
+      "first_seen": "2026-10-11",
+      "source": "marketwatch",
+      "title": "Why Nvidia’s stock is dodging the AI credit scare that is crushing Broadcom and Oracle"
     },
     "02d05d50ed5e32b6": {
       "first_seen": "2026-10-01",
@@ -226,6 +231,11 @@
       "source": "ft_companies",
       "title": "UK biodiesel industry attacks rejection of duties on cheaper US imports"
     },
+    "331037b7a40d5e0a": {
+      "first_seen": "2026-10-11",
+      "source": "coindesk",
+      "title": "One year after 10/10 flash crash, bitcoin and ether liquidity have rebuilt, but altcoins still face risks"
+    },
     "334a6646400953dd": {
       "first_seen": "2026-09-28",
       "source": "hn_show",
@@ -260,6 +270,11 @@
       "first_seen": "2026-10-02",
       "source": "planetmoney",
       "title": "Who’s gonna pay for your Social Security?"
+    },
+    "36c0f47da0b61148": {
+      "first_seen": "2026-10-11",
+      "source": "nikkei_asia",
+      "title": "Japan's DOGE to 'step up' spending review, eyeing EV subsidies, health checks"
     },
     "376c796fbe430399": {
       "first_seen": "2026-09-23",
@@ -315,6 +330,11 @@
       "first_seen": "2026-09-30",
       "source": "hn_show",
       "title": "Show HN: OpenAPPA – open-source deterministic guardrails that don't break agents"
+    },
+    "3cfbbe27d7821539": {
+      "first_seen": "2026-10-11",
+      "source": "hn_show",
+      "title": "Show HN: Making a flexible \"neon\" t-shirt with LED filaments"
     },
     "3d344af9c440b35a": {
       "first_seen": "2026-09-26",
@@ -531,6 +551,11 @@
       "source": "hn_ask",
       "title": "Ask HN: I just talked to an AI-obsessed client, and I need a shower afterwards"
     },
+    "64581bfda36978c6": {
+      "first_seen": "2026-10-11",
+      "source": "hn_show",
+      "title": "Show HN: Carrier-Explode: iPhone, Pixel and Galaxy carrier settings decoded"
+    },
     "65aebdcbf7d7da2e": {
       "first_seen": "2026-09-27",
       "source": "awealthofcommonsense",
@@ -621,6 +646,11 @@
       "source": "hn_show",
       "title": "Show HN: graf (1000x faster graphify in Rust)"
     },
+    "77585447d04f9853": {
+      "first_seen": "2026-10-11",
+      "source": "reddit_builders",
+      "title": "Request: Open Source Projects / Agents that help with GTM, Marketing, Distribution"
+    },
     "77dacb667680037a": {
       "first_seen": "2026-09-20",
       "source": "hn_show",
@@ -695,6 +725,16 @@
       "first_seen": "2026-10-09",
       "source": "hn_show",
       "title": "Show HN: gtlds.fyi – All the proposed new gTLDs"
+    },
+    "865c13fe6ef82090": {
+      "first_seen": "2026-10-11",
+      "source": "reddit_builders",
+      "title": "I launched my research app in open beta. How do I find my first real users?"
+    },
+    "876449a0944e93d0": {
+      "first_seen": "2026-10-11",
+      "source": "hn_show",
+      "title": "Show HN: The rarest tech books and docs you've probably never read"
     },
     "88362ab1cef9a649": {
       "first_seen": "2026-09-18",
@@ -841,10 +881,20 @@
       "source": "hn_show",
       "title": "Show HN: InstinctFlash – High-Performance Serving Runtime for Robotics Models"
     },
+    "a1a80cd9e8b21234": {
+      "first_seen": "2026-10-11",
+      "source": "awealthofcommonsense",
+      "title": "The Winners & Losers of Higher Interest Rates"
+    },
     "a3d8f734a10741b6": {
       "first_seen": "2026-09-27",
       "source": "hn_show",
       "title": "Show HN: A game about fake news and memes"
+    },
+    "a40db2c445455d8c": {
+      "first_seen": "2026-10-11",
+      "source": "hn_show",
+      "title": "Show HN: Pocketty – iPhone SSH terminal that pings you when an agent is blocked"
     },
     "a502eed1530757c8": {
       "first_seen": "2026-10-04",
@@ -880,6 +930,11 @@
       "first_seen": "2026-10-06",
       "source": "hn_show",
       "title": "Show HN: Build with Python – a beginner course where your code draws"
+    },
+    "ad986333f66a8a31": {
+      "first_seen": "2026-10-11",
+      "source": "hn_show",
+      "title": "Show HN: Apogee: Rebuilding Mozilla's Orbit, fully local and private"
     },
     "addcb9e869faa539": {
       "first_seen": "2026-09-29",
@@ -985,6 +1040,11 @@
       "first_seen": "2026-10-01",
       "source": "ft_companies",
       "title": "How will Trump ‘accord’ for AI to ‘self-regulate’ work?"
+    },
+    "bf2149b8045ec7a8": {
+      "first_seen": "2026-10-11",
+      "source": "hn_show",
+      "title": "Show HN: Let your AI agents paint big arrows, boxes and text on your screen"
     },
     "c036f9990682fe35": {
       "first_seen": "2026-09-28",
@@ -1265,6 +1325,11 @@
       "first_seen": "2026-09-17",
       "source": "awealthofcommonsense",
       "title": "Why Are Valuations Falling in a Bull Market?"
+    },
+    "f76d02742cac31c7": {
+      "first_seen": "2026-10-11",
+      "source": "ft_companies",
+      "title": "AI borrowing slows as investors grow wary of debt binge"
     },
     "fa35849781166026": {
       "first_seen": "2026-10-07",
