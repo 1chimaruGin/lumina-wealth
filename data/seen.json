@@ -1,5 +1,5 @@
 {
-  "count": 275,
+  "count": 288,
   "items": {
     "007e061ec788b834": {
       "first_seen": "2026-10-09",
@@ -226,6 +226,16 @@
       "source": "hn_ask",
       "title": "OpenAI Codex agents go rogue and consumes USD 78,000 without authorization"
     },
+    "2edbac87738b5104": {
+      "first_seen": "2026-10-12",
+      "source": "hn_ask",
+      "title": "If AI keeps evolving,would you worry about your next generation's survival"
+    },
+    "31767104313292dd": {
+      "first_seen": "2026-10-12",
+      "source": "coindesk",
+      "title": "IMF finds demand for tokenized stocks, says the market is still volatile, illiquid"
+    },
     "32a99b88d10e1b10": {
       "first_seen": "2026-09-28",
       "source": "ft_companies",
@@ -396,6 +406,16 @@
       "source": "hn_show",
       "title": "Show HN: Open-source model routing for coding agents at Astra-level performance"
     },
+    "47b832b0b4ac6475": {
+      "first_seen": "2026-10-12",
+      "source": "marketwatch",
+      "title": "The bull market is turning 4 years old — but yields could crash the party"
+    },
+    "47e32662b43840a7": {
+      "first_seen": "2026-10-12",
+      "source": "hn_ask",
+      "title": "Ask HN: Why aren't Americans rising up against tipping?"
+    },
     "47f52aa565d83c9c": {
       "first_seen": "2026-10-10",
       "source": "hn_show",
@@ -541,6 +561,11 @@
       "source": "hn_show",
       "title": "Show HN: Sigabrt.dev – cronjob monitor with an SSH TUI"
     },
+    "61c0da3a99e7cb28": {
+      "first_seen": "2026-10-12",
+      "source": "hn_show",
+      "title": "Show HN: Diffle, a keyboard-centric diff viewer with LSP support"
+    },
     "62f6909d541eadcd": {
       "first_seen": "2026-09-28",
       "source": "ft_companies",
@@ -556,10 +581,20 @@
       "source": "hn_show",
       "title": "Show HN: Carrier-Explode: iPhone, Pixel and Galaxy carrier settings decoded"
     },
+    "64f733b90d8376ee": {
+      "first_seen": "2026-10-12",
+      "source": "marketwatch",
+      "title": "These decisions you make in your 20s — not your income — determine whether you’ll spend decades in debt or retire comfortably"
+    },
     "65aebdcbf7d7da2e": {
       "first_seen": "2026-09-27",
       "source": "awealthofcommonsense",
       "title": "Most Stocks Are Losers"
+    },
+    "65b03506b2a191b1": {
+      "first_seen": "2026-10-12",
+      "source": "indicator",
+      "title": "SNAP strains, youth baseball's class divide, and Meta's bug bounty"
     },
     "674262d286f369d0": {
       "first_seen": "2026-10-05",
@@ -601,6 +636,11 @@
       "source": "hn_show",
       "title": "Show HN: Jotbus – a shared encrypted scratchpad for coding agents"
     },
+    "71ac2caf205580a8": {
+      "first_seen": "2026-10-12",
+      "source": "hn_show",
+      "title": "Show HN: AI SRE Arena, an Open Benchmark for AI SRE Agents on Kubernetes"
+    },
     "721246f5ef477a45": {
       "first_seen": "2026-09-29",
       "source": "bbc_business",
@@ -641,6 +681,11 @@
       "source": "reddit_builders",
       "title": "I built B2B SaaS OS – Next.js 16 + Supabase starter with an automated 8-point security test runner"
     },
+    "75e95a3e1b590c16": {
+      "first_seen": "2026-10-12",
+      "source": "ft_companies",
+      "title": "UK spending on subscriptions rapidly outpaces other goods and services"
+    },
     "7737ad254ded6080": {
       "first_seen": "2026-09-23",
       "source": "hn_show",
@@ -675,6 +720,16 @@
       "first_seen": "2026-09-30",
       "source": "hn_show",
       "title": "Show HN: HN.watch – Videos of all Hacker News posts"
+    },
+    "7c92b328b2e9e017": {
+      "first_seen": "2026-10-12",
+      "source": "hn_show",
+      "title": "Show HN: A simple to-do app for iPhone, Mac, and your agent"
+    },
+    "7cd496121f201d47": {
+      "first_seen": "2026-10-12",
+      "source": "hn_show",
+      "title": "Show HN: Happy Hangul Day! An RNN for Generating Korean Handwriting Strokes"
     },
     "7cd8f4c772468a6d": {
       "first_seen": "2026-10-06",
@@ -901,6 +956,11 @@
       "source": "reddit_builders",
       "title": "Solo SaaS finally has momentum, experienced exited founder wants to join - and I genuinely have no idea what I should do"
     },
+    "a6ffbff7a12cc2eb": {
+      "first_seen": "2026-10-12",
+      "source": "hn_ask",
+      "title": "Ask HN: What's your favorite children's books?"
+    },
     "a7100dc6c0045ce8": {
       "first_seen": "2026-10-10",
       "source": "hn_show",
@@ -1045,6 +1105,11 @@
       "first_seen": "2026-10-11",
       "source": "hn_show",
       "title": "Show HN: Let your AI agents paint big arrows, boxes and text on your screen"
+    },
+    "bf79879b30894193": {
+      "first_seen": "2026-10-12",
+      "source": "hn_show",
+      "title": "Show HN: WallHop – 12ft.io is gone, so I built a replacement"
     },
     "c036f9990682fe35": {
       "first_seen": "2026-09-28",
