@@ -1,5 +1,5 @@
 {
-  "count": 288,
+  "count": 301,
   "items": {
     "007e061ec788b834": {
       "first_seen": "2026-10-09",
@@ -196,10 +196,20 @@
       "source": "hn_show",
       "title": "Show HN: OpenChart – OSS TradingView alternative with your own AI agent"
     },
+    "2855c72d82b82b45": {
+      "first_seen": "2026-10-13",
+      "source": "hn_show",
+      "title": "Show HN: Shpyrd – A new type of cloud for AI era"
+    },
     "28aed8cfa03a51c2": {
       "first_seen": "2026-10-03",
       "source": "hn_ask",
       "title": "Muse.ai gets me kicked off fb marketplace"
+    },
+    "28c42d0b09e29c08": {
+      "first_seen": "2026-10-13",
+      "source": "hn_show",
+      "title": "Show HN: Opus 5.5 made a fully featured Figma clone in 3 hours / 8 prompts"
     },
     "2aa6acd28e1a954f": {
       "first_seen": "2026-09-17",
@@ -311,6 +321,11 @@
       "source": "hn_show",
       "title": "Show HN: Jev Plays Pokémon Red"
     },
+    "39203af7f2592df4": {
+      "first_seen": "2026-10-13",
+      "source": "reddit_builders",
+      "title": "Built my first SaaS product. Now figuring out how to get my first customers."
+    },
     "398b092189690eb9": {
       "first_seen": "2026-09-27",
       "source": "hn_ask",
@@ -400,6 +415,11 @@
       "first_seen": "2026-09-30",
       "source": "hn_show",
       "title": "Show HN: Museum of Numbers"
+    },
+    "4667d313bc36a186": {
+      "first_seen": "2026-10-13",
+      "source": "hn_ask",
+      "title": "Ask HN: Do you want a router that has DD-WRT pre-installed?"
     },
     "46ee65d794dc7f97": {
       "first_seen": "2026-10-03",
@@ -616,6 +636,11 @@
       "source": "hn_show",
       "title": "Show HN: Yantra – an LALR(1) parser generator for C++"
     },
+    "6ace05f76f2b1985": {
+      "first_seen": "2026-10-13",
+      "source": "ft_companies",
+      "title": "Labour plan to cut funds from heat pump scheme sparks industry backlash"
+    },
     "6d455570ede58037": {
       "first_seen": "2026-10-05",
       "source": "ft_companies",
@@ -766,6 +791,11 @@
       "source": "hn_show",
       "title": "Show HN: Ax-check.com – Can agents use your product?"
     },
+    "83d972a9b2df7a88": {
+      "first_seen": "2026-10-13",
+      "source": "marketwatch",
+      "title": "Trump’s ‘energy ceasefire’ collides with real-world problems of dwindling fuel supplies"
+    },
     "83f7854c52fd9c7c": {
       "first_seen": "2026-09-30",
       "source": "hn_show",
@@ -896,6 +926,11 @@
       "source": "hn_show",
       "title": "Show HN: Audionaut – an open-source cross-platform multitrack audio editor"
     },
+    "97e026a93ef159e9": {
+      "first_seen": "2026-10-13",
+      "source": "hn_show",
+      "title": "Show HN: PS2 games statically recompiled to WebAssembly"
+    },
     "98a1a75f4d9a62cb": {
       "first_seen": "2026-10-09",
       "source": "hn_show",
@@ -905,6 +940,11 @@
       "first_seen": "2026-10-05",
       "source": "hn_show",
       "title": "Show HN: Factorio but with unreliable components"
+    },
+    "9ba26f056f84bfae": {
+      "first_seen": "2026-10-13",
+      "source": "reddit_builders",
+      "title": "I made a saas for 5$/month"
     },
     "9e3ed547b6b0c997": {
       "first_seen": "2026-09-22",
@@ -950,6 +990,11 @@
       "first_seen": "2026-10-11",
       "source": "hn_show",
       "title": "Show HN: Pocketty – iPhone SSH terminal that pings you when an agent is blocked"
+    },
+    "a5020678bb36f8ef": {
+      "first_seen": "2026-10-13",
+      "source": "ft_companies",
+      "title": "The diesel crisis is testing the limits of globalisation"
     },
     "a502eed1530757c8": {
       "first_seen": "2026-10-04",
@@ -1146,6 +1191,11 @@
       "source": "marketwatch",
       "title": "These bond strategies can help you get a safe 5% return on your cash"
     },
+    "cde60f73cff56554": {
+      "first_seen": "2026-10-13",
+      "source": "reddit_builders",
+      "title": "I built 4 isolated Next.js 15 boilerplates instead of one giant repo – launching today with early access pricing"
+    },
     "d02fb1281f749011": {
       "first_seen": "2026-09-26",
       "source": "hn_show",
@@ -1180,6 +1230,11 @@
       "first_seen": "2026-09-29",
       "source": "japanfinance",
       "title": "My Experience with an NTA Agent Regarding FX Gains/Losses"
+    },
+    "d367041addc37f34": {
+      "first_seen": "2026-10-13",
+      "source": "bbc_business",
+      "title": "Healey faces £35bn Budget challenge to meet spending pledges, says think tank"
     },
     "d3af24f9f6346a49": {
       "first_seen": "2026-10-04",
@@ -1256,6 +1311,11 @@
       "source": "hn_ask",
       "title": "Tell HN: Claude Code just accepted and signed a contract for me. Without asking"
     },
+    "dfe32506cde924cf": {
+      "first_seen": "2026-10-13",
+      "source": "awealthofcommonsense",
+      "title": "Betting on Hope"
+    },
     "e0ff8c3a76cfd4f6": {
       "first_seen": "2026-09-26",
       "source": "reddit_builders",
@@ -1280,6 +1340,11 @@
       "first_seen": "2026-10-10",
       "source": "reddit_builders",
       "title": "Most SaaS \"X vs Y\" comparison posts are just citation loops quoting dead pricing pages"
+    },
+    "e6753b8422696224": {
+      "first_seen": "2026-10-13",
+      "source": "hn_show",
+      "title": "Show HN: BetterWispr – Free, open-source dictation for Mac"
     },
     "e6b37f47d4c262f0": {
       "first_seen": "2026-09-26",
