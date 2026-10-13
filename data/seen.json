@@ -1,5 +1,5 @@
 {
-  "count": 301,
+  "count": 314,
   "items": {
     "007e061ec788b834": {
       "first_seen": "2026-10-09",
@@ -160,6 +160,11 @@
       "first_seen": "2026-09-21",
       "source": "hn_show",
       "title": "Show HN: Three genlocked RP2350B make a console – 3k sprite pixels per line)"
+    },
+    "233e30c6f22de11e": {
+      "first_seen": "2026-10-14",
+      "source": "hn_show",
+      "title": "Show HN: SolidCraft – Open-Source Parametric CAD in Rust (With MCP Support)"
     },
     "23c507f121cabd1e": {
       "first_seen": "2026-10-06",
@@ -351,6 +356,11 @@
       "source": "reddit_builders",
       "title": "J’ai construit un SaaS pour résoudre un problème que je voyais revenir souvent : trouver ses premiers clients"
     },
+    "3c72121a70447f3c": {
+      "first_seen": "2026-10-14",
+      "source": "ft_companies",
+      "title": "Creditors sue Patrick Drahi’s Altice International over asset shifts"
+    },
     "3ca499c72b5e2232": {
       "first_seen": "2026-09-30",
       "source": "hn_show",
@@ -496,10 +506,20 @@
       "source": "hn_ask",
       "title": "Ask HN: Who is hiring? (October 2026)"
     },
+    "529e20637d76cb58": {
+      "first_seen": "2026-10-14",
+      "source": "boj",
+      "title": "Results of the 107th Opinion Survey on the General Public's Views and Behavior"
+    },
     "52d0c7b75c081c08": {
       "first_seen": "2026-10-10",
       "source": "hn_show",
       "title": "Show HN: Free open source Adobe Lightroom alternative, completely local with AI"
+    },
+    "5394c51ed710a783": {
+      "first_seen": "2026-10-14",
+      "source": "hn_show",
+      "title": "Show HN: Brickbrag – A multiplayer brick-building world in the browser"
     },
     "53fc5e3980fdd562": {
       "first_seen": "2026-09-30",
@@ -530,6 +550,11 @@
       "first_seen": "2026-10-10",
       "source": "hn_show",
       "title": "Show HN: K10s – A Clickable Kubernetes TUI (Go, Bubble Tea)"
+    },
+    "587281d93e4949fe": {
+      "first_seen": "2026-10-14",
+      "source": "hn_show",
+      "title": "Show HN: An experimental pattern-first DAW that supports MCP"
     },
     "5a782934e5e10573": {
       "first_seen": "2026-10-10",
@@ -591,6 +616,11 @@
       "source": "ft_companies",
       "title": "AI hyperscalers are transforming debt"
     },
+    "6351979a48016218": {
+      "first_seen": "2026-10-14",
+      "source": "reddit_builders",
+      "title": "Visited the Zoute Grand Prix in Knokke, found every car/parking app overly monetized, so I built my own free open-source car scanner in Kotl"
+    },
     "644978a1273ab2c3": {
       "first_seen": "2026-09-25",
       "source": "hn_ask",
@@ -650,6 +680,11 @@
       "first_seen": "2026-09-27",
       "source": "hn_show",
       "title": "Show HN: The last day of the dinosaurs, as an interactive painting"
+    },
+    "702c3f24c909e329": {
+      "first_seen": "2026-10-14",
+      "source": "hn_show",
+      "title": "Show HN: Atticus – Hold-to-talk voice assistant for macOS that runs on Claude -p"
     },
     "70359c27b4e5e0d8": {
       "first_seen": "2026-09-25",
@@ -881,6 +916,11 @@
       "source": "hn_ask",
       "title": "Management is forcing us to use AI"
     },
+    "8cca87dd3808ea07": {
+      "first_seen": "2026-10-14",
+      "source": "ft_companies",
+      "title": "English football on ‘edge of financial disaster’, warns game’s new regulator"
+    },
     "8de0d2c1cbc7beef": {
       "first_seen": "2026-10-02",
       "source": "marketwatch",
@@ -935,6 +975,11 @@
       "first_seen": "2026-10-09",
       "source": "hn_show",
       "title": "Show HN: Durable Actors – OSS Durable Objects with configurable compute"
+    },
+    "9a2ab3313a974682": {
+      "first_seen": "2026-10-14",
+      "source": "ofdollarsanddata",
+      "title": "Who Got Richer Since 2022?"
     },
     "9b1a5221e33600cf": {
       "first_seen": "2026-10-05",
@@ -1000,6 +1045,11 @@
       "first_seen": "2026-10-04",
       "source": "reddit_builders",
       "title": "Solo SaaS finally has momentum, experienced exited founder wants to join - and I genuinely have no idea what I should do"
+    },
+    "a6515c4c4a10b8db": {
+      "first_seen": "2026-10-14",
+      "source": "ft_companies",
+      "title": "The ‘ungodly spending’ behind the creator economy"
     },
     "a6ffbff7a12cc2eb": {
       "first_seen": "2026-10-12",
@@ -1166,6 +1216,11 @@
       "source": "hn_show",
       "title": "Show HN: Real-time Solar System with 526k asteroids and all tracked satellites"
     },
+    "c5751df832aa608c": {
+      "first_seen": "2026-10-14",
+      "source": "reddit_builders",
+      "title": "Webmcp for your app ?"
+    },
     "c851d13813897def": {
       "first_seen": "2026-09-24",
       "source": "hn_show",
@@ -1200,6 +1255,11 @@
       "first_seen": "2026-09-26",
       "source": "hn_show",
       "title": "Show HN: Radix – Visual UI for agentic programming"
+    },
+    "d055b625ae405aa6": {
+      "first_seen": "2026-10-14",
+      "source": "hn_show",
+      "title": "Show HN: Use your OpenAI subscription to create audiobooks"
     },
     "d0ee0bd9c8e2762e": {
       "first_seen": "2026-10-01",
@@ -1270,6 +1330,11 @@
       "first_seen": "2026-10-03",
       "source": "hn_show",
       "title": "Show HN: Rhun, an open-source code editor written in assembly"
+    },
+    "d9af2e8a4552dd9b": {
+      "first_seen": "2026-10-14",
+      "source": "reddit_builders",
+      "title": "Trying to understand B2B SaaS pricing models."
     },
     "dabd36d6ac350fc5": {
       "first_seen": "2026-09-25",
