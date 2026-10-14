@@ -1,5 +1,5 @@
 {
-  "count": 314,
+  "count": 327,
   "items": {
     "007e061ec788b834": {
       "first_seen": "2026-10-09",
@@ -116,6 +116,11 @@
       "source": "hn_show",
       "title": "Show HN: Steve Jobs died 15 years ago today. I built an interactive tribute"
     },
+    "1882e55caad4e932": {
+      "first_seen": "2026-10-15",
+      "source": "hn_show",
+      "title": "Show HN: Graphicle, a Rust port of Graphify with memory for coding agents"
+    },
     "1a6d2491b77e8c89": {
       "first_seen": "2026-09-27",
       "source": "marketwatch",
@@ -160,6 +165,11 @@
       "first_seen": "2026-09-21",
       "source": "hn_show",
       "title": "Show HN: Three genlocked RP2350B make a console – 3k sprite pixels per line)"
+    },
+    "22dbce1dd938b87d": {
+      "first_seen": "2026-10-15",
+      "source": "hn_show",
+      "title": "Show HN: Parsimony – an open-source benchmark for how much code AI models add"
     },
     "233e30c6f22de11e": {
       "first_seen": "2026-10-14",
@@ -270,6 +280,11 @@
       "first_seen": "2026-10-10",
       "source": "hn_show",
       "title": "Show HN: SVG Spark – 10 client-side SVG design and dev tools"
+    },
+    "33b960f5d23aee12": {
+      "first_seen": "2026-10-15",
+      "source": "hn_show",
+      "title": "Show HN: Pulse Local, a Mac budgeting app whose AI models run on your machine"
     },
     "33e3a64873b42ff7": {
       "first_seen": "2026-10-08",
@@ -395,6 +410,11 @@
       "first_seen": "2026-10-08",
       "source": "economist_fin",
       "title": "American investors’ trick to lower taxes: lose money"
+    },
+    "43908efb2c58e9cb": {
+      "first_seen": "2026-10-15",
+      "source": "marketwatch",
+      "title": "Big banks see risks in financing the AI boom, but are happy to keep writing the checks"
     },
     "43af959064d90d37": {
       "first_seen": "2026-10-02",
@@ -551,6 +571,11 @@
       "source": "hn_show",
       "title": "Show HN: K10s – A Clickable Kubernetes TUI (Go, Bubble Tea)"
     },
+    "56c0690ddc7dfaf4": {
+      "first_seen": "2026-10-15",
+      "source": "hn_show",
+      "title": "Show HN: I built a tool to track what AI leaders say and how their views change"
+    },
     "587281d93e4949fe": {
       "first_seen": "2026-10-14",
       "source": "hn_show",
@@ -636,6 +661,11 @@
       "source": "marketwatch",
       "title": "These decisions you make in your 20s — not your income — determine whether you’ll spend decades in debt or retire comfortably"
     },
+    "65291dbf8a99673a": {
+      "first_seen": "2026-10-15",
+      "source": "bbc_business",
+      "title": "How a Chinese-made toy gets to a US retailer"
+    },
     "65aebdcbf7d7da2e": {
       "first_seen": "2026-09-27",
       "source": "awealthofcommonsense",
@@ -665,6 +695,11 @@
       "first_seen": "2026-10-02",
       "source": "hn_show",
       "title": "Show HN: Yantra – an LALR(1) parser generator for C++"
+    },
+    "697116bc29d65102": {
+      "first_seen": "2026-10-15",
+      "source": "marketwatch",
+      "title": "CoreWeave’s AI bonds tumble, raising red flags for the wider market"
     },
     "6ace05f76f2b1985": {
       "first_seen": "2026-10-13",
@@ -810,6 +845,16 @@
       "first_seen": "2026-09-20",
       "source": "hn_ask",
       "title": "Ask HN: How do you interview devs in a post-AI world?"
+    },
+    "8046c79956428cb1": {
+      "first_seen": "2026-10-15",
+      "source": "hn_show",
+      "title": "Show HN: Petal, open-source CoScreen/ScreenHero finally free"
+    },
+    "80b17e5ba2acecb3": {
+      "first_seen": "2026-10-15",
+      "source": "hn_show",
+      "title": "Show HN: A guided 3D Leonardo da Vinci museum, built in code"
     },
     "8175d7c6796ef21f": {
       "first_seen": "2026-09-19",
@@ -975,6 +1020,11 @@
       "first_seen": "2026-10-09",
       "source": "hn_show",
       "title": "Show HN: Durable Actors – OSS Durable Objects with configurable compute"
+    },
+    "998ca21e7612e20b": {
+      "first_seen": "2026-10-15",
+      "source": "reddit_builders",
+      "title": "How do you know if your SaaS name is safe to use?"
     },
     "9a2ab3313a974682": {
       "first_seen": "2026-10-14",
@@ -1235,6 +1285,11 @@
       "first_seen": "2026-09-24",
       "source": "hn_show",
       "title": "Show HN: Conway's Game of Life in boot sector"
+    },
+    "cb0908fa52c79627": {
+      "first_seen": "2026-10-15",
+      "source": "hn_show",
+      "title": "Show HN: I wrote an email app that accepts only one sender per inbox"
     },
     "cd69215e60e4b7a4": {
       "first_seen": "2026-09-21",
@@ -1570,6 +1625,16 @@
       "first_seen": "2026-09-25",
       "source": "hn_show",
       "title": "Show HN: Treepeat – Code similarity detection using Tree-sitter"
+    },
+    "ff7712b56ba7ee30": {
+      "first_seen": "2026-10-15",
+      "source": "awealthofcommonsense",
+      "title": "Is It Time to Rebalance Your Portfolio?"
+    },
+    "ffec7b58423d2292": {
+      "first_seen": "2026-10-15",
+      "source": "ft_companies",
+      "title": "US chip stocks slide as inflation and AI debt fears unsettle investors"
     }
   }
 }
