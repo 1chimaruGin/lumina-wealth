@@ -1,5 +1,5 @@
 {
-  "count": 327,
+  "count": 339,
   "items": {
     "007e061ec788b834": {
       "first_seen": "2026-10-09",
@@ -110,6 +110,11 @@
       "first_seen": "2026-10-04",
       "source": "hn_show",
       "title": "Show HN: Made an open-source Lego AI generator"
+    },
+    "180fcb0308a35a32": {
+      "first_seen": "2026-10-16",
+      "source": "reddit_builders",
+      "title": "I built an app that scans your Gmail and asks companies to delete your data. Launch numbers from the first 118 users"
     },
     "184fa5e897df9de1": {
       "first_seen": "2026-10-06",
@@ -676,6 +681,11 @@
       "source": "indicator",
       "title": "SNAP strains, youth baseball's class divide, and Meta's bug bounty"
     },
+    "66ce1636137bc229": {
+      "first_seen": "2026-10-16",
+      "source": "hn_show",
+      "title": "Show HN: Proa – A Rust web framework with fast SSR and multi-target rendering"
+    },
     "674262d286f369d0": {
       "first_seen": "2026-10-05",
       "source": "hn_show",
@@ -716,6 +726,11 @@
       "source": "hn_show",
       "title": "Show HN: The last day of the dinosaurs, as an interactive painting"
     },
+    "6f91feacae1a7152": {
+      "first_seen": "2026-10-16",
+      "source": "ft_companies",
+      "title": "Harvard’s endowment returns surge on back of AI and SpaceX investments"
+    },
     "702c3f24c909e329": {
       "first_seen": "2026-10-14",
       "source": "hn_show",
@@ -751,6 +766,11 @@
       "source": "ft_companies",
       "title": "EU countries in crisis talks over release of diesel stocks"
     },
+    "732478e2d680628f": {
+      "first_seen": "2026-10-16",
+      "source": "hn_show",
+      "title": "Show HN: Ito – Build Terminal UIs in Lua"
+    },
     "7353d228e9146cbf": {
       "first_seen": "2026-10-07",
       "source": "hn_show",
@@ -775,6 +795,11 @@
       "first_seen": "2026-10-04",
       "source": "reddit_builders",
       "title": "I built B2B SaaS OS – Next.js 16 + Supabase starter with an automated 8-point security test runner"
+    },
+    "7597fd09aa5e3688": {
+      "first_seen": "2026-10-16",
+      "source": "awealthofcommonsense",
+      "title": "Hedging the AI Trade"
     },
     "75e95a3e1b590c16": {
       "first_seen": "2026-10-12",
@@ -931,6 +956,11 @@
       "source": "awealthofcommonsense",
       "title": "Can You Be a Boglehead Tech Investor?"
     },
+    "8b65edffc0f09fcb": {
+      "first_seen": "2026-10-16",
+      "source": "marketwatch",
+      "title": "Big pharma stocks close near all-time highs as tech selloff pushes investors toward safer bets"
+    },
     "8b7eafda898be1bd": {
       "first_seen": "2026-10-04",
       "source": "hn_show",
@@ -1026,6 +1056,11 @@
       "source": "reddit_builders",
       "title": "How do you know if your SaaS name is safe to use?"
     },
+    "99b50cda3751ead4": {
+      "first_seen": "2026-10-16",
+      "source": "hn_show",
+      "title": "Show HN: XY Music Notation"
+    },
     "9a2ab3313a974682": {
       "first_seen": "2026-10-14",
       "source": "ofdollarsanddata",
@@ -1095,6 +1130,11 @@
       "first_seen": "2026-10-04",
       "source": "reddit_builders",
       "title": "Solo SaaS finally has momentum, experienced exited founder wants to join - and I genuinely have no idea what I should do"
+    },
+    "a52daacfcae86727": {
+      "first_seen": "2026-10-16",
+      "source": "hn_show",
+      "title": "Show HN: Guitoro, a virtual guitar you strum with your keyboard"
     },
     "a6515c4c4a10b8db": {
       "first_seen": "2026-10-14",
@@ -1221,6 +1261,11 @@
       "source": "hn_show",
       "title": "Show HN: Agent.reviews – Where AI agents read and write reviews on tools"
     },
+    "b996ab45573be092": {
+      "first_seen": "2026-10-16",
+      "source": "hn_show",
+      "title": "Show HN: Flipflop – Iroh-powered persistent tunnels for filesharing"
+    },
     "ba6acbaffda3da50": {
       "first_seen": "2026-09-30",
       "source": "bbc_business",
@@ -1275,6 +1320,11 @@
       "first_seen": "2026-09-24",
       "source": "hn_show",
       "title": "Show HN: How long do I need to work at my salary before I can coast, or retire?"
+    },
+    "c86e97c563237353": {
+      "first_seen": "2026-10-16",
+      "source": "ft_companies",
+      "title": "Treasuries rally as investors seek shelter from AI turbulence"
     },
     "c8901fa7de950728": {
       "first_seen": "2026-09-22",
@@ -1526,6 +1576,11 @@
       "source": "hn_ask",
       "title": "Neovim have a ~$800k Bitcoin donation sitting untouched since 2023"
     },
+    "f08784ca69eb615b": {
+      "first_seen": "2026-10-16",
+      "source": "hn_show",
+      "title": "Show HN: Unfenced – Land for sale that borders public land"
+    },
     "f1157c176aaf4c32": {
       "first_seen": "2026-10-06",
       "source": "awealthofcommonsense",
@@ -1615,6 +1670,11 @@
       "first_seen": "2026-09-28",
       "source": "hn_show",
       "title": "Show HN: TinyAIArena watch AI agents battle it out"
+    },
+    "fed6b0065b82f526": {
+      "first_seen": "2026-10-16",
+      "source": "hn_show",
+      "title": "Show HN: How random are you?"
     },
     "ff27b312652dc3b1": {
       "first_seen": "2026-10-01",
