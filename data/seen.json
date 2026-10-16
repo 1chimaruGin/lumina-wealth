@@ -1,5 +1,5 @@
 {
-  "count": 339,
+  "count": 352,
   "items": {
     "007e061ec788b834": {
       "first_seen": "2026-10-09",
@@ -311,6 +311,11 @@
       "source": "hn_show",
       "title": "Show HN: Agentic CUDA Kernel Optimizer"
     },
+    "362af0c9f201ebf3": {
+      "first_seen": "2026-10-17",
+      "source": "hn_show",
+      "title": "Show HN: Wonderhop – A daily game: guess what most people say, or what none do"
+    },
     "365dd95e9f3f5fbf": {
       "first_seen": "2026-10-02",
       "source": "planetmoney",
@@ -406,6 +411,11 @@
       "source": "hn_ask",
       "title": "Ask HN: What are you reading?"
     },
+    "3e8b370c3dc7b88d": {
+      "first_seen": "2026-10-17",
+      "source": "marketwatch",
+      "title": "The bond market shrugged off two inflation shocks. Why stock investors should pay attention."
+    },
     "3f000715446cf13a": {
       "first_seen": "2026-09-23",
       "source": "awealthofcommonsense",
@@ -415,6 +425,11 @@
       "first_seen": "2026-10-08",
       "source": "economist_fin",
       "title": "American investors’ trick to lower taxes: lose money"
+    },
+    "411a6830a0545053": {
+      "first_seen": "2026-10-17",
+      "source": "hn_show",
+      "title": "Show HN: My Terminal Themes Web App"
     },
     "43908efb2c58e9cb": {
       "first_seen": "2026-10-15",
@@ -586,6 +601,11 @@
       "source": "hn_show",
       "title": "Show HN: An experimental pattern-first DAW that supports MCP"
     },
+    "5a13ce7aaffad260": {
+      "first_seen": "2026-10-17",
+      "source": "hn_show",
+      "title": "Show HN: Gemini 4 Argon plays StarCraft"
+    },
     "5a782934e5e10573": {
       "first_seen": "2026-10-10",
       "source": "japanfinance",
@@ -636,10 +656,25 @@
       "source": "hn_show",
       "title": "Show HN: Sigabrt.dev – cronjob monitor with an SSH TUI"
     },
+    "60894de463677fb7": {
+      "first_seen": "2026-10-17",
+      "source": "hn_ask",
+      "title": "Anthropic Console overcharged my card 100x due to internationalization input bug"
+    },
     "61c0da3a99e7cb28": {
       "first_seen": "2026-10-12",
       "source": "hn_show",
       "title": "Show HN: Diffle, a keyboard-centric diff viewer with LSP support"
+    },
+    "624b1720d9ea127d": {
+      "first_seen": "2026-10-17",
+      "source": "ft_companies",
+      "title": "Italy secures EU deal to lower its electricity prices"
+    },
+    "6257c59c9d88fbc3": {
+      "first_seen": "2026-10-17",
+      "source": "hn_show",
+      "title": "Show HN: Stoke Money – Personal finance app built around a cash flow forecast"
     },
     "62f6909d541eadcd": {
       "first_seen": "2026-09-28",
@@ -660,6 +695,11 @@
       "first_seen": "2026-10-11",
       "source": "hn_show",
       "title": "Show HN: Carrier-Explode: iPhone, Pixel and Galaxy carrier settings decoded"
+    },
+    "647b4159f8ec106d": {
+      "first_seen": "2026-10-17",
+      "source": "japanfinance",
+      "title": "Friday Poll Thread - for those who have reached 'coast', what changed ?"
     },
     "64f733b90d8376ee": {
       "first_seen": "2026-10-12",
@@ -951,6 +991,11 @@
       "source": "marginalrevolution",
       "title": "Supply is elastic, installment #1637"
     },
+    "8a231454d50f2699": {
+      "first_seen": "2026-10-17",
+      "source": "hn_show",
+      "title": "Show HN: rStation – A shared research lab for your AI agents"
+    },
     "8a4d6455521ce750": {
       "first_seen": "2026-09-26",
       "source": "awealthofcommonsense",
@@ -1031,6 +1076,11 @@
       "source": "hn_ask",
       "title": "How to Freelance Now?"
     },
+    "961a468b0e48a8cd": {
+      "first_seen": "2026-10-17",
+      "source": "reddit_builders",
+      "title": "Im offering 2 SaaS founders a few weeks of free engineering help. Here is why."
+    },
     "96e7da2e2d90b9a4": {
       "first_seen": "2026-09-29",
       "source": "ft_companies",
@@ -1110,6 +1160,11 @@
       "first_seen": "2026-10-11",
       "source": "awealthofcommonsense",
       "title": "The Winners & Losers of Higher Interest Rates"
+    },
+    "a2122928a5df54c0": {
+      "first_seen": "2026-10-17",
+      "source": "nikkei_asia",
+      "title": "US has full confidence in Takaichi's fiscal discipline: Treasury official"
     },
     "a3d8f734a10741b6": {
       "first_seen": "2026-09-27",
@@ -1546,10 +1601,20 @@
       "source": "hn_show",
       "title": "Show HN: SoldStack – sold prices API for secondhand clothes"
     },
+    "e88cac823d980e70": {
+      "first_seen": "2026-10-17",
+      "source": "ft_companies",
+      "title": "Big Tech stocks suffer biggest weekly drop since ‘liberation day’"
+    },
     "e9abf1e70b491ae8": {
       "first_seen": "2026-10-05",
       "source": "hn_show",
       "title": "Show HN: Breadcrumb, record everything on your mac + context manager for AI"
+    },
+    "e9b24b133f4835f6": {
+      "first_seen": "2026-10-17",
+      "source": "hn_show",
+      "title": "Show HN: Sygal – Convert PDFs, scans and web pages to Markdown, locally"
     },
     "ea90d022311e9479": {
       "first_seen": "2026-09-18",

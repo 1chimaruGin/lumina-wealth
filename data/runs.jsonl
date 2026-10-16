@@ -45,3 +45,4 @@
 {"at": "2026-10-14", "mode": "daily", "sources_ok": 33, "sources_total": 33, "failed": [], "candidates": 279, "picks": 3, "scored_by": "claude-code", "cost_usd": 0.22139}
 {"at": "2026-10-15", "mode": "daily", "sources_ok": 32, "sources_total": 33, "failed": ["timharford"], "candidates": 329, "picks": 3, "scored_by": "claude-code", "cost_usd": 0.23715}
 {"at": "2026-10-16", "mode": "daily", "sources_ok": 33, "sources_total": 33, "failed": [], "candidates": 335, "picks": 1, "scored_by": "claude-code", "cost_usd": 0.22879}
+{"at": "2026-10-17", "mode": "daily", "sources_ok": 33, "sources_total": 33, "failed": [], "candidates": 326, "picks": 3, "scored_by": "claude-code", "cost_usd": 0.18468}
