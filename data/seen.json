@@ -1,5 +1,5 @@
 {
-  "count": 352,
+  "count": 363,
   "items": {
     "007e061ec788b834": {
       "first_seen": "2026-10-09",
@@ -15,6 +15,11 @@
       "first_seen": "2026-10-11",
       "source": "marketwatch",
       "title": "Why Nvidia’s stock is dodging the AI credit scare that is crushing Broadcom and Oracle"
+    },
+    "02427232eda6c5bc": {
+      "first_seen": "2026-10-18",
+      "source": "hn_show",
+      "title": "Show HN: Esp32sim – Run ESP32 firmware in the browser"
     },
     "02d05d50ed5e32b6": {
       "first_seen": "2026-10-01",
@@ -65,6 +70,11 @@
       "first_seen": "2026-09-24",
       "source": "hn_show",
       "title": "Show HN: I built a post-mortem debugger for native Windows x64/x86 crashes"
+    },
+    "0b943b34f96f56d2": {
+      "first_seen": "2026-10-18",
+      "source": "marketwatch",
+      "title": "Meet the home buyers totally unfazed by 7% mortgage rates"
     },
     "0d4ee8d3a656eb91": {
       "first_seen": "2026-09-26",
@@ -125,6 +135,11 @@
       "first_seen": "2026-10-15",
       "source": "hn_show",
       "title": "Show HN: Graphicle, a Rust port of Graphify with memory for coding agents"
+    },
+    "193c75e957e5e198": {
+      "first_seen": "2026-10-18",
+      "source": "hn_ask",
+      "title": "Ask HN: Are you hesitant to install vibe-coded apps?"
     },
     "1a6d2491b77e8c89": {
       "first_seen": "2026-09-27",
@@ -421,10 +436,20 @@
       "source": "awealthofcommonsense",
       "title": "Animal Spirits: The Wobbly House of Cards"
     },
+    "3f408a3702098b12": {
+      "first_seen": "2026-10-18",
+      "source": "coindesk",
+      "title": "Banks could slow stablecoin growth by paying savers more, BIS paper finds"
+    },
     "40a3cce8ddc83803": {
       "first_seen": "2026-10-08",
       "source": "economist_fin",
       "title": "American investors’ trick to lower taxes: lose money"
+    },
+    "410ae70aa0cfae08": {
+      "first_seen": "2026-10-18",
+      "source": "hn_show",
+      "title": "Show HN: Things to Do API"
     },
     "411a6830a0545053": {
       "first_seen": "2026-10-17",
@@ -611,6 +636,11 @@
       "source": "japanfinance",
       "title": "What to expect from the NTA"
     },
+    "5a7ee043aa8e58ad": {
+      "first_seen": "2026-10-18",
+      "source": "hn_show",
+      "title": "Show HN: High-quality duck audio synthesizer"
+    },
     "5acb10de6eadaf10": {
       "first_seen": "2026-10-01",
       "source": "hn_show",
@@ -625,6 +655,11 @@
       "first_seen": "2026-09-25",
       "source": "reddit_sideproject",
       "title": "Remix a launch video the way you fork a repo. My side project after 6 months."
+    },
+    "5cf8bc3a52e1e15c": {
+      "first_seen": "2026-10-18",
+      "source": "hn_show",
+      "title": "Show HN: Llmspeed – feel how fast a local LLM runs before you buy the hardware"
     },
     "5d63c736fb7cf98e": {
       "first_seen": "2026-10-05",
@@ -735,6 +770,11 @@
       "first_seen": "2026-09-21",
       "source": "hn_show",
       "title": "Show HN: jevals – replacing LLM judges with typed Jev decisions"
+    },
+    "68311c89f6595a23": {
+      "first_seen": "2026-10-18",
+      "source": "awealthofcommonsense",
+      "title": "What’s the Right Level of Interest Rates For the Economy?"
     },
     "68a8443cc3d881a6": {
       "first_seen": "2026-09-19",
@@ -1136,6 +1176,11 @@
       "source": "marketwatch",
       "title": "30-year mortgage rate posts biggest jump in four years"
     },
+    "9f3e4c964b8c905d": {
+      "first_seen": "2026-10-18",
+      "source": "hn_show",
+      "title": "Show HN: OneDeploy – Managed open-source apps with nightly backups and TLS"
+    },
     "a0977d94805cece8": {
       "first_seen": "2026-09-24",
       "source": "awealthofcommonsense",
@@ -1250,6 +1295,11 @@
       "first_seen": "2026-10-08",
       "source": "hn_ask",
       "title": "Tell HN: Apple not letting removal of AI models on macOS 27 is outrageous"
+    },
+    "ae9a0b40802cb671": {
+      "first_seen": "2026-10-18",
+      "source": "hn_show",
+      "title": "Show HN: Fakeipedia – Wikipedia for worlds that don't exist"
     },
     "b1a6c6a4a4210479": {
       "first_seen": "2026-09-29",
@@ -1555,6 +1605,11 @@
       "first_seen": "2026-09-20",
       "source": "hn_show",
       "title": "Show HN: Set, offline Markdown note-taking app with device-to-device sync"
+    },
+    "e31b704014b392fd": {
+      "first_seen": "2026-10-18",
+      "source": "hn_show",
+      "title": "Show HN: I got tired of btop not seeing my Mac's chip, so I built siltop"
     },
     "e3af9e67d41faaf3": {
       "first_seen": "2026-10-08",
