@@ -1,5 +1,5 @@
 {
-  "count": 363,
+  "count": 376,
   "items": {
     "007e061ec788b834": {
       "first_seen": "2026-10-09",
@@ -76,10 +76,20 @@
       "source": "marketwatch",
       "title": "Meet the home buyers totally unfazed by 7% mortgage rates"
     },
+    "0d22d78027b53889": {
+      "first_seen": "2026-10-19",
+      "source": "ft_companies",
+      "title": "US threatens Europe over Starlink restrictions"
+    },
     "0d4ee8d3a656eb91": {
       "first_seen": "2026-09-26",
       "source": "reddit_builders",
       "title": "What are you using for usage based billing?"
+    },
+    "0e1c32a585dd4e05": {
+      "first_seen": "2026-10-19",
+      "source": "hn_show",
+      "title": "Show HN: Sphinx – A hook that quizzes you on your AI's code before shipping"
     },
     "0ea575d9c4e561dc": {
       "first_seen": "2026-09-21",
@@ -681,6 +691,11 @@
       "source": "hn_ask",
       "title": "Anyone using a Wispr Flow alternative that is non-cloud?"
     },
+    "5eb1a3a6e8766175": {
+      "first_seen": "2026-10-19",
+      "source": "reddit_builders",
+      "title": "$600+ MRR from one simple comment"
+    },
     "5f06d68178e6da5a": {
       "first_seen": "2026-09-26",
       "source": "hn_show",
@@ -795,6 +810,11 @@
       "first_seen": "2026-10-13",
       "source": "ft_companies",
       "title": "Labour plan to cut funds from heat pump scheme sparks industry backlash"
+    },
+    "6cc36c0973b74d4b": {
+      "first_seen": "2026-10-19",
+      "source": "freakonomics",
+      "title": "691. Is This What a “Good Billionaire” Looks Like?"
     },
     "6d455570ede58037": {
       "first_seen": "2026-10-05",
@@ -911,6 +931,11 @@
       "source": "hn_ask",
       "title": "Tell HN: Uceprotect is extorting website owners"
     },
+    "7a2b274d4bc79105": {
+      "first_seen": "2026-10-19",
+      "source": "hn_show",
+      "title": "Show HN: 500 clocks in one 6.3 MB HTML file by Opus 5.5"
+    },
     "7b06ea738f27b6bf": {
       "first_seen": "2026-10-06",
       "source": "ft_companies",
@@ -940,6 +965,11 @@
       "first_seen": "2026-09-18",
       "source": "hn_show",
       "title": "Show HN: Microsoft Office running with Wine on Linux with no virtualization"
+    },
+    "7eeb44b577264433": {
+      "first_seen": "2026-10-19",
+      "source": "coindesk",
+      "title": "Latvia eyes crypto tax payments in 2027 as parliament overhauls crypto taxation"
     },
     "7fc2d2012fea3586": {
       "first_seen": "2026-10-02",
@@ -1005,6 +1035,11 @@
       "first_seen": "2026-10-11",
       "source": "hn_show",
       "title": "Show HN: The rarest tech books and docs you've probably never read"
+    },
+    "878ff1446345b768": {
+      "first_seen": "2026-10-19",
+      "source": "marketwatch",
+      "title": "These surprising stocks could be some of the biggest drivers of S&P 500 earnings growth"
     },
     "88362ab1cef9a649": {
       "first_seen": "2026-09-18",
@@ -1111,6 +1146,11 @@
       "source": "behavioralscientist",
       "title": "Frontiers: A Roundtable Discussion on the I-Frame vs. S-Frame Debate"
     },
+    "956d462d69506633": {
+      "first_seen": "2026-10-19",
+      "source": "hn_show",
+      "title": "Show HN: The Zelda timeline to catch up before the Ocarina of Time remake"
+    },
     "95d84a62f098cb66": {
       "first_seen": "2026-09-28",
       "source": "hn_ask",
@@ -1180,6 +1220,11 @@
       "first_seen": "2026-10-18",
       "source": "hn_show",
       "title": "Show HN: OneDeploy – Managed open-source apps with nightly backups and TLS"
+    },
+    "a03656ddad0f54fd": {
+      "first_seen": "2026-10-19",
+      "source": "reddit_builders",
+      "title": "Building a SaaS/AI tool? Let’s talk branding (Premium names inside) 🚀"
     },
     "a0977d94805cece8": {
       "first_seen": "2026-09-24",
@@ -1260,6 +1305,11 @@
       "first_seen": "2026-10-08",
       "source": "reddit_builders",
       "title": "I’m looking for some honest advice from people who have actually bought or sold small SaaS products."
+    },
+    "abf23f8013453ee4": {
+      "first_seen": "2026-10-19",
+      "source": "hn_show",
+      "title": "Show HN: Parin – A 2D game engine between raylib and Godot, written in Dlang"
     },
     "abf452cf9e18fc22": {
       "first_seen": "2026-09-21",
@@ -1411,6 +1461,11 @@
       "source": "ft_companies",
       "title": "The Bank of England’s balance sheet has already stopped shrinking"
     },
+    "c3a14134953bd7c9": {
+      "first_seen": "2026-10-19",
+      "source": "hn_show",
+      "title": "Show HN: CallSitter – bot that answers my calls and wastes scammers' time"
+    },
     "c4479fafdff7b0f4": {
       "first_seen": "2026-10-01",
       "source": "hn_show",
@@ -1536,6 +1591,11 @@
       "source": "marketwatch",
       "title": "Switching jobs to get higher pay works best in these industries"
     },
+    "d8c9444c5cfaf038": {
+      "first_seen": "2026-10-19",
+      "source": "coindesk",
+      "title": "Crypto audits give investors false sense of security as Q3 hacks cost $1.18 billion, Hacken says"
+    },
     "d911ff91163f6c4c": {
       "first_seen": "2026-10-03",
       "source": "hn_show",
@@ -1590,6 +1650,11 @@
       "first_seen": "2026-10-13",
       "source": "awealthofcommonsense",
       "title": "Betting on Hope"
+    },
+    "e01381226f7955df": {
+      "first_seen": "2026-10-19",
+      "source": "hn_show",
+      "title": "Show HN: Ranet3 – High performance policy routed IPsec mesh SD-WAN"
     },
     "e0ff8c3a76cfd4f6": {
       "first_seen": "2026-09-26",
