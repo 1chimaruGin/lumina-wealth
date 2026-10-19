@@ -1,5 +1,5 @@
 {
-  "count": 376,
+  "count": 389,
   "items": {
     "007e061ec788b834": {
       "first_seen": "2026-10-09",
@@ -46,6 +46,11 @@
       "source": "reddit_builders",
       "title": "I built an iMessage agent for startup job hunting"
     },
+    "045a469c80b94f5b": {
+      "first_seen": "2026-10-20",
+      "source": "reddit_builders",
+      "title": "I got tired of only seeing 10k MRR success stories, so I built a place for honest build stories - cost, time, stack"
+    },
     "05049c22f724c510": {
       "first_seen": "2026-09-23",
       "source": "hn_ask",
@@ -76,6 +81,11 @@
       "source": "marketwatch",
       "title": "Meet the home buyers totally unfazed by 7% mortgage rates"
     },
+    "0ce9b259116624d1": {
+      "first_seen": "2026-10-20",
+      "source": "bbc_business",
+      "title": "China's growth accelerates as AI boom helps boost exports"
+    },
     "0d22d78027b53889": {
       "first_seen": "2026-10-19",
       "source": "ft_companies",
@@ -95,6 +105,11 @@
       "first_seen": "2026-09-21",
       "source": "hn_show",
       "title": "Show HN: Radius – A Meetup.com Alternative"
+    },
+    "0f00de936e62bba8": {
+      "first_seen": "2026-10-20",
+      "source": "reddit_builders",
+      "title": "Would freelancers actually use a single link to onboard new clients?"
     },
     "108484971e36be76": {
       "first_seen": "2026-10-07",
@@ -256,6 +271,16 @@
       "source": "hn_show",
       "title": "Show HN: Opus 5.5 made a fully featured Figma clone in 3 hours / 8 prompts"
     },
+    "290e94fd146cae35": {
+      "first_seen": "2026-10-20",
+      "source": "marketwatch",
+      "title": "Colleges raced to build massive computer-science departments. Now the boom is turning to bust."
+    },
+    "2a6ac23eb50f0535": {
+      "first_seen": "2026-10-20",
+      "source": "hn_show",
+      "title": "Show HN: WhatsApp MCP running free on Cloudflare"
+    },
     "2aa6acd28e1a954f": {
       "first_seen": "2026-09-17",
       "source": "hn_show",
@@ -310,6 +335,11 @@
       "first_seen": "2026-10-10",
       "source": "hn_show",
       "title": "Show HN: SVG Spark – 10 client-side SVG design and dev tools"
+    },
+    "337549f33a482927": {
+      "first_seen": "2026-10-20",
+      "source": "hn_show",
+      "title": "Show HN: KiviDB, a faster Redis-compatible memory database and vector cache"
     },
     "33b960f5d23aee12": {
       "first_seen": "2026-10-15",
@@ -511,10 +541,20 @@
       "source": "hn_show",
       "title": "Show HN: Open-source model routing for coding agents at Astra-level performance"
     },
+    "4745476b2cf5984c": {
+      "first_seen": "2026-10-20",
+      "source": "hn_show",
+      "title": "Show HN: Strot – Compile an LLM's intent once, run decisions locally"
+    },
     "47b832b0b4ac6475": {
       "first_seen": "2026-10-12",
       "source": "marketwatch",
       "title": "The bull market is turning 4 years old — but yields could crash the party"
+    },
+    "47bd92d163d0e7b5": {
+      "first_seen": "2026-10-20",
+      "source": "reddit_builders",
+      "title": "I just launched CloudAuro, a website hosting platform"
     },
     "47e32662b43840a7": {
       "first_seen": "2026-10-12",
@@ -735,6 +775,11 @@
       "first_seen": "2026-10-14",
       "source": "reddit_builders",
       "title": "Visited the Zoute Grand Prix in Knokke, found every car/parking app overly monetized, so I built my own free open-source car scanner in Kotl"
+    },
+    "63bad746129764fb": {
+      "first_seen": "2026-10-20",
+      "source": "marginalrevolution",
+      "title": "No, DataCenters are Not Crowding-Out Other Investments"
     },
     "644978a1273ab2c3": {
       "first_seen": "2026-09-25",
@@ -1351,6 +1396,11 @@
       "source": "hn_show",
       "title": "Show HN: Fakeipedia – Wikipedia for worlds that don't exist"
     },
+    "b15e2cfe207afea0": {
+      "first_seen": "2026-10-20",
+      "source": "hn_show",
+      "title": "Show HN: Qwen3-4B with the AI writing tics trained out"
+    },
     "b1a6c6a4a4210479": {
       "first_seen": "2026-09-29",
       "source": "reddit_builders",
@@ -1441,6 +1491,11 @@
       "source": "hn_show",
       "title": "Show HN: Hntui – A TUI for Hacker News"
     },
+    "bee2389228360f43": {
+      "first_seen": "2026-10-20",
+      "source": "hn_show",
+      "title": "Show HN: Vibe coded a city builder set in ancient Rome"
+    },
     "bf00cdb689bec46e": {
       "first_seen": "2026-10-01",
       "source": "ft_companies",
@@ -1450,6 +1505,11 @@
       "first_seen": "2026-10-11",
       "source": "hn_show",
       "title": "Show HN: Let your AI agents paint big arrows, boxes and text on your screen"
+    },
+    "bf5bfdbd6c44d8e8": {
+      "first_seen": "2026-10-20",
+      "source": "marketwatch",
+      "title": "Builders slash prices on new homes as buyer traffic drops to 14-year low"
     },
     "bf79879b30894193": {
       "first_seen": "2026-10-12",
@@ -1545,6 +1605,11 @@
       "first_seen": "2026-10-09",
       "source": "hn_ask",
       "title": "Tell HN: HN has lost the joy for me"
+    },
+    "d243678df57dd2cd": {
+      "first_seen": "2026-10-20",
+      "source": "marketwatch",
+      "title": "‘I’m naturally skeptical’: I receive 10 calls a day offering me $15,000 loans at 8% interest. Is this a scam?"
     },
     "d2963bd75db6285b": {
       "first_seen": "2026-09-22",
