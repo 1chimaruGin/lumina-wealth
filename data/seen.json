@@ -1,5 +1,5 @@
 {
-  "count": 389,
+  "count": 400,
   "items": {
     "007e061ec788b834": {
       "first_seen": "2026-10-09",
@@ -20,6 +20,11 @@
       "first_seen": "2026-10-18",
       "source": "hn_show",
       "title": "Show HN: Esp32sim – Run ESP32 firmware in the browser"
+    },
+    "02b82d367685ef5a": {
+      "first_seen": "2026-10-21",
+      "source": "hn_show",
+      "title": "Show HN: VoidAccess – open-source dark web OSINT, from query to a graph"
     },
     "02d05d50ed5e32b6": {
       "first_seen": "2026-10-01",
@@ -61,6 +66,11 @@
       "source": "hn_show",
       "title": "Show HN: Will Jev pull the lever in the trolley problem?"
     },
+    "07d8c3b4813f0f9b": {
+      "first_seen": "2026-10-21",
+      "source": "ofdollarsanddata",
+      "title": "What is the Average Net Worth by Age? [2025 Latest Data]"
+    },
     "0858e483249d4d6c": {
       "first_seen": "2026-09-21",
       "source": "hn_show",
@@ -80,6 +90,11 @@
       "first_seen": "2026-10-18",
       "source": "marketwatch",
       "title": "Meet the home buyers totally unfazed by 7% mortgage rates"
+    },
+    "0be981a9fb44d08e": {
+      "first_seen": "2026-10-21",
+      "source": "hn_show",
+      "title": "Show HN: Rouler – Steer Windows traffic per app or IP across multiple interfaces"
     },
     "0ce9b259116624d1": {
       "first_seen": "2026-10-20",
@@ -140,6 +155,11 @@
       "first_seen": "2026-10-04",
       "source": "hn_show",
       "title": "Show HN: Pi pod – Run your pi coding agent in sandboxes on your own server"
+    },
+    "14242a0d03562ba4": {
+      "first_seen": "2026-10-21",
+      "source": "hn_show",
+      "title": "Show HN: Penmentor – Claude marks up your handwritten math like a teacher"
     },
     "16212e61438fe737": {
       "first_seen": "2026-10-04",
@@ -406,6 +426,11 @@
       "source": "hn_show",
       "title": "Show HN: Jev Plays Pokémon Red"
     },
+    "3906f1ad96893f31": {
+      "first_seen": "2026-10-21",
+      "source": "hn_show",
+      "title": "Show HN: Jev Cards, Can you beat a vision model at a picture quiz?"
+    },
     "39203af7f2592df4": {
       "first_seen": "2026-10-13",
       "source": "reddit_builders",
@@ -590,6 +615,11 @@
       "first_seen": "2026-10-03",
       "source": "hn_show",
       "title": "Show HN: Giving Opus 5.5 a simulated paint canvas"
+    },
+    "4c44ba8727c5a9fb": {
+      "first_seen": "2026-10-21",
+      "source": "bbc_business",
+      "title": "Audit regulator looking into Manchester City accounting"
     },
     "4d20a54c0eac7cc0": {
       "first_seen": "2026-10-07",
@@ -856,6 +886,11 @@
       "source": "ft_companies",
       "title": "Labour plan to cut funds from heat pump scheme sparks industry backlash"
     },
+    "6bcbd1b996df15e7": {
+      "first_seen": "2026-10-21",
+      "source": "hn_show",
+      "title": "Show HN: I built a task system to handle the drudgery so I could focus on tasks"
+    },
     "6cc36c0973b74d4b": {
       "first_seen": "2026-10-19",
       "source": "freakonomics",
@@ -885,6 +920,11 @@
       "first_seen": "2026-09-25",
       "source": "hn_show",
       "title": "Show HN: Whiteboard (YC W26) – An open-source IDE for thoughtful software design"
+    },
+    "71094174f326b71b": {
+      "first_seen": "2026-10-21",
+      "source": "hn_ask",
+      "title": "Ask HN: How to deal with shipping AI-written code you don't understand?"
     },
     "7171ac78141d1fbc": {
       "first_seen": "2026-10-07",
@@ -1010,6 +1050,11 @@
       "first_seen": "2026-09-18",
       "source": "hn_show",
       "title": "Show HN: Microsoft Office running with Wine on Linux with no virtualization"
+    },
+    "7e1b17e91a6b6a2c": {
+      "first_seen": "2026-10-21",
+      "source": "hn_show",
+      "title": "Show HN: RoadRash ported to Three.js to run in the browser"
     },
     "7eeb44b577264433": {
       "first_seen": "2026-10-19",
@@ -1506,6 +1551,11 @@
       "source": "hn_show",
       "title": "Show HN: Let your AI agents paint big arrows, boxes and text on your screen"
     },
+    "bf40330273ef4f98": {
+      "first_seen": "2026-10-21",
+      "source": "ft_companies",
+      "title": "UK to approve development of Jackdaw gasfield in North Sea"
+    },
     "bf5bfdbd6c44d8e8": {
       "first_seen": "2026-10-20",
       "source": "marketwatch",
@@ -1855,6 +1905,11 @@
       "first_seen": "2026-09-20",
       "source": "hn_show",
       "title": "Show HN: Rubrol – Sub-10ms PDF engine using Typst instead of Headless Chrome"
+    },
+    "f5650bacb7dba05a": {
+      "first_seen": "2026-10-21",
+      "source": "hn_show",
+      "title": "Show HN: Death Plan Switch, a self-hosted dead man's switch for solo devs"
     },
     "f5987a8199ffd88e": {
       "first_seen": "2026-09-29",
