@@ -1,5 +1,5 @@
 {
-  "count": 400,
+  "count": 413,
   "items": {
     "007e061ec788b834": {
       "first_seen": "2026-10-09",
@@ -285,6 +285,11 @@
       "first_seen": "2026-10-03",
       "source": "hn_ask",
       "title": "Muse.ai gets me kicked off fb marketplace"
+    },
+    "28c32189f4c40826": {
+      "first_seen": "2026-10-22",
+      "source": "marginalrevolution",
+      "title": "Saving for the machines"
     },
     "28c42d0b09e29c08": {
       "first_seen": "2026-10-13",
@@ -591,6 +596,16 @@
       "source": "hn_show",
       "title": "Show HN: Rgpu – a PyTorch device whose tensors live on a remote GPU"
     },
+    "47fb700b5cee5337": {
+      "first_seen": "2026-10-22",
+      "source": "reddit_builders",
+      "title": "Launched my side project last week — looking for brutally honest feedback on the concept and landing page"
+    },
+    "484d2e6926949239": {
+      "first_seen": "2026-10-22",
+      "source": "bbc_business",
+      "title": "The \"trillion pound\" oil fund the government believes Britain could have built"
+    },
     "4a311e18c894116a": {
       "first_seen": "2026-09-22",
       "source": "hn_show",
@@ -881,6 +896,11 @@
       "source": "marketwatch",
       "title": "CoreWeave’s AI bonds tumble, raising red flags for the wider market"
     },
+    "6996595eaf9e43e0": {
+      "first_seen": "2026-10-22",
+      "source": "bbc_business",
+      "title": "Meta fined $25bn for 'lies' over user data privacy"
+    },
     "6ace05f76f2b1985": {
       "first_seen": "2026-10-13",
       "source": "ft_companies",
@@ -955,6 +975,11 @@
       "first_seen": "2026-10-16",
       "source": "hn_show",
       "title": "Show HN: Ito – Build Terminal UIs in Lua"
+    },
+    "73379a76d8cf4ed6": {
+      "first_seen": "2026-10-22",
+      "source": "hn_show",
+      "title": "Show HN: ULDA – Client-side encryption with a simple JavaScript API"
     },
     "7353d228e9146cbf": {
       "first_seen": "2026-10-07",
@@ -1231,6 +1256,11 @@
       "source": "hn_show",
       "title": "Show HN: Give your AI agents access to WhatsApp"
     },
+    "92a57943eb255271": {
+      "first_seen": "2026-10-22",
+      "source": "hn_ask",
+      "title": "GCP Europe-West2 Outage"
+    },
     "939640ed8e963c3c": {
       "first_seen": "2026-10-09",
       "source": "behavioralscientist",
@@ -1451,6 +1481,11 @@
       "source": "reddit_builders",
       "title": "I checked 30 customer accounts. 3 were actually unprofitable."
     },
+    "b1cb12e60c8c4ff7": {
+      "first_seen": "2026-10-22",
+      "source": "hn_show",
+      "title": "Show HN: Sumi.css – CSS Framework"
+    },
     "b2f712a899907cd6": {
       "first_seen": "2026-10-08",
       "source": "ft_companies",
@@ -1571,6 +1606,11 @@
       "source": "ft_companies",
       "title": "The Bank of England’s balance sheet has already stopped shrinking"
     },
+    "c081a08c2b1a48f6": {
+      "first_seen": "2026-10-22",
+      "source": "reddit_builders",
+      "title": "Launching a website globally any advice? 📩"
+    },
     "c3a14134953bd7c9": {
       "first_seen": "2026-10-19",
       "source": "hn_show",
@@ -1606,10 +1646,20 @@
       "source": "hn_show",
       "title": "Show HN: Conway's Game of Life in boot sector"
     },
+    "cafe6b22bc85ec0b": {
+      "first_seen": "2026-10-22",
+      "source": "hn_show",
+      "title": "Show HN: I told people I'm a convicted felon after 20 years of hiding it"
+    },
     "cb0908fa52c79627": {
       "first_seen": "2026-10-15",
       "source": "hn_show",
       "title": "Show HN: I wrote an email app that accepts only one sender per inbox"
+    },
+    "cc28d84b8cecf167": {
+      "first_seen": "2026-10-22",
+      "source": "ft_companies",
+      "title": "Meta agrees deal to keep Zuckerberg in California despite wealth tax proposal"
     },
     "cd69215e60e4b7a4": {
       "first_seen": "2026-09-21",
@@ -1866,6 +1916,11 @@
       "source": "hn_show",
       "title": "Show HN: Janus – Go binary that runs GGUF models via Vulkan on AMD/Intel/Nvidia"
     },
+    "edeaa49e1f5e7570": {
+      "first_seen": "2026-10-22",
+      "source": "hn_ask",
+      "title": "Tell HN: 2x PHP RCE CVEs with CVSS 10.0 Incoming"
+    },
     "ee4f657a56bd17f5": {
       "first_seen": "2026-10-08",
       "source": "hn_show",
@@ -1940,6 +1995,16 @@
       "first_seen": "2026-10-11",
       "source": "ft_companies",
       "title": "AI borrowing slows as investors grow wary of debt binge"
+    },
+    "f7f77bbb97fe20e6": {
+      "first_seen": "2026-10-22",
+      "source": "marketwatch",
+      "title": "Trump says data centers should generate their own electricity — but experts say only states can mandate that"
+    },
+    "f933f1f1a760390e": {
+      "first_seen": "2026-10-22",
+      "source": "hn_show",
+      "title": "Show HN: SimCity, but with Permits"
     },
     "fa35849781166026": {
       "first_seen": "2026-10-07",
