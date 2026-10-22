@@ -1,5 +1,5 @@
 {
-  "count": 413,
+  "count": 426,
   "items": {
     "007e061ec788b834": {
       "first_seen": "2026-10-09",
@@ -56,6 +56,11 @@
       "source": "reddit_builders",
       "title": "I got tired of only seeing 10k MRR success stories, so I built a place for honest build stories - cost, time, stack"
     },
+    "04f0a95eb6b9fd87": {
+      "first_seen": "2026-10-23",
+      "source": "marketwatch",
+      "title": "Oil prices approach Iran-war highs as soaring tanker rates trigger a second energy squeeze"
+    },
     "05049c22f724c510": {
       "first_seen": "2026-09-23",
       "source": "hn_ask",
@@ -110,6 +115,11 @@
       "first_seen": "2026-09-26",
       "source": "reddit_builders",
       "title": "What are you using for usage based billing?"
+    },
+    "0d663c79d2d20cc4": {
+      "first_seen": "2026-10-23",
+      "source": "hn_show",
+      "title": "Show HN: Uberblok – an interactive museum of ZFS internals"
     },
     "0e1c32a585dd4e05": {
       "first_seen": "2026-10-19",
@@ -526,6 +536,11 @@
       "source": "hn_show",
       "title": "Show HN: My Terminal Themes Web App"
     },
+    "41b0a329ca38f631": {
+      "first_seen": "2026-10-23",
+      "source": "hn_ask",
+      "title": "eMudhra to Exit Global SSL/TLS Certificate Business;"
+    },
     "43908efb2c58e9cb": {
       "first_seen": "2026-10-15",
       "source": "marketwatch",
@@ -560,6 +575,11 @@
       "first_seen": "2026-09-30",
       "source": "hn_show",
       "title": "Show HN: Museum of Numbers"
+    },
+    "463ffc77f7161b15": {
+      "first_seen": "2026-10-23",
+      "source": "hn_show",
+      "title": "Show HN: Turn regular JavaScript into a neural net"
     },
     "4667d313bc36a186": {
       "first_seen": "2026-10-13",
@@ -741,6 +761,11 @@
       "source": "hn_show",
       "title": "Show HN: Jevstiller – Distill Jev into a local model, with a disagreement bound"
     },
+    "5c56e87087c48684": {
+      "first_seen": "2026-10-23",
+      "source": "damodaran",
+      "title": "From Eyeballs to Annual Run Rates (ARR): Buzzy Pricing Metrics and the Anthropic Trade!"
+    },
     "5c62aca4451929a9": {
       "first_seen": "2026-09-28",
       "source": "hn_show",
@@ -916,6 +941,11 @@
       "source": "freakonomics",
       "title": "691. Is This What a “Good Billionaire” Looks Like?"
     },
+    "6cecc2766dea41ef": {
+      "first_seen": "2026-10-23",
+      "source": "ft_companies",
+      "title": "Blackstone cuts property valuations as higher rates hit returns"
+    },
     "6d455570ede58037": {
       "first_seen": "2026-10-05",
       "source": "ft_companies",
@@ -930,6 +960,11 @@
       "first_seen": "2026-10-16",
       "source": "ft_companies",
       "title": "Harvard’s endowment returns surge on back of AI and SpaceX investments"
+    },
+    "6ff66be1cb226649": {
+      "first_seen": "2026-10-23",
+      "source": "hn_show",
+      "title": "Show HN: UI micro interactions prompts for AI"
     },
     "702c3f24c909e329": {
       "first_seen": "2026-10-14",
@@ -1005,6 +1040,11 @@
       "first_seen": "2026-10-04",
       "source": "reddit_builders",
       "title": "I built B2B SaaS OS – Next.js 16 + Supabase starter with an automated 8-point security test runner"
+    },
+    "753bb2d1de6b3012": {
+      "first_seen": "2026-10-23",
+      "source": "ft_companies",
+      "title": "UK waters down ‘fit and proper’ rules set up to hold bankers to account"
     },
     "7597fd09aa5e3688": {
       "first_seen": "2026-10-16",
@@ -1105,6 +1145,11 @@
       "first_seen": "2026-10-15",
       "source": "hn_show",
       "title": "Show HN: A guided 3D Leonardo da Vinci museum, built in code"
+    },
+    "812873a8e1e5facc": {
+      "first_seen": "2026-10-23",
+      "source": "marketwatch",
+      "title": "Treasury yields log biggest drop since the 2023 banking crisis. Here’s what’s going on."
     },
     "8175d7c6796ef21f": {
       "first_seen": "2026-09-19",
@@ -1370,6 +1415,11 @@
       "first_seen": "2026-10-11",
       "source": "awealthofcommonsense",
       "title": "The Winners & Losers of Higher Interest Rates"
+    },
+    "a1ee33a52509d445": {
+      "first_seen": "2026-10-23",
+      "source": "hn_show",
+      "title": "Show HN: Omnara – Open-source alternative to Claude Managed Agents"
     },
     "a2122928a5df54c0": {
       "first_seen": "2026-10-17",
@@ -1656,6 +1706,11 @@
       "source": "hn_show",
       "title": "Show HN: I wrote an email app that accepts only one sender per inbox"
     },
+    "cc200911000adcbb": {
+      "first_seen": "2026-10-23",
+      "source": "marginalrevolution",
+      "title": "How Long Do Wealth Shocks Persist? Less Than Three Generations in England, 1700–2026"
+    },
     "cc28d84b8cecf167": {
       "first_seen": "2026-10-22",
       "source": "ft_companies",
@@ -1720,6 +1775,11 @@
       "first_seen": "2026-09-29",
       "source": "japanfinance",
       "title": "My Experience with an NTA Agent Regarding FX Gains/Losses"
+    },
+    "d2d147873d73c857": {
+      "first_seen": "2026-10-23",
+      "source": "hn_ask",
+      "title": "Ask HN: If the models are so good, why doesn't OpenAI just start 100 companies?"
     },
     "d367041addc37f34": {
       "first_seen": "2026-10-13",
@@ -1950,6 +2010,11 @@
       "first_seen": "2026-09-27",
       "source": "ft_companies",
       "title": "Burnham to revive Help to Buy scheme in bid to aid first-time buyers"
+    },
+    "f3cc35f9475b86c1": {
+      "first_seen": "2026-10-23",
+      "source": "hn_show",
+      "title": "Show HN: I built a Markdown and raw HTML blog platform scoring 99 on PageSpeed"
     },
     "f42b726f0675b58b": {
       "first_seen": "2026-10-02",
