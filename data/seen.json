@@ -1,5 +1,5 @@
 {
-  "count": 426,
+  "count": 439,
   "items": {
     "007e061ec788b834": {
       "first_seen": "2026-10-09",
@@ -15,6 +15,11 @@
       "first_seen": "2026-10-11",
       "source": "marketwatch",
       "title": "Why Nvidia’s stock is dodging the AI credit scare that is crushing Broadcom and Oracle"
+    },
+    "022b6ce23e527da4": {
+      "first_seen": "2026-10-24",
+      "source": "japanfinance",
+      "title": "Moving to Japan from Canada"
     },
     "02427232eda6c5bc": {
       "first_seen": "2026-10-18",
@@ -85,6 +90,11 @@
       "first_seen": "2026-09-17",
       "source": "hn_show",
       "title": "Show HN: I built a new version of my fun spatial 3D online meeting app"
+    },
+    "0a68678458619ed9": {
+      "first_seen": "2026-10-24",
+      "source": "ft_companies",
+      "title": "National Crime Agency wins freezing order over £15mn London flat"
     },
     "0b540d37febda4a8": {
       "first_seen": "2026-09-24",
@@ -216,6 +226,11 @@
       "source": "hn_show",
       "title": "Show HN: AI search for every photo and every frame of video on macOS"
     },
+    "1dcc92b8fe851772": {
+      "first_seen": "2026-10-24",
+      "source": "hn_show",
+      "title": "Show HN: We had AI write a wiki from 45k Enron emails, every fact cited"
+    },
     "1dd845e0f72e08c2": {
       "first_seen": "2026-10-10",
       "source": "ft_companies",
@@ -230,6 +245,11 @@
       "first_seen": "2026-09-28",
       "source": "hn_show",
       "title": "Show HN: Ekselio – Loveable for finance workflows (local first)"
+    },
+    "220b792ecf08356e": {
+      "first_seen": "2026-10-24",
+      "source": "ft_companies",
+      "title": "London Underground blames rising delays on repair backlog"
     },
     "2215665ac20f1d7a": {
       "first_seen": "2026-10-09",
@@ -951,6 +971,11 @@
       "source": "ft_companies",
       "title": "Dealmaking slowdown threatens early end to M&A boom"
     },
+    "6d6d92c3e871515a": {
+      "first_seen": "2026-10-24",
+      "source": "hn_show",
+      "title": "Show HN: Impossible Machines: declaratively program the physical world"
+    },
     "6d94eabab0b15f71": {
       "first_seen": "2026-09-27",
       "source": "hn_show",
@@ -1041,6 +1066,11 @@
       "source": "reddit_builders",
       "title": "I built B2B SaaS OS – Next.js 16 + Supabase starter with an automated 8-point security test runner"
     },
+    "7502ffe393ce17ad": {
+      "first_seen": "2026-10-24",
+      "source": "hn_show",
+      "title": "Show HN: OnKey – I'm a bad singer, so I built an app to show where I'm off-key"
+    },
     "753bb2d1de6b3012": {
       "first_seen": "2026-10-23",
       "source": "ft_companies",
@@ -1055,6 +1085,11 @@
       "first_seen": "2026-10-12",
       "source": "ft_companies",
       "title": "UK spending on subscriptions rapidly outpaces other goods and services"
+    },
+    "760ea34d457135c0": {
+      "first_seen": "2026-10-24",
+      "source": "hn_ask",
+      "title": "Tell HN: I unknowingly broke the PHP RCE embargo. I am sorry"
     },
     "7737ad254ded6080": {
       "first_seen": "2026-09-23",
@@ -1085,6 +1120,11 @@
       "first_seen": "2026-10-19",
       "source": "hn_show",
       "title": "Show HN: 500 clocks in one 6.3 MB HTML file by Opus 5.5"
+    },
+    "7a5061c4c5ef3bba": {
+      "first_seen": "2026-10-24",
+      "source": "bbc_business",
+      "title": "White House lifts tariffs on some Canadian goods as midterm elections loom"
     },
     "7b06ea738f27b6bf": {
       "first_seen": "2026-10-06",
@@ -1696,6 +1736,11 @@
       "source": "hn_show",
       "title": "Show HN: Conway's Game of Life in boot sector"
     },
+    "cae943e48e615892": {
+      "first_seen": "2026-10-24",
+      "source": "marketwatch",
+      "title": "Investors piled a record sum into a leveraged semiconductor ETF last week. Things didn’t work out."
+    },
     "cafe6b22bc85ec0b": {
       "first_seen": "2026-10-22",
       "source": "hn_show",
@@ -1730,6 +1775,11 @@
       "first_seen": "2026-10-13",
       "source": "reddit_builders",
       "title": "I built 4 isolated Next.js 15 boilerplates instead of one giant repo – launching today with early access pricing"
+    },
+    "cdf86179f9a2ec80": {
+      "first_seen": "2026-10-24",
+      "source": "hn_show",
+      "title": "Show HN: Swurf – Swipe through the real web"
     },
     "d02fb1281f749011": {
       "first_seen": "2026-09-26",
@@ -1780,6 +1830,11 @@
       "first_seen": "2026-10-23",
       "source": "hn_ask",
       "title": "Ask HN: If the models are so good, why doesn't OpenAI just start 100 companies?"
+    },
+    "d2e1c90caf13ead0": {
+      "first_seen": "2026-10-24",
+      "source": "hn_ask",
+      "title": "Median product \"lifespan\" has fallen from ~4y down to ~1.5y"
     },
     "d367041addc37f34": {
       "first_seen": "2026-10-13",
@@ -1911,6 +1966,11 @@
       "source": "reddit_builders",
       "title": "Most SaaS \"X vs Y\" comparison posts are just citation loops quoting dead pricing pages"
     },
+    "e4c332e9fa8c240d": {
+      "first_seen": "2026-10-24",
+      "source": "hn_show",
+      "title": "Show HN: An icon for every city in North America"
+    },
     "e6753b8422696224": {
       "first_seen": "2026-10-13",
       "source": "hn_show",
@@ -1975,6 +2035,11 @@
       "first_seen": "2026-10-03",
       "source": "hn_show",
       "title": "Show HN: Janus – Go binary that runs GGUF models via Vulkan on AMD/Intel/Nvidia"
+    },
+    "eaeb4841c281d36f": {
+      "first_seen": "2026-10-24",
+      "source": "hn_show",
+      "title": "Show HN: Making a smart TV dumb and then smart"
     },
     "edeaa49e1f5e7570": {
       "first_seen": "2026-10-22",
