@@ -1,5 +1,5 @@
 {
-  "count": 439,
+  "count": 451,
   "items": {
     "007e061ec788b834": {
       "first_seen": "2026-10-09",
@@ -10,6 +10,11 @@
       "first_seen": "2026-09-26",
       "source": "hn_ask",
       "title": "Ask HN: What job boards are good these days?"
+    },
+    "0144c916c25fe84e": {
+      "first_seen": "2026-10-25",
+      "source": "hn_show",
+      "title": "Show HN: agent-usage-guard – a Claude Code mod to protect your usage window"
     },
     "01eff61eed2a9591": {
       "first_seen": "2026-10-11",
@@ -111,6 +116,11 @@
       "source": "hn_show",
       "title": "Show HN: Rouler – Steer Windows traffic per app or IP across multiple interfaces"
     },
+    "0c52706d1cc52b2e": {
+      "first_seen": "2026-10-25",
+      "source": "hn_show",
+      "title": "Show HN: Corgi, a helpful {agent, terminal} multiplexer"
+    },
     "0ce9b259116624d1": {
       "first_seen": "2026-10-20",
       "source": "bbc_business",
@@ -181,6 +191,11 @@
       "source": "hn_show",
       "title": "Show HN: Penmentor – Claude marks up your handwritten math like a teacher"
     },
+    "153b7aa18d6a1f9a": {
+      "first_seen": "2026-10-25",
+      "source": "hn_show",
+      "title": "Show HN: Autonomous root for Tcl Android TV via CVE-2022-22706"
+    },
     "16212e61438fe737": {
       "first_seen": "2026-10-04",
       "source": "hn_show",
@@ -240,6 +255,11 @@
       "first_seen": "2026-09-27",
       "source": "hn_show",
       "title": "Show HN: Hacker Atlas - A map of what Hacker News talks about"
+    },
+    "1f21a11f54e05b7b": {
+      "first_seen": "2026-10-25",
+      "source": "hn_show",
+      "title": "Show HN: Steal My Bitcoin"
     },
     "20e150296e94b6f7": {
       "first_seen": "2026-09-28",
@@ -806,6 +826,11 @@
       "source": "hn_show",
       "title": "Show HN: Our space game has a built-in RISC-V emulator that runs Linux"
     },
+    "5deed5e5e29ae151": {
+      "first_seen": "2026-10-25",
+      "source": "coindesk",
+      "title": "Strategy, Strive face balancing act between bitcoin buying and preferred stock dividends"
+    },
     "5e0d593e160323d9": {
       "first_seen": "2026-10-07",
       "source": "hn_show",
@@ -981,6 +1006,16 @@
       "source": "hn_show",
       "title": "Show HN: The last day of the dinosaurs, as an interactive painting"
     },
+    "6dcec45bac3311bf": {
+      "first_seen": "2026-10-25",
+      "source": "producthunt",
+      "title": "Product Hunt Visual Launch Editor"
+    },
+    "6f70eb856097b65f": {
+      "first_seen": "2026-10-25",
+      "source": "awealthofcommonsense",
+      "title": "Markets Are Always Different This Time"
+    },
     "6f91feacae1a7152": {
       "first_seen": "2026-10-16",
       "source": "ft_companies",
@@ -1000,6 +1035,11 @@
       "first_seen": "2026-09-25",
       "source": "hn_show",
       "title": "Show HN: Whiteboard (YC W26) – An open-source IDE for thoughtful software design"
+    },
+    "70b749766ce21eee": {
+      "first_seen": "2026-10-25",
+      "source": "nikkei_asia",
+      "title": "Japan weighs rebranding energy, AI as defense spending under Trump pressure"
     },
     "71094174f326b71b": {
       "first_seen": "2026-10-21",
@@ -1351,6 +1391,16 @@
       "source": "behavioralscientist",
       "title": "Frontiers: A Roundtable Discussion on the I-Frame vs. S-Frame Debate"
     },
+    "9437e02f221acb6e": {
+      "first_seen": "2026-10-25",
+      "source": "marketwatch",
+      "title": "The Social Security Administration wants more babies signed up for ‘Trump accounts.’ But there’s still a catch."
+    },
+    "953b648e8b36fef3": {
+      "first_seen": "2026-10-25",
+      "source": "reddit_builders",
+      "title": "How to get first users?"
+    },
     "956d462d69506633": {
       "first_seen": "2026-10-19",
       "source": "hn_show",
@@ -1410,6 +1460,11 @@
       "first_seen": "2026-10-13",
       "source": "reddit_builders",
       "title": "I made a saas for 5$/month"
+    },
+    "9dc6be4c8edededb": {
+      "first_seen": "2026-10-25",
+      "source": "hn_ask",
+      "title": "Open-source, cross-harness memory for AI agents"
     },
     "9e3ed547b6b0c997": {
       "first_seen": "2026-09-22",
@@ -1935,6 +1990,11 @@
       "first_seen": "2026-10-19",
       "source": "hn_show",
       "title": "Show HN: Ranet3 – High performance policy routed IPsec mesh SD-WAN"
+    },
+    "e051f0f7e469a78c": {
+      "first_seen": "2026-10-25",
+      "source": "hn_show",
+      "title": "Show HN: Enzyme – a programming language that compiles wikis for agents"
     },
     "e0ff8c3a76cfd4f6": {
       "first_seen": "2026-09-26",
