@@ -1,10 +1,15 @@
 {
-  "count": 451,
+  "count": 463,
   "items": {
     "007e061ec788b834": {
       "first_seen": "2026-10-09",
       "source": "marketwatch",
       "title": "The Treasury market is facing a crucial vote of investor confidence"
+    },
+    "00f9a35730188d0a": {
+      "first_seen": "2026-10-26",
+      "source": "hn_show",
+      "title": "Show HN: Hurston-1 open source TTS that speak Southern American and Afro-English"
     },
     "0120dc65a5a10382": {
       "first_seen": "2026-09-26",
@@ -666,6 +671,11 @@
       "source": "bbc_business",
       "title": "The \"trillion pound\" oil fund the government believes Britain could have built"
     },
+    "48f2a1a2b5470b80": {
+      "first_seen": "2026-10-26",
+      "source": "awealthofcommonsense",
+      "title": "Talk Your Book: Investing in Single Stock Futures"
+    },
     "4a311e18c894116a": {
       "first_seen": "2026-09-22",
       "source": "hn_show",
@@ -711,6 +721,11 @@
       "source": "hn_show",
       "title": "Show HN: Share your AI Setup, Learn from others"
     },
+    "4f189644b99609e6": {
+      "first_seen": "2026-10-26",
+      "source": "hn_show",
+      "title": "Show HN: Encarta 95 Web"
+    },
     "4f217b3f8dc54809": {
       "first_seen": "2026-09-19",
       "source": "hn_show",
@@ -725,6 +740,11 @@
       "first_seen": "2026-10-03",
       "source": "hn_ask",
       "title": "Ask HN: Who is hiring? (October 2026)"
+    },
+    "51e6df29abdef0db": {
+      "first_seen": "2026-10-26",
+      "source": "hn_show",
+      "title": "Show HN: Build a world on your phone, explore it in XR on Vision Pro and Quest"
     },
     "529e20637d76cb58": {
       "first_seen": "2026-10-14",
@@ -890,6 +910,11 @@
       "first_seen": "2026-10-14",
       "source": "reddit_builders",
       "title": "Visited the Zoute Grand Prix in Knokke, found every car/parking app overly monetized, so I built my own free open-source car scanner in Kotl"
+    },
+    "639efe54b394274c": {
+      "first_seen": "2026-10-26",
+      "source": "bbc_business",
+      "title": "Zuckerberg wins Meta deal to help him foot bill for possible California billionaire tax"
     },
     "63bad746129764fb": {
       "first_seen": "2026-10-20",
@@ -1396,6 +1421,11 @@
       "source": "marketwatch",
       "title": "The Social Security Administration wants more babies signed up for ‘Trump accounts.’ But there’s still a catch."
     },
+    "948fbd4b8616e899": {
+      "first_seen": "2026-10-26",
+      "source": "reddit_builders",
+      "title": "How do you get back into a project after switching? We kept losing 10–15 min every time"
+    },
     "953b648e8b36fef3": {
       "first_seen": "2026-10-25",
       "source": "reddit_builders",
@@ -1420,6 +1450,11 @@
       "first_seen": "2026-09-29",
       "source": "ft_companies",
       "title": "Shein’s profits fall by two-thirds in first earnings report as a public company"
+    },
+    "9738c85c5733ec46": {
+      "first_seen": "2026-10-26",
+      "source": "hn_show",
+      "title": "Show HN: Farol – A risk map of a pull request for the person who approves it"
     },
     "97a5f50a708038f2": {
       "first_seen": "2026-10-03",
@@ -1450,6 +1485,11 @@
       "first_seen": "2026-10-14",
       "source": "ofdollarsanddata",
       "title": "Who Got Richer Since 2022?"
+    },
+    "9a820f0ab6eb0e2b": {
+      "first_seen": "2026-10-26",
+      "source": "reddit_builders",
+      "title": "At what stage of completion do you usually launch your projects?"
     },
     "9b1a5221e33600cf": {
       "first_seen": "2026-10-05",
@@ -1570,6 +1610,11 @@
       "first_seen": "2026-10-08",
       "source": "reddit_builders",
       "title": "I’m looking for some honest advice from people who have actually bought or sold small SaaS products."
+    },
+    "a9d1da02010a0270": {
+      "first_seen": "2026-10-26",
+      "source": "hn_ask",
+      "title": "Ask HN: Are tab completion models dead?"
     },
     "abf23f8013453ee4": {
       "first_seen": "2026-10-19",
@@ -1756,10 +1801,20 @@
       "source": "reddit_builders",
       "title": "Launching a website globally any advice? 📩"
     },
+    "c2478135e0d014d0": {
+      "first_seen": "2026-10-26",
+      "source": "hn_show",
+      "title": "Show HN: I put employees inside S&P 500 market-cap bubbles"
+    },
     "c3a14134953bd7c9": {
       "first_seen": "2026-10-19",
       "source": "hn_show",
       "title": "Show HN: CallSitter – bot that answers my calls and wastes scammers' time"
+    },
+    "c434561ff7bd9ecd": {
+      "first_seen": "2026-10-26",
+      "source": "coindesk",
+      "title": "UK banks face 10,000 complaints in 3 months over crypto restrictions"
     },
     "c4479fafdff7b0f4": {
       "first_seen": "2026-10-01",
@@ -1890,6 +1945,11 @@
       "first_seen": "2026-10-24",
       "source": "hn_ask",
       "title": "Median product \"lifespan\" has fallen from ~4y down to ~1.5y"
+    },
+    "d34342f6364b5387": {
+      "first_seen": "2026-10-26",
+      "source": "coindesk",
+      "title": "Latvia targets tokenization rules in 2027 with commercial property in focus"
     },
     "d367041addc37f34": {
       "first_seen": "2026-10-13",
