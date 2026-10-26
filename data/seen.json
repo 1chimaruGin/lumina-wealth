@@ -1,6 +1,11 @@
 {
-  "count": 463,
+  "count": 476,
   "items": {
+    "002beefa35c739dc": {
+      "first_seen": "2026-10-27",
+      "source": "reddit_builders",
+      "title": "I built a lightweight, no root Stremio client for older LG TVs that do not support the official app (targeting 2016–2019 models / webOS 3.x "
+    },
     "007e061ec788b834": {
       "first_seen": "2026-10-09",
       "source": "marketwatch",
@@ -285,6 +290,11 @@
       "first_seen": "2026-09-21",
       "source": "hn_show",
       "title": "Show HN: Three genlocked RP2350B make a console – 3k sprite pixels per line)"
+    },
+    "22c7a8710c73e431": {
+      "first_seen": "2026-10-27",
+      "source": "reddit_builders",
+      "title": "I don’t know how to price an AI feature before proving the pain"
     },
     "22dbce1dd938b87d": {
       "first_seen": "2026-10-15",
@@ -751,6 +761,11 @@
       "source": "boj",
       "title": "Results of the 107th Opinion Survey on the General Public's Views and Behavior"
     },
+    "52aa9b580c7c4c3f": {
+      "first_seen": "2026-10-27",
+      "source": "reddit_builders",
+      "title": "If you are SaaS founder, i build something for you."
+    },
     "52d0c7b75c081c08": {
       "first_seen": "2026-10-10",
       "source": "hn_show",
@@ -960,6 +975,11 @@
       "first_seen": "2026-10-16",
       "source": "hn_show",
       "title": "Show HN: Proa – A Rust web framework with fast SSR and multi-target rendering"
+    },
+    "67264e063a667900": {
+      "first_seen": "2026-10-27",
+      "source": "hn_show",
+      "title": "Show HN: TitleArt – Make text like it's 1997"
     },
     "674262d286f369d0": {
       "first_seen": "2026-10-05",
@@ -1426,10 +1446,20 @@
       "source": "reddit_builders",
       "title": "How do you get back into a project after switching? We kept losing 10–15 min every time"
     },
+    "94e743c142e5c292": {
+      "first_seen": "2026-10-27",
+      "source": "reddit_builders",
+      "title": "Solo Service Project Kit - Excel and Word files for solo client projects"
+    },
     "953b648e8b36fef3": {
       "first_seen": "2026-10-25",
       "source": "reddit_builders",
       "title": "How to get first users?"
+    },
+    "953c9a77674ea02f": {
+      "first_seen": "2026-10-27",
+      "source": "coindesk",
+      "title": "NBA joins pro sports leagues on CFTC prediction markets bandwagon while NFL balks"
     },
     "956d462d69506633": {
       "first_seen": "2026-10-19",
@@ -1500,6 +1530,11 @@
       "first_seen": "2026-10-13",
       "source": "reddit_builders",
       "title": "I made a saas for 5$/month"
+    },
+    "9cfb5433a5a1f760": {
+      "first_seen": "2026-10-27",
+      "source": "hn_show",
+      "title": "Show HN: ADRs for AI – Deliberation records for human–AI work, versioned in Git"
     },
     "9dc6be4c8edededb": {
       "first_seen": "2026-10-25",
@@ -1721,6 +1756,11 @@
       "source": "hn_ask",
       "title": "Tell HN: Bob Cringely has died"
     },
+    "b74bafa555b1872f": {
+      "first_seen": "2026-10-27",
+      "source": "coindesk",
+      "title": "Canada opens consultation on draft stablecoin rules, maintains ban on yields"
+    },
     "b794766a1cd5779f": {
       "first_seen": "2026-09-27",
       "source": "marketwatch",
@@ -1821,6 +1861,11 @@
       "source": "hn_show",
       "title": "Show HN: Real-time Solar System with 526k asteroids and all tracked satellites"
     },
+    "c4566fb199a8d35e": {
+      "first_seen": "2026-10-27",
+      "source": "marketwatch",
+      "title": "Walmart, Best Buy and other stores now use digital price tags. Critics say they could lead to different prices for different shoppers."
+    },
     "c5751df832aa608c": {
       "first_seen": "2026-10-14",
       "source": "reddit_builders",
@@ -1885,6 +1930,11 @@
       "first_seen": "2026-10-13",
       "source": "reddit_builders",
       "title": "I built 4 isolated Next.js 15 boilerplates instead of one giant repo – launching today with early access pricing"
+    },
+    "cdf18f1ab6e7993f": {
+      "first_seen": "2026-10-27",
+      "source": "hn_show",
+      "title": "Show HN: A Truly Modular Keyboard"
     },
     "cdf86179f9a2ec80": {
       "first_seen": "2026-10-24",
@@ -1976,6 +2026,11 @@
       "source": "reddit_builders",
       "title": "What is the fastest tech stack to build and launch a SaaS MVP?"
     },
+    "d6fce34882472c47": {
+      "first_seen": "2026-10-27",
+      "source": "coindesk",
+      "title": "OCC calls on community banks to enter the stablecoin payments market"
+    },
     "d7dddac5c9c6043e": {
       "first_seen": "2026-09-18",
       "source": "hn_show",
@@ -1985,6 +2040,11 @@
       "first_seen": "2026-10-04",
       "source": "marketwatch",
       "title": "Switching jobs to get higher pay works best in these industries"
+    },
+    "d8bec03fabcd5ff5": {
+      "first_seen": "2026-10-27",
+      "source": "awealthofcommonsense",
+      "title": "Talk Your Book: Beyond Bonds in Retirement"
     },
     "d8c9444c5cfaf038": {
       "first_seen": "2026-10-19",
@@ -2160,6 +2220,11 @@
       "first_seen": "2026-10-24",
       "source": "hn_show",
       "title": "Show HN: Making a smart TV dumb and then smart"
+    },
+    "ed5392f81ba27677": {
+      "first_seen": "2026-10-27",
+      "source": "reddit_builders",
+      "title": "Should SaaS platforms support customers who want to pay with stablecoins?"
     },
     "edeaa49e1f5e7570": {
       "first_seen": "2026-10-22",
