@@ -1,5 +1,5 @@
 {
-  "count": 476,
+  "count": 488,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
@@ -50,6 +50,11 @@
       "first_seen": "2026-10-01",
       "source": "hn_show",
       "title": "Show HN: JBR-001 – An open-source 3D printable desktop robot"
+    },
+    "02da46e843683188": {
+      "first_seen": "2026-10-28",
+      "source": "awealthofcommonsense",
+      "title": "What If This is the Worst Time to Retire?"
     },
     "035fa5abb5c7987c": {
       "first_seen": "2026-10-09",
@@ -576,6 +581,11 @@
       "source": "coindesk",
       "title": "Banks could slow stablecoin growth by paying savers more, BIS paper finds"
     },
+    "3fc0c7000f129e5a": {
+      "first_seen": "2026-10-28",
+      "source": "bbc_business",
+      "title": "Minimum wage set to rise but 18-20 year-olds will not get bigger increase"
+    },
     "40a3cce8ddc83803": {
       "first_seen": "2026-10-08",
       "source": "economist_fin",
@@ -595,6 +605,11 @@
       "first_seen": "2026-10-23",
       "source": "hn_ask",
       "title": "eMudhra to Exit Global SSL/TLS Certificate Business;"
+    },
+    "426b7f9c7803ae51": {
+      "first_seen": "2026-10-28",
+      "source": "reddit_builders",
+      "title": "A lightweight, native SSH & RDP client for Windows, macOS and Linux"
     },
     "43908efb2c58e9cb": {
       "first_seen": "2026-10-15",
@@ -745,6 +760,11 @@
       "first_seen": "2026-10-01",
       "source": "hn_show",
       "title": "Show HN: TurboGPT: train 22KiB transformer in 13s"
+    },
+    "506891777dfc125d": {
+      "first_seen": "2026-10-28",
+      "source": "reddit_builders",
+      "title": "My iOS app made 1 sale in September. Nothing since. But I think I'm finally making some progress."
     },
     "50e888fb9132ba09": {
       "first_seen": "2026-10-03",
@@ -1015,6 +1035,11 @@
       "first_seen": "2026-10-22",
       "source": "bbc_business",
       "title": "Meta fined $25bn for 'lies' over user data privacy"
+    },
+    "69fc6651890eddd8": {
+      "first_seen": "2026-10-28",
+      "source": "reddit_builders",
+      "title": "What payment data from 24 small products taught me about pricing: credits, one-time sales, lifetime deals and decay"
     },
     "6ace05f76f2b1985": {
       "first_seen": "2026-10-13",
@@ -1511,6 +1536,11 @@
       "source": "hn_show",
       "title": "Show HN: XY Music Notation"
     },
+    "9a1ced1064846caa": {
+      "first_seen": "2026-10-28",
+      "source": "hn_show",
+      "title": "Show HN: Freehire, open-source search 3M+ tech jobs from company career boards"
+    },
     "9a2ab3313a974682": {
       "first_seen": "2026-10-14",
       "source": "ofdollarsanddata",
@@ -1641,6 +1671,11 @@
       "source": "hn_show",
       "title": "Show HN: A walkable 3D art history museum built from Wikipedia"
     },
+    "a80def230fc69bab": {
+      "first_seen": "2026-10-28",
+      "source": "hn_show",
+      "title": "Show HN: Glider 4.0 Unofficial Web Edition (Mac game port)"
+    },
     "a8c5f1a84102ca1c": {
       "first_seen": "2026-10-08",
       "source": "reddit_builders",
@@ -1710,6 +1745,11 @@
       "first_seen": "2026-10-22",
       "source": "hn_show",
       "title": "Show HN: Sumi.css – CSS Framework"
+    },
+    "b211487b647bbcbd": {
+      "first_seen": "2026-10-28",
+      "source": "ft_companies",
+      "title": "Anthropic and the AI cluster effect in fundraising"
     },
     "b2f712a899907cd6": {
       "first_seen": "2026-10-08",
@@ -2151,6 +2191,11 @@
       "source": "hn_show",
       "title": "Show HN: An icon for every city in North America"
     },
+    "e598bd72bf306b4f": {
+      "first_seen": "2026-10-28",
+      "source": "reddit_builders",
+      "title": "Posso lanciare una SaaS per 30 giorni con Lemon Squeezy senza partita IVA italiana?"
+    },
     "e6753b8422696224": {
       "first_seen": "2026-10-13",
       "source": "hn_show",
@@ -2220,6 +2265,11 @@
       "first_seen": "2026-10-24",
       "source": "hn_show",
       "title": "Show HN: Making a smart TV dumb and then smart"
+    },
+    "eaf5bc60fd1da5a7": {
+      "first_seen": "2026-10-28",
+      "source": "hn_ask",
+      "title": "Ask HN: Is it not possible to enroll for Apple Developer anymore?"
     },
     "ed5392f81ba27677": {
       "first_seen": "2026-10-27",
@@ -2321,6 +2371,11 @@
       "source": "hn_show",
       "title": "Show HN: SimCity, but with Permits"
     },
+    "f93d4d5cf699810a": {
+      "first_seen": "2026-10-28",
+      "source": "hn_show",
+      "title": "Show HN: Hob - Open-source, on device alternative to Claude Cowork and ChatGPT"
+    },
     "fa35849781166026": {
       "first_seen": "2026-10-07",
       "source": "hn_show",
@@ -2360,6 +2415,11 @@
       "first_seen": "2026-10-16",
       "source": "hn_show",
       "title": "Show HN: How random are you?"
+    },
+    "ff04564a5602aba4": {
+      "first_seen": "2026-10-28",
+      "source": "ft_companies",
+      "title": "Novartis takes $1.9bn writedown on key drug after blockbuster Avidity acquisition"
     },
     "ff27b312652dc3b1": {
       "first_seen": "2026-10-01",
