@@ -1,5 +1,5 @@
 {
-  "count": 488,
+  "count": 501,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
@@ -25,6 +25,11 @@
       "first_seen": "2026-10-25",
       "source": "hn_show",
       "title": "Show HN: agent-usage-guard – a Claude Code mod to protect your usage window"
+    },
+    "016479c1ca843f13": {
+      "first_seen": "2026-10-29",
+      "source": "ft_companies",
+      "title": "JetBlue tries to sweet-talk an unforgiving bond market"
     },
     "01eff61eed2a9591": {
       "first_seen": "2026-10-11",
@@ -256,6 +261,11 @@
       "source": "hn_show",
       "title": "Show HN: AI search for every photo and every frame of video on macOS"
     },
+    "1da9f98ea0b1c207": {
+      "first_seen": "2026-10-29",
+      "source": "hn_show",
+      "title": "Show HN: Nasscad – local-first 3D CAD for browser and Windows"
+    },
     "1dcc92b8fe851772": {
       "first_seen": "2026-10-24",
       "source": "hn_show",
@@ -275,6 +285,11 @@
       "first_seen": "2026-10-25",
       "source": "hn_show",
       "title": "Show HN: Steal My Bitcoin"
+    },
+    "2073550217e33683": {
+      "first_seen": "2026-10-29",
+      "source": "hn_show",
+      "title": "Show HN: Specification First Agentic Development Plugin and Prove"
     },
     "20e150296e94b6f7": {
       "first_seen": "2026-09-28",
@@ -391,6 +406,11 @@
       "source": "marketwatch",
       "title": "Junk bonds are heading for worst month since 2022 after punishing global selloff"
     },
+    "2bb6c26df5e3f16a": {
+      "first_seen": "2026-10-29",
+      "source": "ft_companies",
+      "title": "European gas prices jump above €100 on fears of Iran war escalation"
+    },
     "2d4d06d64f22a2f0": {
       "first_seen": "2026-09-30",
       "source": "hn_show",
@@ -490,6 +510,11 @@
       "first_seen": "2026-09-28",
       "source": "hn_show",
       "title": "Show HN: Building a Markdown editor for Mac, iOS and web"
+    },
+    "37fc4de69e96eaef": {
+      "first_seen": "2026-10-29",
+      "source": "reddit_builders",
+      "title": "First SaaS"
     },
     "38778c30c8849ec0": {
       "first_seen": "2026-09-18",
@@ -911,6 +936,11 @@
       "source": "hn_show",
       "title": "Show HN: Trader News – Hacker News for Finance"
     },
+    "5f85cf6c7fc2ee3b": {
+      "first_seen": "2026-10-29",
+      "source": "hn_show",
+      "title": "Show HN: Proc-CLI – An agent-friendly CLI tool for process and port management"
+    },
     "6002707f9b9b99a7": {
       "first_seen": "2026-09-19",
       "source": "hn_show",
@@ -1081,6 +1111,11 @@
       "source": "producthunt",
       "title": "Product Hunt Visual Launch Editor"
     },
+    "6e93a757e35ab48f": {
+      "first_seen": "2026-10-29",
+      "source": "reddit_builders",
+      "title": "relator digital: tudo que voce precisa para seu trafego pago"
+    },
     "6f70eb856097b65f": {
       "first_seen": "2026-10-25",
       "source": "awealthofcommonsense",
@@ -1186,6 +1221,11 @@
       "source": "ft_companies",
       "title": "UK waters down ‘fit and proper’ rules set up to hold bankers to account"
     },
+    "75595565cfa7bcfd": {
+      "first_seen": "2026-10-29",
+      "source": "reddit_builders",
+      "title": "What’s hardest about practicing consulting cases on your own?"
+    },
     "7597fd09aa5e3688": {
       "first_seen": "2026-10-16",
       "source": "awealthofcommonsense",
@@ -1266,6 +1306,11 @@
       "source": "hn_show",
       "title": "Show HN: Microsoft Office running with Wine on Linux with no virtualization"
     },
+    "7da2495c97e2ebe7": {
+      "first_seen": "2026-10-29",
+      "source": "marketwatch",
+      "title": "3 reasons home prices keep going up, even though fewer people are buying"
+    },
     "7e1b17e91a6b6a2c": {
       "first_seen": "2026-10-21",
       "source": "hn_show",
@@ -1305,6 +1350,11 @@
       "first_seen": "2026-09-19",
       "source": "hn_ask",
       "title": "How come AI-related posts get so many points on HN?"
+    },
+    "817df872f4ef17b7": {
+      "first_seen": "2026-10-29",
+      "source": "marginalrevolution",
+      "title": "Inequality in Equal Land"
     },
     "81889b665b9d9ebe": {
       "first_seen": "2026-09-22",
@@ -1881,6 +1931,16 @@
       "source": "reddit_builders",
       "title": "Launching a website globally any advice? 📩"
     },
+    "c1db2c647beb3aee": {
+      "first_seen": "2026-10-29",
+      "source": "hn_ask",
+      "title": "Tell HN: I'm going on strike this November"
+    },
+    "c1ff85812d528d27": {
+      "first_seen": "2026-10-29",
+      "source": "reddit_builders",
+      "title": "Made a dev environment that runs entirely in the browser, npm install included"
+    },
     "c2478135e0d014d0": {
       "first_seen": "2026-10-26",
       "source": "hn_show",
@@ -2130,6 +2190,11 @@
       "first_seen": "2026-10-08",
       "source": "reddit_builders",
       "title": "One client can have Paid and Partial jobs at the same time — an iPhone app I built"
+    },
+    "ddfc29572e859c12": {
+      "first_seen": "2026-10-29",
+      "source": "bbc_business",
+      "title": "The one thing that didn't change that will affect your pay the most"
     },
     "ded0e18f39e00679": {
       "first_seen": "2026-09-26",
