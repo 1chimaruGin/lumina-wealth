@@ -1,5 +1,5 @@
 {
-  "count": 501,
+  "count": 514,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
@@ -50,6 +50,11 @@
       "first_seen": "2026-10-21",
       "source": "hn_show",
       "title": "Show HN: VoidAccess – open-source dark web OSINT, from query to a graph"
+    },
+    "02bca9c32a5ad144": {
+      "first_seen": "2026-10-30",
+      "source": "hn_ask",
+      "title": "Old.reddit.com Gone"
     },
     "02d05d50ed5e32b6": {
       "first_seen": "2026-10-01",
@@ -410,6 +415,11 @@
       "first_seen": "2026-10-29",
       "source": "ft_companies",
       "title": "European gas prices jump above €100 on fears of Iran war escalation"
+    },
+    "2c10954cc99447f4": {
+      "first_seen": "2026-10-30",
+      "source": "hn_show",
+      "title": "Show HN: SlideBySide – Present slides without sharing your screen"
     },
     "2d4d06d64f22a2f0": {
       "first_seen": "2026-09-30",
@@ -861,6 +871,11 @@
       "source": "hn_show",
       "title": "Show HN: An experimental pattern-first DAW that supports MCP"
     },
+    "5a03c375bef00d2b": {
+      "first_seen": "2026-10-30",
+      "source": "hn_ask",
+      "title": "Ask HN: What do you believe or not believe about AI?"
+    },
     "5a13ce7aaffad260": {
       "first_seen": "2026-10-17",
       "source": "hn_show",
@@ -1011,6 +1026,11 @@
       "source": "bbc_business",
       "title": "How a Chinese-made toy gets to a US retailer"
     },
+    "654baa855ed1697f": {
+      "first_seen": "2026-10-30",
+      "source": "bbc_business",
+      "title": "Budget 2026: Key points at a glance"
+    },
     "65aebdcbf7d7da2e": {
       "first_seen": "2026-09-27",
       "source": "awealthofcommonsense",
@@ -1071,6 +1091,11 @@
       "source": "reddit_builders",
       "title": "What payment data from 24 small products taught me about pricing: credits, one-time sales, lifetime deals and decay"
     },
+    "6a3ccd1ab0126cfc": {
+      "first_seen": "2026-10-30",
+      "source": "hn_show",
+      "title": "Show HN: UK Farming Simulator"
+    },
     "6ace05f76f2b1985": {
       "first_seen": "2026-10-13",
       "source": "ft_companies",
@@ -1110,6 +1135,11 @@
       "first_seen": "2026-10-25",
       "source": "producthunt",
       "title": "Product Hunt Visual Launch Editor"
+    },
+    "6e1889f1ddc5b650": {
+      "first_seen": "2026-10-30",
+      "source": "reddit_builders",
+      "title": "Needed a faster way to check IFC models without launching desktop software, so I built a lightweight browser viewer (Apache-2.0)"
     },
     "6e93a757e35ab48f": {
       "first_seen": "2026-10-29",
@@ -1445,6 +1475,11 @@
       "first_seen": "2026-10-04",
       "source": "hn_show",
       "title": "Show HN: Offrun – manage every coding agent from one workspace"
+    },
+    "8be0fca2e2aa2ed6": {
+      "first_seen": "2026-10-30",
+      "source": "ft_companies",
+      "title": "US tech stocks fall after earnings fuel AI spending concerns"
     },
     "8bf440f9048ed7d6": {
       "first_seen": "2026-09-25",
@@ -1821,6 +1856,11 @@
       "source": "hn_show",
       "title": "Show HN: Avoid smooth spinners, use low-FPS spinners"
     },
+    "b64d28c7650a012d": {
+      "first_seen": "2026-10-30",
+      "source": "marketwatch",
+      "title": "Consumer spending flattens out after U.S. inflation surge"
+    },
     "b64d3220bf49bda9": {
       "first_seen": "2026-10-09",
       "source": "hn_ask",
@@ -2041,6 +2081,11 @@
       "source": "hn_show",
       "title": "Show HN: Swurf – Swipe through the real web"
     },
+    "cf1f611e60d17fd8": {
+      "first_seen": "2026-10-30",
+      "source": "hn_show",
+      "title": "Show HN: Hatamoto batteries-included CMS in Go"
+    },
     "d02fb1281f749011": {
       "first_seen": "2026-09-26",
       "source": "hn_show",
@@ -2121,10 +2166,20 @@
       "source": "hn_show",
       "title": "Show HN: A working 3D model of an Enigma machine"
     },
+    "d655a38e8948a719": {
+      "first_seen": "2026-10-30",
+      "source": "japanfinance",
+      "title": "¥240,000 For Tax Accountant"
+    },
     "d688026b07ab141d": {
       "first_seen": "2026-10-04",
       "source": "reddit_builders",
       "title": "What is the fastest tech stack to build and launch a SaaS MVP?"
+    },
+    "d6f4d4f7e23ee601": {
+      "first_seen": "2026-10-30",
+      "source": "bbc_business",
+      "title": "Bereaved families will not face tax bill over pension delays under new rules"
     },
     "d6fce34882472c47": {
       "first_seen": "2026-10-27",
@@ -2196,6 +2251,11 @@
       "source": "bbc_business",
       "title": "The one thing that didn't change that will affect your pay the most"
     },
+    "de03e30e63834f74": {
+      "first_seen": "2026-10-30",
+      "source": "hn_show",
+      "title": "Show HN: Yavashark: I've Built a JavaScript Engine Every Day for 950 Days"
+    },
     "ded0e18f39e00679": {
       "first_seen": "2026-09-26",
       "source": "ft_companies",
@@ -2235,6 +2295,11 @@
       "first_seen": "2026-09-20",
       "source": "hn_show",
       "title": "Show HN: Set, offline Markdown note-taking app with device-to-device sync"
+    },
+    "e29f7fcc93f490b0": {
+      "first_seen": "2026-10-30",
+      "source": "reddit_builders",
+      "title": "My friend built a Chrome extension that makes you earn your social media time instead of blocking it. Thoughts?"
     },
     "e31b704014b392fd": {
       "first_seen": "2026-10-18",
