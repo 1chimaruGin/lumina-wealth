@@ -1,5 +1,5 @@
 {
-  "count": 514,
+  "count": 527,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
@@ -181,6 +181,11 @@
       "source": "reddit_builders",
       "title": "Would freelancers actually use a single link to onboard new clients?"
     },
+    "102bcd83ea1ad695": {
+      "first_seen": "2026-10-31",
+      "source": "hn_show",
+      "title": "Show HN: A proof-of-concept formalization of the IRS federal tax forms"
+    },
     "108484971e36be76": {
       "first_seen": "2026-10-07",
       "source": "hn_show",
@@ -255,6 +260,11 @@
       "first_seen": "2026-10-10",
       "source": "coindesk",
       "title": "New York AG secures up to $35 million and lifetime crypto ban from Celsius’ Alex Mashinsky"
+    },
+    "1b3a1aa316ac72b8": {
+      "first_seen": "2026-10-31",
+      "source": "hn_show",
+      "title": "Show HN: Arsaze – Cursor for video editing (Tab-complete and agent edits)"
     },
     "1d4b2a45374c2f50": {
       "first_seen": "2026-10-01",
@@ -436,6 +446,11 @@
       "source": "hn_ask",
       "title": "If AI keeps evolving,would you worry about your next generation's survival"
     },
+    "3025ed2a7a52d19c": {
+      "first_seen": "2026-10-31",
+      "source": "ft_companies",
+      "title": "Big Tech sheds nearly $900bn in rout over soaring AI spending"
+    },
     "31767104313292dd": {
       "first_seen": "2026-10-12",
       "source": "coindesk",
@@ -525,6 +540,11 @@
       "first_seen": "2026-10-29",
       "source": "reddit_builders",
       "title": "First SaaS"
+    },
+    "3806aadc0d39ab33": {
+      "first_seen": "2026-10-31",
+      "source": "hn_show",
+      "title": "Show HN: Capo-S3 – a typed, async-first S3 client for Python"
     },
     "38778c30c8849ec0": {
       "first_seen": "2026-09-18",
@@ -736,6 +756,11 @@
       "source": "awealthofcommonsense",
       "title": "Talk Your Book: Investing in Single Stock Futures"
     },
+    "494a98817cd2626d": {
+      "first_seen": "2026-10-31",
+      "source": "marketwatch",
+      "title": "It’s the strangest job market the U.S. has ever seen. The low-hire, low-fire economy turns 3 years old."
+    },
     "4a311e18c894116a": {
       "first_seen": "2026-09-22",
       "source": "hn_show",
@@ -805,6 +830,11 @@
       "first_seen": "2026-10-03",
       "source": "hn_ask",
       "title": "Ask HN: Who is hiring? (October 2026)"
+    },
+    "519a776207ed3493": {
+      "first_seen": "2026-10-31",
+      "source": "hn_show",
+      "title": "Show HN: Auto Dismiss Mac OS \"Allow to find devices on local networks?\""
     },
     "51e6df29abdef0db": {
       "first_seen": "2026-10-26",
@@ -980,6 +1010,11 @@
       "first_seen": "2026-10-17",
       "source": "hn_show",
       "title": "Show HN: Stoke Money – Personal finance app built around a cash flow forecast"
+    },
+    "6280cf93f88b6704": {
+      "first_seen": "2026-10-31",
+      "source": "ft_companies",
+      "title": "Binance halts withdrawals after record $6.3bn heist"
     },
     "62f6909d541eadcd": {
       "first_seen": "2026-09-28",
@@ -1311,6 +1346,11 @@
       "source": "ft_companies",
       "title": "Citi to speed up promotion path for junior bankers as hiring war heats up"
     },
+    "7bcd10dc9669d731": {
+      "first_seen": "2026-10-31",
+      "source": "hn_ask",
+      "title": "Ask HN: Are you tired too in this AI era?"
+    },
     "7bd1471e0ccae534": {
       "first_seen": "2026-09-30",
       "source": "hn_show",
@@ -1365,6 +1405,11 @@
       "first_seen": "2026-10-15",
       "source": "hn_show",
       "title": "Show HN: Petal, open-source CoScreen/ScreenHero finally free"
+    },
+    "8071d2138091d32c": {
+      "first_seen": "2026-10-31",
+      "source": "awealthofcommonsense",
+      "title": "Is Buying a House Now a Bad Investment?"
     },
     "80b17e5ba2acecb3": {
       "first_seen": "2026-10-15",
@@ -1851,6 +1896,11 @@
       "source": "paulgraham",
       "title": "Modeling a Wealth Tax"
     },
+    "b5636e2775ac4bb7": {
+      "first_seen": "2026-10-31",
+      "source": "hn_show",
+      "title": "Show HN: Lasm – Write formally verified webapps in Lean for Node/serverless/edge"
+    },
     "b5c30ecf844d89d3": {
       "first_seen": "2026-09-26",
       "source": "hn_show",
@@ -1900,6 +1950,11 @@
       "first_seen": "2026-09-25",
       "source": "hn_show",
       "title": "Show HN: Koi.rest – watch some fish and regain your balance"
+    },
+    "b82a9e9571df3927": {
+      "first_seen": "2026-10-31",
+      "source": "hn_ask",
+      "title": "Ask HN: Do you have side-projects that generate >$500 revenue/month?"
     },
     "b856de0518197d6e": {
       "first_seen": "2026-10-09",
@@ -2085,6 +2140,11 @@
       "first_seen": "2026-10-30",
       "source": "hn_show",
       "title": "Show HN: Hatamoto batteries-included CMS in Go"
+    },
+    "cfee38c25797a9a1": {
+      "first_seen": "2026-10-31",
+      "source": "hn_show",
+      "title": "Show HN: I Turned DOOM into a Transformer"
     },
     "d02fb1281f749011": {
       "first_seen": "2026-09-26",
@@ -2525,6 +2585,11 @@
       "first_seen": "2026-09-28",
       "source": "japanfinance",
       "title": "Looking for skilled and efficient accountant"
+    },
+    "fdbe90a2c18542d2": {
+      "first_seen": "2026-10-31",
+      "source": "marketwatch",
+      "title": "This strategist correctly recommended shorting Big Tech debt last year. Now he says the yields make it attractive."
     },
     "fe813cb04bae4d16": {
       "first_seen": "2026-10-05",
