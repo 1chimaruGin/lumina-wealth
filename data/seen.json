@@ -1,5 +1,5 @@
 {
-  "count": 527,
+  "count": 540,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
@@ -190,6 +190,11 @@
       "first_seen": "2026-10-07",
       "source": "hn_show",
       "title": "Show HN: Parseable, an open observability datalake, handles 100M time-series/min"
+    },
+    "110fb1b3a6af4898": {
+      "first_seen": "2026-11-01",
+      "source": "awealthofcommonsense",
+      "title": "Earnings & Expectations"
     },
     "1137a522057ad664": {
       "first_seen": "2026-09-30",
@@ -451,6 +456,11 @@
       "source": "ft_companies",
       "title": "Big Tech sheds nearly $900bn in rout over soaring AI spending"
     },
+    "309ac245523a3264": {
+      "first_seen": "2026-11-01",
+      "source": "ft_companies",
+      "title": "Cash Isa changes can still foster a ‘nation of investors’"
+    },
     "31767104313292dd": {
       "first_seen": "2026-10-12",
       "source": "coindesk",
@@ -576,6 +586,16 @@
       "source": "hn_show",
       "title": "Show HN: Jevper – the Jev interface on top of any OpenAI-compatible model"
     },
+    "3a256c4f2ddfd09c": {
+      "first_seen": "2026-11-01",
+      "source": "hn_show",
+      "title": "Show HN: I rebuilt Kubernetes for ESP32 microcontrollers"
+    },
+    "3aaae0d5e06070bc": {
+      "first_seen": "2026-11-01",
+      "source": "reddit_builders",
+      "title": "Built a 100% private, zero-backend document studio (PDF & Word editor) using AI + client-side JS. No servers, runs entirely in browser RAM."
+    },
     "3b3507d83f0e90dc": {
       "first_seen": "2026-09-21",
       "source": "hn_show",
@@ -680,6 +700,11 @@
       "first_seen": "2026-10-05",
       "source": "hn_show",
       "title": "Show HN: Glashütte Trash Clock – A 30-minute pendulum clock made from trash"
+    },
+    "44da56d320b41406": {
+      "first_seen": "2026-11-01",
+      "source": "hn_show",
+      "title": "Show HN: A working Nintendo in ~1GB of Qwen weights"
     },
     "45a613464e550622": {
       "first_seen": "2026-10-08",
@@ -895,6 +920,11 @@
       "first_seen": "2026-10-15",
       "source": "hn_show",
       "title": "Show HN: I built a tool to track what AI leaders say and how their views change"
+    },
+    "56f0750699d50935": {
+      "first_seen": "2026-11-01",
+      "source": "hn_show",
+      "title": "Show HN: Overtone – Transcribe, correct and cut captions for any screen shape"
     },
     "587281d93e4949fe": {
       "first_seen": "2026-10-14",
@@ -1141,6 +1171,11 @@
       "source": "hn_show",
       "title": "Show HN: I built a task system to handle the drudgery so I could focus on tasks"
     },
+    "6bd74685552ac124": {
+      "first_seen": "2026-11-01",
+      "source": "reddit_builders",
+      "title": "Got 98+ Founding members in my SaaS post launching multi-lingual support"
+    },
     "6cc36c0973b74d4b": {
       "first_seen": "2026-10-19",
       "source": "freakonomics",
@@ -1300,6 +1335,11 @@
       "first_seen": "2026-10-12",
       "source": "ft_companies",
       "title": "UK spending on subscriptions rapidly outpaces other goods and services"
+    },
+    "7607b83163a07fd5": {
+      "first_seen": "2026-11-01",
+      "source": "marketwatch",
+      "title": "Social Security’s fate — and your benefits — are in the hands of the candidates elected this year"
     },
     "760ea34d457135c0": {
       "first_seen": "2026-10-24",
@@ -1555,6 +1595,11 @@
       "first_seen": "2026-10-14",
       "source": "ft_companies",
       "title": "English football on ‘edge of financial disaster’, warns game’s new regulator"
+    },
+    "8d6c13cd488e187f": {
+      "first_seen": "2026-11-01",
+      "source": "hn_show",
+      "title": "Show HN: I built a multiplayer game where you're an aerial fighter cat"
     },
     "8de0d2c1cbc7beef": {
       "first_seen": "2026-10-02",
@@ -1886,10 +1931,20 @@
       "source": "ft_companies",
       "title": "Sleepy European telcos turn to data centre craze"
     },
+    "b4015ae9894cd66f": {
+      "first_seen": "2026-11-01",
+      "source": "ft_companies",
+      "title": "US tech stocks tumble as concerns over AI spending intensify"
+    },
     "b4840a985d26f811": {
       "first_seen": "2026-09-19",
       "source": "hn_show",
       "title": "Show HN: Seal – Letters and passwords that open for your family after you die"
+    },
+    "b4b5d4708ea8c5f7": {
+      "first_seen": "2026-11-01",
+      "source": "hn_show",
+      "title": "Show HN: Sketch Stadium – watch your agent play Pictionary"
     },
     "b5344f6ddd1c1770": {
       "first_seen": "2026-09-25",
@@ -1970,6 +2025,11 @@
       "first_seen": "2026-09-30",
       "source": "bbc_business",
       "title": "US ban on Canadian alcohol and dairy takes effect as trade war drags on"
+    },
+    "bba0da0d1585467e": {
+      "first_seen": "2026-11-01",
+      "source": "hn_show",
+      "title": "Show HN: To Honor Sir Patrick Stewart, Enjoy the TNG Episode Guessing Game"
     },
     "bc416201cfee9126": {
       "first_seen": "2026-09-27",
@@ -2475,6 +2535,11 @@
       "first_seen": "2026-10-08",
       "source": "hn_show",
       "title": "Show HN: NanoMuse – An open-source AI agent for your phone and computer"
+    },
+    "ee9c9ea7229c19e7": {
+      "first_seen": "2026-11-01",
+      "source": "marketwatch",
+      "title": "Your stock portfolio increasingly hinges on the bond market — and the midterm elections"
     },
     "ef88ab8d6b940197": {
       "first_seen": "2026-09-17",
