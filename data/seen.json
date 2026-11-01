@@ -1,5 +1,5 @@
 {
-  "count": 540,
+  "count": 552,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
@@ -381,6 +381,11 @@
       "source": "hn_show",
       "title": "Show HN: OpenChart – OSS TradingView alternative with your own AI agent"
     },
+    "27908a7deac604e8": {
+      "first_seen": "2026-11-02",
+      "source": "ft_companies",
+      "title": "Investors trim growth bets over fears of US economy’s AI exposure"
+    },
     "2855c72d82b82b45": {
       "first_seen": "2026-10-13",
       "source": "hn_show",
@@ -465,6 +470,11 @@
       "first_seen": "2026-10-12",
       "source": "coindesk",
       "title": "IMF finds demand for tokenized stocks, says the market is still volatile, illiquid"
+    },
+    "329353ff246fa165": {
+      "first_seen": "2026-11-02",
+      "source": "bbc_business",
+      "title": "Streeting denies 'kicking can down the road' in defence spending row"
     },
     "32a99b88d10e1b10": {
       "first_seen": "2026-09-28",
@@ -1106,6 +1116,11 @@
       "source": "indicator",
       "title": "SNAP strains, youth baseball's class divide, and Meta's bug bounty"
     },
+    "66b1d8c95b1508c5": {
+      "first_seen": "2026-11-02",
+      "source": "hn_show",
+      "title": "Show HN: A USB-C LTE modem that gives my computer a phone line"
+    },
     "66ce1636137bc229": {
       "first_seen": "2026-10-16",
       "source": "hn_show",
@@ -1186,6 +1201,11 @@
       "source": "ft_companies",
       "title": "Blackstone cuts property valuations as higher rates hit returns"
     },
+    "6d1f79546fa5a2ec": {
+      "first_seen": "2026-11-02",
+      "source": "hn_show",
+      "title": "Show HN: BBRouter – Ben Eater's 8-bit computer, simulated on 3D breadboards"
+    },
     "6d455570ede58037": {
       "first_seen": "2026-10-05",
       "source": "ft_companies",
@@ -1265,6 +1285,11 @@
       "first_seen": "2026-09-29",
       "source": "bbc_business",
       "title": "UK diesel price hits all-time high, the RAC says"
+    },
+    "72951e3125c41e4f": {
+      "first_seen": "2026-11-02",
+      "source": "lennys",
+      "title": "🧠 Community Wisdom: The biggest sources of interruptions for PMs, hiring junior PMs with case studies vs. behavioral interviews, building a "
     },
     "72b6bc9a217a2513": {
       "first_seen": "2026-10-10",
@@ -1355,6 +1380,11 @@
       "first_seen": "2026-10-11",
       "source": "reddit_builders",
       "title": "Request: Open Source Projects / Agents that help with GTM, Marketing, Distribution"
+    },
+    "778916995661ca3b": {
+      "first_seen": "2026-11-02",
+      "source": "hn_show",
+      "title": "Show HN: A language model that lives in a boot sector"
     },
     "77dacb667680037a": {
       "first_seen": "2026-09-20",
@@ -1786,6 +1816,11 @@
       "source": "hn_show",
       "title": "Show HN: InstinctFlash – High-Performance Serving Runtime for Robotics Models"
     },
+    "a13302c36360f8b6": {
+      "first_seen": "2026-11-02",
+      "source": "hn_show",
+      "title": "Show HN: Point your camera at a landscape to learn about its geology"
+    },
     "a1a80cd9e8b21234": {
       "first_seen": "2026-10-11",
       "source": "awealthofcommonsense",
@@ -1851,6 +1886,11 @@
       "source": "hn_show",
       "title": "Show HN: Glider 4.0 Unofficial Web Edition (Mac game port)"
     },
+    "a815740ee0566f14": {
+      "first_seen": "2026-11-02",
+      "source": "marketwatch",
+      "title": "Is it curtains for COLA? Saving Social Security could mean changing the cost-of-living adjustment."
+    },
     "a8c5f1a84102ca1c": {
       "first_seen": "2026-10-08",
       "source": "reddit_builders",
@@ -1905,6 +1945,11 @@
       "first_seen": "2026-10-18",
       "source": "hn_show",
       "title": "Show HN: Fakeipedia – Wikipedia for worlds that don't exist"
+    },
+    "af71a5cc40079265": {
+      "first_seen": "2026-11-02",
+      "source": "hn_show",
+      "title": "Show HN: NES Contra (1987) port (ASM –> C and then C –> WebAssembly)"
     },
     "b15e2cfe207afea0": {
       "first_seen": "2026-10-20",
@@ -2016,6 +2061,11 @@
       "source": "hn_show",
       "title": "Show HN: Agent.reviews – Where AI agents read and write reviews on tools"
     },
+    "b990d2cb03066d4b": {
+      "first_seen": "2026-11-02",
+      "source": "reddit_builders",
+      "title": "My second paying customer within a week🔥"
+    },
     "b996ab45573be092": {
       "first_seen": "2026-10-16",
       "source": "hn_show",
@@ -2075,6 +2125,11 @@
       "first_seen": "2026-10-12",
       "source": "hn_show",
       "title": "Show HN: WallHop – 12ft.io is gone, so I built a replacement"
+    },
+    "c006ad10d22da4d5": {
+      "first_seen": "2026-11-02",
+      "source": "hn_show",
+      "title": "Show HN: Jointter – A daily word puzzle using dots and lines"
     },
     "c036f9990682fe35": {
       "first_seen": "2026-09-28",
@@ -2325,6 +2380,11 @@
       "first_seen": "2026-10-19",
       "source": "coindesk",
       "title": "Crypto audits give investors false sense of security as Q3 hacks cost $1.18 billion, Hacken says"
+    },
+    "d90e1031b9e75e95": {
+      "first_seen": "2026-11-02",
+      "source": "hn_show",
+      "title": "Show HN: Ghostman – A fast, keyboard-driven TUI API client and webhook inspector"
     },
     "d911ff91163f6c4c": {
       "first_seen": "2026-10-03",
