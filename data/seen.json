@@ -1,5 +1,5 @@
 {
-  "count": 552,
+  "count": 564,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
@@ -101,6 +101,11 @@
       "source": "hn_ask",
       "title": "LinkedIn is a terrible quality website"
     },
+    "06a00580e9d43bf3": {
+      "first_seen": "2026-11-03",
+      "source": "reddit_builders",
+      "title": "SaaS Companies Are Adding AI Features Fast. But Are Their Contracts Ready?"
+    },
     "075dbf6e272e1e5a": {
       "first_seen": "2026-09-20",
       "source": "hn_show",
@@ -176,10 +181,20 @@
       "source": "hn_show",
       "title": "Show HN: Radius – A Meetup.com Alternative"
     },
+    "0ed0d8df609133ce": {
+      "first_seen": "2026-11-03",
+      "source": "bbc_business",
+      "title": "US tech stocks see sharp falls as AI spending nears $1tn"
+    },
     "0f00de936e62bba8": {
       "first_seen": "2026-10-20",
       "source": "reddit_builders",
       "title": "Would freelancers actually use a single link to onboard new clients?"
+    },
+    "0f63a2a5a5620b74": {
+      "first_seen": "2026-11-03",
+      "source": "hn_show",
+      "title": "Show HN: HackerHack – HackerBooks but for Posts Posted on HN"
     },
     "102bcd83ea1ad695": {
       "first_seen": "2026-10-31",
@@ -270,6 +285,11 @@
       "first_seen": "2026-10-31",
       "source": "hn_show",
       "title": "Show HN: Arsaze – Cursor for video editing (Tab-complete and agent edits)"
+    },
+    "1c2c00360e1569ed": {
+      "first_seen": "2026-11-03",
+      "source": "hn_show",
+      "title": "Show HN: OmniDiff – Opensource, super fast, content aware Git difftool, in Rust"
     },
     "1d4b2a45374c2f50": {
       "first_seen": "2026-10-01",
@@ -621,6 +641,11 @@
       "source": "reddit_builders",
       "title": "J’ai construit un SaaS pour résoudre un problème que je voyais revenir souvent : trouver ses premiers clients"
     },
+    "3bc05039ab001845": {
+      "first_seen": "2026-11-03",
+      "source": "abnormalreturns",
+      "title": "Sunday links: economic failures"
+    },
     "3c72121a70447f3c": {
       "first_seen": "2026-10-14",
       "source": "ft_companies",
@@ -820,6 +845,11 @@
       "first_seen": "2026-10-03",
       "source": "hn_show",
       "title": "Show HN: Giving Opus 5.5 a simulated paint canvas"
+    },
+    "4c20a27ee0eed34e": {
+      "first_seen": "2026-11-03",
+      "source": "hn_show",
+      "title": "Show HN: Warsaw in voxels – an interactive 3D map of the city centre"
     },
     "4c44ba8727c5a9fb": {
       "first_seen": "2026-10-21",
@@ -1190,6 +1220,11 @@
       "first_seen": "2026-11-01",
       "source": "reddit_builders",
       "title": "Got 98+ Founding members in my SaaS post launching multi-lingual support"
+    },
+    "6cb1371eb8947994": {
+      "first_seen": "2026-11-03",
+      "source": "hn_show",
+      "title": "Show HN: HackerBooks – HackerTube, but for books mentioned on HN"
     },
     "6cc36c0973b74d4b": {
       "first_seen": "2026-10-19",
@@ -1636,6 +1671,11 @@
       "source": "marketwatch",
       "title": "U.S. manufacturers say inflation is bad and not getting any better"
     },
+    "900459e4c6567727": {
+      "first_seen": "2026-11-03",
+      "source": "nikkei_asia",
+      "title": "Japan's Don Quijote drops refund fees for tourists to boost spending"
+    },
     "905b5151d287988e": {
       "first_seen": "2026-09-30",
       "source": "reddit_builders",
@@ -1715,6 +1755,11 @@
       "first_seen": "2026-10-26",
       "source": "hn_show",
       "title": "Show HN: Farol – A risk map of a pull request for the person who approves it"
+    },
+    "97865404743201e3": {
+      "first_seen": "2026-11-03",
+      "source": "ft_companies",
+      "title": "Anthropic reveals $900bn AI spending commitments ahead of IPO"
     },
     "97a5f50a708038f2": {
       "first_seen": "2026-10-03",
@@ -2191,6 +2236,11 @@
       "source": "ft_companies",
       "title": "Treasuries rally as investors seek shelter from AI turbulence"
     },
+    "c87add8232b3e7a6": {
+      "first_seen": "2026-11-03",
+      "source": "hn_show",
+      "title": "Show HN: Wikihack – HackerTube, but for Wikipedia articles mentioned on HN"
+    },
     "c8901fa7de950728": {
       "first_seen": "2026-09-22",
       "source": "hn_show",
@@ -2626,6 +2676,11 @@
       "source": "ft_companies",
       "title": "Burnham to revive Help to Buy scheme in bid to aid first-time buyers"
     },
+    "f2269a052f0bd4da": {
+      "first_seen": "2026-11-03",
+      "source": "hn_show",
+      "title": "Show HN: Subvocal – Talk to your computer without making noise"
+    },
     "f3cc35f9475b86c1": {
       "first_seen": "2026-10-23",
       "source": "hn_show",
@@ -2715,6 +2770,11 @@
       "first_seen": "2026-10-31",
       "source": "marketwatch",
       "title": "This strategist correctly recommended shorting Big Tech debt last year. Now he says the yields make it attractive."
+    },
+    "fe1d679e74709694": {
+      "first_seen": "2026-11-03",
+      "source": "hn_show",
+      "title": "Show HN: I've updated my Linux System Call website and API"
     },
     "fe813cb04bae4d16": {
       "first_seen": "2026-10-05",
