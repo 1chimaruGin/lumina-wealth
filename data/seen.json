@@ -1,5 +1,5 @@
 {
-  "count": 564,
+  "count": 576,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
@@ -150,6 +150,11 @@
       "first_seen": "2026-10-25",
       "source": "hn_show",
       "title": "Show HN: Corgi, a helpful {agent, terminal} multiplexer"
+    },
+    "0cbf21adf73aa952": {
+      "first_seen": "2026-11-04",
+      "source": "hn_show",
+      "title": "Show HN: Rustable is an open source database client built in Rust"
     },
     "0ce9b259116624d1": {
       "first_seen": "2026-10-20",
@@ -951,6 +956,11 @@
       "source": "reddit_sideproject",
       "title": "InvGen - A simple invoice and quotation maker for Indian businesses, with or without GST"
     },
+    "569e3832e8eea4c7": {
+      "first_seen": "2026-11-04",
+      "source": "reddit_builders",
+      "title": "Advice on SaaS pricing model"
+    },
     "56ae1b27cc90a7bd": {
       "first_seen": "2026-10-10",
       "source": "hn_show",
@@ -970,6 +980,11 @@
       "first_seen": "2026-10-14",
       "source": "hn_show",
       "title": "Show HN: An experimental pattern-first DAW that supports MCP"
+    },
+    "5973d0308d2f526a": {
+      "first_seen": "2026-11-04",
+      "source": "hn_show",
+      "title": "Show HN: HackerChurn – which SaaS tools HN wants to cancel"
     },
     "5a03c375bef00d2b": {
       "first_seen": "2026-10-30",
@@ -995,6 +1010,11 @@
       "first_seen": "2026-10-01",
       "source": "hn_show",
       "title": "Show HN: Jevstiller – Distill Jev into a local model, with a disagreement bound"
+    },
+    "5b2597ff02747823": {
+      "first_seen": "2026-11-04",
+      "source": "ofdollarsanddata",
+      "title": "How Many Americans Are Millionaires?"
     },
     "5c56e87087c48684": {
       "first_seen": "2026-10-23",
@@ -1320,6 +1340,11 @@
       "first_seen": "2026-09-29",
       "source": "bbc_business",
       "title": "UK diesel price hits all-time high, the RAC says"
+    },
+    "7293bd976531373f": {
+      "first_seen": "2026-11-04",
+      "source": "marketwatch",
+      "title": "5 questions to ask if your boss offers you a buyout, as Microsoft did with 60,000 employees"
     },
     "72951e3125c41e4f": {
       "first_seen": "2026-11-02",
@@ -1761,6 +1786,11 @@
       "source": "ft_companies",
       "title": "Anthropic reveals $900bn AI spending commitments ahead of IPO"
     },
+    "9787d7a848ee5843": {
+      "first_seen": "2026-11-04",
+      "source": "bbc_business",
+      "title": "From scooters to shampoo - the people saving hundreds from dumpster diving"
+    },
     "97a5f50a708038f2": {
       "first_seen": "2026-10-03",
       "source": "hn_show",
@@ -1961,6 +1991,11 @@
       "source": "hn_show",
       "title": "Show HN: Ive Sent It – online courier for files, with signed proof of delivery"
     },
+    "ad5caf9363b0d29b": {
+      "first_seen": "2026-11-04",
+      "source": "hn_show",
+      "title": "Show HN: I built a little browser game to practice Vim commands"
+    },
     "ad90f0c89b677504": {
       "first_seen": "2026-10-06",
       "source": "hn_show",
@@ -1995,6 +2030,11 @@
       "first_seen": "2026-11-02",
       "source": "hn_show",
       "title": "Show HN: NES Contra (1987) port (ASM –> C and then C –> WebAssembly)"
+    },
+    "b00f3c61979d2dea": {
+      "first_seen": "2026-11-04",
+      "source": "hn_show",
+      "title": "Show HN: Subvocal – Talk to your computer without making noise"
     },
     "b15e2cfe207afea0": {
       "first_seen": "2026-10-20",
@@ -2226,6 +2266,11 @@
       "source": "reddit_builders",
       "title": "Webmcp for your app ?"
     },
+    "c6b64c6f66589d18": {
+      "first_seen": "2026-11-04",
+      "source": "hn_show",
+      "title": "Show HN: Hacker Times, a New York Times-inspired version of Hacker News"
+    },
     "c851d13813897def": {
       "first_seen": "2026-09-24",
       "source": "hn_show",
@@ -2391,6 +2436,11 @@
       "source": "hn_show",
       "title": "Show HN: A working 3D model of an Enigma machine"
     },
+    "d58eee98a42697ff": {
+      "first_seen": "2026-11-04",
+      "source": "hn_show",
+      "title": "Show HN: Bema: Work messaging built for humans"
+    },
     "d655a38e8948a719": {
       "first_seen": "2026-10-30",
       "source": "japanfinance",
@@ -2526,6 +2576,11 @@
       "source": "hn_show",
       "title": "Show HN: Set, offline Markdown note-taking app with device-to-device sync"
     },
+    "e2866517d6b95770": {
+      "first_seen": "2026-11-04",
+      "source": "marketwatch",
+      "title": "Want to help your adult kids and grandkids? Give them money while you’re still alive."
+    },
     "e29f7fcc93f490b0": {
       "first_seen": "2026-10-30",
       "source": "reddit_builders",
@@ -2575,6 +2630,11 @@
       "first_seen": "2026-10-04",
       "source": "marketwatch",
       "title": "The Treasury Department started Trump accounts for 60 million kids — but families still have to take this step if they want one"
+    },
+    "e818676465236810": {
+      "first_seen": "2026-11-04",
+      "source": "reddit_builders",
+      "title": "Jasper went from a $1.5B valuation to a reported 20% internal cut in about a year. What does that teach new SaaS builders about building on "
     },
     "e86027df822f90e5": {
       "first_seen": "2026-09-20",
