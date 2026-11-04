@@ -1,5 +1,5 @@
 {
-  "count": 576,
+  "count": 588,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
@@ -176,6 +176,11 @@
       "source": "hn_show",
       "title": "Show HN: Uberblok – an interactive museum of ZFS internals"
     },
+    "0dbc4de87d07b7f7": {
+      "first_seen": "2026-11-05",
+      "source": "hn_show",
+      "title": "Show HN: Uncracked City, detective game where you question LLM suspects that lie"
+    },
     "0e1c32a585dd4e05": {
       "first_seen": "2026-10-19",
       "source": "hn_show",
@@ -275,6 +280,11 @@
       "first_seen": "2026-10-18",
       "source": "hn_ask",
       "title": "Ask HN: Are you hesitant to install vibe-coded apps?"
+    },
+    "1a1de7f011f64663": {
+      "first_seen": "2026-11-05",
+      "source": "marketwatch",
+      "title": "Midterm elections deliver a ‘blue wave.’ The stock market sees green."
     },
     "1a6d2491b77e8c89": {
       "first_seen": "2026-09-27",
@@ -550,6 +560,11 @@
       "first_seen": "2026-09-26",
       "source": "hn_show",
       "title": "Show HN: Agentic CUDA Kernel Optimizer"
+    },
+    "34c66b47dd0c5af8": {
+      "first_seen": "2026-11-05",
+      "source": "hn_show",
+      "title": "Show HN: HackerTV – HN's most-recommended Youtube videos as 24/7 TV channels"
     },
     "362af0c9f201ebf3": {
       "first_seen": "2026-10-17",
@@ -1686,6 +1701,11 @@
       "source": "ft_companies",
       "title": "English football on ‘edge of financial disaster’, warns game’s new regulator"
     },
+    "8d3cc7be190c47e5": {
+      "first_seen": "2026-11-05",
+      "source": "hn_ask",
+      "title": "Getting hit with \"Prove you are a human\" at every other website"
+    },
     "8d6c13cd488e187f": {
       "first_seen": "2026-11-01",
       "source": "hn_show",
@@ -1976,6 +1996,11 @@
       "source": "hn_ask",
       "title": "Ask HN: Are tab completion models dead?"
     },
+    "ab29ca8bc2a8e5f5": {
+      "first_seen": "2026-11-05",
+      "source": "awealthofcommonsense",
+      "title": "Animal Spirits: Drowning Financially"
+    },
     "abf23f8013453ee4": {
       "first_seen": "2026-10-19",
       "source": "hn_show",
@@ -2030,6 +2055,11 @@
       "first_seen": "2026-11-02",
       "source": "hn_show",
       "title": "Show HN: NES Contra (1987) port (ASM –> C and then C –> WebAssembly)"
+    },
+    "affd0ae8af428840": {
+      "first_seen": "2026-11-05",
+      "source": "hn_show",
+      "title": "Show HN: SIE Serverless – managed inference powered by self-hostable stack"
     },
     "b00f3c61979d2dea": {
       "first_seen": "2026-11-04",
@@ -2441,6 +2471,11 @@
       "source": "hn_show",
       "title": "Show HN: Bema: Work messaging built for humans"
     },
+    "d5eecd06151a7663": {
+      "first_seen": "2026-11-05",
+      "source": "hn_ask",
+      "title": "Tell HN: Gemini trains on chat history, even for subscribers (personal accounts)"
+    },
     "d655a38e8948a719": {
       "first_seen": "2026-10-30",
       "source": "japanfinance",
@@ -2460,6 +2495,11 @@
       "first_seen": "2026-10-27",
       "source": "coindesk",
       "title": "OCC calls on community banks to enter the stablecoin payments market"
+    },
+    "d7d9a2a25df6ba53": {
+      "first_seen": "2026-11-05",
+      "source": "hn_ask",
+      "title": "Ask HN: What's your current AI agentic setup?"
     },
     "d7dddac5c9c6043e": {
       "first_seen": "2026-09-18",
@@ -2601,6 +2641,11 @@
       "source": "reddit_builders",
       "title": "Most SaaS \"X vs Y\" comparison posts are just citation loops quoting dead pricing pages"
     },
+    "e4b8bfc18029f8b5": {
+      "first_seen": "2026-11-05",
+      "source": "bbc_business",
+      "title": "Graduates are managing AI - but are they learning much else?"
+    },
     "e4c332e9fa8c240d": {
       "first_seen": "2026-10-24",
       "source": "hn_show",
@@ -2711,10 +2756,20 @@
       "source": "marketwatch",
       "title": "Your stock portfolio increasingly hinges on the bond market — and the midterm elections"
     },
+    "eee55c2b48f8205b": {
+      "first_seen": "2026-11-05",
+      "source": "hn_ask",
+      "title": "Tell HN: Don't use Postman, they proxy your info without your permission"
+    },
     "ef88ab8d6b940197": {
       "first_seen": "2026-09-17",
       "source": "hn_ask",
       "title": "Neovim have a ~$800k Bitcoin donation sitting untouched since 2023"
+    },
+    "f00530e1d5e94b4a": {
+      "first_seen": "2026-11-05",
+      "source": "marketwatch",
+      "title": "Big Tech’s $500 billion spending spree leaves a lot less for shareholders"
     },
     "f08784ca69eb615b": {
       "first_seen": "2026-10-16",
@@ -2725,6 +2780,11 @@
       "first_seen": "2026-10-06",
       "source": "awealthofcommonsense",
       "title": "Talk Your Book: How Higher Rates Are Re-shaping Commercial Real Estate"
+    },
+    "f1213d42ab134c32": {
+      "first_seen": "2026-11-05",
+      "source": "hn_show",
+      "title": "Show HN: Kairos – Open-source risk and fraud decisioning platform"
     },
     "f16fc592d4331b29": {
       "first_seen": "2026-09-28",
