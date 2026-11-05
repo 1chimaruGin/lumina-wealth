@@ -1,5 +1,5 @@
 {
-  "count": 588,
+  "count": 600,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
@@ -306,6 +306,11 @@
       "source": "hn_show",
       "title": "Show HN: OmniDiff – Opensource, super fast, content aware Git difftool, in Rust"
     },
+    "1cf9d162bd34860a": {
+      "first_seen": "2026-11-06",
+      "source": "awealthofcommonsense",
+      "title": "Is it Realistic to Live Off Your Dividends?"
+    },
     "1d4b2a45374c2f50": {
       "first_seen": "2026-10-01",
       "source": "coindesk",
@@ -465,6 +470,11 @@
       "first_seen": "2026-09-30",
       "source": "marketwatch",
       "title": "Junk bonds are heading for worst month since 2022 after punishing global selloff"
+    },
+    "2b6dc67e5ac6a764": {
+      "first_seen": "2026-11-06",
+      "source": "hn_show",
+      "title": "Show HN: I built a tool that prices a pre-built PC part by part"
     },
     "2bb6c26df5e3f16a": {
       "first_seen": "2026-10-29",
@@ -941,6 +951,16 @@
       "source": "hn_show",
       "title": "Show HN: Free open source Adobe Lightroom alternative, completely local with AI"
     },
+    "52f1128d67c8649f": {
+      "first_seen": "2026-11-06",
+      "source": "hn_show",
+      "title": "Show HN: After a decade of reversing, I got co-op working in DOS Wing Commander"
+    },
+    "533ecb13d29bbad7": {
+      "first_seen": "2026-11-06",
+      "source": "reddit_builders",
+      "title": "I built Launch Circle to make Android closed-test feedback easier to manage"
+    },
     "5394c51ed710a783": {
       "first_seen": "2026-10-14",
       "source": "hn_show",
@@ -1071,6 +1091,11 @@
       "source": "hn_show",
       "title": "Show HN: Ledge.sh – Runnable Markdown Notes"
     },
+    "5e93a68709678d7c": {
+      "first_seen": "2026-11-06",
+      "source": "hn_show",
+      "title": "Show HN: Codemap – one-page interactive map of any Go repository"
+    },
     "5eae0ed268831f89": {
       "first_seen": "2026-09-23",
       "source": "hn_ask",
@@ -1171,6 +1196,11 @@
       "source": "bbc_business",
       "title": "Budget 2026: Key points at a glance"
     },
+    "6588f2c998773af6": {
+      "first_seen": "2026-11-06",
+      "source": "hn_ask",
+      "title": "Ask HN: What your experience with the monthly \"who wants to be hired\" thread?"
+    },
     "65aebdcbf7d7da2e": {
       "first_seen": "2026-09-27",
       "source": "awealthofcommonsense",
@@ -1180,6 +1210,11 @@
       "first_seen": "2026-10-12",
       "source": "indicator",
       "title": "SNAP strains, youth baseball's class divide, and Meta's bug bounty"
+    },
+    "6669707f3d1e3930": {
+      "first_seen": "2026-11-06",
+      "source": "hn_show",
+      "title": "Show HN: Gauge – Open-Source CLI to recursively improve your docs"
     },
     "66b1d8c95b1508c5": {
       "first_seen": "2026-11-02",
@@ -1340,6 +1375,11 @@
       "first_seen": "2026-10-21",
       "source": "hn_ask",
       "title": "Ask HN: How to deal with shipping AI-written code you don't understand?"
+    },
+    "7168a868b9419878": {
+      "first_seen": "2026-11-06",
+      "source": "reddit_builders",
+      "title": "I just listed my SaaS on TrustMRR: what I built and the challenge of selling to a non-English market"
     },
     "7171ac78141d1fbc": {
       "first_seen": "2026-10-07",
@@ -1716,6 +1756,11 @@
       "source": "marketwatch",
       "title": "U.S. manufacturers say inflation is bad and not getting any better"
     },
+    "8ff53dd9237e47d6": {
+      "first_seen": "2026-11-06",
+      "source": "ft_companies",
+      "title": "The onward march of cognitive capitalism"
+    },
     "900459e4c6567727": {
       "first_seen": "2026-11-03",
       "source": "nikkei_asia",
@@ -1800,6 +1845,11 @@
       "first_seen": "2026-10-26",
       "source": "hn_show",
       "title": "Show HN: Farol – A risk map of a pull request for the person who approves it"
+    },
+    "9740df60e7bada76": {
+      "first_seen": "2026-11-06",
+      "source": "bbc_business",
+      "title": "Elon Musk's millions failed to deliver Republican wins in fierce midterms"
     },
     "97865404743201e3": {
       "first_seen": "2026-11-03",
@@ -2156,6 +2206,11 @@
       "source": "coindesk",
       "title": "Canada opens consultation on draft stablecoin rules, maintains ban on yields"
     },
+    "b77dfa1d500aee4d": {
+      "first_seen": "2026-11-06",
+      "source": "nikkei_asia",
+      "title": "Indonesia's GDP grows 5.5% in Q3, helped by government spending"
+    },
     "b794766a1cd5779f": {
       "first_seen": "2026-09-27",
       "source": "marketwatch",
@@ -2420,6 +2475,11 @@
       "first_seen": "2026-10-20",
       "source": "marketwatch",
       "title": "‘I’m naturally skeptical’: I receive 10 calls a day offering me $15,000 loans at 8% interest. Is this a scam?"
+    },
+    "d250b8c7b2a144b1": {
+      "first_seen": "2026-11-06",
+      "source": "hn_show",
+      "title": "Show HN: The DNA of DOOM – How code structure survives across 44 ports"
     },
     "d2963bd75db6285b": {
       "first_seen": "2026-09-22",
