@@ -1,5 +1,5 @@
 {
-  "count": 600,
+  "count": 612,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
@@ -216,6 +216,11 @@
       "source": "hn_show",
       "title": "Show HN: Parseable, an open observability datalake, handles 100M time-series/min"
     },
+    "10c72cd2b5ab9eaf": {
+      "first_seen": "2026-11-07",
+      "source": "hn_show",
+      "title": "Show HN: TubeHaus – an open-source YouTube client with no Google account"
+    },
     "110fb1b3a6af4898": {
       "first_seen": "2026-11-01",
       "source": "awealthofcommonsense",
@@ -240,6 +245,11 @@
       "first_seen": "2026-09-19",
       "source": "hn_show",
       "title": "Show HN: LiveWorld – Every 24/7 YouTube live camera on one globe"
+    },
+    "130ba4bf0913356f": {
+      "first_seen": "2026-11-07",
+      "source": "nikkei_asia",
+      "title": "Foreign-student spending in Japan hits $4.3bn amid soft yen"
     },
     "13d13608380ca28e": {
       "first_seen": "2026-10-04",
@@ -405,6 +415,11 @@
       "first_seen": "2026-09-20",
       "source": "hn_show",
       "title": "Show HN: I created an open source locally usable full fledged AI platform"
+    },
+    "24e1aea537d2f659": {
+      "first_seen": "2026-11-07",
+      "source": "hn_show",
+      "title": "Show HN: Stroq – a local audit of what your coding agent did and why"
     },
     "26f1aa9b16410b70": {
       "first_seen": "2026-09-26",
@@ -620,6 +635,11 @@
       "first_seen": "2026-09-18",
       "source": "hn_show",
       "title": "Show HN: Aclif – Agent CLI framework: one grammar, canonical names across SaaS"
+    },
+    "388c00c56ff2fd49": {
+      "first_seen": "2026-11-07",
+      "source": "marketwatch",
+      "title": "Hims & Hers struck a GLP-1 deal with Lilly. Its stock is rallying."
     },
     "38be6ea6b4966762": {
       "first_seen": "2026-09-27",
@@ -921,6 +941,11 @@
       "source": "reddit_builders",
       "title": "My iOS app made 1 sale in September. Nothing since. But I think I'm finally making some progress."
     },
+    "50b8cb5482391d8b": {
+      "first_seen": "2026-11-07",
+      "source": "reddit_builders",
+      "title": "Looking for SaaS project ideas that solve real world problems"
+    },
     "50e888fb9132ba09": {
       "first_seen": "2026-10-03",
       "source": "hn_ask",
@@ -1010,6 +1035,11 @@
       "first_seen": "2026-11-01",
       "source": "hn_show",
       "title": "Show HN: Overtone – Transcribe, correct and cut captions for any screen shape"
+    },
+    "577d8db53bed81db": {
+      "first_seen": "2026-11-07",
+      "source": "marketwatch",
+      "title": "Trump’s Iran war has changed the future of Social Security"
     },
     "587281d93e4949fe": {
       "first_seen": "2026-10-14",
@@ -1266,6 +1296,11 @@
       "source": "bbc_business",
       "title": "Meta fined $25bn for 'lies' over user data privacy"
     },
+    "69b62b0af31fdcec": {
+      "first_seen": "2026-11-07",
+      "source": "hn_show",
+      "title": "Show HN: A decent text-to-image model trained for ~$20K (Apache 2.0 Weights)"
+    },
     "69fc6651890eddd8": {
       "first_seen": "2026-10-28",
       "source": "reddit_builders",
@@ -1515,6 +1550,11 @@
       "first_seen": "2026-10-06",
       "source": "hn_ask",
       "title": "Tell HN: Uceprotect is extorting website owners"
+    },
+    "7a1c643f34bc792e": {
+      "first_seen": "2026-11-07",
+      "source": "hn_ask",
+      "title": "Ask HN: What are forgotten topics in computing that deserve a new revisit?"
     },
     "7a2b274d4bc79105": {
       "first_seen": "2026-10-19",
@@ -2006,6 +2046,11 @@
       "source": "hn_show",
       "title": "Show HN: Guitoro, a virtual guitar you strum with your keyboard"
     },
+    "a5a1e66d3b1e8f47": {
+      "first_seen": "2026-11-07",
+      "source": "hn_ask",
+      "title": "Ask HN: What in the world is taking Ubuntu so long?"
+    },
     "a6515c4c4a10b8db": {
       "first_seen": "2026-10-14",
       "source": "ft_companies",
@@ -2115,6 +2160,11 @@
       "first_seen": "2026-11-04",
       "source": "hn_show",
       "title": "Show HN: Subvocal – Talk to your computer without making noise"
+    },
+    "b09bb44bfd32c55e": {
+      "first_seen": "2026-11-07",
+      "source": "hn_show",
+      "title": "Show HN: Firenook – Firebase emulators in Rust: 40× faster writes, 10× less RAM"
     },
     "b15e2cfe207afea0": {
       "first_seen": "2026-10-20",
@@ -2260,6 +2310,11 @@
       "first_seen": "2026-09-24",
       "source": "hn_ask",
       "title": "Ask HN: Dead Internet"
+    },
+    "bd3140dadf1265c7": {
+      "first_seen": "2026-11-07",
+      "source": "hn_ask",
+      "title": "Ask HN: What are you working on? (November 2026)"
     },
     "bd51b467a6b479d0": {
       "first_seen": "2026-09-29",
@@ -2600,6 +2655,11 @@
       "first_seen": "2026-09-25",
       "source": "hn_show",
       "title": "Show HN: Air-gapped file encryption as self-decrypting HTML page"
+    },
+    "db0e3c2abb5aed7c": {
+      "first_seen": "2026-11-07",
+      "source": "abnormalreturns",
+      "title": "Thursday links: having an answer"
     },
     "dbb06f4b858fb0a2": {
       "first_seen": "2026-09-21",
