@@ -1,5 +1,5 @@
 {
-  "count": 612,
+  "count": 624,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
@@ -211,6 +211,11 @@
       "source": "hn_show",
       "title": "Show HN: A proof-of-concept formalization of the IRS federal tax forms"
     },
+    "104d64f17d79311c": {
+      "first_seen": "2026-11-08",
+      "source": "abnormalreturns",
+      "title": "Saturday links: unparalleled greed"
+    },
     "108484971e36be76": {
       "first_seen": "2026-10-07",
       "source": "hn_show",
@@ -310,6 +315,11 @@
       "first_seen": "2026-10-31",
       "source": "hn_show",
       "title": "Show HN: Arsaze – Cursor for video editing (Tab-complete and agent edits)"
+    },
+    "1b7de356e782a236": {
+      "first_seen": "2026-11-08",
+      "source": "marketwatch",
+      "title": "This retired professor has reinvented himself — as a Taylor Swift scholar"
     },
     "1c2c00360e1569ed": {
       "first_seen": "2026-11-03",
@@ -516,6 +526,11 @@
       "source": "hn_ask",
       "title": "If AI keeps evolving,would you worry about your next generation's survival"
     },
+    "2ee805849cbe3313": {
+      "first_seen": "2026-11-08",
+      "source": "ft_companies",
+      "title": "West End reports spending boost after Oxford Street bans cars and buses"
+    },
     "3025ed2a7a52d19c": {
       "first_seen": "2026-10-31",
       "source": "ft_companies",
@@ -590,6 +605,11 @@
       "first_seen": "2026-11-05",
       "source": "hn_show",
       "title": "Show HN: HackerTV – HN's most-recommended Youtube videos as 24/7 TV channels"
+    },
+    "35978d566e4f0ab9": {
+      "first_seen": "2026-11-08",
+      "source": "reddit_builders",
+      "title": "Moroccan/African SaaS founders, how are you handling online payments?"
     },
     "362af0c9f201ebf3": {
       "first_seen": "2026-10-17",
@@ -1401,6 +1421,11 @@
       "source": "hn_show",
       "title": "Show HN: Whiteboard (YC W26) – An open-source IDE for thoughtful software design"
     },
+    "70abf9b6f2133e56": {
+      "first_seen": "2026-11-08",
+      "source": "hn_show",
+      "title": "Show HN: GPUWorks – A 40 MB GPU cluster manager for vLLM/SGLang, no K8s needed"
+    },
     "70b749766ce21eee": {
       "first_seen": "2026-10-25",
       "source": "nikkei_asia",
@@ -1430,6 +1455,11 @@
       "first_seen": "2026-09-29",
       "source": "bbc_business",
       "title": "UK diesel price hits all-time high, the RAC says"
+    },
+    "728790b9a3090b55": {
+      "first_seen": "2026-11-08",
+      "source": "hn_show",
+      "title": "Show HN: Spindle – a full-featured, type-safe web framework for OCaml 5"
     },
     "7293bd976531373f": {
       "first_seen": "2026-11-04",
@@ -1886,6 +1916,11 @@
       "source": "hn_show",
       "title": "Show HN: Farol – A risk map of a pull request for the person who approves it"
     },
+    "973fe76bce3be79d": {
+      "first_seen": "2026-11-08",
+      "source": "hn_show",
+      "title": "Show HN: CloneGuard – Scan a repo for credential-stealing tricks before it runs"
+    },
     "9740df60e7bada76": {
       "first_seen": "2026-11-06",
       "source": "bbc_business",
@@ -2280,6 +2315,11 @@
       "first_seen": "2026-10-09",
       "source": "hn_show",
       "title": "Show HN: Agent.reviews – Where AI agents read and write reviews on tools"
+    },
+    "b889830baf54dda7": {
+      "first_seen": "2026-11-08",
+      "source": "hn_show",
+      "title": "Show HN: Waymark – A workflow engine that compiles jobs instead of replaying"
     },
     "b990d2cb03066d4b": {
       "first_seen": "2026-11-02",
@@ -2791,6 +2831,11 @@
       "source": "ft_companies",
       "title": "Investors look to shelter portfolios from rising AI concentration risks"
     },
+    "e7f1f984909b0959": {
+      "first_seen": "2026-11-08",
+      "source": "ft_companies",
+      "title": "‘I don’t do business plans’ — serial entrepreneur Marcia Kilgore"
+    },
     "e7f2eb76ffbc1538": {
       "first_seen": "2026-10-04",
       "source": "marketwatch",
@@ -2865,6 +2910,11 @@
       "first_seen": "2026-10-22",
       "source": "hn_ask",
       "title": "Tell HN: 2x PHP RCE CVEs with CVSS 10.0 Incoming"
+    },
+    "ee1504eea214e326": {
+      "first_seen": "2026-11-08",
+      "source": "hn_show",
+      "title": "Show HN: Did prediction markets do any predicting this midterms?"
     },
     "ee4f657a56bd17f5": {
       "first_seen": "2026-10-08",
@@ -3026,6 +3076,11 @@
       "source": "hn_show",
       "title": "Show HN: CUA-S1 – A System One Model for Computer Use"
     },
+    "feb48f6759f39ef1": {
+      "first_seen": "2026-11-08",
+      "source": "hn_ask",
+      "title": "Canva lays off 22% of its workforce; 1,270 people"
+    },
     "feb8ab8ab26f328d": {
       "first_seen": "2026-09-28",
       "source": "hn_show",
@@ -3035,6 +3090,11 @@
       "first_seen": "2026-10-16",
       "source": "hn_show",
       "title": "Show HN: How random are you?"
+    },
+    "fee9a4074992725b": {
+      "first_seen": "2026-11-08",
+      "source": "hn_show",
+      "title": "Show HN: Curious HN – Hacker News without the snark"
     },
     "ff04564a5602aba4": {
       "first_seen": "2026-10-28",
