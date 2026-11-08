@@ -1,5 +1,5 @@
 {
-  "count": 624,
+  "count": 636,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
@@ -106,6 +106,11 @@
       "source": "reddit_builders",
       "title": "SaaS Companies Are Adding AI Features Fast. But Are Their Contracts Ready?"
     },
+    "073250d1f8e79567": {
+      "first_seen": "2026-11-09",
+      "source": "hn_show",
+      "title": "Show HN: Goethe – The infrastructure for self-hosted AI"
+    },
     "075dbf6e272e1e5a": {
       "first_seen": "2026-09-20",
       "source": "hn_show",
@@ -125,6 +130,11 @@
       "first_seen": "2026-09-17",
       "source": "hn_show",
       "title": "Show HN: I built a new version of my fun spatial 3D online meeting app"
+    },
+    "0939d704b87b6a9d": {
+      "first_seen": "2026-11-09",
+      "source": "reddit_builders",
+      "title": "Launched my first SaaS 3 days ago. Zero paying users. Here's what I'm doing next. What would you change?"
     },
     "0a68678458619ed9": {
       "first_seen": "2026-10-24",
@@ -165,6 +175,11 @@
       "first_seen": "2026-10-19",
       "source": "ft_companies",
       "title": "US threatens Europe over Starlink restrictions"
+    },
+    "0d2aa7d21102e3b6": {
+      "first_seen": "2026-11-09",
+      "source": "hn_show",
+      "title": "Show HN: Where Were We"
     },
     "0d4ee8d3a656eb91": {
       "first_seen": "2026-09-26",
@@ -220,6 +235,11 @@
       "first_seen": "2026-10-07",
       "source": "hn_show",
       "title": "Show HN: Parseable, an open observability datalake, handles 100M time-series/min"
+    },
+    "109af1d3cd8eb9fd": {
+      "first_seen": "2026-11-09",
+      "source": "awealthofcommonsense",
+      "title": "Diversification & Drawdowns"
     },
     "10c72cd2b5ab9eaf": {
       "first_seen": "2026-11-07",
@@ -366,6 +386,11 @@
       "source": "hn_show",
       "title": "Show HN: Steal My Bitcoin"
     },
+    "1f4d6154803609f8": {
+      "first_seen": "2026-11-09",
+      "source": "reddit_builders",
+      "title": "How can I publish my SaaS to windows?"
+    },
     "2073550217e33683": {
       "first_seen": "2026-10-29",
       "source": "hn_show",
@@ -510,6 +535,11 @@
       "first_seen": "2026-10-30",
       "source": "hn_show",
       "title": "Show HN: SlideBySide – Present slides without sharing your screen"
+    },
+    "2d0f77b80e409429": {
+      "first_seen": "2026-11-09",
+      "source": "hn_show",
+      "title": "Show HN: An offline desktop companion to help maintain a healthy blink rhythm"
     },
     "2d4d06d64f22a2f0": {
       "first_seen": "2026-09-30",
@@ -690,6 +720,11 @@
       "first_seen": "2026-11-01",
       "source": "hn_show",
       "title": "Show HN: I rebuilt Kubernetes for ESP32 microcontrollers"
+    },
+    "3a88d89ef3dc6d0d": {
+      "first_seen": "2026-11-09",
+      "source": "hn_ask",
+      "title": "Ask HN: How did you convince family and friends to join your XMPP/Matrix server?"
     },
     "3aaae0d5e06070bc": {
       "first_seen": "2026-11-01",
@@ -1030,6 +1065,11 @@
       "first_seen": "2026-09-29",
       "source": "hn_show",
       "title": "Show HN: PaperMono, e-ink fridge magnet shopping list with mobile web page"
+    },
+    "55aa1dc18cbb251b": {
+      "first_seen": "2026-11-09",
+      "source": "hn_show",
+      "title": "Show HN: Coldframe, a honeypot that poses as a supermarket fridge controller"
     },
     "569ae022ea2f0e60": {
       "first_seen": "2026-09-24",
@@ -1550,6 +1590,11 @@
       "first_seen": "2026-10-24",
       "source": "hn_ask",
       "title": "Tell HN: I unknowingly broke the PHP RCE embargo. I am sorry"
+    },
+    "76fb68434f9fa786": {
+      "first_seen": "2026-11-09",
+      "source": "bbc_business",
+      "title": "Government 'looking seriously' at banning under-16s from Vinted and eBay"
     },
     "7737ad254ded6080": {
       "first_seen": "2026-09-23",
@@ -2221,6 +2266,11 @@
       "source": "ft_companies",
       "title": "Anthropic and the AI cluster effect in fundraising"
     },
+    "b228101c3e9d88f9": {
+      "first_seen": "2026-11-09",
+      "source": "hn_show",
+      "title": "Show HN: We compressed a 31B video+audio diffusion model to 14B, 6 steps, INT8"
+    },
     "b2f712a899907cd6": {
       "first_seen": "2026-10-08",
       "source": "ft_companies",
@@ -2666,6 +2716,11 @@
       "source": "marketwatch",
       "title": "Switching jobs to get higher pay works best in these industries"
     },
+    "d818620c0ac2fdbe": {
+      "first_seen": "2026-11-09",
+      "source": "ft_companies",
+      "title": "Private equity firm seeks to take control of LIV Golf from Saudi wealth fund"
+    },
     "d8bec03fabcd5ff5": {
       "first_seen": "2026-10-27",
       "source": "awealthofcommonsense",
@@ -3060,6 +3115,11 @@
       "first_seen": "2026-10-31",
       "source": "marketwatch",
       "title": "This strategist correctly recommended shorting Big Tech debt last year. Now he says the yields make it attractive."
+    },
+    "fdfc418f4fb24f9e": {
+      "first_seen": "2026-11-09",
+      "source": "ft_companies",
+      "title": "Meet the people saving England’s peatlands"
     },
     "fe1d679e74709694": {
       "first_seen": "2026-11-03",
