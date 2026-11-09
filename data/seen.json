@@ -1,5 +1,5 @@
 {
-  "count": 636,
+  "count": 648,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
@@ -151,6 +151,11 @@
       "source": "marketwatch",
       "title": "Meet the home buyers totally unfazed by 7% mortgage rates"
     },
+    "0bcb48896fbaafcf": {
+      "first_seen": "2026-11-10",
+      "source": "reddit_builders",
+      "title": "My MRR is $0 and I'm fine with it. What 30 days of selling one-time Mac apps taught me ($13 to $317)"
+    },
     "0be981a9fb44d08e": {
       "first_seen": "2026-10-21",
       "source": "hn_show",
@@ -215,6 +220,11 @@
       "first_seen": "2026-10-20",
       "source": "reddit_builders",
       "title": "Would freelancers actually use a single link to onboard new clients?"
+    },
+    "0f601825cf49dc42": {
+      "first_seen": "2026-11-10",
+      "source": "hn_ask",
+      "title": "Ask HN: How do you manage your AI agents' context across clients and projects?"
     },
     "0f63a2a5a5620b74": {
       "first_seen": "2026-11-03",
@@ -516,6 +526,11 @@
       "source": "awealthofcommonsense",
       "title": "5% Bond Yields"
     },
+    "2b44002238d69bc9": {
+      "first_seen": "2026-11-10",
+      "source": "hn_show",
+      "title": "Show HN: Flide: Make Jev-like decision models up to 9.5x faster"
+    },
     "2b5a00fb5320e887": {
       "first_seen": "2026-09-30",
       "source": "marketwatch",
@@ -656,6 +671,11 @@
       "source": "nikkei_asia",
       "title": "Japan's DOGE to 'step up' spending review, eyeing EV subsidies, health checks"
     },
+    "36c76e41557d962d": {
+      "first_seen": "2026-11-10",
+      "source": "hn_show",
+      "title": "Show HN: JavaScript web apps with WASM layout and GPU rendering in 280 KB"
+    },
     "376c796fbe430399": {
       "first_seen": "2026-09-23",
       "source": "hn_show",
@@ -730,6 +750,11 @@
       "first_seen": "2026-11-01",
       "source": "reddit_builders",
       "title": "Built a 100% private, zero-backend document studio (PDF & Word editor) using AI + client-side JS. No servers, runs entirely in browser RAM."
+    },
+    "3b0d1dcb5cae97f7": {
+      "first_seen": "2026-11-10",
+      "source": "hn_ask",
+      "title": "ChatGPT Desktop forwards your SSH agent to remote machines"
     },
     "3b3507d83f0e90dc": {
       "first_seen": "2026-09-21",
@@ -961,6 +986,11 @@
       "source": "bbc_business",
       "title": "Audit regulator looking into Manchester City accounting"
     },
+    "4c8a99b52af74ce9": {
+      "first_seen": "2026-11-10",
+      "source": "hn_ask",
+      "title": "Ask HN: Do you still enjoy coding in C++?"
+    },
     "4d20a54c0eac7cc0": {
       "first_seen": "2026-10-07",
       "source": "bbc_business",
@@ -1005,6 +1035,11 @@
       "first_seen": "2026-10-03",
       "source": "hn_ask",
       "title": "Ask HN: Who is hiring? (October 2026)"
+    },
+    "511f94d7d43007f1": {
+      "first_seen": "2026-11-10",
+      "source": "awealthofcommonsense",
+      "title": "Talk Your Book: Customized and Income"
     },
     "519a776207ed3493": {
       "first_seen": "2026-10-31",
@@ -1220,6 +1255,11 @@
       "first_seen": "2026-10-12",
       "source": "hn_show",
       "title": "Show HN: Diffle, a keyboard-centric diff viewer with LSP support"
+    },
+    "622184d5f62c4308": {
+      "first_seen": "2026-11-10",
+      "source": "marketwatch",
+      "title": "What employers should do to build a pipeline of talented Gen Z workers"
     },
     "624b1720d9ea127d": {
       "first_seen": "2026-10-17",
@@ -1661,6 +1701,11 @@
       "source": "hn_show",
       "title": "Show HN: A simple to-do app for iPhone, Mac, and your agent"
     },
+    "7cabb3f3335114d8": {
+      "first_seen": "2026-11-10",
+      "source": "coindesk",
+      "title": "Robinhood backs tokenization of its stock on OKX–ICE platform even as most companies opt out"
+    },
     "7cd496121f201d47": {
       "first_seen": "2026-10-12",
       "source": "hn_show",
@@ -1770,6 +1815,11 @@
       "first_seen": "2026-10-11",
       "source": "hn_show",
       "title": "Show HN: The rarest tech books and docs you've probably never read"
+    },
+    "876d6b63f9120144": {
+      "first_seen": "2026-11-10",
+      "source": "hn_ask",
+      "title": "Ask HN: What are you working on? (November 2026)"
     },
     "878ff1446345b768": {
       "first_seen": "2026-10-19",
@@ -2921,6 +2971,11 @@
       "source": "ft_companies",
       "title": "Big Tech stocks suffer biggest weekly drop since ‘liberation day’"
     },
+    "e8ed40cc9955e3cb": {
+      "first_seen": "2026-11-10",
+      "source": "marketwatch",
+      "title": "‘We had the worst fight’: I want my husband to retire at 65, but I don’t want to lose his $280,000 salary. Is that unreasonable?"
+    },
     "e9abf1e70b491ae8": {
       "first_seen": "2026-10-05",
       "source": "hn_show",
@@ -3075,6 +3130,11 @@
       "first_seen": "2026-10-11",
       "source": "ft_companies",
       "title": "AI borrowing slows as investors grow wary of debt binge"
+    },
+    "f770723aae2a6293": {
+      "first_seen": "2026-11-10",
+      "source": "hn_show",
+      "title": "Show HN: DBDelve – Open-Source DB Client Made with Rust and GPUI"
     },
     "f7f77bbb97fe20e6": {
       "first_seen": "2026-10-22",
