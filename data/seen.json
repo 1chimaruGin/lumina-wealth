@@ -1,5 +1,5 @@
 {
-  "count": 648,
+  "count": 660,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
@@ -626,6 +626,11 @@
       "source": "hn_show",
       "title": "Show HN: Pulse Local, a Mac budgeting app whose AI models run on your machine"
     },
+    "33db90b2033a87a7": {
+      "first_seen": "2026-11-11",
+      "source": "bbc_business",
+      "title": "Some pupils 'struggling just to get a hot meal'"
+    },
     "33e3a64873b42ff7": {
       "first_seen": "2026-10-08",
       "source": "hn_show",
@@ -811,6 +816,11 @@
       "source": "marketwatch",
       "title": "The bond market shrugged off two inflation shocks. Why stock investors should pay attention."
     },
+    "3ee14dd2a8f1293a": {
+      "first_seen": "2026-11-11",
+      "source": "hn_show",
+      "title": "Show HN: MeowDisplay Is iPhone Mirroring, but in Reverse"
+    },
     "3f000715446cf13a": {
       "first_seen": "2026-09-23",
       "source": "awealthofcommonsense",
@@ -860,6 +870,11 @@
       "first_seen": "2026-10-02",
       "source": "hn_show",
       "title": "Show HN: Strata – an expressive semantic layer that can say no to your LLM"
+    },
+    "445a1641aaef9d52": {
+      "first_seen": "2026-11-11",
+      "source": "reddit_builders",
+      "title": "Payments in Saas companies"
     },
     "44caccdb01c9a3b8": {
       "first_seen": "2026-10-05",
@@ -950,6 +965,11 @@
       "first_seen": "2026-10-31",
       "source": "marketwatch",
       "title": "It’s the strangest job market the U.S. has ever seen. The low-hire, low-fire economy turns 3 years old."
+    },
+    "49b42ea52f29175c": {
+      "first_seen": "2026-11-11",
+      "source": "abnormalreturns",
+      "title": "Monday links: search traffic"
     },
     "4a311e18c894116a": {
       "first_seen": "2026-09-22",
@@ -1311,6 +1331,11 @@
       "source": "japanfinance",
       "title": "Friday Poll Thread - for those who have reached 'coast', what changed ?"
     },
+    "64db3e073aa8db67": {
+      "first_seen": "2026-11-11",
+      "source": "reddit_builders",
+      "title": "I built Indie Torch, a weekly launch platform for indie products, on Cloudflare’s free tier"
+    },
     "64f733b90d8376ee": {
       "first_seen": "2026-10-12",
       "source": "marketwatch",
@@ -1380,6 +1405,11 @@
       "first_seen": "2026-09-19",
       "source": "hn_ask",
       "title": "Ask HN: Losing motivation to work in the IT field, need advice"
+    },
+    "68d6b40ba1ccbcf7": {
+      "first_seen": "2026-11-11",
+      "source": "reddit_builders",
+      "title": "My new SaaS reached $1200 MRR!!"
     },
     "6954c2918556f038": {
       "first_seen": "2026-10-02",
@@ -1721,6 +1751,11 @@
       "source": "hn_show",
       "title": "Show HN: Microsoft Office running with Wine on Linux with no virtualization"
     },
+    "7d3c5ee3bee4b346": {
+      "first_seen": "2026-11-11",
+      "source": "bbc_business",
+      "title": "Californians reject wealth tax for billionaires"
+    },
     "7da2495c97e2ebe7": {
       "first_seen": "2026-10-29",
       "source": "marketwatch",
@@ -1745,6 +1780,11 @@
       "first_seen": "2026-09-20",
       "source": "hn_ask",
       "title": "Ask HN: How do you interview devs in a post-AI world?"
+    },
+    "804184d9d644a5ca": {
+      "first_seen": "2026-11-11",
+      "source": "hn_show",
+      "title": "Show HN: Someone Was Here – Find out who used your Mac while you were away"
     },
     "8046c79956428cb1": {
       "first_seen": "2026-10-15",
@@ -2100,6 +2140,11 @@
       "first_seen": "2026-10-02",
       "source": "marketwatch",
       "title": "30-year mortgage rate posts biggest jump in four years"
+    },
+    "9f3a6306b37623d1": {
+      "first_seen": "2026-11-11",
+      "source": "marketwatch",
+      "title": "Why stocks are falling and the 10-year Treasury yield is back near 5% after Tuesday’s inflation report"
     },
     "9f3e4c964b8c905d": {
       "first_seen": "2026-10-18",
@@ -2571,6 +2616,11 @@
       "source": "hn_show",
       "title": "Show HN: JevBench, a reproducible benchmark for typed decision models"
     },
+    "c978c31c4ec3f01e": {
+      "first_seen": "2026-11-11",
+      "source": "reddit_builders",
+      "title": "What's selling on SaaS marketplaces right now (from a marketplace)"
+    },
     "cab07fce8c766aec": {
       "first_seen": "2026-09-24",
       "source": "hn_show",
@@ -2716,6 +2766,11 @@
       "source": "hn_show",
       "title": "Show HN: An atlas of system designs with interactive architecture diagrams"
     },
+    "d49ab84d681895f6": {
+      "first_seen": "2026-11-11",
+      "source": "reddit_builders",
+      "title": "250 signups, 50% activation rate, but only 2 paying customers. What am I missing?"
+    },
     "d5844b51c3278a55": {
       "first_seen": "2026-10-01",
       "source": "hn_show",
@@ -2750,6 +2805,11 @@
       "first_seen": "2026-10-27",
       "source": "coindesk",
       "title": "OCC calls on community banks to enter the stablecoin payments market"
+    },
+    "d7379938113b1f2c": {
+      "first_seen": "2026-11-11",
+      "source": "hn_show",
+      "title": "Show HN: A 15 MB self-hosted Netflix and Spotify for your media server"
     },
     "d7d9a2a25df6ba53": {
       "first_seen": "2026-11-05",
