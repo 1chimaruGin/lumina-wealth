@@ -1,5 +1,5 @@
 {
-  "count": 672,
+  "count": 684,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
@@ -396,6 +396,11 @@
       "source": "hn_show",
       "title": "Show HN: Hacker Atlas - A map of what Hacker News talks about"
     },
+    "1f213ddefe4bf32e": {
+      "first_seen": "2026-11-13",
+      "source": "marketwatch",
+      "title": "‘He calls my plans a fantasy’: My husband says we can’t afford our $200,000-a-year dream retirement. I think he’s cheap."
+    },
     "1f21a11f54e05b7b": {
       "first_seen": "2026-10-25",
       "source": "hn_show",
@@ -465,6 +470,11 @@
       "first_seen": "2026-09-20",
       "source": "hn_show",
       "title": "Show HN: I created an open source locally usable full fledged AI platform"
+    },
+    "24cd3b024b565378": {
+      "first_seen": "2026-11-13",
+      "source": "hn_show",
+      "title": "Show HN: 3D to 2D, point clouds flattening (geometry images)"
     },
     "24e1aea537d2f659": {
       "first_seen": "2026-11-07",
@@ -561,6 +571,11 @@
       "source": "ft_companies",
       "title": "European gas prices jump above €100 on fears of Iran war escalation"
     },
+    "2c0e804c1cdf420d": {
+      "first_seen": "2026-11-13",
+      "source": "hn_show",
+      "title": "Show HN: Godbolt-in-a-floating-window for Neovim (C, C++, Rust)"
+    },
     "2c10954cc99447f4": {
       "first_seen": "2026-10-30",
       "source": "hn_show",
@@ -600,6 +615,11 @@
       "first_seen": "2026-11-01",
       "source": "ft_companies",
       "title": "Cash Isa changes can still foster a ‘nation of investors’"
+    },
+    "309fee028c8b1fe0": {
+      "first_seen": "2026-11-13",
+      "source": "hn_show",
+      "title": "Show HN: I recreated Papers Please but you're deciding which YC startups to fund"
     },
     "31767104313292dd": {
       "first_seen": "2026-10-12",
@@ -675,6 +695,11 @@
       "first_seen": "2026-11-08",
       "source": "reddit_builders",
       "title": "Moroccan/African SaaS founders, how are you handling online payments?"
+    },
+    "359bb99c45677a93": {
+      "first_seen": "2026-11-13",
+      "source": "hn_show",
+      "title": "Show HN: Klad, a paint app your coding agent can drive (source-available)"
     },
     "362af0c9f201ebf3": {
       "first_seen": "2026-10-17",
@@ -815,6 +840,11 @@
       "first_seen": "2026-09-26",
       "source": "marketwatch",
       "title": "A new bill in Congress would lower the retirement age to 60. See who would qualify."
+    },
+    "3dc38c9c15705893": {
+      "first_seen": "2026-11-13",
+      "source": "reddit_builders",
+      "title": "I made a game about quitting your job to build a SaaS. You can still end up back at the office."
     },
     "3e1fccb6ce25ce74": {
       "first_seen": "2026-10-09",
@@ -1396,6 +1426,11 @@
       "source": "hn_show",
       "title": "Show HN: Gauge – Open-Source CLI to recursively improve your docs"
     },
+    "66a28b075bc74d0c": {
+      "first_seen": "2026-11-13",
+      "source": "hn_ask",
+      "title": "How do you keep up quality when you vibe-code?"
+    },
     "66b1d8c95b1508c5": {
       "first_seen": "2026-11-02",
       "source": "hn_show",
@@ -1866,6 +1901,11 @@
       "source": "hn_show",
       "title": "Show HN: An open-source manufacturing ERP/MES/QMS"
     },
+    "853dbb82b8173f9f": {
+      "first_seen": "2026-11-13",
+      "source": "hn_show",
+      "title": "Show HN: Fable52.games – Play and inspect Fable 5.2 single-file HTML games"
+    },
     "864cbfe55cb5547f": {
       "first_seen": "2026-10-09",
       "source": "hn_show",
@@ -1980,6 +2020,11 @@
       "first_seen": "2026-11-01",
       "source": "hn_show",
       "title": "Show HN: I built a multiplayer game where you're an aerial fighter cat"
+    },
+    "8d77cad00d4d5d0e": {
+      "first_seen": "2026-11-13",
+      "source": "marketwatch",
+      "title": "Nvidia is spending more than ever on Washington lobbying. It may not stop Congress from limiting China chip sales now."
     },
     "8de0d2c1cbc7beef": {
       "first_seen": "2026-10-02",
@@ -2300,6 +2345,11 @@
       "first_seen": "2026-11-05",
       "source": "awealthofcommonsense",
       "title": "Animal Spirits: Drowning Financially"
+    },
+    "abe7dbda3c312fce": {
+      "first_seen": "2026-11-13",
+      "source": "nikkei_asia",
+      "title": "Takaichi looks to meet with Trump to head off defense spending demands"
     },
     "abf23f8013453ee4": {
       "first_seen": "2026-10-19",
@@ -2911,6 +2961,11 @@
       "source": "reddit_builders",
       "title": "Trying to understand B2B SaaS pricing models."
     },
+    "da45486f0cc429d9": {
+      "first_seen": "2026-11-13",
+      "source": "indicator",
+      "title": "Should personal finance be part of the liberal arts?"
+    },
     "dabd36d6ac350fc5": {
       "first_seen": "2026-09-25",
       "source": "hn_show",
@@ -3015,6 +3070,11 @@
       "first_seen": "2026-10-08",
       "source": "coindesk",
       "title": "Tether tapped by Kazakhstan’s central bank to explore stablecoin and tokenization"
+    },
+    "e40297c9b5a8aa90": {
+      "first_seen": "2026-11-13",
+      "source": "hn_show",
+      "title": "Show HN: Yogurt – Free, private, open-source alternative to Granola"
     },
     "e44323c655e717f3": {
       "first_seen": "2026-10-10",
