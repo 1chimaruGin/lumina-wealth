@@ -73,3 +73,4 @@
 {"at": "2026-11-11", "mode": "daily", "sources_ok": 33, "sources_total": 33, "failed": [], "candidates": 284, "picks": 3, "scored_by": "claude-code", "cost_usd": 0.0}
 {"at": "2026-11-12", "mode": "daily", "sources_ok": 32, "sources_total": 33, "failed": ["timharford"], "candidates": 319, "picks": 3, "scored_by": "claude-code", "cost_usd": 0.0}
 {"at": "2026-11-13", "mode": "daily", "sources_ok": 33, "sources_total": 33, "failed": [], "candidates": 313, "picks": 3, "scored_by": "claude-code", "cost_usd": 0.0}
+{"at": "2026-11-14", "mode": "daily", "sources_ok": 33, "sources_total": 33, "failed": [], "candidates": 303, "picks": 3, "scored_by": "claude-code", "cost_usd": 0.0}

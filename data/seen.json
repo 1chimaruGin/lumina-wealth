@@ -1,5 +1,5 @@
 {
-  "count": 684,
+  "count": 696,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
@@ -176,6 +176,11 @@
       "source": "bbc_business",
       "title": "China's growth accelerates as AI boom helps boost exports"
     },
+    "0cf4a3c90c3f2b20": {
+      "first_seen": "2026-11-14",
+      "source": "hn_show",
+      "title": "Show HN: AI Red Lines – write down what would make you act on AI"
+    },
     "0d22d78027b53889": {
       "first_seen": "2026-10-19",
       "source": "ft_companies",
@@ -325,6 +330,11 @@
       "first_seen": "2026-10-15",
       "source": "hn_show",
       "title": "Show HN: Graphicle, a Rust port of Graphify with memory for coding agents"
+    },
+    "188f9e636534e490": {
+      "first_seen": "2026-11-14",
+      "source": "hn_ask",
+      "title": "U.S. October PPI Rises 6.5% YoY, Highest in Nearly Four Years"
     },
     "193c75e957e5e198": {
       "first_seen": "2026-10-18",
@@ -545,6 +555,11 @@
       "first_seen": "2026-09-19",
       "source": "awealthofcommonsense",
       "title": "5% Bond Yields"
+    },
+    "2b40b585359d0124": {
+      "first_seen": "2026-11-14",
+      "source": "hn_show",
+      "title": "Show HN: Kapso – Iterative learning from enterprise data"
     },
     "2b44002238d69bc9": {
       "first_seen": "2026-11-10",
@@ -1171,6 +1186,11 @@
       "source": "coindesk",
       "title": "Crypto job postings triple to over 1,200 in September, but applications fall"
     },
+    "5499b2fa594f46a2": {
+      "first_seen": "2026-11-14",
+      "source": "hn_ask",
+      "title": "Ask HN: Can anyone name anything new that AI has done?"
+    },
     "549a1ac34905b494": {
       "first_seen": "2026-09-29",
       "source": "hn_show",
@@ -1270,6 +1290,11 @@
       "first_seen": "2026-10-18",
       "source": "hn_show",
       "title": "Show HN: Llmspeed – feel how fast a local LLM runs before you buy the hardware"
+    },
+    "5d529917bd914db2": {
+      "first_seen": "2026-11-14",
+      "source": "marketwatch",
+      "title": "If you could change one thing about caregiving, what would it be?"
     },
     "5d63c736fb7cf98e": {
       "first_seen": "2026-10-05",
@@ -1876,6 +1901,11 @@
       "source": "marginalrevolution",
       "title": "Inequality in Equal Land"
     },
+    "817ff5abcef35eae": {
+      "first_seen": "2026-11-14",
+      "source": "marketwatch",
+      "title": "SpaceX is about to attempt the ‘holy grail’ of rocketry"
+    },
     "81889b665b9d9ebe": {
       "first_seen": "2026-09-22",
       "source": "hn_show",
@@ -2015,6 +2045,11 @@
       "first_seen": "2026-11-05",
       "source": "hn_ask",
       "title": "Getting hit with \"Prove you are a human\" at every other website"
+    },
+    "8d421d9d0ca569c2": {
+      "first_seen": "2026-11-14",
+      "source": "hn_show",
+      "title": "Show HN: I built a Rick and Morty explainer video generator"
     },
     "8d6c13cd488e187f": {
       "first_seen": "2026-11-01",
@@ -2221,6 +2256,11 @@
       "source": "hn_show",
       "title": "Show HN: OneDeploy – Managed open-source apps with nightly backups and TLS"
     },
+    "9f652a2c4d20a371": {
+      "first_seen": "2026-11-14",
+      "source": "hn_show",
+      "title": "Show HN: AgentRun – open-source, Self-improving Managed Agents"
+    },
     "a03656ddad0f54fd": {
       "first_seen": "2026-10-19",
       "source": "reddit_builders",
@@ -2330,6 +2370,11 @@
       "first_seen": "2026-11-02",
       "source": "marketwatch",
       "title": "Is it curtains for COLA? Saving Social Security could mean changing the cost-of-living adjustment."
+    },
+    "a852a3af83bf936f": {
+      "first_seen": "2026-11-14",
+      "source": "awealthofcommonsense",
+      "title": "The Bear Markets"
     },
     "a8c5f1a84102ca1c": {
       "first_seen": "2026-10-08",
@@ -3061,6 +3106,11 @@
       "source": "reddit_builders",
       "title": "My friend built a Chrome extension that makes you earn your social media time instead of blocking it. Thoughts?"
     },
+    "e2d9e43fc9a263a7": {
+      "first_seen": "2026-11-14",
+      "source": "hn_show",
+      "title": "Show HN: My $300 embroidery machine needed a subscription, so I built my own app"
+    },
     "e31b704014b392fd": {
       "first_seen": "2026-10-18",
       "source": "hn_show",
@@ -3185,6 +3235,16 @@
       "first_seen": "2026-10-28",
       "source": "hn_ask",
       "title": "Ask HN: Is it not possible to enroll for Apple Developer anymore?"
+    },
+    "eb728733a295bf87": {
+      "first_seen": "2026-11-14",
+      "source": "ft_companies",
+      "title": "Bessent blames Lutnick’s commerce department for failure to blacklist Megaspeed"
+    },
+    "ec1ec261b9f5b8dd": {
+      "first_seen": "2026-11-14",
+      "source": "hn_show",
+      "title": "Show HN: Apron Chat Protocol"
     },
     "ed5392f81ba27677": {
       "first_seen": "2026-10-27",
