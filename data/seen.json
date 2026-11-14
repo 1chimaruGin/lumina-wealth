@@ -1,5 +1,5 @@
 {
-  "count": 696,
+  "count": 708,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
@@ -100,6 +100,11 @@
       "first_seen": "2026-09-23",
       "source": "hn_ask",
       "title": "LinkedIn is a terrible quality website"
+    },
+    "055cbb5574fcb329": {
+      "first_seen": "2026-11-15",
+      "source": "marginalrevolution",
+      "title": "Are we witnessing an intelligence explosion?"
     },
     "06a00580e9d43bf3": {
       "first_seen": "2026-11-03",
@@ -535,6 +540,11 @@
       "first_seen": "2026-10-20",
       "source": "marketwatch",
       "title": "Colleges raced to build massive computer-science departments. Now the boom is turning to bust."
+    },
+    "2920ad2a4637efec": {
+      "first_seen": "2026-11-15",
+      "source": "hn_ask",
+      "title": "Ask HN: What is the state of self-hosting email in 2026?"
     },
     "29e9658fc03818e7": {
       "first_seen": "2026-11-12",
@@ -1016,6 +1026,11 @@
       "source": "reddit_builders",
       "title": "Launched my side project last week — looking for brutally honest feedback on the concept and landing page"
     },
+    "4807ad3940efe10d": {
+      "first_seen": "2026-11-15",
+      "source": "coindesk",
+      "title": "Kazakhstan plans tokenized government bonds in first quarter after $22 million note sale"
+    },
     "484d2e6926949239": {
       "first_seen": "2026-10-22",
       "source": "bbc_business",
@@ -1246,6 +1261,11 @@
       "source": "hn_ask",
       "title": "Ask HN: What do you believe or not believe about AI?"
     },
+    "5a06cd56282b89f9": {
+      "first_seen": "2026-11-15",
+      "source": "hn_show",
+      "title": "Show HN: Isometric SF – A pixel-art map of the SF Bay Area"
+    },
     "5a13ce7aaffad260": {
       "first_seen": "2026-10-17",
       "source": "hn_show",
@@ -1266,10 +1286,20 @@
       "source": "hn_show",
       "title": "Show HN: Jevstiller – Distill Jev into a local model, with a disagreement bound"
     },
+    "5afee097c619e367": {
+      "first_seen": "2026-11-15",
+      "source": "hn_ask",
+      "title": "Tell HN: Claude Code Is Down"
+    },
     "5b2597ff02747823": {
       "first_seen": "2026-11-04",
       "source": "ofdollarsanddata",
       "title": "How Many Americans Are Millionaires?"
+    },
+    "5c4f352f53a33584": {
+      "first_seen": "2026-11-15",
+      "source": "hn_ask",
+      "title": "Tell HN: Google Search to start locking down search behind a login wall"
     },
     "5c56e87087c48684": {
       "first_seen": "2026-10-23",
@@ -1280,6 +1310,11 @@
       "first_seen": "2026-09-28",
       "source": "hn_show",
       "title": "Show HN: Panda, the world's first personal AI computer"
+    },
+    "5c97ee21fcf0f96d": {
+      "first_seen": "2026-11-15",
+      "source": "hn_show",
+      "title": "Show HN: Live map of U.S. flights during tonight's FAA nationwide ground stop"
     },
     "5cc84770752caa45": {
       "first_seen": "2026-09-25",
@@ -1600,6 +1635,11 @@
       "first_seen": "2026-10-16",
       "source": "ft_companies",
       "title": "Harvard’s endowment returns surge on back of AI and SpaceX investments"
+    },
+    "6fa7bf91fa8f4e52": {
+      "first_seen": "2026-11-15",
+      "source": "ft_companies",
+      "title": "UK housing wealth owned by over-65s tops £2.25tn"
     },
     "6ff66be1cb226649": {
       "first_seen": "2026-10-23",
@@ -2076,6 +2116,11 @@
       "source": "nikkei_asia",
       "title": "Japan's Don Quijote drops refund fees for tourists to boost spending"
     },
+    "902bcfbaabf42bd0": {
+      "first_seen": "2026-11-15",
+      "source": "hn_ask",
+      "title": "Claude OAuth Failures"
+    },
     "905b5151d287988e": {
       "first_seen": "2026-09-30",
       "source": "reddit_builders",
@@ -2245,6 +2290,11 @@
       "first_seen": "2026-10-02",
       "source": "marketwatch",
       "title": "30-year mortgage rate posts biggest jump in four years"
+    },
+    "9f16b8b1938ff02c": {
+      "first_seen": "2026-11-15",
+      "source": "marketwatch",
+      "title": "‘The thought of living to 100 terrifies me’: Is Social Security a giant Ponzi scheme?"
     },
     "9f3a6306b37623d1": {
       "first_seen": "2026-11-11",
@@ -2506,6 +2556,11 @@
       "source": "ft_companies",
       "title": "Sleepy European telcos turn to data centre craze"
     },
+    "b338b5a5af80e931": {
+      "first_seen": "2026-11-15",
+      "source": "hn_ask",
+      "title": "Ask HN: What are the most useful, concrete AI skills to independently learn?"
+    },
     "b4015ae9894cd66f": {
       "first_seen": "2026-11-01",
       "source": "ft_companies",
@@ -2625,6 +2680,11 @@
       "first_seen": "2026-09-27",
       "source": "hn_show",
       "title": "Show HN: Doom or Bloom, map your AI worldview"
+    },
+    "bcedd58cb29bc178": {
+      "first_seen": "2026-11-15",
+      "source": "hn_show",
+      "title": "Show HN: Cerulion – ROS 2-compatible robotics runtime with multi-process replay"
     },
     "bd209c4cd5607be8": {
       "first_seen": "2026-09-24",
