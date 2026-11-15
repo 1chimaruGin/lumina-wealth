@@ -1,5 +1,5 @@
 {
-  "count": 708,
+  "count": 720,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
@@ -411,6 +411,11 @@
       "source": "hn_show",
       "title": "Show HN: Hacker Atlas - A map of what Hacker News talks about"
     },
+    "1ed6c2a0f5a90749": {
+      "first_seen": "2026-11-16",
+      "source": "hn_show",
+      "title": "Show HN: Fursoy – Out-of-order RV64IMAFDV core in SystemVerilog (Linux 6.6)"
+    },
     "1f213ddefe4bf32e": {
       "first_seen": "2026-11-13",
       "source": "marketwatch",
@@ -560,6 +565,11 @@
       "first_seen": "2026-09-17",
       "source": "hn_show",
       "title": "Show HN: How Stale Is Your AI? Release age and training cutoff for 20 models"
+    },
+    "2aad7466fcfc733c": {
+      "first_seen": "2026-11-16",
+      "source": "hn_show",
+      "title": "Show HN: A custom font based on the Jamaican flag alphabet"
     },
     "2b017119b467ede2": {
       "first_seen": "2026-09-19",
@@ -716,6 +726,11 @@
       "source": "hn_show",
       "title": "Show HN: HackerTV – HN's most-recommended Youtube videos as 24/7 TV channels"
     },
+    "34de9d80d81453d3": {
+      "first_seen": "2026-11-16",
+      "source": "hn_show",
+      "title": "Show HN: DeepSeek V3 in ~200 lines of pure Jax"
+    },
     "35978d566e4f0ab9": {
       "first_seen": "2026-11-08",
       "source": "reddit_builders",
@@ -865,6 +880,11 @@
       "first_seen": "2026-09-26",
       "source": "marketwatch",
       "title": "A new bill in Congress would lower the retirement age to 60. See who would qualify."
+    },
+    "3d9660037aa42689": {
+      "first_seen": "2026-11-16",
+      "source": "marketwatch",
+      "title": "‘I’m sick of flying’: I paid for priority boarding, but the overhead bins were full. Was I duped?"
     },
     "3dc38c9c15705893": {
       "first_seen": "2026-11-13",
@@ -1091,6 +1111,11 @@
       "source": "hn_ask",
       "title": "Ask HN: Do you still enjoy coding in C++?"
     },
+    "4c97d8b498dce88b": {
+      "first_seen": "2026-11-16",
+      "source": "ft_companies",
+      "title": "HSBC’s bet on bots could reshape the wealth wars"
+    },
     "4d20a54c0eac7cc0": {
       "first_seen": "2026-10-07",
       "source": "bbc_business",
@@ -1150,6 +1175,11 @@
       "first_seen": "2026-10-26",
       "source": "hn_show",
       "title": "Show HN: Build a world on your phone, explore it in XR on Vision Pro and Quest"
+    },
+    "529d65553fb48fbf": {
+      "first_seen": "2026-11-16",
+      "source": "hn_show",
+      "title": "Show HN: A terminal-native idle factory game, written in Rust with ratatui"
     },
     "529e20637d76cb58": {
       "first_seen": "2026-10-14",
@@ -1350,6 +1380,11 @@
       "first_seen": "2026-10-02",
       "source": "hn_show",
       "title": "Show HN: Ledge.sh – Runnable Markdown Notes"
+    },
+    "5e606231a9fd6a9d": {
+      "first_seen": "2026-11-16",
+      "source": "hn_show",
+      "title": "Show HN: Gawain – Require type hints on all Python variables"
     },
     "5e93a68709678d7c": {
       "first_seen": "2026-11-06",
@@ -2236,6 +2271,11 @@
       "source": "hn_show",
       "title": "Show HN: Durable Actors – OSS Durable Objects with configurable compute"
     },
+    "98ad066448f15b3b": {
+      "first_seen": "2026-11-16",
+      "source": "marginalrevolution",
+      "title": "Do not overrate zero-sum status-seeking"
+    },
     "998ca21e7612e20b": {
       "first_seen": "2026-10-15",
       "source": "reddit_builders",
@@ -2506,6 +2546,11 @@
       "source": "hn_show",
       "title": "Show HN: NES Contra (1987) port (ASM –> C and then C –> WebAssembly)"
     },
+    "af7f8d8cd3854a59": {
+      "first_seen": "2026-11-16",
+      "source": "hn_show",
+      "title": "Show HN: Agweb – a browser for agents that stays out of your way"
+    },
     "affd0ae8af428840": {
       "first_seen": "2026-11-05",
       "source": "hn_show",
@@ -2606,6 +2651,11 @@
       "source": "ft_companies",
       "title": "Quant hedge funds reap big gains from global bond sell-off"
     },
+    "b6a998f7218333dc": {
+      "first_seen": "2026-11-16",
+      "source": "hn_show",
+      "title": "Show HN: Turbo-Browser-MCP – Batch forms, DOM deltas and submit guards for MCP"
+    },
     "b6d27ada39475d11": {
       "first_seen": "2026-09-24",
       "source": "hn_show",
@@ -2701,6 +2751,11 @@
       "source": "hn_show",
       "title": "Show HN: Hntui – A TUI for Hacker News"
     },
+    "bdb3efaff34c6d93": {
+      "first_seen": "2026-11-16",
+      "source": "marketwatch",
+      "title": "China’s hottest stocks these days have one thing in common: names that sound like sheep"
+    },
     "bee2389228360f43": {
       "first_seen": "2026-10-20",
       "source": "hn_show",
@@ -2730,6 +2785,11 @@
       "first_seen": "2026-10-12",
       "source": "hn_show",
       "title": "Show HN: WallHop – 12ft.io is gone, so I built a replacement"
+    },
+    "c005f6f641321e88": {
+      "first_seen": "2026-11-16",
+      "source": "reddit_builders",
+      "title": "[FOR HIRE] Stuck on your web app or MVP? I will build and launch it for you in 7 to 14 days (USD600 fixed rate)"
     },
     "c006ad10d22da4d5": {
       "first_seen": "2026-11-02",
