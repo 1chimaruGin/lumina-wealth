@@ -1,5 +1,5 @@
 {
-  "count": 720,
+  "count": 732,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
@@ -320,6 +320,11 @@
       "first_seen": "2026-11-12",
       "source": "economist_fin",
       "title": "For boomers, economic boom times are over"
+    },
+    "180c301438cacf64": {
+      "first_seen": "2026-11-17",
+      "source": "hn_show",
+      "title": "Show HN: db-branch – database branches in seconds for AI agents and CI, via ZFS"
     },
     "180fcb0308a35a32": {
       "first_seen": "2026-10-16",
@@ -956,6 +961,11 @@
       "source": "hn_show",
       "title": "Show HN: Ghanaian street games you can play in the browser"
     },
+    "4342f376d8ff1f54": {
+      "first_seen": "2026-11-17",
+      "source": "marketwatch",
+      "title": "My husband is happily retired at 64 and thinks I should keep working. Is he being fair?"
+    },
     "43908efb2c58e9cb": {
       "first_seen": "2026-10-15",
       "source": "marketwatch",
@@ -980,6 +990,11 @@
       "first_seen": "2026-11-01",
       "source": "hn_show",
       "title": "Show HN: A working Nintendo in ~1GB of Qwen weights"
+    },
+    "45a3e75c50e65f9b": {
+      "first_seen": "2026-11-17",
+      "source": "awealthofcommonsense",
+      "title": "Talk Your Book: The Anthropic IPO"
     },
     "45a613464e550622": {
       "first_seen": "2026-10-08",
@@ -1430,6 +1445,11 @@
       "first_seen": "2026-11-10",
       "source": "marketwatch",
       "title": "What employers should do to build a pipeline of talented Gen Z workers"
+    },
+    "6225a8c598150e80": {
+      "first_seen": "2026-11-17",
+      "source": "hn_show",
+      "title": "Show HN: OpenTodo – a self-hosted, local-first task manager in one Go binary"
     },
     "624b1720d9ea127d": {
       "first_seen": "2026-10-17",
@@ -1931,6 +1951,11 @@
       "source": "coindesk",
       "title": "Latvia eyes crypto tax payments in 2027 as parliament overhauls crypto taxation"
     },
+    "7fb0c170d40bd46b": {
+      "first_seen": "2026-11-17",
+      "source": "hn_ask",
+      "title": "Vercel should fork and maintain Deno"
+    },
     "7fc2d2012fea3586": {
       "first_seen": "2026-10-02",
       "source": "ft_companies",
@@ -2171,6 +2196,11 @@
       "source": "hn_show",
       "title": "Show HN: Quake ported to safe Rust, playable in browser"
     },
+    "923a984e5c2e0ade": {
+      "first_seen": "2026-11-17",
+      "source": "nikkei_asia",
+      "title": "China's economy softens across the board as factory output, spending slow"
+    },
     "928727e5fe5c949c": {
       "first_seen": "2026-09-17",
       "source": "hn_show",
@@ -2296,6 +2326,11 @@
       "source": "ofdollarsanddata",
       "title": "Who Got Richer Since 2022?"
     },
+    "9a43f04f7c926fd5": {
+      "first_seen": "2026-11-17",
+      "source": "bbc_business",
+      "title": "Trump backs return of ex-Nvidia boss after 'Bring Jensen Back' campaign launched"
+    },
     "9a820f0ab6eb0e2b": {
       "first_seen": "2026-10-26",
       "source": "reddit_builders",
@@ -2310,6 +2345,11 @@
       "first_seen": "2026-10-13",
       "source": "reddit_builders",
       "title": "I made a saas for 5$/month"
+    },
+    "9c1a992de6824ec3": {
+      "first_seen": "2026-11-17",
+      "source": "hn_ask",
+      "title": "Ask HN: Stripe closed us after one $1,500 invoice and never asked for evidence"
     },
     "9cfb5433a5a1f760": {
       "first_seen": "2026-10-27",
@@ -2551,6 +2591,11 @@
       "source": "hn_show",
       "title": "Show HN: Agweb – a browser for agents that stays out of your way"
     },
+    "af8c996dd078d369": {
+      "first_seen": "2026-11-17",
+      "source": "hn_ask",
+      "title": "Ask HN: If AI tools are so good, why isn't your bug backlog empty?"
+    },
     "affd0ae8af428840": {
       "first_seen": "2026-11-05",
       "source": "hn_show",
@@ -2595,6 +2640,11 @@
       "first_seen": "2026-11-12",
       "source": "japanfinance",
       "title": "Investing for dividend return in Japan"
+    },
+    "b2d839f0afe9a3df": {
+      "first_seen": "2026-11-17",
+      "source": "hn_show",
+      "title": "Show HN: A tiny macOS app that turns off the MacBook display [free license]"
     },
     "b2f712a899907cd6": {
       "first_seen": "2026-10-08",
@@ -2695,6 +2745,11 @@
       "first_seen": "2026-10-31",
       "source": "hn_ask",
       "title": "Ask HN: Do you have side-projects that generate >$500 revenue/month?"
+    },
+    "b8363c3127134c83": {
+      "first_seen": "2026-11-17",
+      "source": "hn_show",
+      "title": "Show HN: Coral – Open-source gateway where agents write their own tools"
     },
     "b856de0518197d6e": {
       "first_seen": "2026-10-09",
@@ -2815,6 +2870,11 @@
       "first_seen": "2026-10-29",
       "source": "reddit_builders",
       "title": "Made a dev environment that runs entirely in the browser, npm install included"
+    },
+    "c22844cf4d10c8c3": {
+      "first_seen": "2026-11-17",
+      "source": "hn_show",
+      "title": "Show HN: The Last Complication, a Zachtronics-style watchmaking puzzle game"
     },
     "c2478135e0d014d0": {
       "first_seen": "2026-10-26",
