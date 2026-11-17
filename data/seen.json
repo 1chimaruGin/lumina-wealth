@@ -1,5 +1,5 @@
 {
-  "count": 732,
+  "count": 744,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
@@ -651,6 +651,11 @@
       "source": "ft_companies",
       "title": "Big Tech sheds nearly $900bn in rout over soaring AI spending"
     },
+    "30440c4bdc27459b": {
+      "first_seen": "2026-11-18",
+      "source": "hn_ask",
+      "title": "Tell HN: HN is being scraped for emails to scam"
+    },
     "309ac245523a3264": {
       "first_seen": "2026-11-01",
       "source": "ft_companies",
@@ -680,6 +685,11 @@
       "first_seen": "2026-10-11",
       "source": "coindesk",
       "title": "One year after 10/10 flash crash, bitcoin and ether liquidity have rebuilt, but altcoins still face risks"
+    },
+    "3329787c38c056cf": {
+      "first_seen": "2026-11-18",
+      "source": "hn_show",
+      "title": "Show HN: Umbrella – macOS app to capture audio from any app"
     },
     "334a6646400953dd": {
       "first_seen": "2026-09-28",
@@ -951,6 +961,11 @@
       "source": "hn_ask",
       "title": "eMudhra to Exit Global SSL/TLS Certificate Business;"
     },
+    "42535f84b4dd9be0": {
+      "first_seen": "2026-11-18",
+      "source": "hn_show",
+      "title": "Show HN: Fakemetrics.com – \"build in public\" like a superstar"
+    },
     "426b7f9c7803ae51": {
       "first_seen": "2026-10-28",
       "source": "reddit_builders",
@@ -1176,6 +1191,11 @@
       "source": "hn_ask",
       "title": "Ask HN: Who is hiring? (October 2026)"
     },
+    "50fba0f4984fc98e": {
+      "first_seen": "2026-11-18",
+      "source": "hn_show",
+      "title": "Show HN: Agav – an open-source terminal agent designed to waste fewer tokens"
+    },
     "511f94d7d43007f1": {
       "first_seen": "2026-11-10",
       "source": "awealthofcommonsense",
@@ -1300,6 +1320,11 @@
       "first_seen": "2026-11-04",
       "source": "hn_show",
       "title": "Show HN: HackerChurn – which SaaS tools HN wants to cancel"
+    },
+    "59aaf32bdaffe5f6": {
+      "first_seen": "2026-11-18",
+      "source": "hn_show",
+      "title": "Show HN: VennDB: append-only in-memory Rust DB for rows queried using bit flags"
     },
     "5a03c375bef00d2b": {
       "first_seen": "2026-10-30",
@@ -1876,6 +1901,11 @@
       "source": "hn_ask",
       "title": "Tell HN: Uceprotect is extorting website owners"
     },
+    "7866e27b5e007e08": {
+      "first_seen": "2026-11-18",
+      "source": "hn_show",
+      "title": "Show HN: Rbit – Self Hosted Git Forge in Rust"
+    },
     "7a1c643f34bc792e": {
       "first_seen": "2026-11-07",
       "source": "hn_ask",
@@ -2090,6 +2120,11 @@
       "first_seen": "2026-10-17",
       "source": "hn_show",
       "title": "Show HN: rStation – A shared research lab for your AI agents"
+    },
+    "8a2c23255303265b": {
+      "first_seen": "2026-11-18",
+      "source": "ft_companies",
+      "title": "US tech stocks slide ahead of Nvidia results"
     },
     "8a4d6455521ce750": {
       "first_seen": "2026-09-26",
@@ -2361,6 +2396,11 @@
       "source": "hn_ask",
       "title": "Open-source, cross-harness memory for AI agents"
     },
+    "9e322312fca7c7ee": {
+      "first_seen": "2026-11-18",
+      "source": "ft_companies",
+      "title": "Disney turns to job cuts in latest cost blitz"
+    },
     "9e3ed547b6b0c997": {
       "first_seen": "2026-09-22",
       "source": "hn_show",
@@ -2475,6 +2515,11 @@
       "first_seen": "2026-10-14",
       "source": "ft_companies",
       "title": "The ‘ungodly spending’ behind the creator economy"
+    },
+    "a6f750c37cb8d79b": {
+      "first_seen": "2026-11-18",
+      "source": "marketwatch",
+      "title": "Parents told us what it’s like to help their kids battle sports-gambling addiction: ‘There’s no handbook’"
     },
     "a6ffbff7a12cc2eb": {
       "first_seen": "2026-10-12",
@@ -2610,6 +2655,11 @@
       "first_seen": "2026-11-07",
       "source": "hn_show",
       "title": "Show HN: Firenook – Firebase emulators in Rust: 40× faster writes, 10× less RAM"
+    },
+    "b138e21104747003": {
+      "first_seen": "2026-11-18",
+      "source": "hn_show",
+      "title": "Show HN: Alloy CSS, dialogs, menus and tabs that work with JavaScript off"
     },
     "b15e2cfe207afea0": {
       "first_seen": "2026-10-20",
@@ -2840,6 +2890,11 @@
       "first_seen": "2026-10-12",
       "source": "hn_show",
       "title": "Show HN: WallHop – 12ft.io is gone, so I built a replacement"
+    },
+    "bff9d77ec76cff10": {
+      "first_seen": "2026-11-18",
+      "source": "hn_show",
+      "title": "Show HN: Sutra-OS – A self-hosted ontology platform"
     },
     "c005f6f641321e88": {
       "first_seen": "2026-11-16",
@@ -3170,6 +3225,11 @@
       "first_seen": "2026-10-19",
       "source": "coindesk",
       "title": "Crypto audits give investors false sense of security as Q3 hacks cost $1.18 billion, Hacken says"
+    },
+    "d8f53164e01e3c35": {
+      "first_seen": "2026-11-18",
+      "source": "ofdollarsanddata",
+      "title": "How Much Should You Have Saved for Retirement by Age?"
     },
     "d90e1031b9e75e95": {
       "first_seen": "2026-11-02",
