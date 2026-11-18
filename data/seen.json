@@ -1,10 +1,15 @@
 {
-  "count": 744,
+  "count": 756,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
       "source": "reddit_builders",
       "title": "I built a lightweight, no root Stremio client for older LG TVs that do not support the official app (targeting 2016–2019 models / webOS 3.x "
+    },
+    "004ddcf6c10ee73f": {
+      "first_seen": "2026-11-19",
+      "source": "hn_ask",
+      "title": "Ask HN: Are iPhone Duo Customers Happy?"
     },
     "007e061ec788b834": {
       "first_seen": "2026-10-09",
@@ -166,6 +171,11 @@
       "source": "hn_show",
       "title": "Show HN: Rouler – Steer Windows traffic per app or IP across multiple interfaces"
     },
+    "0c0bb5ad5838f8ee": {
+      "first_seen": "2026-11-19",
+      "source": "awealthofcommonsense",
+      "title": "A Strange Year in the Stock Market"
+    },
     "0c52706d1cc52b2e": {
       "first_seen": "2026-10-25",
       "source": "hn_show",
@@ -310,6 +320,11 @@
       "first_seen": "2026-10-25",
       "source": "hn_show",
       "title": "Show HN: Autonomous root for Tcl Android TV via CVE-2022-22706"
+    },
+    "15e68d546f2e159c": {
+      "first_seen": "2026-11-19",
+      "source": "nikkei_asia",
+      "title": "Breach of Japan's Fugaku supercomputer exposes security spending gap"
     },
     "16212e61438fe737": {
       "first_seen": "2026-10-04",
@@ -1281,6 +1296,11 @@
       "source": "hn_show",
       "title": "Show HN: Coldframe, a honeypot that poses as a supermarket fridge controller"
     },
+    "55edba111c3434e7": {
+      "first_seen": "2026-11-19",
+      "source": "hn_show",
+      "title": "Show HN: Birds as Code"
+    },
     "569ae022ea2f0e60": {
       "first_seen": "2026-09-24",
       "source": "reddit_sideproject",
@@ -1320,6 +1340,11 @@
       "first_seen": "2026-11-04",
       "source": "hn_show",
       "title": "Show HN: HackerChurn – which SaaS tools HN wants to cancel"
+    },
+    "599c95193b51a96b": {
+      "first_seen": "2026-11-19",
+      "source": "hn_ask",
+      "title": "Ask HN: Aren't the current cyber attacks suspicious?"
     },
     "59aaf32bdaffe5f6": {
       "first_seen": "2026-11-18",
@@ -1791,6 +1816,11 @@
       "source": "hn_show",
       "title": "Show HN: Jevman – AI decision models play Pac-Man"
     },
+    "7311406471007f4b": {
+      "first_seen": "2026-11-19",
+      "source": "hn_ask",
+      "title": "Codeberg seems to have vanished from DNS"
+    },
     "7320319a1718b24e": {
       "first_seen": "2026-10-02",
       "source": "ft_companies",
@@ -1925,6 +1955,11 @@
       "first_seen": "2026-10-06",
       "source": "ft_companies",
       "title": "Citi to speed up promotion path for junior bankers as hiring war heats up"
+    },
+    "7b51051dc622a0b2": {
+      "first_seen": "2026-11-19",
+      "source": "hn_show",
+      "title": "Show HN: Type Fighter 2"
     },
     "7bcd10dc9669d731": {
       "first_seen": "2026-10-31",
@@ -2115,6 +2150,11 @@
       "first_seen": "2026-10-04",
       "source": "marginalrevolution",
       "title": "Supply is elastic, installment #1637"
+    },
+    "89f441741c92b404": {
+      "first_seen": "2026-11-19",
+      "source": "hn_show",
+      "title": "Show HN: Take Voyager 1 apart, down to a single memory chip"
     },
     "8a231454d50f2699": {
       "first_seen": "2026-10-17",
@@ -2370,6 +2410,11 @@
       "first_seen": "2026-10-26",
       "source": "reddit_builders",
       "title": "At what stage of completion do you usually launch your projects?"
+    },
+    "9a9f2d276ba2011c": {
+      "first_seen": "2026-11-19",
+      "source": "marketwatch",
+      "title": "Social Security should be shut down, this Republican senator says"
     },
     "9b1a5221e33600cf": {
       "first_seen": "2026-10-05",
@@ -2810,6 +2855,11 @@
       "first_seen": "2026-11-08",
       "source": "hn_show",
       "title": "Show HN: Waymark – A workflow engine that compiles jobs instead of replaying"
+    },
+    "b955388224554f43": {
+      "first_seen": "2026-11-19",
+      "source": "hn_show",
+      "title": "Show HN: TrnRT – An open-source LLM inference engine for AWS Trainium"
     },
     "b990d2cb03066d4b": {
       "first_seen": "2026-11-02",
@@ -3331,6 +3381,11 @@
       "source": "hn_show",
       "title": "Show HN: Free alternative to graphics design giants"
     },
+    "e1f0381c8cfc61e3": {
+      "first_seen": "2026-11-19",
+      "source": "hn_show",
+      "title": "Show HN: Unref – A Python dead code finder built on Ruff's parser"
+    },
     "e25c770944ccc7cc": {
       "first_seen": "2026-09-20",
       "source": "hn_show",
@@ -3600,6 +3655,11 @@
       "first_seen": "2026-09-25",
       "source": "hn_show",
       "title": "Show HN: Make cursed fonts like Times New Bastard"
+    },
+    "f67bdc27779d4ca7": {
+      "first_seen": "2026-11-19",
+      "source": "bbc_business",
+      "title": "Government backs welfare shake-up to prevent 'lost generation'"
     },
     "f6ae2f8548ecbe45": {
       "first_seen": "2026-09-17",
