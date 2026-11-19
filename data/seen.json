@@ -1,5 +1,5 @@
 {
-  "count": 756,
+  "count": 768,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
@@ -286,6 +286,11 @@
       "source": "hn_show",
       "title": "Show HN: Destroy Any Website with Stickman"
     },
+    "1190fbbe33df33fa": {
+      "first_seen": "2026-11-20",
+      "source": "hn_show",
+      "title": "Show HN: Robotics needs better CAD, so I wrote a B-rep kernel and 3,487 tests"
+    },
     "11dba99efb7b77f7": {
       "first_seen": "2026-09-21",
       "source": "hn_show",
@@ -315,6 +320,11 @@
       "first_seen": "2026-10-21",
       "source": "hn_show",
       "title": "Show HN: Penmentor – Claude marks up your handwritten math like a teacher"
+    },
+    "151b4b4750a15cc6": {
+      "first_seen": "2026-11-20",
+      "source": "timharford",
+      "title": "Hotblack Desiato’s Guide to Britain’s Bad Taxes"
     },
     "153b7aa18d6a1f9a": {
       "first_seen": "2026-10-25",
@@ -900,6 +910,11 @@
       "first_seen": "2026-09-30",
       "source": "hn_show",
       "title": "Show HN: OpenAPPA – open-source deterministic guardrails that don't break agents"
+    },
+    "3ce21c9c1e9d58d8": {
+      "first_seen": "2026-11-20",
+      "source": "hn_show",
+      "title": "Show HN: Mastra Factory, the open-source software factory we use to build Mastra"
     },
     "3cfbbe27d7821539": {
       "first_seen": "2026-10-11",
@@ -1556,6 +1571,11 @@
       "source": "reddit_builders",
       "title": "I built Indie Torch, a weekly launch platform for indie products, on Cloudflare’s free tier"
     },
+    "64f479dd8ae37c5f": {
+      "first_seen": "2026-11-20",
+      "source": "hn_show",
+      "title": "Show HN: An API for word timestamps from speech, 75% within 20ms"
+    },
     "64f733b90d8376ee": {
       "first_seen": "2026-10-12",
       "source": "marketwatch",
@@ -2030,6 +2050,11 @@
       "first_seen": "2026-09-20",
       "source": "hn_ask",
       "title": "Ask HN: How do you interview devs in a post-AI world?"
+    },
+    "8015c163dae44d94": {
+      "first_seen": "2026-11-20",
+      "source": "hn_show",
+      "title": "Show HN: Foolscap – a writing app that reads your book and never writes for you"
     },
     "804184d9d644a5ca": {
       "first_seen": "2026-11-11",
@@ -2536,6 +2561,11 @@
       "source": "hn_show",
       "title": "Show HN: Get your coding agent off ~2019 JavaScript, onto modern web primitives"
     },
+    "a4aa8bf59da29cf9": {
+      "first_seen": "2026-11-20",
+      "source": "bbc_business",
+      "title": "Elon Musk says record $446m spending on US midterms was 'pretty foolish'"
+    },
     "a5020678bb36f8ef": {
       "first_seen": "2026-10-13",
       "source": "ft_companies",
@@ -2876,6 +2906,11 @@
       "source": "bbc_business",
       "title": "US ban on Canadian alcohol and dairy takes effect as trade war drags on"
     },
+    "ba700ea486c182fa": {
+      "first_seen": "2026-11-20",
+      "source": "hn_show",
+      "title": "Show HN: Poptato – App launcher, command runner, and fuzzy menu for Linux"
+    },
     "bba0da0d1585467e": {
       "first_seen": "2026-11-01",
       "source": "hn_show",
@@ -2910,6 +2945,11 @@
       "first_seen": "2026-11-16",
       "source": "marketwatch",
       "title": "China’s hottest stocks these days have one thing in common: names that sound like sheep"
+    },
+    "becfd432b03324ca": {
+      "first_seen": "2026-11-20",
+      "source": "ft_companies",
+      "title": "UK’s long-delayed pensions dashboard now due to launch next year"
     },
     "bee2389228360f43": {
       "first_seen": "2026-10-20",
@@ -2965,6 +3005,11 @@
       "first_seen": "2026-10-22",
       "source": "reddit_builders",
       "title": "Launching a website globally any advice? 📩"
+    },
+    "c1172ed18ac8a1aa": {
+      "first_seen": "2026-11-20",
+      "source": "hn_show",
+      "title": "Show HN: ExitPath – Open-source ways out of Slack, Notion and Microsoft 365"
     },
     "c1db2c647beb3aee": {
       "first_seen": "2026-10-29",
@@ -3060,6 +3105,11 @@
       "first_seen": "2026-10-15",
       "source": "hn_show",
       "title": "Show HN: I wrote an email app that accepts only one sender per inbox"
+    },
+    "cc198026e3a4c56f": {
+      "first_seen": "2026-11-20",
+      "source": "hn_show",
+      "title": "Show HN: Open-source, real-time object tracking for live video feeds"
     },
     "cc200911000adcbb": {
       "first_seen": "2026-10-23",
@@ -3331,6 +3381,11 @@
       "source": "hn_show",
       "title": "Show HN: Timeline of the Far Future"
     },
+    "dd9d9a6fb4ba929d": {
+      "first_seen": "2026-11-20",
+      "source": "ft_companies",
+      "title": "Walmart boosted by grocery sales as US consumers search for lower prices"
+    },
     "dda807656f1c976b": {
       "first_seen": "2026-10-08",
       "source": "reddit_builders",
@@ -3565,6 +3620,11 @@
       "first_seen": "2026-11-01",
       "source": "marketwatch",
       "title": "Your stock portfolio increasingly hinges on the bond market — and the midterm elections"
+    },
+    "eeab092161f80361": {
+      "first_seen": "2026-11-20",
+      "source": "hn_ask",
+      "title": "Anthropic (ANT) stock lists at nearly $2T valuation"
     },
     "eee402332b6dfec3": {
       "first_seen": "2026-11-12",
