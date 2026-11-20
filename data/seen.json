@@ -1,5 +1,5 @@
 {
-  "count": 768,
+  "count": 780,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
@@ -181,6 +181,11 @@
       "source": "hn_show",
       "title": "Show HN: Corgi, a helpful {agent, terminal} multiplexer"
     },
+    "0c792f512e8ca45c": {
+      "first_seen": "2026-11-21",
+      "source": "hn_ask",
+      "title": "Claude Gets Hella Paranoid"
+    },
     "0cbf21adf73aa952": {
       "first_seen": "2026-11-04",
       "source": "hn_show",
@@ -310,6 +315,11 @@
       "first_seen": "2026-11-07",
       "source": "nikkei_asia",
       "title": "Foreign-student spending in Japan hits $4.3bn amid soft yen"
+    },
+    "13b54d558a1deb49": {
+      "first_seen": "2026-11-21",
+      "source": "marketwatch",
+      "title": "My husband spent $80,000 on a boat, yet says my plans for a $100,000 pottery studio are irresponsible. Who’s right?"
     },
     "13d13608380ca28e": {
       "first_seen": "2026-10-04",
@@ -846,6 +856,11 @@
       "source": "hn_show",
       "title": "Show HN: Jev Cards, Can you beat a vision model at a picture quiz?"
     },
+    "391827c3b786906b": {
+      "first_seen": "2026-11-21",
+      "source": "moneystuff",
+      "title": "Anthropic Pops"
+    },
     "39203af7f2592df4": {
       "first_seen": "2026-10-13",
       "source": "reddit_builders",
@@ -1281,6 +1296,11 @@
       "source": "hn_show",
       "title": "Show HN: Brickbrag – A multiplayer brick-building world in the browser"
     },
+    "5396e1f459074d03": {
+      "first_seen": "2026-11-21",
+      "source": "hn_show",
+      "title": "Show HN: Can an AI Agent Bypass Your Website Security?"
+    },
     "53fc5e3980fdd562": {
       "first_seen": "2026-09-30",
       "source": "ft_companies",
@@ -1551,6 +1571,11 @@
       "source": "marginalrevolution",
       "title": "No, DataCenters are Not Crowding-Out Other Investments"
     },
+    "6405678c381720ec": {
+      "first_seen": "2026-11-21",
+      "source": "hn_show",
+      "title": "Show HN: Cornhole News – A Hacker News inspired site for news across the Midwest"
+    },
     "644978a1273ab2c3": {
       "first_seen": "2026-09-25",
       "source": "hn_ask",
@@ -1741,6 +1766,11 @@
       "source": "producthunt",
       "title": "Product Hunt Visual Launch Editor"
     },
+    "6de61fb8a31c5d00": {
+      "first_seen": "2026-11-21",
+      "source": "hn_ask",
+      "title": "I'm Peter Roberts, immigration attorney who does work for YC and startups. AMA"
+    },
     "6e1889f1ddc5b650": {
       "first_seen": "2026-10-30",
       "source": "reddit_builders",
@@ -1895,6 +1925,11 @@
       "first_seen": "2026-10-29",
       "source": "reddit_builders",
       "title": "What’s hardest about practicing consulting cases on your own?"
+    },
+    "758703cc360e15cb": {
+      "first_seen": "2026-11-21",
+      "source": "ft_companies",
+      "title": "Anthropic shares slide as fears over AI boom dominate"
     },
     "7597fd09aa5e3688": {
       "first_seen": "2026-10-16",
@@ -2136,6 +2171,11 @@
       "source": "reddit_builders",
       "title": "I launched my research app in open beta. How do I find my first real users?"
     },
+    "868288735380a384": {
+      "first_seen": "2026-11-21",
+      "source": "hn_ask",
+      "title": "Ask HN: Where do you see Software in 5 years?"
+    },
     "876449a0944e93d0": {
       "first_seen": "2026-10-11",
       "source": "hn_show",
@@ -2266,6 +2306,11 @@
       "source": "marketwatch",
       "title": "U.S. manufacturers say inflation is bad and not getting any better"
     },
+    "8f1df3eb2c3a7583": {
+      "first_seen": "2026-11-21",
+      "source": "hn_show",
+      "title": "Show HN: Watch weight-space programming in action with WebGPU"
+    },
     "8ff53dd9237e47d6": {
       "first_seen": "2026-11-06",
       "source": "ft_companies",
@@ -2280,6 +2325,11 @@
       "first_seen": "2026-11-15",
       "source": "hn_ask",
       "title": "Claude OAuth Failures"
+    },
+    "904ba83881d575df": {
+      "first_seen": "2026-11-21",
+      "source": "marketwatch",
+      "title": "I’m terrified of a market crash. Should I put $400,000 of my $1 million retirement savings into an annuity?"
     },
     "905b5151d287988e": {
       "first_seen": "2026-09-30",
@@ -2545,6 +2595,11 @@
       "first_seen": "2026-10-17",
       "source": "nikkei_asia",
       "title": "US has full confidence in Takaichi's fiscal discipline: Treasury official"
+    },
+    "a2da745830e5decf": {
+      "first_seen": "2026-11-21",
+      "source": "hn_show",
+      "title": "Show HN: Tinnitus frequency finder and audio notch tool"
     },
     "a3d8f734a10741b6": {
       "first_seen": "2026-09-27",
@@ -3105,6 +3160,11 @@
       "first_seen": "2026-10-15",
       "source": "hn_show",
       "title": "Show HN: I wrote an email app that accepts only one sender per inbox"
+    },
+    "cbbbac7b6ef9e802": {
+      "first_seen": "2026-11-21",
+      "source": "hn_show",
+      "title": "Show HN: Fast deterministic natural language search for OpenStreetMap data"
     },
     "cc198026e3a4c56f": {
       "first_seen": "2026-11-20",
