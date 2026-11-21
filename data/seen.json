@@ -1,5 +1,5 @@
 {
-  "count": 780,
+  "count": 792,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
@@ -90,6 +90,11 @@
       "first_seen": "2026-10-07",
       "source": "reddit_builders",
       "title": "I built an iMessage agent for startup job hunting"
+    },
+    "0410ff4eedc7ce48": {
+      "first_seen": "2026-11-22",
+      "source": "coindesk",
+      "title": "Cross-chain protocol Chainflip's FLIP tanks 30% after suspected $4.86 million vault drain"
     },
     "045a469c80b94f5b": {
       "first_seen": "2026-10-20",
@@ -706,10 +711,20 @@
       "source": "coindesk",
       "title": "IMF finds demand for tokenized stocks, says the market is still volatile, illiquid"
     },
+    "32676eb52e9bcf49": {
+      "first_seen": "2026-11-22",
+      "source": "hn_ask",
+      "title": "GitLab 19.6.0 is out and still vulnerable to Ruby2Shell and NGINX2Root"
+    },
     "329353ff246fa165": {
       "first_seen": "2026-11-02",
       "source": "bbc_business",
       "title": "Streeting denies 'kicking can down the road' in defence spending row"
+    },
+    "3293eb0f037addf5": {
+      "first_seen": "2026-11-22",
+      "source": "hn_ask",
+      "title": "Ask HN: I have been unemployed for 2y. 15 years of experience, US. What to do?"
     },
     "32a99b88d10e1b10": {
       "first_seen": "2026-09-28",
@@ -1015,6 +1030,11 @@
       "first_seen": "2026-10-28",
       "source": "reddit_builders",
       "title": "A lightweight, native SSH & RDP client for Windows, macOS and Linux"
+    },
+    "429ae5914f70055f": {
+      "first_seen": "2026-11-22",
+      "source": "hn_show",
+      "title": "Show HN: ADE Index – a sourced and ranked index of 975 agentic coding tools"
     },
     "430b0db1de6bf653": {
       "first_seen": "2026-11-12",
@@ -1580,6 +1600,11 @@
       "first_seen": "2026-09-25",
       "source": "hn_ask",
       "title": "Ask HN: I just talked to an AI-obsessed client, and I need a shower afterwards"
+    },
+    "64517cce6f631543": {
+      "first_seen": "2026-11-22",
+      "source": "ft_companies",
+      "title": "The Bank of Mum and Dad has a ‘Neets’ problem"
     },
     "64581bfda36978c6": {
       "first_seen": "2026-10-11",
@@ -2306,6 +2331,11 @@
       "source": "marketwatch",
       "title": "U.S. manufacturers say inflation is bad and not getting any better"
     },
+    "8deaa5d834e604f7": {
+      "first_seen": "2026-11-22",
+      "source": "abnormalreturns",
+      "title": "Friday links: people of honor"
+    },
     "8f1df3eb2c3a7583": {
       "first_seen": "2026-11-21",
       "source": "hn_show",
@@ -2345,6 +2375,11 @@
       "first_seen": "2026-10-10",
       "source": "hn_show",
       "title": "Show HN: Quake ported to safe Rust, playable in browser"
+    },
+    "91dd07bfecbe334c": {
+      "first_seen": "2026-11-22",
+      "source": "hn_show",
+      "title": "Show HN: Drive around my village in 3D"
     },
     "923a984e5c2e0ade": {
       "first_seen": "2026-11-17",
@@ -2861,6 +2896,11 @@
       "source": "hn_show",
       "title": "Show HN: Lasm – Write formally verified webapps in Lean for Node/serverless/edge"
     },
+    "b5a0847d6d615b51": {
+      "first_seen": "2026-11-22",
+      "source": "hn_show",
+      "title": "Show HN: Beat – a to-do list that completes its own tasks"
+    },
     "b5c30ecf844d89d3": {
       "first_seen": "2026-09-26",
       "source": "hn_show",
@@ -3141,6 +3181,11 @@
       "source": "reddit_builders",
       "title": "What's selling on SaaS marketplaces right now (from a marketplace)"
     },
+    "ca81b9fb123eb4d9": {
+      "first_seen": "2026-11-22",
+      "source": "ft_companies",
+      "title": "US tech stocks plunge into bear market in worst week since Covid-19 crisis"
+    },
     "cab07fce8c766aec": {
       "first_seen": "2026-09-24",
       "source": "hn_show",
@@ -3160,6 +3205,11 @@
       "first_seen": "2026-10-15",
       "source": "hn_show",
       "title": "Show HN: I wrote an email app that accepts only one sender per inbox"
+    },
+    "cb3cd586e997a629": {
+      "first_seen": "2026-11-22",
+      "source": "hn_show",
+      "title": "Show HN: AgentMall – Let your AI agent buy groceries"
     },
     "cbbbac7b6ef9e802": {
       "first_seen": "2026-11-21",
@@ -3376,6 +3426,11 @@
       "source": "ft_companies",
       "title": "Private equity firm seeks to take control of LIV Golf from Saudi wealth fund"
     },
+    "d8640923d2430592": {
+      "first_seen": "2026-11-22",
+      "source": "hn_show",
+      "title": "Show HN: Zero C#, Power of C# without any GC"
+    },
     "d8bec03fabcd5ff5": {
       "first_seen": "2026-10-27",
       "source": "awealthofcommonsense",
@@ -3550,6 +3605,11 @@
       "first_seen": "2026-10-24",
       "source": "hn_show",
       "title": "Show HN: An icon for every city in North America"
+    },
+    "e54c27197d1f9855": {
+      "first_seen": "2026-11-22",
+      "source": "hn_show",
+      "title": "Show HN: OpenComputer – an open source alternative to Devin"
     },
     "e598bd72bf306b4f": {
       "first_seen": "2026-10-28",
