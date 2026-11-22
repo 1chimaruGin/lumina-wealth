@@ -1,5 +1,5 @@
 {
-  "count": 792,
+  "count": 804,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
@@ -486,6 +486,11 @@
       "source": "hn_show",
       "title": "Show HN: Ekselio – Loveable for finance workflows (local first)"
     },
+    "212b109585530bd2": {
+      "first_seen": "2026-11-23",
+      "source": "hn_show",
+      "title": "Show HN: The Riemann Proof Handbook"
+    },
     "220b792ecf08356e": {
       "first_seen": "2026-10-24",
       "source": "ft_companies",
@@ -556,6 +561,11 @@
       "source": "hn_show",
       "title": "Show HN: Rickub – The Smartest Git in the Universe"
     },
+    "2757cdb01647bfab": {
+      "first_seen": "2026-11-23",
+      "source": "marketwatch",
+      "title": "‘I felt so seen’: Why families across America are laughing — and crying — over SNL’s ‘Sister’ sketch"
+    },
     "278c1d724ea06d22": {
       "first_seen": "2026-10-08",
       "source": "hn_show",
@@ -601,6 +611,11 @@
       "source": "marketwatch",
       "title": "I’m 63 and want to spend $95,000 on a roof deck for my $500,000 home. Is that a good investment?"
     },
+    "2a149758582a52e3": {
+      "first_seen": "2026-11-23",
+      "source": "hn_show",
+      "title": "Show HN: Reaktiv Workbook – A spreadsheet where every cell is Python"
+    },
     "2a6ac23eb50f0535": {
       "first_seen": "2026-10-20",
       "source": "hn_show",
@@ -640,6 +655,11 @@
       "first_seen": "2026-11-06",
       "source": "hn_show",
       "title": "Show HN: I built a tool that prices a pre-built PC part by part"
+    },
+    "2b80ac733fcd05d4": {
+      "first_seen": "2026-11-23",
+      "source": "producthunt",
+      "title": "TeaserKit"
     },
     "2b99d31cc307840f": {
       "first_seen": "2026-11-12",
@@ -771,6 +791,11 @@
       "source": "hn_show",
       "title": "Show HN: I turned my iPhone and a $20 smart plug into an f-stop timer"
     },
+    "344725e2b5a5353e": {
+      "first_seen": "2026-11-23",
+      "source": "awealthofcommonsense",
+      "title": "Risk is a Four Letter Word"
+    },
     "345510f3052df01d": {
       "first_seen": "2026-10-08",
       "source": "reddit_builders",
@@ -795,6 +820,11 @@
       "first_seen": "2026-11-16",
       "source": "hn_show",
       "title": "Show HN: DeepSeek V3 in ~200 lines of pure Jax"
+    },
+    "3587cfcfff14264d": {
+      "first_seen": "2026-11-23",
+      "source": "hn_ask",
+      "title": "Tell HN: OpenRouter prompts to Minimax may have been read"
     },
     "35978d566e4f0ab9": {
       "first_seen": "2026-11-08",
@@ -1311,6 +1341,11 @@
       "source": "marketwatch",
       "title": "CoreWeave just gave a shot in the arm to Micron, Lumentum and the rest of the AI trade"
     },
+    "53759bf788710363": {
+      "first_seen": "2026-11-23",
+      "source": "ft_companies",
+      "title": "Nscale slows hiring and curtails spending ahead of planned $35bn IPO"
+    },
     "5394c51ed710a783": {
       "first_seen": "2026-10-14",
       "source": "hn_show",
@@ -1380,6 +1415,11 @@
       "first_seen": "2026-11-01",
       "source": "hn_show",
       "title": "Show HN: Overtone – Transcribe, correct and cut captions for any screen shape"
+    },
+    "57703cf16d7bb0c4": {
+      "first_seen": "2026-11-23",
+      "source": "hn_show",
+      "title": "Show HN: LZ0 -An asymmetric LZ compressor with ultra minimal, 0-alloc decoder"
     },
     "577d8db53bed81db": {
       "first_seen": "2026-11-07",
@@ -2441,6 +2481,11 @@
       "source": "reddit_builders",
       "title": "Im offering 2 SaaS founders a few weeks of free engineering help. Here is why."
     },
+    "9650bd855da1041f": {
+      "first_seen": "2026-11-23",
+      "source": "economist_fin",
+      "title": "Saudi Arabia’s $1trn wealth pot suffers an identity crisis"
+    },
     "96e7da2e2d90b9a4": {
       "first_seen": "2026-09-29",
       "source": "ft_companies",
@@ -2485,6 +2530,11 @@
       "first_seen": "2026-10-09",
       "source": "hn_show",
       "title": "Show HN: Durable Actors – OSS Durable Objects with configurable compute"
+    },
+    "98a52954bd1215d5": {
+      "first_seen": "2026-11-23",
+      "source": "hn_show",
+      "title": "Show HN: I made a PS1 style racing game"
     },
     "98ad066448f15b3b": {
       "first_seen": "2026-11-16",
@@ -2565,6 +2615,11 @@
       "first_seen": "2026-10-02",
       "source": "marketwatch",
       "title": "30-year mortgage rate posts biggest jump in four years"
+    },
+    "9e90f9c0947157e7": {
+      "first_seen": "2026-11-23",
+      "source": "hn_show",
+      "title": "Show HN: I built a game where you are an LLM's subagent"
     },
     "9f16b8b1938ff02c": {
       "first_seen": "2026-11-15",
@@ -3755,6 +3810,11 @@
       "first_seen": "2026-11-05",
       "source": "hn_ask",
       "title": "Tell HN: Don't use Postman, they proxy your info without your permission"
+    },
+    "ef67826b8d46f737": {
+      "first_seen": "2026-11-23",
+      "source": "hn_show",
+      "title": "Show HN: agent-mcts – Monte Carlo tree search on top of Claude Code"
     },
     "ef88ab8d6b940197": {
       "first_seen": "2026-09-17",
