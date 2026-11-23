@@ -1,10 +1,15 @@
 {
-  "count": 804,
+  "count": 816,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
       "source": "reddit_builders",
       "title": "I built a lightweight, no root Stremio client for older LG TVs that do not support the official app (targeting 2016–2019 models / webOS 3.x "
+    },
+    "004112385fd79e77": {
+      "first_seen": "2026-11-24",
+      "source": "hn_show",
+      "title": "Show HN: Hearth 64 – A cozy fireplace screensaver ROM for real N64 hardware"
     },
     "004ddcf6c10ee73f": {
       "first_seen": "2026-11-19",
@@ -420,6 +425,11 @@
       "first_seen": "2026-11-03",
       "source": "hn_show",
       "title": "Show HN: OmniDiff – Opensource, super fast, content aware Git difftool, in Rust"
+    },
+    "1c35a01982297f2b": {
+      "first_seen": "2026-11-24",
+      "source": "hn_show",
+      "title": "Show HN: I used Fable to make an open source 80s-style Skyrim browser game"
     },
     "1cf9d162bd34860a": {
       "first_seen": "2026-11-06",
@@ -881,6 +891,11 @@
       "source": "hn_show",
       "title": "Show HN: Capo-S3 – a typed, async-first S3 client for Python"
     },
+    "381405cca2e12fa7": {
+      "first_seen": "2026-11-24",
+      "source": "awealthofcommonsense",
+      "title": "Talk Your Book: Stop Handing the IRS Your Yield"
+    },
     "38778c30c8849ec0": {
       "first_seen": "2026-09-18",
       "source": "hn_show",
@@ -955,6 +970,11 @@
       "first_seen": "2026-09-29",
       "source": "reddit_builders",
       "title": "J’ai construit un SaaS pour résoudre un problème que je voyais revenir souvent : trouver ses premiers clients"
+    },
+    "3bbc71fa13d1b2aa": {
+      "first_seen": "2026-11-24",
+      "source": "ft_companies",
+      "title": "Consultants reap public sector boom thanks to AI and cyber security"
     },
     "3bc05039ab001845": {
       "first_seen": "2026-11-03",
@@ -1285,6 +1305,11 @@
       "first_seen": "2026-10-03",
       "source": "hn_ask",
       "title": "Ask HN: Who is hiring? (October 2026)"
+    },
+    "50f0f8b5abbb1486": {
+      "first_seen": "2026-11-24",
+      "source": "marketwatch",
+      "title": "A 66-year-old nurse faces retirement with just $500 saved. Who’s to blame?"
     },
     "50fba0f4984fc98e": {
       "first_seen": "2026-11-18",
@@ -1725,6 +1750,11 @@
       "first_seen": "2026-10-05",
       "source": "hn_show",
       "title": "Show HN: Pyxel – A Python retro game engine with built-in art and sound editors"
+    },
+    "676820b420345b82": {
+      "first_seen": "2026-11-24",
+      "source": "producthunt",
+      "title": "Inkling 2 Mini"
     },
     "67a22ef4c1c325b4": {
       "first_seen": "2026-09-21",
@@ -2266,6 +2296,11 @@
       "source": "hn_ask",
       "title": "Ask HN: Who wants to be hired? (October 2026)"
     },
+    "88f77e76b0ee1a3b": {
+      "first_seen": "2026-11-24",
+      "source": "hn_show",
+      "title": "Show HN: News Blocklist – a DNS blocklist of 14k news and current-affairs sites"
+    },
     "8912abbe00cc5b8d": {
       "first_seen": "2026-10-01",
       "source": "hn_show",
@@ -2671,6 +2706,11 @@
       "source": "hn_show",
       "title": "Show HN: Point your camera at a landscape to learn about its geology"
     },
+    "a19ba2b6c5a6259a": {
+      "first_seen": "2026-11-24",
+      "source": "hn_show",
+      "title": "Show HN: ClawVet – Offline AST scanner and rug-pull diff for AI agent skills"
+    },
     "a1a80cd9e8b21234": {
       "first_seen": "2026-10-11",
       "source": "awealthofcommonsense",
@@ -2700,6 +2740,11 @@
       "first_seen": "2026-10-11",
       "source": "hn_show",
       "title": "Show HN: Pocketty – iPhone SSH terminal that pings you when an agent is blocked"
+    },
+    "a462595df204c07d": {
+      "first_seen": "2026-11-24",
+      "source": "hn_ask",
+      "title": "Ask HN: Are the trades a safe career transition?"
     },
     "a4978faa7e166cdb": {
       "first_seen": "2026-11-12",
@@ -2781,6 +2826,11 @@
       "source": "hn_ask",
       "title": "Ask HN: Are tab completion models dead?"
     },
+    "aa17fcdf26c84af5": {
+      "first_seen": "2026-11-24",
+      "source": "ft_companies",
+      "title": "Nvidia reinstates Jensen Huang as chief executive"
+    },
     "ab29ca8bc2a8e5f5": {
       "first_seen": "2026-11-05",
       "source": "awealthofcommonsense",
@@ -2845,6 +2895,11 @@
       "first_seen": "2026-10-18",
       "source": "hn_show",
       "title": "Show HN: Fakeipedia – Wikipedia for worlds that don't exist"
+    },
+    "af46a24db0a5464a": {
+      "first_seen": "2026-11-24",
+      "source": "hn_show",
+      "title": "Show HN: How deep is the Riemann hypothesis? An interactive explainer"
     },
     "af71a5cc40079265": {
       "first_seen": "2026-11-02",
@@ -3765,6 +3820,11 @@
       "first_seen": "2026-11-14",
       "source": "ft_companies",
       "title": "Bessent blames Lutnick’s commerce department for failure to blacklist Megaspeed"
+    },
+    "ebfb0e2339393a4c": {
+      "first_seen": "2026-11-24",
+      "source": "producthunt",
+      "title": "Branchery"
     },
     "ec1ec261b9f5b8dd": {
       "first_seen": "2026-11-14",
