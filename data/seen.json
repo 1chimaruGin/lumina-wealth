@@ -1,5 +1,5 @@
 {
-  "count": 816,
+  "count": 828,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
@@ -265,6 +265,11 @@
       "first_seen": "2026-11-03",
       "source": "hn_show",
       "title": "Show HN: HackerHack – HackerBooks but for Posts Posted on HN"
+    },
+    "0faff442de8834ef": {
+      "first_seen": "2026-11-25",
+      "source": "hn_ask",
+      "title": "Coworker rejects PR (one month in) because it does not meet his standards"
     },
     "102bcd83ea1ad695": {
       "first_seen": "2026-10-31",
@@ -691,6 +696,11 @@
       "source": "hn_show",
       "title": "Show HN: SlideBySide – Present slides without sharing your screen"
     },
+    "2c63cec8238a0b6f": {
+      "first_seen": "2026-11-25",
+      "source": "hn_show",
+      "title": "Show HN: Ant – A scripting language with goroutines and static types"
+    },
     "2d0f77b80e409429": {
       "first_seen": "2026-11-09",
       "source": "hn_show",
@@ -1046,6 +1056,11 @@
       "source": "coindesk",
       "title": "Banks could slow stablecoin growth by paying savers more, BIS paper finds"
     },
+    "3f862efdf78511d5": {
+      "first_seen": "2026-11-25",
+      "source": "ft_companies",
+      "title": "CrowdStrike bucks Silicon Valley’s invincible-founder trend"
+    },
     "3fc0c7000f129e5a": {
       "first_seen": "2026-10-28",
       "source": "bbc_business",
@@ -1276,6 +1291,11 @@
       "source": "hn_show",
       "title": "Show HN: Share your AI Setup, Learn from others"
     },
+    "4eb340fea015b709": {
+      "first_seen": "2026-11-25",
+      "source": "ft_companies",
+      "title": "US tech stocks slide as Jensen Huang return rally fades"
+    },
     "4f189644b99609e6": {
       "first_seen": "2026-10-26",
       "source": "hn_show",
@@ -1321,6 +1341,11 @@
       "source": "awealthofcommonsense",
       "title": "Talk Your Book: Customized and Income"
     },
+    "513b8126cde481d4": {
+      "first_seen": "2026-11-25",
+      "source": "indicator",
+      "title": "How American money is changing Europe's defense strategy"
+    },
     "519a776207ed3493": {
       "first_seen": "2026-10-31",
       "source": "hn_show",
@@ -1355,6 +1380,11 @@
       "first_seen": "2026-11-06",
       "source": "hn_show",
       "title": "Show HN: After a decade of reversing, I got co-op working in DOS Wing Commander"
+    },
+    "5328a366e59b2cf1": {
+      "first_seen": "2026-11-25",
+      "source": "hn_show",
+      "title": "Show HN: Type-C – variants, options, generics and pattern matching for C"
     },
     "533ecb13d29bbad7": {
       "first_seen": "2026-11-06",
@@ -2001,6 +2031,11 @@
       "source": "hn_show",
       "title": "Show HN: Hack – my Hacker News mobile client now lets you block AI posts"
     },
+    "74d816fb25305bd5": {
+      "first_seen": "2026-11-25",
+      "source": "hn_show",
+      "title": "Show HN: Hermit CRM – Free open-source CRM for solopreneurs"
+    },
     "75007cfc45592ceb": {
       "first_seen": "2026-10-04",
       "source": "reddit_builders",
@@ -2416,6 +2451,11 @@
       "source": "hn_show",
       "title": "Show HN: Watch weight-space programming in action with WebGPU"
     },
+    "8f51180f74ef58bd": {
+      "first_seen": "2026-11-25",
+      "source": "hn_show",
+      "title": "Show HN: Genesis Map – Visualize your agent's changes. See where they can break"
+    },
     "8ff53dd9237e47d6": {
       "first_seen": "2026-11-06",
       "source": "ft_companies",
@@ -2696,6 +2736,11 @@
       "source": "hn_ask",
       "title": "My Thoughts on AI and LLMs"
     },
+    "a119ba077639cb3e": {
+      "first_seen": "2026-11-25",
+      "source": "hn_show",
+      "title": "Show HN: FireVoice, free open-source voice studio on your own GPU"
+    },
     "a1214a1aaf3a4210": {
       "first_seen": "2026-09-23",
       "source": "hn_show",
@@ -2811,6 +2856,11 @@
       "source": "marketwatch",
       "title": "Is it curtains for COLA? Saving Social Security could mean changing the cost-of-living adjustment."
     },
+    "a81ddc7a5298b938": {
+      "first_seen": "2026-11-25",
+      "source": "nikkei_asia",
+      "title": "Japan's defense spending pitted against sales tax cut in budget tug-of-war"
+    },
     "a852a3af83bf936f": {
       "first_seen": "2026-11-14",
       "source": "awealthofcommonsense",
@@ -2830,6 +2880,11 @@
       "first_seen": "2026-11-24",
       "source": "ft_companies",
       "title": "Nvidia reinstates Jensen Huang as chief executive"
+    },
+    "aa5e277f511b1a33": {
+      "first_seen": "2026-11-25",
+      "source": "hn_show",
+      "title": "Show HN: 3D story maps in JupyterLab, written in Python, run in the browser"
     },
     "ab29ca8bc2a8e5f5": {
       "first_seen": "2026-11-05",
@@ -3255,6 +3310,11 @@
       "first_seen": "2026-10-27",
       "source": "marketwatch",
       "title": "Walmart, Best Buy and other stores now use digital price tags. Critics say they could lead to different prices for different shoppers."
+    },
+    "c4766e997cf55369": {
+      "first_seen": "2026-11-25",
+      "source": "hn_show",
+      "title": "Show HN: OCRia-nano-1, OCR at 8.1M parameters"
     },
     "c5751df832aa608c": {
       "first_seen": "2026-10-14",
