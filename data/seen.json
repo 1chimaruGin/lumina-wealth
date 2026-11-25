@@ -1,5 +1,5 @@
 {
-  "count": 828,
+  "count": 840,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
@@ -150,6 +150,11 @@
       "first_seen": "2026-09-17",
       "source": "hn_show",
       "title": "Show HN: I built a new version of my fun spatial 3D online meeting app"
+    },
+    "08bee0fe1cc4c96a": {
+      "first_seen": "2026-11-26",
+      "source": "hn_show",
+      "title": "Show HN: Sliding-panes React UI library (inspired by WebOS Enyo)"
     },
     "0939d704b87b6a9d": {
       "first_seen": "2026-11-09",
@@ -411,6 +416,11 @@
       "source": "marketwatch",
       "title": "Millions will lose Medicaid once new work rules kick in. These groups will be hit the hardest."
     },
+    "1ac09a398b6e2ac9": {
+      "first_seen": "2026-11-26",
+      "source": "hn_show",
+      "title": "Show HN: Old Nvidia and ATI tech demos, running again in the browser"
+    },
     "1b29fcf074775456": {
       "first_seen": "2026-10-10",
       "source": "coindesk",
@@ -495,6 +505,11 @@
       "first_seen": "2026-10-29",
       "source": "hn_show",
       "title": "Show HN: Specification First Agentic Development Plugin and Prove"
+    },
+    "20ad395847a07981": {
+      "first_seen": "2026-11-26",
+      "source": "awealthofcommonsense",
+      "title": "The Most Powerful Force on Earth"
     },
     "20e150296e94b6f7": {
       "first_seen": "2026-09-28",
@@ -1421,6 +1436,11 @@
       "source": "awealthofcommonsense",
       "title": "The Biggest Risk to the Economy"
     },
+    "544d826b3594171b": {
+      "first_seen": "2026-11-26",
+      "source": "bbc_business",
+      "title": "US stocks fall further as fears over AI intensify"
+    },
     "54782069d3d0875e": {
       "first_seen": "2026-10-04",
       "source": "coindesk",
@@ -2045,6 +2065,11 @@
       "first_seen": "2026-10-24",
       "source": "hn_show",
       "title": "Show HN: OnKey – I'm a bad singer, so I built an app to show where I'm off-key"
+    },
+    "750ec5d7bb0cac9b": {
+      "first_seen": "2026-11-26",
+      "source": "hn_show",
+      "title": "Show HN: Mergeon – A native desktop Git client written in Rust with GPUI"
     },
     "753bb2d1de6b3012": {
       "first_seen": "2026-10-23",
@@ -2671,6 +2696,11 @@
       "source": "hn_show",
       "title": "Show HN: ADRs for AI – Deliberation records for human–AI work, versioned in Git"
     },
+    "9d8ef44660a0fb71": {
+      "first_seen": "2026-11-26",
+      "source": "hn_ask",
+      "title": "Ask HN: Anthropic is accusing my company of distilling. How can I prove I'm not?"
+    },
     "9dc6be4c8edededb": {
       "first_seen": "2026-10-25",
       "source": "hn_ask",
@@ -2911,6 +2941,11 @@
       "source": "hn_show",
       "title": "Show HN: Ive Sent It – online courier for files, with signed proof of delivery"
     },
+    "ac64a3fde082e22a": {
+      "first_seen": "2026-11-26",
+      "source": "hn_ask",
+      "title": "Ask HN: Am I the only one whose AI hype is cooling down a lot?"
+    },
     "ad4d9bf888fcb213": {
       "first_seen": "2026-11-12",
       "source": "hn_show",
@@ -2935,6 +2970,11 @@
       "first_seen": "2026-09-29",
       "source": "ft_companies",
       "title": "TotalEnergies boosts buybacks and dividends as oil prices surge"
+    },
+    "ae3d83d813a6043f": {
+      "first_seen": "2026-11-26",
+      "source": "hn_show",
+      "title": "Show HN: Brickie – Deploy sandboxes in your own AWS account"
     },
     "ae66baacc0cd771d": {
       "first_seen": "2026-09-23",
@@ -3206,6 +3246,11 @@
       "source": "marketwatch",
       "title": "China’s hottest stocks these days have one thing in common: names that sound like sheep"
     },
+    "bea9afe10cbe8efa": {
+      "first_seen": "2026-11-26",
+      "source": "hn_show",
+      "title": "Show HN: Mason – A lightweight Postgres read-replica, built on columnar storage"
+    },
     "becfd432b03324ca": {
       "first_seen": "2026-11-20",
       "source": "ft_companies",
@@ -3405,6 +3450,11 @@
       "first_seen": "2026-09-21",
       "source": "hn_show",
       "title": "Show HN: Lightspeed, build real time apps the Laravel way (+asteroids demo)"
+    },
+    "cd958439bdc579f8": {
+      "first_seen": "2026-11-26",
+      "source": "ft_companies",
+      "title": "British drone developers hampered by outdated laws, industry warns"
     },
     "cdab6db8369706e9": {
       "first_seen": "2026-10-05",
@@ -3951,6 +4001,11 @@
       "source": "hn_show",
       "title": "Show HN: Unfenced – Land for sale that borders public land"
     },
+    "f0fd6c40fafe0f56": {
+      "first_seen": "2026-11-26",
+      "source": "marketwatch",
+      "title": "Inflation gets worse. Now the Fed no choice but to raise U.S. interest rates."
+    },
     "f1157c176aaf4c32": {
       "first_seen": "2026-10-06",
       "source": "awealthofcommonsense",
@@ -4070,6 +4125,11 @@
       "first_seen": "2026-09-28",
       "source": "japanfinance",
       "title": "Looking for skilled and efficient accountant"
+    },
+    "fd1323c0e6740e24": {
+      "first_seen": "2026-11-26",
+      "source": "hn_show",
+      "title": "Show HN: Carry – Save every AI conversations as Markdown, in a folder you Own"
     },
     "fdbe90a2c18542d2": {
       "first_seen": "2026-10-31",
