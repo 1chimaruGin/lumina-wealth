@@ -1,5 +1,5 @@
 {
-  "count": 840,
+  "count": 852,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
@@ -401,6 +401,11 @@
       "source": "hn_ask",
       "title": "U.S. October PPI Rises 6.5% YoY, Highest in Nearly Four Years"
     },
+    "18977fb8743f41a2": {
+      "first_seen": "2026-11-27",
+      "source": "economist_fin",
+      "title": "The fall of China’s most trusted wealth manager"
+    },
     "193c75e957e5e198": {
       "first_seen": "2026-10-18",
       "source": "hn_ask",
@@ -415,6 +420,11 @@
       "first_seen": "2026-09-27",
       "source": "marketwatch",
       "title": "Millions will lose Medicaid once new work rules kick in. These groups will be hit the hardest."
+    },
+    "1a72a6f355fe4056": {
+      "first_seen": "2026-11-27",
+      "source": "awealthofcommonsense",
+      "title": "Books For New Investors"
     },
     "1ac09a398b6e2ac9": {
       "first_seen": "2026-11-26",
@@ -565,6 +575,11 @@
       "first_seen": "2026-09-29",
       "source": "reddit_builders",
       "title": "Before you pay a launch directory for a \"backlink\", check these 4 things. Takes 2 minutes."
+    },
+    "243dfaa22eaec489": {
+      "first_seen": "2026-11-27",
+      "source": "hn_show",
+      "title": "Show HN: Synth Patch Hero"
     },
     "24bbbc5418dbd902": {
       "first_seen": "2026-09-20",
@@ -1366,6 +1381,11 @@
       "source": "hn_show",
       "title": "Show HN: Auto Dismiss Mac OS \"Allow to find devices on local networks?\""
     },
+    "51a7b30accc3d769": {
+      "first_seen": "2026-11-27",
+      "source": "hn_show",
+      "title": "Show HN: Keeping faces and features consistent across 24 AI-driven comic pages"
+    },
     "51e6df29abdef0db": {
       "first_seen": "2026-10-26",
       "source": "hn_show",
@@ -1926,6 +1946,11 @@
       "source": "reddit_builders",
       "title": "relator digital: tudo que voce precisa para seu trafego pago"
     },
+    "6f4551363709e1c3": {
+      "first_seen": "2026-11-27",
+      "source": "hn_ask",
+      "title": "Ask HN: Any courses/products by indie makers worth getting today?"
+    },
     "6f70eb856097b65f": {
       "first_seen": "2026-10-25",
       "source": "awealthofcommonsense",
@@ -2226,6 +2251,11 @@
       "source": "coindesk",
       "title": "Latvia eyes crypto tax payments in 2027 as parliament overhauls crypto taxation"
     },
+    "7fa3f7b7a4bdfc71": {
+      "first_seen": "2026-11-27",
+      "source": "hn_show",
+      "title": "Show HN: Termius was asking me for $120 a year, so I built my own SSH client"
+    },
     "7fb0c170d40bd46b": {
       "first_seen": "2026-11-17",
       "source": "hn_ask",
@@ -2305,6 +2335,11 @@
       "first_seen": "2026-09-30",
       "source": "hn_show",
       "title": "Show HN: Pac-Bench – How well can models one-shot a Pac-Man game?"
+    },
+    "84a8485377b7e2c9": {
+      "first_seen": "2026-11-27",
+      "source": "hn_ask",
+      "title": "Tell HN: Happy Thanksgiving"
     },
     "84fe7e7085b7660f": {
       "first_seen": "2026-09-24",
@@ -2856,6 +2891,11 @@
       "source": "ft_companies",
       "title": "The ‘ungodly spending’ behind the creator economy"
     },
+    "a6a5b9a1d3287da2": {
+      "first_seen": "2026-11-27",
+      "source": "hn_show",
+      "title": "Show HN: Three Linux VMs in a browser tab, each running a different browser"
+    },
     "a6f750c37cb8d79b": {
       "first_seen": "2026-11-18",
       "source": "marketwatch",
@@ -3251,6 +3291,11 @@
       "source": "hn_show",
       "title": "Show HN: Mason – A lightweight Postgres read-replica, built on columnar storage"
     },
+    "bec09f5f94847a7f": {
+      "first_seen": "2026-11-27",
+      "source": "coindesk",
+      "title": "Bitcoin’s dormant supply rises, a behavior seen during previous bear-market bottoming phases"
+    },
     "becfd432b03324ca": {
       "first_seen": "2026-11-20",
       "source": "ft_companies",
@@ -3430,6 +3475,11 @@
       "first_seen": "2026-11-21",
       "source": "hn_show",
       "title": "Show HN: Fast deterministic natural language search for OpenStreetMap data"
+    },
+    "cbdccf31bdf303bb": {
+      "first_seen": "2026-11-27",
+      "source": "hn_show",
+      "title": "Show HN: Turned a $5 AliExpress clock into a desk Clawd pet(+usage)"
     },
     "cc198026e3a4c56f": {
       "first_seen": "2026-11-20",
@@ -3761,6 +3811,11 @@
       "source": "hn_show",
       "title": "Show HN: Enzyme – a programming language that compiles wikis for agents"
     },
+    "e06f788c1eff26ca": {
+      "first_seen": "2026-11-27",
+      "source": "ft_companies",
+      "title": "Britain’s electricity grid operator makes record number of calls for extra power"
+    },
     "e0ff8c3a76cfd4f6": {
       "first_seen": "2026-09-26",
       "source": "reddit_builders",
@@ -3930,6 +3985,11 @@
       "first_seen": "2026-11-14",
       "source": "ft_companies",
       "title": "Bessent blames Lutnick’s commerce department for failure to blacklist Megaspeed"
+    },
+    "eba9fad3e65717f7": {
+      "first_seen": "2026-11-27",
+      "source": "hn_show",
+      "title": "Show HN: Rchive – Every drive I've owned since the 90s, searchable in one window"
     },
     "ebfb0e2339393a4c": {
       "first_seen": "2026-11-24",
