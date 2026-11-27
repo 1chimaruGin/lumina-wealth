@@ -1,5 +1,5 @@
 {
-  "count": 852,
+  "count": 864,
   "items": {
     "002beefa35c739dc": {
       "first_seen": "2026-10-27",
@@ -371,6 +371,11 @@
       "source": "hn_show",
       "title": "Show HN: Made an open-source Lego AI generator"
     },
+    "16dc45523745c64d": {
+      "first_seen": "2026-11-28",
+      "source": "hn_show",
+      "title": "Show HN: I wrote an entire Vim manual over 4 years"
+    },
     "172f0fba360473e0": {
       "first_seen": "2026-11-12",
       "source": "economist_fin",
@@ -731,6 +736,11 @@
       "source": "hn_show",
       "title": "Show HN: Ant – A scripting language with goroutines and static types"
     },
+    "2cc6dd43000d6844": {
+      "first_seen": "2026-11-28",
+      "source": "hn_show",
+      "title": "Show HN: Olumino, a Markdown notes and spaced repetition app"
+    },
     "2d0f77b80e409429": {
       "first_seen": "2026-11-09",
       "source": "hn_show",
@@ -740,6 +750,11 @@
       "first_seen": "2026-09-30",
       "source": "hn_show",
       "title": "Show HN: Raven – The harness of harnesses, built for RSI"
+    },
+    "2d5e4fa6115e5985": {
+      "first_seen": "2026-11-28",
+      "source": "hn_ask",
+      "title": "Tell HN: Lots of Ask HNs again"
     },
     "2e872540e50a8ee3": {
       "first_seen": "2026-09-28",
@@ -1261,6 +1276,11 @@
       "source": "abnormalreturns",
       "title": "Monday links: search traffic"
     },
+    "4a1783e545c231ce": {
+      "first_seen": "2026-11-28",
+      "source": "ft_companies",
+      "title": "Hong Kong seeks to lure sovereign wealth funds with tax breaks"
+    },
     "4a311e18c894116a": {
       "first_seen": "2026-09-22",
       "source": "hn_show",
@@ -1671,6 +1691,11 @@
       "source": "hn_show",
       "title": "Show HN: Sigabrt.dev – cronjob monitor with an SSH TUI"
     },
+    "60894b4a270c0b22": {
+      "first_seen": "2026-11-28",
+      "source": "hn_ask",
+      "title": "Ask HN: Where is all the amazing AI-generated software?"
+    },
     "60894de463677fb7": {
       "first_seen": "2026-10-17",
       "source": "hn_ask",
@@ -1916,6 +1941,11 @@
       "source": "ft_companies",
       "title": "Dealmaking slowdown threatens early end to M&A boom"
     },
+    "6d6cf162aa8d0fc0": {
+      "first_seen": "2026-11-28",
+      "source": "ft_companies",
+      "title": "If we say the pay, let’s mention the pension"
+    },
     "6d6d92c3e871515a": {
       "first_seen": "2026-10-24",
       "source": "hn_show",
@@ -2066,6 +2096,11 @@
       "source": "hn_show",
       "title": "Show HN: A modern low-poly SimCity 2000 clone, built by Opus 5.5"
     },
+    "743be50c28f44417": {
+      "first_seen": "2026-11-28",
+      "source": "hn_ask",
+      "title": "Ask HN: How do you find meaning of life at 41?"
+    },
     "744d2f629b0930e8": {
       "first_seen": "2026-10-05",
       "source": "awealthofcommonsense",
@@ -2170,6 +2205,11 @@
       "first_seen": "2026-11-18",
       "source": "hn_show",
       "title": "Show HN: Rbit – Self Hosted Git Forge in Rust"
+    },
+    "79207398062de82e": {
+      "first_seen": "2026-11-28",
+      "source": "marginalrevolution",
+      "title": "Friday assorted links"
     },
     "7a1c643f34bc792e": {
       "first_seen": "2026-11-07",
@@ -2741,6 +2781,11 @@
       "source": "hn_ask",
       "title": "Open-source, cross-harness memory for AI agents"
     },
+    "9e1ed62749839d21": {
+      "first_seen": "2026-11-28",
+      "source": "ft_companies",
+      "title": "AI data centre boom piles pressure on stressed US defence sector"
+    },
     "9e322312fca7c7ee": {
       "first_seen": "2026-11-18",
       "source": "ft_companies",
@@ -2885,6 +2930,11 @@
       "first_seen": "2026-11-07",
       "source": "hn_ask",
       "title": "Ask HN: What in the world is taking Ubuntu so long?"
+    },
+    "a600b22c06f703e4": {
+      "first_seen": "2026-11-28",
+      "source": "hn_show",
+      "title": "Show HN: Fuck_data_brokers.py"
     },
     "a6515c4c4a10b8db": {
       "first_seen": "2026-10-14",
@@ -3240,6 +3290,11 @@
       "first_seen": "2026-10-16",
       "source": "hn_show",
       "title": "Show HN: Flipflop – Iroh-powered persistent tunnels for filesharing"
+    },
+    "b9a922b9838e4c7d": {
+      "first_seen": "2026-11-28",
+      "source": "hn_show",
+      "title": "Show HN: SimDrop – Running iOS simulators in the macOS Finder sidebar"
     },
     "ba6acbaffda3da50": {
       "first_seen": "2026-09-30",
@@ -4245,6 +4300,11 @@
       "first_seen": "2026-10-01",
       "source": "japanfinance",
       "title": "At what level of wealth / inheritance does staying in Japan stop making sense for you?"
+    },
+    "ff46556d3568b911": {
+      "first_seen": "2026-11-28",
+      "source": "hn_show",
+      "title": "Show HN: bouncemarket – a live prediction market game for a bouncing ball"
     },
     "ff580beb46fca679": {
       "first_seen": "2026-09-25",
