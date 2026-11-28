@@ -88,3 +88,4 @@
 {"at": "2026-11-26", "mode": "daily", "sources_ok": 31, "sources_total": 33, "failed": ["japanfinance", "reddit_builders"], "candidates": 257, "picks": 3, "scored_by": "claude-code", "cost_usd": 0.0}
 {"at": "2026-11-27", "mode": "daily", "sources_ok": 30, "sources_total": 33, "failed": ["japanfinance", "reddit_builders", "boj"], "candidates": 270, "picks": 3, "scored_by": "claude-code", "cost_usd": 0.0}
 {"at": "2026-11-28", "mode": "daily", "sources_ok": 31, "sources_total": 33, "failed": ["japanfinance", "reddit_builders"], "candidates": 261, "picks": 3, "scored_by": "claude-code", "cost_usd": 0.0}
+{"at": "2026-11-29", "mode": "daily", "sources_ok": 31, "sources_total": 33, "failed": ["japanfinance", "reddit_builders"], "candidates": 228, "picks": 3, "scored_by": "claude-code", "cost_usd": 0.0}
